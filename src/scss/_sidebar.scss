@@ -1,0 +1,23 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 376px;
+	padding: 0 40px;
+}
+
+.sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sidebar-header-title {
+	font-size: 21px;
+	line-height: 31px;
+	letter-spacing: 0.15px;
+	color: #212121;
+}
+
+.sidebar-header-btn {
+	margin-left: 5px;
+}

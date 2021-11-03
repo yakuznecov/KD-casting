@@ -1,6 +1,8 @@
 @import 'notice';
 @import 'menu';
 @import 'font';
+@import 'sidebar';
+@import 'btn';
 @import 'mobile';
 @import 'null';
 
@@ -190,14 +192,7 @@ body {
 .main {
 	display: flex;
 	width: 100%;
-	padding: 0 0 0 40px;
 	margin-top: 142px;
-}
-
-.sidebar {
-	display: flex;
-	flex-direction: column;
-	flex: 0 0 336px;
 }
 
 .main-inner {
