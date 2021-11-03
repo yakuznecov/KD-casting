@@ -1,0 +1,846 @@
+/* Start: Иконка вопросительный знак */
+
+.dropdown-question {
+	position: relative;
+	margin-right: 16px;
+}
+
+.question-button {
+	position: relative;
+	display: block;
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.question-button:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: -4px;
+	left: -4px;
+	right: -4px;
+	bottom: -4px;
+}
+
+.dropdown-question .question-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #408bd1;
+	transition: 0.2s ease all;
+}
+
+.dropdown-question .question-button:hover {
+	background-color: #70a8dd;
+}
+
+.dropdown-question .question-menu {
+	position: absolute;
+	width: 256px;
+	top: 28px;
+	right: 0;
+	z-index: 100;
+	border: 1px solid #e7e7e7;
+	background-color: #fafafa;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	padding: 20px 0 9px;
+}
+.dropdown-question .question-menu ul {
+	list-style: none;
+	padding: 0 8px;
+	margin: 0;
+}
+
+.dropdown-question .question-menu ul:last-child {
+	margin-top: 7px;
+}
+
+.dropdown-question .question-menu ul li {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 6px 8px;
+}
+
+.dropdown-question .question-menu ul li:hover {
+	background-color: #f2f2f2;
+	border-radius: 4px;
+}
+
+.dropdown-question .question-menu ul li:last-child {
+	margin-bottom: 0;
+}
+
+.dropdown-question .question-menu ul li a {
+	display: flex;
+	align-items: center;
+	color: #637380;
+}
+
+.dropdown-question .question-menu ul li a span {
+	padding-top: 3px;
+}
+
+.dropdown-question .question-menu ul li svg {
+	margin: 0 11px 0 0;
+}
+
+.dropdown-question .question-menu {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+
+.dropdown-question:hover .question-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.question-title {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 700;
+	color: #a0afbb;
+	margin-bottom: 5px;
+	margin-left: 16px;
+}
+
+.question-menu-text {
+	font-size: 15px;
+	color: #637380;
+}
+
+.question-line {
+	width: 224px;
+	height: 1px;
+	background-color: #e1e5e9;
+	margin: 8px 16px 20px;
+}
+
+/* End: Иконка вопросительный знак */
+
+/* Start: Выбор языка */
+
+.dropdown-language {
+	position: relative;
+	color: #fff;
+	font-weight: 500;
+}
+
+.language-button {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.language-button span {
+	margin-left: 8px;
+	display: flex;
+}
+
+.button-rus {
+	margin-left: 8px;
+}
+
+.dropdown-language .language-button {
+	display: flex;
+	align-items: center;
+	width: 48px;
+	height: 24px;
+	border-radius: 100px;
+	background-color: #408bd1;
+	transition: 0.2s ease all;
+}
+
+.dropdown-language .language-button:hover {
+	background-color: #70a8dd;
+}
+
+.dropdown-language .arrow {
+	width: 1.25rem;
+	margin-left: auto;
+	fill: currentColor;
+}
+.dropdown-language .language-menu {
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+.dropdown-language .language-menu ul {
+	margin-top: 4px;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #70a8dd;
+	list-style: none;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.158628);
+}
+
+.dropdown-language .language-menu ul li {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	margin-bottom: 8px;
+}
+
+.dropdown-language .language-menu ul li:last-child {
+	margin-bottom: 0;
+}
+
+.dropdown-language .language-menu ul li button {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 0px;
+}
+
+.dropdown-language .language-menu ul li:hover {
+	background-color: #70a8dd;
+}
+
+.dropdown-language .arrow {
+	transition: transform 0.2s;
+}
+.dropdown-language .language-menu {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+.dropdown-language:hover .arrow {
+	transform: rotate(180deg);
+}
+.dropdown-language:hover .language-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* END: Выбор языка */
+
+/* Start: Нижнее меню в шапке сайта */
+
+.menu-header__bottom {
+	display: flex;
+	align-items: center;
+	min-height: 48px;
+	padding: 0 40px;
+	background: #0058a9;
+}
+
+.menu-header__bottom-list {
+	display: flex;
+}
+
+.menu-header__bottom-list li {
+	margin: 0px 24px 0px 0px;
+}
+
+.menu-header__bottom-link {
+	position: relative;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	display: block;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-ms-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	& .mobile-share,
+	.mobile-search {
+		display: none;
+
+		@media (max-width: 768px) {
+			display: block;
+		}
+	}
+	& .desktop-share,
+	.desktop-search {
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: -4px;
+		left: -4px;
+		right: -4px;
+		bottom: -16px;
+	}
+	&.active {
+		color: #ffca28;
+	}
+
+	&.--agent {
+		@media (max-width: 896px) {
+			font-size: 14px;
+		}
+	}
+}
+
+.menu-header__bottom-link:hover {
+	color: #ffca28;
+}
+
+.after-lang-line {
+	height: 24px;
+	width: 1px;
+	background-color: #408bd1;
+	margin: 0 24px;
+}
+
+// Start: Меню профайла
+
+.dropdown-profile {
+	position: relative;
+}
+
+.profile-button {
+	position: relative;
+	display: block;
+	padding: 0;
+	border: none;
+	font: inherit;
+	line-height: 0;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.profile-button:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: -4px;
+	left: -4px;
+	right: -4px;
+	bottom: -4px;
+}
+
+.profile-menu {
+	position: absolute;
+	width: 256px;
+	top: 40px;
+	right: 0;
+	z-index: 100;
+	border: 1px solid #e7e7e7;
+	background-color: #fafafa;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+
+.dropdown-profile:hover .profile-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.profile-menu-inner {
+	padding: 16px 0 11px;
+
+	& ul {
+		list-style: none;
+		padding: 0 8px;
+		margin: 0;
+	}
+
+	& ul li {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		padding: 7px 8px;
+		&:hover {
+			background: #f2f2f2;
+			border-radius: 4px;
+		}
+	}
+
+	& ul li a {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.profile-menu-inner-head {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+	padding: 0 16px;
+}
+
+.profile-menu-user img {
+	width: 40px;
+}
+
+.profile-menu-info {
+	display: flex;
+	flex-direction: column;
+	margin-left: 12px;
+	line-height: 16px;
+}
+
+.profile-menu-info-name {
+	font-size: 15px;
+	color: #2f2f2f;
+}
+
+.profile-menu-info-text {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #8e9aa6;
+}
+
+.profile-menu-line {
+	width: 224px;
+	height: 1px;
+	background-color: #e1e5e9;
+	margin: 0 auto 11px;
+	&.--bottom {
+		margin: 11px auto 12px;
+	}
+}
+
+.profile-menu-link-text {
+	margin-left: 12px;
+	font-size: 15px;
+	color: #637380;
+	margin-top: 2px;
+	line-height: 20px;
+}
+
+.profile-menu-footer {
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid #e1e5e9;
+	background-color: #f2f2f2;
+}
+
+.profile-menu-footer-links {
+	display: flex;
+}
+
+.profile-menu-footer-links a {
+	margin: 0px 2px;
+}
+
+.appStore-box {
+	position: relative;
+}
+
+.googlePlay-box {
+	position: relative;
+}
+
+.appStore {
+	z-index: 1;
+}
+
+.googlePlay {
+	z-index: 1;
+}
+
+.appStoreDark {
+	display: none;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 96px;
+	height: 32px;
+}
+
+.googlePlayDark {
+	display: none;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 96px;
+	height: 32px;
+}
+
+// End: Меню профайла
+
+// Start: Меню с тарифом в профайле
+
+.profile-menu__rate-desktop {
+	width: 224px;
+	min-height: 76px;
+	background: #ebf5ff;
+	border: 1px solid #d5eaff;
+	border-radius: 4px;
+	padding: 9px 12px 8px;
+	margin: 0 auto 12px;
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	&-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	&-text {
+		display: inline-block;
+		color: #424242;
+		font-size: 14px;
+		&.--date {
+			font-size: 12px;
+			color: #637380;
+			font-weight: 700;
+			line-height: 11px;
+		}
+	}
+	&-line {
+		width: 200px;
+		height: 1px;
+		background-color: #d4eaff;
+		margin-top: 7px;
+		margin-bottom: 12px;
+	}
+}
+
+.rate-desktop-symbol {
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 22px;
+	height: 20px;
+	min-width: 39px;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0 7px;
+	border-radius: 2px;
+}
+
+.rate-desktop-pro {
+	background: #605fff;
+}
+
+.rate-desktop-lite {
+	background: #5f9fff;
+}
+
+.rate-desktop-65 {
+	background: #895fff;
+}
+
+.rate-desktop-vip {
+	background: #ffa25f;
+}
+
+.tariff-control-desktop-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 224px;
+	height: 32px;
+	font-size: 14px;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	border-radius: 100px;
+	color: #fff;
+	background: #2699fb;
+	margin: 0 auto 16px;
+	&:hover {
+		color: #fff;
+		background: #0588f8;
+	}
+}
+
+// End: Меню с тарифом в профайле
+
+// Start: меню со счетчиком сообщений
+
+.menu-header__info {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	&.--actor.active {
+		@media (max-width: 896px) {
+			display: none;
+		}
+	}
+	@media (max-width: 650px) {
+		display: none;
+	}
+}
+
+.menu-header__info-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 12px;
+	height: 64px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	& span {
+		color: #8cafcf;
+	}
+	&:hover {
+		color: #fff;
+	}
+	&.active {
+		background-color: #004d94;
+	}
+
+	@media (max-width: 930px) {
+		font-size: 15px;
+	}
+}
+
+// End: меню со счетчиком сообщений
+
+// Start: Меню кастингов
+
+.dropdown-сastings {
+	position: relative;
+}
+
+.castings-menu {
+	position: absolute;
+	padding: 12px 12px 15px 12px;
+	width: 280px;
+	top: 35px;
+	left: -40px;
+	z-index: 100;
+	border-top: 1px solid #0064c1;
+	background-color: #0058a9;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.158628);
+	border-radius: 0px 0px 4px 4px;
+	opacity: 0;
+	visibility: hidden;
+	// opacity: 1;
+	// visibility: visible;
+	transition: all 0.2s;
+}
+
+.dropdown-сastings:hover .castings-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.castings-menu-item {
+	display: flex;
+	align-items: center;
+	padding: 0 28px;
+	min-height: 40px;
+	&:nth-child(3) span {
+		margin: 0 0 0 14px;
+	}
+	& svg {
+		margin-bottom: 1px;
+	}
+	& span {
+		margin: 0 0 0 12px;
+		font-size: 16px;
+		color: #fff;
+	}
+	&:hover {
+		background: #004d94;
+		border-radius: 4px;
+	}
+}
+
+// End: Меню кастингов
+
+// Start: Меню кастингов у агента
+
+.dropdown-сastings-agent {
+	position: relative;
+}
+
+.castings-menu-agent {
+	position: absolute;
+	padding: 12px 12px 15px 12px;
+	width: 323px;
+	top: 35px;
+	left: -40px;
+	z-index: 100;
+	border-top: 1px solid #0064c1;
+	background-color: #0058a9;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.158628);
+	border-radius: 0px 0px 4px 4px;
+	opacity: 0;
+	visibility: hidden;
+	// opacity: 1;
+	// visibility: visible;
+	transition: all 0.2s;
+	@media (max-width: 896px) {
+		top: 31px;
+	}
+}
+
+.dropdown-сastings-agent:hover .castings-menu-agent {
+	opacity: 1;
+	visibility: visible;
+}
+
+.castings-menu-agent-item {
+	display: flex;
+	align-items: center;
+	padding: 0 28px;
+	min-height: 40px;
+	& svg {
+		margin-bottom: 1px;
+	}
+	& span {
+		margin: 0 0 0 12px;
+		font-size: 16px;
+		color: #fff;
+	}
+	&:hover {
+		background: #004d94;
+		border-radius: 4px;
+	}
+}
+
+// End: Меню кастингов у агента
+
+// Start: Меню реклама профиля
+
+.dropdown-promo {
+	position: relative;
+}
+
+.promo-menu {
+	position: absolute;
+	padding: 12px 12px 15px 12px;
+	width: 280px;
+	top: 35px;
+	left: -130px;
+	z-index: 100;
+	border-top: 1px solid #0064c1;
+	background-color: #0058a9;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.158628);
+	border-radius: 0px 0px 4px 4px;
+	opacity: 0;
+	visibility: hidden;
+	// opacity: 1;
+	// visibility: visible;
+	transition: all 0.2s;
+}
+
+.dropdown-promo:hover .promo-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.promo-menu-item {
+	display: flex;
+	align-items: center;
+	padding: 0 28px;
+	min-height: 40px;
+	& svg {
+		margin-bottom: 1px;
+	}
+	& span {
+		margin: 0 0 0 12px;
+		font-size: 16px;
+		color: #fff;
+	}
+	&:hover {
+		background: #004d94;
+		border-radius: 4px;
+	}
+}
+
+// End: Меню реклама профиля
+
+// Start: Меню рекламировать актёров у агента
+
+.dropdown-promo-actors {
+	position: relative;
+}
+
+.promo-menu-actors {
+	position: absolute;
+	padding: 12px 12px 15px 12px;
+	width: 323px;
+	top: 35px;
+	left: -130px;
+	z-index: 100;
+	border-top: 1px solid #0064c1;
+	background-color: #0058a9;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.158628);
+	border-radius: 0px 0px 4px 4px;
+	opacity: 0;
+	visibility: hidden;
+	// opacity: 1;
+	// visibility: visible;
+	transition: all 0.2s;
+	@media (max-width: 896px) {
+		top: 31px;
+	}
+}
+
+.dropdown-promo-actors:hover .promo-menu-actors {
+	opacity: 1;
+	visibility: visible;
+}
+
+.promo-menu-item-actors {
+	display: flex;
+	align-items: center;
+	min-height: 40px;
+	padding: 0 28px;
+	& svg {
+		margin-bottom: 1px;
+	}
+	& span {
+		margin: 0 0 0 12px;
+		font-size: 16px;
+		color: #fff;
+	}
+	&:hover {
+		background: #004d94;
+		border-radius: 4px;
+	}
+}
+
+// End: Меню рекламировать актёров у агента
+
+/* End: Нижнее меню в шапке сайта */

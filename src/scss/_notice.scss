@@ -1,0 +1,22 @@
+// Значки с уведомлениями
+
+.hasNotice {
+	position: relative;
+}
+
+.notice {
+	position: absolute;
+	right: -13px;
+	top: -10px;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+	height: 16px;
+	min-width: 23px;
+	letter-spacing: 1px;
+	color: #fff;
+	padding: 0 6px;
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.12);
+	border-radius: 100px;
+	background: #219653;
+}
