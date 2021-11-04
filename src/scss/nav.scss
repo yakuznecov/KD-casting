@@ -2,6 +2,7 @@
 @import 'menu';
 @import 'font';
 @import 'sidebar';
+@import 'dropdown';
 @import 'btn';
 @import 'mobile';
 @import 'null';
@@ -245,5 +246,15 @@ body {
 }
 
 // End: Пустое рабочее пространство
+
+// Start: main-header
+
+.main-header {
+	display: flex;
+	min-height: 95px;
+	padding: 0 40px 0 32px;
+}
+
+// End: main-header
 
 // End: Основная страница
