@@ -250,9 +250,56 @@ body {
 // Start: main-header
 
 .main-header {
+	height: 95px;
+	padding: 24px 40px 15px 32px;
+}
+
+.main-header-top {
 	display: flex;
-	min-height: 95px;
-	padding: 0 40px 0 32px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.main-header-top-title {
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 31px;
+	letter-spacing: 0.15px;
+	color: #212121;
+}
+
+.main-header-top-btn {
+	display: flex;
+	align-items: center;
+}
+
+.main-header-top-search {
+	display: inline-flex;
+	align-items: center;
+	height: 32px;
+	min-width: 216px;
+	padding: 0 12px;
+	border-radius: 4px;
+	background: #f5f5f5;
+
+	& input {
+		background: transparent;
+		width: 100%;
+		font-size: 14px;
+		letter-spacing: 0.25px;
+		color: #616161;
+	}
+
+	& button {
+		display: flex;
+		margin-right: 4px;
+	}
+}
+
+.main-header-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 // End: main-header
