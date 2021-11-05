@@ -15,6 +15,14 @@
 		$('.language-button').css('background-color', '#408bd1');
 	});
 
+	$('.points-grey-wrapper').mouseover(function () {
+		$('.points-grey-btn-header').addClass('active');
+	});
+
+	$('.points-grey-wrapper').mouseout(function () {
+		$('.points-grey-btn-header').removeClass('active');
+	});
+
 	// $('.burger__menu-profile').click(function () {
 	// 	$('.burger__menu-profile-wrapper').toggleClass('active');
 	// });

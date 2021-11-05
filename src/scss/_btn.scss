@@ -28,8 +28,8 @@
 	background: #1991eb;
 }
 
-// Кнопка с тремя точками
-.points-btn {
+// Кнопка с тремя синими точками
+.points-blue-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -42,6 +42,27 @@
 		width: 4px;
 		height: 4px;
 		background-color: #1991eb;
+		margin-right: 2px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+// Кнопка с тремя серыми точками
+.points-grey-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 4px;
+	background: #f5f5f5;
+	& span {
+		border-radius: 50%;
+		width: 4px;
+		height: 4px;
+		background-color: #9e9e9e;
 		margin-right: 2px;
 		&:last-child {
 			margin-right: 0;
@@ -68,4 +89,70 @@
 	background: #fff;
 	border: 1px solid #e8e8e8;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+// Вертикальные линии
+.vl-12 {
+	border-left: 1px solid #eee;
+	height: 12px;
+}
+
+.vl-20 {
+	border-left: 1px solid #eee;
+	height: 20px;
+}
+
+// Статусы
+.status-default {
+	display: inline-block;
+	margin-right: 4px;
+	padding: 0 10px;
+	height: 20px;
+	line-height: 21px;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+	border-radius: 100px;
+	color: #70a8dd;
+	background: #dbedff;
+}
+
+.status-mainRole {
+	color: #9e9e9e;
+	background: #f5f5f5;
+}
+
+.status-onCheck {
+	color: #e0865e;
+	background: #f2cbba;
+}
+
+.data-filterBtn {
+	font-weight: 700;
+	font-size: 10px;
+	text-transform: uppercase;
+	line-height: 12px;
+	letter-spacing: 0.4px;
+	color: #bdbdbd;
+	&.--active {
+		color: #70a8dd;
+	}
+}
+
+// Счетчик в хедере карточки на главной
+.item-counter {
+	display: inline-flex;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
+	padding: 0 6px;
+	height: 20px;
+	color: #bdbdbd;
+	min-width: 20px;
+	letter-spacing: 0.4px;
+	border: 1px solid #bdbdbd;
+	border-radius: 4px;
+	background: #fafafa;
 }
