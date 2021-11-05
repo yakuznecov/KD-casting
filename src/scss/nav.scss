@@ -200,7 +200,7 @@ body {
 .main-inner {
 	display: flex;
 	flex-direction: column;
-	flex: 0 1 100%;
+	flex: 1 1 1527px;
 	background: #fff;
 	height: calc(100vh - 142px);
 	box-shadow: -1px 4px 8px rgba(0, 0, 0, 0.1);
@@ -525,7 +525,8 @@ body {
 .main-wrapper {
 	display: flex;
 	padding: 24px 40px 0 32px;
-	overflow-y: hidden;
+	overflow-x: auto;
+	height: 100%;
 }
 
 .main__item {
@@ -535,10 +536,11 @@ body {
 	padding: 20px 24px 0 24px;
 	border-radius: 8px 8px 0px 0px;
 	background: #f5f5f5;
-	height: 100vh;
-	overflow-y: auto;
-	overflow-x: auto;
+	height: 100%;
 	margin-right: 27px;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .main__item-header {
