@@ -15,17 +15,21 @@
 		$('.language-button').css('background-color', '#408bd1');
 	});
 
-	$('.points-grey-wrapper').mouseover(function () {
+	$('.dropdown-grey-points').mouseover(function () {
 		$('.points-grey-btn-header').addClass('active');
 	});
 
-	$('.points-grey-wrapper').mouseout(function () {
+	$('.dropdown-grey-points').mouseout(function () {
 		$('.points-grey-btn-header').removeClass('active');
 	});
 
-	// $('.burger__menu-profile').click(function () {
-	// 	$('.burger__menu-profile-wrapper').toggleClass('active');
-	// });
+	$('.dropdown-blue-points').mouseover(function () {
+		$('.points-blue-btn-sidebar').addClass('active');
+	});
+
+	$('.dropdown-blue-points').mouseout(function () {
+		$('.points-blue-btn-sidebar').removeClass('active');
+	});
 
 	// Start: двойное меню с переключением
 	$(function () {
