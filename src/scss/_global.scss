@@ -6,3 +6,18 @@
 	letter-spacing: 0.5px;
 	color: #212121;
 }
+
+// Цветные точки индикаторы
+.color-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	margin-left: 4px;
+	background-color: #f2cbba;
+	&.--green {
+		background-color: #b0ead5;
+	}
+	&.--grey {
+		background-color: #e0e0e0;
+	}
+}

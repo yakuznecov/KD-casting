@@ -194,7 +194,7 @@ body {
 .main {
 	display: flex;
 	width: 100%;
-	margin-top: 142px;
+	padding-top: 142px;
 }
 
 .main-inner {
@@ -524,7 +524,7 @@ body {
 
 .main-wrapper {
 	display: flex;
-	padding: 24px 40px 0 32px;
+	padding: 24px 0 0 32px;
 	overflow-x: auto;
 	height: 100%;
 }
@@ -577,5 +577,53 @@ body {
 }
 
 // End: Main-wrapper
+
+// Start: Sidebar castings
+
+.sidebar__castings {
+	margin-top: 24px;
+}
+
+.sidebar__castings-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 296px;
+	height: 64px;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 8px;
+	padding: 0 11px;
+	margin-bottom: 12px;
+	background: #fff;
+}
+
+.sidebar__castings-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 auto 0 12px;
+}
+
+.sidebar__castings-item-top {
+	display: flex;
+	align-items: center;
+}
+
+.sidebar__castings-item-title {
+	font-size: 15px;
+	line-height: 19px;
+	letter-spacing: 0.5px;
+	color: #212121;
+}
+
+.sidebar__castings-item-subtitle {
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: #9e9e9e;
+}
+
+// End: Sidebar castings
 
 // End: Основная страница
