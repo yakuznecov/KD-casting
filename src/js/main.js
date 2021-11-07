@@ -31,6 +31,22 @@
 		$('.points-blue-btn-sidebar').removeClass('active');
 	});
 
+	$('.dropdown-request').mouseover(function () {
+		$('.request-btn').addClass('active');
+	});
+
+	$('.dropdown-request').mouseout(function () {
+		$('.request-btn').removeClass('active');
+	});
+
+	$('.dropdown-approved').mouseover(function () {
+		$('.approved-btn').addClass('active');
+	});
+
+	$('.dropdown-approved').mouseout(function () {
+		$('.approved-btn').removeClass('active');
+	});
+
 	// Start: двойное меню с переключением
 	$(function () {
 		$('ul.profile-menu-wrapper').on('click', 'li:not(.active)', function () {

@@ -15,6 +15,9 @@
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	border-radius: 4px;
 
+	// opacity: 1;
+	// visibility: visible;
+
 	& li {
 		padding: 8px 0;
 	}
@@ -49,6 +52,12 @@
 		right: -8px;
 		bottom: -8px;
 	}
+}
+// End: Общие стили для дропдауна
+
+// Start: Серая кнопка с тремя точками и дропдаун (класс active)
+.points-grey-btn-header {
+	margin-left: 27px;
 
 	&.active {
 		background: #e0e0e0;
@@ -57,4 +66,70 @@
 		}
 	}
 }
-// End: Общие стили для дропдауна
+
+.points-grey-text {
+	margin-left: 12px;
+	margin-top: 2px;
+}
+// End: Серая кнопка с тремя точками и дропдаун (класс active)
+
+// Start: Синяя кнопка с тремя точками и дропдаун (класс active)
+.dropdown-blue-inner {
+	left: 0;
+	width: 206px;
+	top: 44px;
+}
+
+.points-blue-btn-sidebar {
+	&.active {
+		background: #a0cfff;
+		& span {
+			background: #127fd1;
+		}
+	}
+}
+
+.points-blue-text {
+	margin-left: 12px;
+	margin-top: 2px;
+}
+// End: Синяя кнопка с тремя точками и дропдаун (класс active)
+
+// Start: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
+.dropdown-request-inner {
+	width: 214px;
+	right: 0;
+	top: 27px;
+}
+
+.item-points-grey-btn {
+	width: 24px;
+	height: 24px;
+}
+
+.request-btn {
+	&.active {
+		background: #e0e0e0;
+		& span {
+			background: #757575;
+		}
+	}
+}
+// End: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
+
+// Start: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Одобренные
+.dropdown-approved-inner {
+	right: 0;
+	width: 198px;
+	top: 27px;
+}
+
+.approved-btn {
+	&.active {
+		background: #e0e0e0;
+		& span {
+			background: #757575;
+		}
+	}
+}
+// End: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Одобренные

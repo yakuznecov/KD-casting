@@ -2,8 +2,8 @@
 @import 'menu';
 @import 'font';
 @import 'sidebar';
-@import 'dropdown';
 @import 'btn';
+@import 'dropdown';
 @import 'global';
 @import 'mobile';
 @import 'null';
@@ -430,15 +430,6 @@ body {
 
 // End: filter-dropdown
 
-.points-grey-text {
-	margin-left: 12px;
-	margin-top: 2px;
-}
-
-.points-grey-btn-header {
-	margin-left: 27px;
-}
-
 .main-header-bottom {
 	display: flex;
 	justify-content: space-between;
@@ -474,7 +465,7 @@ body {
 	display: inline-flex;
 	flex-direction: column;
 	flex: 0 0 348px;
-	padding: 20px 24px 0 24px;
+	padding: 19px 24px 0 24px;
 	border-radius: 8px 8px 0px 0px;
 	background: #f5f5f5;
 	height: 100%;
@@ -487,15 +478,11 @@ body {
 .main__item-header {
 	display: flex;
 	align-items: center;
+	margin-bottom: 23px;
 }
 
 .main__item-header-counter {
 	margin: 0 auto 0 12px;
-}
-
-.item-points-grey-btn {
-	width: 25px;
-	height: 25px;
 }
 
 .drag-wrapper {
@@ -574,5 +561,79 @@ body {
 }
 
 // End: Sidebar castings
+
+// Start: карточка актёра
+
+.main__item-card {
+	width: 300px;
+	height: 322px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	background: #ffffff;
+}
+
+.main__item-card-info {
+	padding: 16px;
+}
+
+.card-info-top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-info-top-content {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.item-cityAge {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8px;
+}
+
+.item-cityAge-left {
+	display: flex;
+	flex-direction: column;
+}
+
+.item-cityAge-title {
+	font-size: 11px;
+	line-height: 13px;
+	letter-spacing: 0.4px;
+	color: #9e9e9e;
+}
+
+.item-cityAge-subtitle {
+	font-size: 13px;
+	line-height: 26px;
+	letter-spacing: 0.4px;
+	color: #424242;
+}
+
+.item-cityAge-line {
+	margin-top: 1px;
+	margin-left: 3px;
+}
+
+.item-cityAge-right {
+	display: flex;
+	flex-direction: column;
+}
+
+.item-tags-wrapper {
+	margin-top: 18px;
+	font-size: 0;
+}
+
+.card-info-top-foto {
+	width: 96px;
+	height: 144px;
+	border-radius: 4px;
+	margin-left: 25px;
+}
+
+// End: карточка актёра
 
 // End: Основная страница

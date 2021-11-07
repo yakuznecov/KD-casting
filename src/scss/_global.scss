@@ -1,7 +1,7 @@
 // Основной заголовок в карточках на главной странице
 .item-title {
 	font-size: 16px;
-	line-height: 16px;
+	line-height: 17px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
 	color: #212121;
@@ -27,4 +27,19 @@
 	&.--grey {
 		background-color: #e0e0e0;
 	}
+}
+
+// Теги в карточках актера
+.item-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 4px;
+	padding: 0 8px;
+	height: 21px;
+	font-size: 11px;
+	letter-spacing: 0.4px;
+	border-radius: 4px;
+	color: #757575;
+	background: #eee;
 }
