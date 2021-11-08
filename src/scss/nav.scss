@@ -455,17 +455,31 @@ body {
 // Start: Main-wrapper
 
 .main-wrapper {
-	display: flex;
-	padding: 24px 0 0 32px;
-	overflow-x: auto;
 	height: 100%;
+	padding: 24px 0 0 32px;
+}
+
+.main-items-wrapper {
+	display: flex;
+	height: calc(100vh - 263px);
+	width: calc(100vw - 408px);
+	overflow-x: auto;
+	&::-webkit-scrollbar {
+		height: 6px;
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #ebebeb;
+		border-radius: 100px;
+	}
 }
 
 .main__item {
 	display: inline-flex;
 	flex-direction: column;
 	flex: 0 0 348px;
-	padding: 19px 24px 0 24px;
+	padding-right: 8px;
 	border-radius: 8px 8px 0px 0px;
 	background: #f5f5f5;
 	height: 100%;
@@ -478,6 +492,7 @@ body {
 .main__item-header {
 	display: flex;
 	align-items: center;
+	padding: 19px 16px 0 24px;
 	margin-bottom: 23px;
 }
 
@@ -563,8 +578,18 @@ body {
 // End: Sidebar castings
 
 .main__item-inner {
+	padding: 0 8px 0 24px;
 	overflow-y: auto;
 	height: 100%;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: #f5f5f5;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #e0e0e0;
+		border-radius: 100px;
+	}
 }
 
 // Start: карточка актёра
@@ -674,6 +699,7 @@ body {
 }
 
 .card-btns-small-box {
+	position: relative;
 	padding: 5px;
 	cursor: pointer;
 	& button {
