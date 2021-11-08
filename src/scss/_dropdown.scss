@@ -133,3 +133,101 @@
 	}
 }
 // End: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Одобренные
+
+// Start: dropdown "Главная роль"
+.dropdown-mainRole {
+	margin-right: 8px;
+}
+.mainRole-dropdown-btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 0 8px 0 10px;
+	text-transform: uppercase;
+	height: 20px;
+	min-width: 115px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	letter-spacing: 0.4px;
+	color: #757575;
+	background-color: #f5f5f5;
+	transition: all 0.2s;
+	&.active {
+		color: #424242;
+		& .mainRole-dropdown-arrow-box svg path {
+			fill: #757575;
+		}
+	}
+}
+
+.mainRole-dropdown-title {
+	margin: 0 auto 0 0;
+}
+
+.mainRole-dropdown-arrow-box {
+	display: flex;
+}
+
+.dropdown-mainRole .mainRole-dropdown-arrow {
+	transition: transform 0.2s;
+}
+
+.dropdown-mainRole .dropdown-mainRole-inner {
+	width: 356px;
+	border-radius: 8px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	left: 0;
+	top: 24px;
+	padding: 8px;
+}
+
+.dropdown-mainRole .dropdown-mainRole-inner {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s;
+}
+
+.dropdown-mainRole:hover .dropdown-mainRole-inner {
+	opacity: 1;
+	visibility: visible;
+}
+
+.dropdown-mainRole:hover .mainRole-dropdown-arrow {
+	transform: rotate(180deg);
+}
+
+.dropdown-mainRole .dropdown-mainRole-item {
+	padding: 8px 12px;
+	&:hover {
+		background-color: #f2f2f2;
+		border-radius: 4px;
+	}
+}
+
+.dropdown-mainRole-item-title {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #424242;
+}
+
+.dropdown-mainRole-item-text {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #bdbdbd;
+}
+
+.mainRole-btn {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.mainRole-line {
+	margin-right: 8px;
+}
+
+// End: dropdown "Главная роль"

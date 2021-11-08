@@ -525,10 +525,45 @@
 					</div>
 					<div class="main-header-bottom">
 						<div class="main-header-bottom-left">
+							<!-- Start: dropdown на кнопке "Главная роль" -->
+							<div class="dropdown-wrapper dropdown-mainRole">
+								<button class="mainRole-dropdown-btn dropdown-btn">
+									<span class="mainRole-dropdown-title">Главная роль</span>
+									<span class="mainRole-dropdown-arrow-box">
+										<img class="mainRole-dropdown-arrow" src="arrow-down4-8.svg" />
+									</span>
+								</button>
+								<div class="dropdown-inner dropdown-mainRole-inner">
+									<ul>
+										<li class="dropdown-mainRole-item">
+											<button class="mainRole-btn">
+												<span class="dropdown-mainRole-item-title">Главная роль</span>
+												<span class="dropdown-mainRole-item-text">Звёздные актёры</span>
+											</button>
+										</li>
+										<li class="dropdown-mainRole-item">
+											<button class="mainRole-btn">
+												<span class="dropdown-mainRole-item-title">Соседка</span>
+												<span class="dropdown-mainRole-item-text">Второстепенные роли</span>
+											</button>
+										</li>
+										<li class="dropdown-mainRole-item">
+											<button class="mainRole-btn">
+												<span class="dropdown-mainRole-item-title">Брат</span>
+												<span class="dropdown-mainRole-item-text">Семья Ивановых</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="vl-12 mainRole-line"></div>
+							<!-- End: dropdown на кнопке "Главная роль" -->
 							<span class="status-default status-mainRole">главная роль</span>
 							<span class="status-default">фильм</span>
 							<span class="status-default">кастинг</span>
 							<span class="status-default status-onCheck">на проверке</span>
+							<span class="status-default status-approved">одобрен</span>
+							<span class="status-default status-blocked">заблокирован</span>
 						</div>
 						<div class="main-header-bottom-right">
 							<button class="data-filterBtn large-foto-btn">крупное фото</button>
@@ -970,8 +1005,8 @@
 											</div>
 										</div>
 										<div class="main__item-card-btns-large">
-											<button class="card-large-btn --accept">
-												Отложить <span><img src="arrow-inBtn.svg" /></span>
+											<button class="card-large-btn">
+												Одобрить <span><img src="arrow-inBtn.svg" /></span>
 											</button>
 										</div>
 									</div>
@@ -1031,6 +1066,7 @@
 											</div>
 											<div class="card-btns-small-box">
 												<button><img src="chatCircleDots-20.svg" /></button>
+												<div class="chatCircleCounter">3</div>
 											</div>
 											<div class="card-btns-small-box">
 												<button><img src="bookmarkSimple-20.svg" /></button>
@@ -1043,8 +1079,8 @@
 											</div>
 										</div>
 										<div class="main__item-card-btns-large">
-											<button class="card-large-btn --accept">
-												Отложить <span><img src="arrow-inBtn.svg" /></span>
+											<button class="card-large-btn">
+												Одобрить <span><img src="arrow-inBtn.svg" /></span>
 											</button>
 										</div>
 									</div>
@@ -1135,7 +1171,7 @@
 										</div>
 										<div class="main__item-card-btns-large">
 											<button class="card-large-btn --return">
-												Отложить <span><img src="arrow-inBtn.svg" /></span>
+												Вернуть <span><img src="refresh-10.svg" /></span>
 											</button>
 										</div>
 									</div>

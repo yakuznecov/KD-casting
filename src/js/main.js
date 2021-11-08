@@ -47,6 +47,14 @@
 		$('.approved-btn').removeClass('active');
 	});
 
+	$('.dropdown-mainRole').mouseover(function () {
+		$('.mainRole-dropdown-btn').addClass('active');
+	});
+
+	$('.dropdown-mainRole').mouseout(function () {
+		$('.mainRole-dropdown-btn').removeClass('active');
+	});
+
 	// Start: двойное меню с переключением
 	$(function () {
 		$('ul.profile-menu-wrapper').on('click', 'li:not(.active)', function () {
