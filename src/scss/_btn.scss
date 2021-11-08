@@ -161,3 +161,30 @@
 	border-radius: 4px;
 	background: #fafafa;
 }
+
+// Большая кнопка в карточке актера
+.card-large-btn {
+	display: inline-flex;
+	justify-content: center;
+	height: 24px;
+	min-width: 105px;
+	font-size: 13px;
+	line-height: 26px;
+	margin-bottom: 2px;
+	padding: 0 11px;
+	border-radius: 4px;
+	letter-spacing: 0.4px;
+	color: #fff;
+	background: #1991eb;
+	& span {
+		margin-left: 8px;
+	}
+
+	&.--accept {
+		background: #df8282;
+	}
+
+	&.--return {
+		background: #009a61;
+	}
+}
