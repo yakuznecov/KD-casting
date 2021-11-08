@@ -573,7 +573,7 @@ body {
 }
 
 .main__item-card-info {
-	padding: 16px;
+	padding: 16px 16px 7px 16px;
 }
 
 .card-info-top {
@@ -654,6 +654,30 @@ body {
 
 	& span {
 		color: #9e9e9e;
+	}
+}
+
+.main__item-card-btns {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 10px 9px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.main__item-card-btns-small {
+	display: flex;
+}
+
+.card-btns-small-box {
+	padding: 5px;
+	cursor: pointer;
+	& button {
+		display: flex;
+	}
+
+	&.--monitorPlay {
+		margin-top: -1px;
 	}
 }
 
