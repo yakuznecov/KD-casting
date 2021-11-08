@@ -34,7 +34,7 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 4px;
+	margin: 0 4px 4px 0;
 	padding: 0 8px;
 	height: 21px;
 	font-size: 11px;
@@ -42,4 +42,8 @@
 	border-radius: 4px;
 	color: #757575;
 	background: #eee;
+}
+
+.item-number-tag {
+	padding: 0 4px;
 }

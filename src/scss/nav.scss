@@ -620,6 +620,7 @@ body {
 .item-cityAge-right {
 	display: flex;
 	flex-direction: column;
+	margin-right: 5px;
 }
 
 .item-tags-wrapper {
@@ -631,7 +632,29 @@ body {
 	width: 96px;
 	height: 144px;
 	border-radius: 4px;
-	margin-left: 25px;
+	margin-left: 20px;
+}
+
+.card-info-bottom {
+	margin-top: 17px;
+}
+
+.card-info-bottom-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.card-info-bottom-item-text {
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.4px;
+	color: #424242;
+	margin: 1px 0 0 6px;
+
+	& span {
+		color: #9e9e9e;
+	}
 }
 
 // End: карточка актёра
