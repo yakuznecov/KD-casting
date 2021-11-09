@@ -4,6 +4,7 @@
 @import 'sidebar';
 @import 'btn';
 @import 'dropdown';
+@import 'tooltip';
 @import 'global';
 @import 'mobile';
 @import 'null';
@@ -723,5 +724,22 @@ body {
 }
 
 // End: карточка актёра
+
+// Start: Карточка актера, крупное фото
+
+.main__item-card.--big-card {
+	height: 559px;
+}
+
+.card-info-top-foto.--big-foto {
+	width: 268px;
+	height: 402px;
+	margin-left: 0;
+}
+
+.card-info-top.--big-card {
+	margin: 17px 0 2px 0;
+}
+// End: Карточка актера, крупное фото
 
 // End: Основная страница

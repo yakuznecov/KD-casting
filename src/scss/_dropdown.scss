@@ -231,3 +231,30 @@
 }
 
 // End: dropdown "Главная роль"
+
+// Srart: dropdown tags в карточке актёра
+.number-tag-dropdown {
+	display: inline-block;
+}
+.number-tag-dropdown-wrapper {
+	width: 171px;
+	left: 0;
+	top: 23px;
+	padding: 11px 4px 3px 12px;
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 6px;
+}
+
+.item-number-tag {
+	cursor: pointer;
+}
+
+.item-tag.item-tag-drop {
+	margin: 0 4px 8px 0;
+}
+
+.number-tag-dropdown:hover .item-number-tag {
+	background: #dfdfdf;
+	color: #474747;
+}
+// End: dropdown tags в карточке актёра
