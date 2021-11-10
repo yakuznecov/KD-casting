@@ -472,9 +472,41 @@
 									</span>
 								</button>
 								<div class="filter-dropdown-menu">
-									<div class="filter-country-input">
-										<input class="country-input" type="text" placeholder="Все страны" />
+									<div class="filter-dropdown-menu-title">страна или город</div>
+									<!-- Start: Кнопка переключения страна-город -->
+									<div class="filter-dropdown-location">
+										<div class="switch-button-loc">
+											<span class="active"></span>
+											<button class="switch-button-case-loc left active-case">По стране</button>
+											<button class="switch-button-case-loc right">По городу</button>
+										</div>
 									</div>
+									<!-- End: Кнопка переключения страна-город -->
+									<div class="filter-dropdown-menu-title">выберите</div>
+									<div class="filter-dropdown-input">
+										<input class="dropdown-input" type="text" placeholder="Москва" />
+										<img src="arrow-topBottom.svg" />
+									</div>
+									<div class="filter-dropdown-menu-title">пол</div>
+									<!-- Start: Кнопка переключения пола человека -->
+									<div class="filter-dropdown-gender">
+										<div class="switch-button">
+											<span class="active"></span>
+											<button class="switch-button-case left active-case">Все</button>
+											<button class="switch-button-case right">Мужчина</button>
+											<button class="switch-button-case middle">Женщина</button>
+										</div>
+									</div>
+									<!-- End: Кнопка переключения пола человека -->
+									<div class="filter-dropdown-menu-title">возраст</div>
+									<section class="range-slider">
+										<span class="output outputOne"></span>
+										<span class="output outputTwo"></span>
+										<span class="full-range"></span>
+										<span class="incl-range"></span>
+										<input name="rangeOne" value="10" min="0" max="100" step="1" type="range" />
+										<input name="rangeTwo" value="90" min="0" max="100" step="1" type="range" />
+									</section>
 								</div>
 							</div>
 							<!-- End: filter-dropdown -->

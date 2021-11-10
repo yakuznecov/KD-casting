@@ -5,7 +5,7 @@
 @import 'sidebar';
 @import 'btn';
 @import 'dropdown';
-
+@import 'range-input';
 @import 'global';
 @import 'mobile';
 @import 'null';
@@ -13,7 +13,7 @@
 html,
 body {
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 	color: #212529;
 	font-size: 16px;
 	padding: 0;
@@ -378,7 +378,16 @@ body {
 	border-radius: 8px;
 }
 
-.filter-country-input {
+.filter-dropdown-menu-title {
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	color: #424242;
+	margin-bottom: 8px;
+}
+
+.filter-dropdown-input {
 	display: flex;
 	align-items: center;
 	height: 40px;
@@ -386,9 +395,11 @@ body {
 	padding: 0 12px;
 	border-radius: 4px;
 	background: #fafafa;
+	border: 1px solid #e0e0e0;
+	margin-bottom: 16px;
 }
 
-.filter-country-input .country-input {
+.filter-dropdown-input .dropdown-input {
 	background: transparent;
 	width: 100%;
 	font-size: 14px;
@@ -397,8 +408,10 @@ body {
 }
 
 .main-header-top-filter .filter-dropdown-menu {
-	opacity: 0;
-	visibility: hidden;
+	// opacity: 0;
+	// visibility: hidden;
+	opacity: 1;
+	visibility: visible;
 	transition: all 0.2s;
 }
 

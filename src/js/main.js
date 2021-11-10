@@ -160,4 +160,126 @@
 				$('.dropdown-language > .language-button span').html($(this).html());
 			});
 	});
+
+	// Кнопка переключения страна-город
+
+	var switchButton = document.querySelector('.switch-button-loc');
+	var switchBtnLocRight = document.querySelector('.switch-button-case-loc.right');
+	var switchBtnLocLeft = document.querySelector('.switch-button-case-loc.left');
+	var activeSwitchLoc = document.querySelector('.switch-button-loc .active');
+
+	function switchLocLeft() {
+		switchBtnLocRight.classList.remove('active-case');
+		switchBtnLocLeft.classList.add('active-case');
+		activeSwitchLoc.style.left = '0%';
+	}
+
+	function switchLocRight() {
+		switchBtnLocRight.classList.add('active-case');
+		switchBtnLocLeft.classList.remove('active-case');
+		activeSwitchLoc.style.left = '50%';
+	}
+
+	switchBtnLocLeft.addEventListener(
+		'click',
+		function () {
+			switchLocLeft();
+		},
+		false
+	);
+
+	switchBtnLocRight.addEventListener(
+		'click',
+		function () {
+			switchLocRight();
+		},
+		false
+	);
+
+	// Кнопка с переключением пола
+	var switchButton = document.querySelector('.switch-button');
+	var switchBtnRight = document.querySelector('.switch-button-case.right');
+	var switchBtnLeft = document.querySelector('.switch-button-case.left');
+	var switchBtnMiddle = document.querySelector('.switch-button-case.middle');
+	var activeSwitch = document.querySelector('.switch-button .active');
+
+	function switchLeft() {
+		switchBtnRight.classList.remove('active-case');
+		switchBtnMiddle.classList.remove('active-case');
+		switchBtnLeft.classList.add('active-case');
+		activeSwitch.style.left = '0%';
+	}
+
+	function switchRight() {
+		switchBtnRight.classList.add('active-case');
+		switchBtnLeft.classList.remove('active-case');
+		switchBtnMiddle.classList.remove('active-case');
+		activeSwitch.style.left = '33.33333%';
+	}
+
+	function switchMiddle() {
+		switchBtnMiddle.classList.add('active-case');
+		switchBtnLeft.classList.remove('active-case');
+		switchBtnRight.classList.remove('active-case');
+		activeSwitch.style.left = '67%';
+	}
+
+	switchBtnLeft.addEventListener(
+		'click',
+		function () {
+			switchLeft();
+		},
+		false
+	);
+
+	switchBtnMiddle.addEventListener(
+		'click',
+		function () {
+			switchMiddle();
+		},
+		false
+	);
+
+	switchBtnRight.addEventListener(
+		'click',
+		function () {
+			switchRight();
+		},
+		false
+	);
+
+	// Range input slider in filter
+	var rangeOne = document.querySelector('input[name="rangeOne"]'),
+		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
+		outputOne = document.querySelector('.outputOne'),
+		outputTwo = document.querySelector('.outputTwo'),
+		inclRange = document.querySelector('.incl-range'),
+		updateView = function () {
+			if (this.getAttribute('name') === 'rangeOne') {
+				outputOne.innerHTML = this.value;
+				outputOne.style.left = (this.value / this.getAttribute('max')) * 100 + '%';
+			} else {
+				outputTwo.style.left = (this.value / this.getAttribute('max')) * 100 + '%';
+				outputTwo.innerHTML = this.value;
+			}
+			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
+				inclRange.style.width = ((rangeOne.value - rangeTwo.value) / this.getAttribute('max')) * 100 + '%';
+				inclRange.style.left = (rangeTwo.value / this.getAttribute('max')) * 100 + '%';
+			} else {
+				inclRange.style.width = ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
+				inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
+			}
+		};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		updateView.call(rangeOne);
+		updateView.call(rangeTwo);
+		$('input[type="range"]')
+			.on('mouseup', function () {
+				this.blur();
+			})
+			.on('mousedown input', function () {
+				updateView.call(this);
+			});
+	});
 })(jQuery);
