@@ -49,7 +49,7 @@
 	padding: 0 4px;
 }
 
-//
+// Индикатор количества сообщений рядом с иконкой чата
 .chatCircleCounter {
 	position: absolute;
 	top: 13px;
@@ -67,4 +67,19 @@
 	border-radius: 50%;
 	background-color: #1991eb;
 	border: 1px solid #fff;
+}
+
+// Навыки-теги в дропдауне фильтр
+.item-skill-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 8px 8px 0;
+	padding: 0 12px;
+	height: 24px;
+	font-size: 13px;
+	letter-spacing: 0.4px;
+	border-radius: 4px;
+	color: #1991eb;
+	background: #dbedff;
 }

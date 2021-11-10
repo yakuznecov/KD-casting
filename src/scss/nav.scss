@@ -407,6 +407,31 @@ body {
 	color: #616161;
 }
 
+.range-slider-age {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.range-slider-number {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #757575;
+}
+
+.range-slider-dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #e0e0e0;
+}
+
+.filter-dropdown-skills {
+	font-size: 0;
+	margin-top: 20px;
+}
+
 .main-header-top-filter .filter-dropdown-menu {
 	// opacity: 0;
 	// visibility: hidden;
