@@ -232,6 +232,166 @@
 
 // End: dropdown "Главная роль"
 
+// Start: filter-dropdown
+
+.main-header-top-filter {
+	position: relative;
+	display: flex;
+	min-width: 112px;
+	margin-right: 27px;
+	margin-left: 8px;
+}
+
+.filter-dropdown-btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-size: 14px;
+	padding: 0 12px;
+	height: 32px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	letter-spacing: 0.25px;
+	color: #616161;
+	background-color: #f5f5f5;
+	transition: all 0.2s;
+	&:hover {
+		color: #212121;
+		border: 1px solid #1991eb;
+	}
+}
+
+.filter-dropdown-btn:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: -8px;
+	left: -8px;
+	right: -8px;
+	bottom: -8px;
+}
+
+.filter-dropdown-icon {
+	display: flex;
+	background: url(../images/dropdown-filter.svg) 0 0 no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.main-header-top-filter:hover .filter-dropdown-icon {
+	background: url(../images/dropdown-filter-blue.svg) 0 0 no-repeat;
+}
+
+.filter-dropdown-title {
+	margin: 0 auto 0 4px;
+}
+
+.filter-dropdown-arrow {
+	display: flex;
+}
+
+.main-header-top-filter .dropdown-arrow {
+	transition: transform 0.2s;
+}
+
+.filter-dropdown-menu {
+	position: absolute;
+	width: 336px;
+	top: 36px;
+	padding: 24px;
+	right: 0;
+	z-index: 100;
+	border: 1px solid #e7e7e7;
+	background-color: #fff;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 8px;
+}
+
+.filter-dropdown-menu-title {
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	color: #424242;
+	margin-bottom: 8px;
+}
+
+.filter-dropdown-input {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	padding: 0 12px;
+	border-radius: 4px;
+	background: #fafafa;
+	border: 1px solid #e0e0e0;
+	margin-bottom: 16px;
+}
+
+.filter-dropdown-input .dropdown-input {
+	background: transparent;
+	width: 100%;
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	color: #616161;
+}
+
+.range-slider-age {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.range-slider-number {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #757575;
+}
+
+.range-slider-dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #e0e0e0;
+}
+
+.filter-dropdown-skills {
+	font-size: 0;
+	margin-top: 20px;
+}
+
+.main-header-top-filter .filter-dropdown-menu {
+	// opacity: 0;
+	// visibility: hidden;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.2s;
+}
+
+.main-header-top-filter:hover .filter-dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.main-header-top-filter:hover .dropdown-arrow {
+	transform: rotate(180deg);
+}
+
+.filter-dropdown-inner {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	height: 40px;
+	width: 288px;
+	background: #fafafa;
+	// border: 1px solid #e0e0e0;
+	border-radius: 4px;
+}
+
+// End: filter-dropdown
+
 // Srart: dropdown tags в карточке актёра
 .number-tag-dropdown {
 	display: inline-block;
