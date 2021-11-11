@@ -20,10 +20,36 @@
 	font-weight: 700;
 	padding: 0 20px;
 	letter-spacing: 0.25px;
-	border: none;
-	outline: none;
-	text-decoration: none;
 	border-radius: 8px;
+	color: #fff;
+	background: #1991eb;
+}
+
+// Прозрачная кнопка
+.transparent-btn {
+	display: inline-block;
+	text-align: center;
+	min-width: 108px;
+	height: 32px;
+	line-height: 37px;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	color: #616161;
+	background: transparent;
+}
+
+// Средняя кнопка в дропдауне фильтр
+.middle-btn {
+	display: inline-block;
+	text-align: center;
+	min-width: 120px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 15px;
+	padding: 0 20px;
+	letter-spacing: 0.5px;
+	border-radius: 4px;
 	color: #fff;
 	background: #1991eb;
 }

@@ -55,6 +55,18 @@
 		$('.mainRole-dropdown-btn').removeClass('active');
 	});
 
+	$('.main-header-top-filter').mouseover(function () {
+		$('.filter-dropdown-btn').addClass('active');
+	});
+
+	$('.main-header-top-filter').mouseout(function () {
+		$('.filter-dropdown-btn').removeClass('active');
+	});
+
+	$('.filter-dropdown-input').click(function () {
+		$(this).toggleClass('active');
+	});
+
 	// Start: двойное меню с переключением
 	$(function () {
 		$('ul.profile-menu-wrapper').on('click', 'li:not(.active)', function () {
