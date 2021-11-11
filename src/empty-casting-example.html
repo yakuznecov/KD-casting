@@ -618,97 +618,107 @@
 
 				<!-- Start: Main-wrapper -->
 				<div class="main-wrapper">
-					<div class="main__item">
-						<div class="main__item-header">
-							<div class="item-title">Заявки</div>
-							<span class="item-counter main__item-header-counter">0</span>
-							<div class="dropdown-wrapper dropdown-request">
-								<button class="points-grey-btn item-points-grey-btn request-btn dropdown-btn">
+					<div class="main-items-wrapper">
+						<div class="main__item">
+							<div class="main__item-header">
+								<div class="item-title">Заявки</div>
+								<span class="item-counter main__item-header-counter">0</span>
+								<div class="dropdown-wrapper dropdown-request">
+									<button class="points-grey-btn item-points-grey-btn request-btn dropdown-btn">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<div class="dropdown-inner dropdown-request-inner">
+										<ul>
+											<li>
+												<button>
+													<img src="arrowFatLinesRight-20.svg" />
+													<span class="points-blue-text dropdown-text">Развернуть колонку</span>
+												</button>
+											</li>
+											<li>
+												<button>
+													<img src="printer-20.svg" />
+													<span class="points-blue-text dropdown-text">Распечатать</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="main__item-inner">
+								<div class="drag-wrapper">
+									<img src="user3.svg" />
+									<span>Заявок пока нет</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="main__item">
+							<div class="main__item-header">
+								<div class="item-title">Одобренные</div>
+								<span class="item-counter main__item-header-counter">0</span>
+								<div class="dropdown-wrapper dropdown-approved">
+									<button class="points-grey-btn item-points-grey-btn approved-btn dropdown-btn">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<div class="dropdown-inner dropdown-approved-inner">
+										<ul>
+											<li>
+												<button>
+													<img src="printer-20.svg" />
+													<span class="points-blue-text dropdown-text">Распечатать</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="main__item-inner">
+								<div class="drag-wrapper">
+									<img src="drag-over.svg" />
+									<span>Перетащите сюда карточку</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="main__item">
+							<div class="main__item-header">
+								<div class="item-title">Отложенные</div>
+								<span class="item-counter main__item-header-counter">0</span>
+								<button class="points-grey-btn item-points-grey-btn">
 									<span></span>
 									<span></span>
 									<span></span>
 								</button>
-								<div class="dropdown-inner dropdown-request-inner">
-									<ul>
-										<li>
-											<button>
-												<img src="arrowFatLinesRight-20.svg" />
-												<span class="points-blue-text dropdown-text">Развернуть колонку</span>
-											</button>
-										</li>
-										<li>
-											<button>
-												<img src="printer-20.svg" />
-												<span class="points-blue-text dropdown-text">Распечатать</span>
-											</button>
-										</li>
-									</ul>
+							</div>
+							<div class="main__item-inner">
+								<div class="drag-wrapper">
+									<img src="drag-over.svg" />
+									<span>Перетащите сюда карточку</span>
 								</div>
 							</div>
 						</div>
-						<div class="drag-wrapper">
-							<img src="user3.svg" />
-							<span>Заявок пока нет</span>
-						</div>
-					</div>
 
-					<div class="main__item">
-						<div class="main__item-header">
-							<div class="item-title">Одобренные</div>
-							<span class="item-counter main__item-header-counter">0</span>
-							<div class="dropdown-wrapper dropdown-approved">
-								<button class="points-grey-btn item-points-grey-btn approved-btn dropdown-btn">
+						<div class="main__item">
+							<div class="main__item-header">
+								<div class="item-title">Отклонённые</div>
+								<span class="item-counter main__item-header-counter">0</span>
+								<button class="points-grey-btn item-points-grey-btn">
 									<span></span>
 									<span></span>
 									<span></span>
 								</button>
-								<div class="dropdown-inner dropdown-approved-inner">
-									<ul>
-										<li>
-											<button>
-												<img src="printer-20.svg" />
-												<span class="points-blue-text dropdown-text">Распечатать</span>
-											</button>
-										</li>
-									</ul>
+							</div>
+							<div class="main__item-inner">
+								<div class="drag-wrapper">
+									<img src="drag-over.svg" />
+									<span>Перетащите сюда карточку</span>
 								</div>
 							</div>
-						</div>
-						<div class="drag-wrapper">
-							<img src="drag-over.svg" />
-							<span>Перетащите сюда карточку</span>
-						</div>
-					</div>
-
-					<div class="main__item">
-						<div class="main__item-header">
-							<div class="item-title">Отложенные</div>
-							<span class="item-counter main__item-header-counter">0</span>
-							<button class="points-grey-btn item-points-grey-btn">
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-						</div>
-						<div class="drag-wrapper">
-							<img src="drag-over.svg" />
-							<span>Перетащите сюда карточку</span>
-						</div>
-					</div>
-
-					<div class="main__item">
-						<div class="main__item-header">
-							<div class="item-title">Отклонённые</div>
-							<span class="item-counter main__item-header-counter">0</span>
-							<button class="points-grey-btn item-points-grey-btn">
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-						</div>
-						<div class="drag-wrapper">
-							<img src="drag-over.svg" />
-							<span>Перетащите сюда карточку</span>
 						</div>
 					</div>
 				</div>
