@@ -374,3 +374,31 @@
 		}
 	}
 }
+
+.cancelPopup-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 106px;
+	height: 40px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	padding: 0 5px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	color: #757575;
+}
+
+.deletePopup-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 108px;
+	height: 40px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	padding: 0 5px;
+	border-radius: 4px;
+	color: #fff;
+	background: #1991eb;
+}

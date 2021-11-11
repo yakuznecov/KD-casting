@@ -1,0 +1,47 @@
+.bg-popup-delete-casting {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 99;
+}
+
+.popup-delete-casting {
+	position: absolute;
+	left: 50%;
+	top: 59%;
+	width: 440px;
+	height: 231px;
+	padding: 24px;
+	transform: translate(-50%, -65%);
+	border: 1px solid #e7e7e7;
+	border-radius: 8px;
+	background: #fff;
+}
+
+.popup-delete-casting-title {
+	font-size: 21px;
+	line-height: 21px;
+	letter-spacing: 0.15px;
+	color: #212121;
+	margin-bottom: 30px;
+}
+
+.popup-delete-casting-text {
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	color: #757575;
+	margin-bottom: 32px;
+}
+
+.popup-delete-casting-footer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.popup-delete-casting-btn {
+	margin-left: 8px;
+}
