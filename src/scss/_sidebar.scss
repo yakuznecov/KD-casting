@@ -4,10 +4,25 @@
 	flex-direction: column;
 	flex: 0 0 376px;
 	padding: 0 40px;
+}
 
-	&.--rolled {
-		padding: 0 28px 0 40px;
-		flex: 0 0 128px;
+.sidebar.--rolled {
+	padding: 0 28px 0 40px;
+	flex: 0 0 128px;
+	& .sidebar-dropdown-question {
+		margin-bottom: 16px;
+	}
+	& .sidebar-dropdown-question-slide {
+		top: 0;
+		left: 52px;
+	}
+	& .sidebar-dropdown-calendar-slide {
+		top: 0;
+		left: 52px;
+	}
+	& .roll-up-box {
+		margin-left: -14px;
+		margin-bottom: 5px;
 	}
 }
 
@@ -241,9 +256,7 @@
 .roll-up-box {
 	display: flex;
 	align-items: center;
-	margin-top: auto;
-	left: 26px;
-	bottom: 33px;
+	margin: auto 0 6px -14px;
 	padding: 9px;
 	& button {
 		width: 42px;
@@ -261,26 +274,65 @@
 	}
 }
 
+// Start: sidebar-burger
+
 .sidebar-burger {
+	position: relative;
 	margin-bottom: 64px;
 }
 
-.burger-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 48px;
-	height: 48px;
-	border: 1px solid #e7e7e7;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+.sidebar-burger-inner {
+	position: absolute;
+	top: 0;
+	left: 52px;
+	width: 344px;
+	padding: 24px 24px 12px 24px;
+	z-index: 100;
 	border-radius: 4px;
-	background: #fff;
+	background: #ffffff;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	opacity: 0;
+	visibility: hidden;
 	transition: all 0.2s;
-	&:hover {
-		background: #f3f9fe;
-		border: 1px solid #70a8dd;
-		& svg path {
-			stroke: #70a8dd;
-		}
+}
+
+.sidebar-burger:hover .sidebar-burger-inner {
+	opacity: 1;
+	visibility: visible;
+}
+
+.burger-btn.active {
+	background: #f3f9fe;
+	border: 1px solid #70a8dd;
+	& svg path {
+		stroke: #70a8dd;
 	}
+}
+
+.sidebar-question-btn.active {
+	background: #f3f9fe;
+	border: 1px solid #70a8dd;
+	& svg path {
+		stroke: #70a8dd;
+	}
+}
+
+.sidebar-calendar-btn.active {
+	background: #f3f9fe;
+	border: 1px solid #70a8dd;
+	& svg path {
+		stroke: #70a8dd;
+	}
+}
+
+.sidebar-burger .sidebar__castings {
+	height: 100%;
+}
+
+// End: sidebar-burger
+
+.sidebar-plus {
+	display: inline-block;
+	margin-bottom: 16px;
 }

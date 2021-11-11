@@ -63,6 +63,30 @@
 		$('.filter-dropdown-btn').removeClass('active');
 	});
 
+	$('.sidebar-burger').mouseover(function () {
+		$('.burger-btn').addClass('active');
+	});
+
+	$('.sidebar-burger').mouseout(function () {
+		$('.burger-btn').removeClass('active');
+	});
+
+	$('.sidebar-dropdown-question').mouseover(function () {
+		$('.sidebar-question-btn').addClass('active');
+	});
+
+	$('.sidebar-dropdown-question').mouseout(function () {
+		$('.sidebar-question-btn').removeClass('active');
+	});
+
+	$('.sidebar-dropdown-calendar').mouseover(function () {
+		$('.sidebar-calendar-btn').addClass('active');
+	});
+
+	$('.sidebar-dropdown-calendar').mouseout(function () {
+		$('.sidebar-calendar-btn').removeClass('active');
+	});
+
 	$('.filter-dropdown-input').click(function () {
 		$(this).toggleClass('active');
 	});
