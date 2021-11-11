@@ -262,6 +262,10 @@
 	}
 }
 
+.filter-dropdown-btn.--hasForFilterBtn {
+	border-radius: 4px 0 0 4px;
+}
+
 .filter-dropdown-btn:before {
 	content: '';
 	position: absolute;
@@ -288,6 +292,10 @@
 }
 
 .filter-dropdown-arrow {
+	display: flex;
+}
+
+.filter-dropdown-num {
 	display: flex;
 }
 

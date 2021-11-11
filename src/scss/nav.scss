@@ -365,6 +365,23 @@ body {
 	&:last-child {
 		margin-right: 0;
 	}
+
+	// развернутый вид окна с карточками
+	&.--expand {
+		max-width: 996px;
+		& .main__item-inner {
+			display: flex;
+			padding: 0 16px 0 24 px;
+			min-width: 996px;
+			flex-wrap: wrap;
+		}
+		& .main__item-card {
+			margin-right: 24px;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 .main__item-header {
@@ -534,6 +551,10 @@ body {
 	font-size: 13px;
 	line-height: 26px;
 	letter-spacing: 0.4px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 106px;
+	overflow: hidden;
 	color: #424242;
 }
 
