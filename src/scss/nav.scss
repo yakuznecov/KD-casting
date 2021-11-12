@@ -343,14 +343,25 @@ body {
 	height: calc(100vh - 263px);
 	width: calc(100vw - 408px);
 	overflow-x: auto;
+	overflow: overlay;
+	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
+	scrollbar-width: thin;
 	&::-webkit-scrollbar {
-		height: 6px;
+		height: 24px;
+		width: 910px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
 
+	/* Handle */
 	&::-webkit-scrollbar-thumb {
-		background: #ebebeb;
+		background: rgba(224, 224, 224, 0.5);
 		border-radius: 100px;
+		background-clip: padding-box;
+		border: 8px solid rgba(0, 0, 0, 0);
 	}
 }
 

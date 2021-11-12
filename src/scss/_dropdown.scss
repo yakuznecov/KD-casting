@@ -421,9 +421,12 @@
 }
 
 .main-header-top-filter .filter-dropdown-menu {
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.2s;
+	// opacity: 0;
+	// visibility: hidden;
+	// transition: all 0.2s;
+
+	opacity: 1;
+	visibility: visible;
 }
 
 .main-header-top-filter:hover .filter-dropdown-menu {
