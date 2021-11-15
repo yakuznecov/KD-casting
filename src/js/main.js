@@ -1,4 +1,35 @@
 (function ($) {
+	// Start: actor profile
+
+	var tabs_menu = document.getElementsByClassName('tabs-menu');
+	for (var k = 0; k < tabs_menu.length; k++) {
+		tabs_menu[k].onclick = js_tabs;
+	}
+	function js_tabs() {
+		var tab_id = this.getAttribute('data-target');
+		var tabs_panel = document.getElementsByClassName('tabs-panel');
+
+		for (var i = 0; i < tabs_panel.length; i++) {
+			tabs_panel[i].style.display = 'none';
+		}
+		for (var j = 0; j < tabs_menu.length; j++) {
+			tabs_menu[j].className = tabs_menu[j].className.replace(' tabs-menu-active', '');
+		}
+		this.className += ' tabs-menu-active';
+		document.getElementById(tab_id).style.display = 'block';
+		return false;
+	}
+
+	// End: actor profile
+
+	// Start: focus input
+
+	$('.main-header-top-search input').focus(function () {
+		$('.main-header-top-search').addClass('active');
+	});
+
+	// End: focus input
+
 	$('.question-menu,  .question-button').mouseover(function () {
 		$('.question-button').css('background-color', '#70a8dd');
 	});
@@ -23,13 +54,13 @@
 		$('.points-grey-btn-header').removeClass('active');
 	});
 
-	$('.dropdown-blue-points').mouseover(function () {
-		$('.points-blue-btn-sidebar').addClass('active');
-	});
+	// $('.dropdown-blue-points').mouseover(function () {
+	// 	$('.points-blue-btn-sidebar').addClass('active');
+	// });
 
-	$('.dropdown-blue-points').mouseout(function () {
-		$('.points-blue-btn-sidebar').removeClass('active');
-	});
+	// $('.dropdown-blue-points').mouseout(function () {
+	// 	$('.points-blue-btn-sidebar').removeClass('active');
+	// });
 
 	$('.dropdown-request').mouseover(function () {
 		$('.request-btn').addClass('active');
@@ -71,25 +102,39 @@
 		$('.burger-btn').removeClass('active');
 	});
 
-	$('.sidebar-dropdown-question').mouseover(function () {
-		$('.sidebar-question-btn').addClass('active');
-	});
+	// $('.sidebar-dropdown-question').mouseover(function () {
+	// 	$('.sidebar-question-btn').addClass('active');
+	// });
 
-	$('.sidebar-dropdown-question').mouseout(function () {
-		$('.sidebar-question-btn').removeClass('active');
-	});
+	// $('.sidebar-dropdown-question').mouseout(function () {
+	// 	$('.sidebar-question-btn').removeClass('active');
+	// });
 
-	$('.sidebar-dropdown-calendar').mouseover(function () {
-		$('.sidebar-calendar-btn').addClass('active');
-	});
+	// $('.sidebar-dropdown-calendar').mouseover(function () {
+	// 	$('.sidebar-calendar-btn').addClass('active');
+	// });
 
-	$('.sidebar-dropdown-calendar').mouseout(function () {
-		$('.sidebar-calendar-btn').removeClass('active');
-	});
+	// $('.sidebar-dropdown-calendar').mouseout(function () {
+	// 	$('.sidebar-calendar-btn').removeClass('active');
+	// });
 
 	$('.filter-dropdown-input').click(function () {
 		$(this).toggleClass('active');
 	});
+
+	function addActive(parent, child) {
+		$(parent).mouseover(function () {
+			$(child).addClass('active');
+		});
+	}
+
+	addActive('.dropdown-blue-points', '.points-blue-btn-sidebar');
+
+	function removeActive(parent, child) {
+		$(parent).mouseover(function () {
+			$(child).removeClass('active');
+		});
+	}
 
 	// Start: двойное меню с переключением
 	$(function () {

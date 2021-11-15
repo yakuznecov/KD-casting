@@ -10,6 +10,7 @@
 @import 'global';
 @import 'mobile';
 @import 'null';
+@import 'actor-profile';
 
 html,
 body {
@@ -288,6 +289,10 @@ body {
 	padding: 0 12px;
 	border-radius: 4px;
 	background: #f5f5f5;
+	border: 2px solid transparent;
+	&.active {
+		border: 2px solid rgba(112, 168, 221, 0.7);
+	}
 
 	& input {
 		background: transparent;
@@ -462,9 +467,9 @@ body {
 
 	&.active {
 		background: #f3f9fe;
-		border: 1px solid #70a8dd;
+		border: 2px solid rgba(112, 168, 221, 0.7);
 		& .arrow-right path {
-			stroke: #1991eb;
+			stroke: #70a8dd;
 		}
 	}
 }
