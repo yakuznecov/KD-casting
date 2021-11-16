@@ -13,6 +13,7 @@
 	& .sidebar-dropdown-question {
 		margin-bottom: 16px;
 	}
+
 	& .sidebar-dropdown-question-slide {
 		top: 0;
 		left: 52px;
@@ -25,6 +26,22 @@
 		margin-left: -14px;
 		margin-bottom: 5px;
 	}
+	& .sidebar-question-btn-hide {
+		display: block;
+	}
+
+	& .sidebar-question-btn-show {
+		display: none;
+	}
+	& .arrowSquareLeft {
+		display: none;
+	}
+
+	& .arowSquareRight,
+	& .sidebar-burger,
+	& .sidebar-plus {
+		display: block;
+	}
 }
 
 .sidebar-header {
@@ -32,9 +49,13 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 37px;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.3s ease;
 }
 
 .sidebar-header-title {
+	opacity: 1;
 	font-size: 21px;
 	line-height: 31px;
 	letter-spacing: 0.15px;
@@ -132,6 +153,19 @@
 	background: #f2f2f2;
 }
 
+.sidebar-question-btn-hide {
+	display: none;
+}
+
+.arowSquareRight {
+	display: none;
+}
+
+.sidebar-header-buttons .sidebar-burger,
+.sidebar-header-buttons .sidebar-plus {
+	display: none;
+}
+
 // End: sidebar-dropdown-question
 
 // Start: sidebar-dropdown-calendar
@@ -176,6 +210,8 @@
 .sidebar__tabs {
 	display: flex;
 	flex-wrap: wrap;
+	opacity: 1;
+	transition: all 0.3s ease;
 }
 
 .sidebar__tabs-item-input {
