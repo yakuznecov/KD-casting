@@ -23,6 +23,20 @@
 	border-radius: 8px;
 	color: #fff;
 	background: #1991eb;
+	border: 2px solid transparent;
+	transition: 0.2s ease all;
+	&:hover {
+		background: #127fd1;
+	}
+
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+
+	&:active {
+		background: #127fd1;
+	}
 }
 
 // Прозрачная кнопка
@@ -49,9 +63,23 @@
 	font-size: 15px;
 	padding: 0 20px;
 	letter-spacing: 0.5px;
+	border: 2px solid transparent;
 	border-radius: 4px;
 	color: #fff;
 	background: #1991eb;
+	transition: 0.2s ease all;
+	&:hover {
+		background: #127fd1;
+	}
+
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+
+	&:active {
+		background: #127fd1;
+	}
 }
 
 // Кнопка с тремя синими точками
@@ -153,13 +181,15 @@
 
 // Статусы
 .status-default {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: 4px;
 	padding: 0 10px;
 	height: 20px;
-	line-height: 21px;
 	font-size: 10px;
 	text-transform: uppercase;
+	white-space: nowrap;
 	font-weight: 700;
 	letter-spacing: 0.4px;
 	border-radius: 100px;
@@ -223,23 +253,64 @@
 	height: 24px;
 	min-width: 105px;
 	font-size: 13px;
-	line-height: 26px;
+	line-height: 22px;
 	margin-bottom: 2px;
 	padding: 0 11px;
 	border-radius: 4px;
 	letter-spacing: 0.4px;
 	color: #fff;
+	border: 2px solid transparent;
 	background: #1991eb;
+	transition: 0.2s ease all;
+	&:hover {
+		background: #127fd1;
+	}
+
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+
+	&:active {
+		background: #127fd1;
+	}
+
 	& span {
 		margin-left: 8px;
 	}
 
 	&.--accept {
 		background: #df8282;
+
+		&:hover {
+			background: #d65f5f;
+		}
+
+		&:focus-visible {
+			background: #df8282;
+			border: 2px solid #ebb1b1;
+		}
+
+		&:active {
+			background: #d65f5f;
+		}
 	}
 
 	&.--return {
 		background: #009a61;
+
+		&:hover {
+			background: #008755;
+		}
+
+		&:focus-visible {
+			background: #009a61;
+			border: 2px solid #8ccab3;
+		}
+
+		&:active {
+			background: #008755;
+		}
 	}
 }
 
@@ -375,11 +446,10 @@
 	}
 }
 
-.cancelPopup-btn {
+.secondary-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 106px;
 	height: 40px;
 	font-size: 16px;
 	letter-spacing: 0.5px;
@@ -387,9 +457,24 @@
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 	color: #757575;
+	transition: 0.2s ease;
+
+	&:focus-visible {
+		border: 2px solid #7bb9f0;
+	}
+	&:hover,
+	&:active {
+		background: #fafafa;
+		border: 1px solid #757575;
+		color: #424242;
+	}
 }
 
-.deletePopup-btn {
+.cancelPopup-btn {
+	min-width: 106px;
+}
+
+.primary-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -399,8 +484,18 @@
 	letter-spacing: 0.5px;
 	padding: 0 5px;
 	border-radius: 4px;
+	border: 2px solid transparent;
 	color: #fff;
 	background: #1991eb;
+
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+	&:hover,
+	&:active {
+		background: #127fd1;
+	}
 }
 
 .white-btn-48 {

@@ -292,6 +292,10 @@ body {
 	border: 2px solid transparent;
 	&.active {
 		border: 2px solid rgba(112, 168, 221, 0.7);
+		& button svg path,
+		button svg circle {
+			stroke: #70a8dd;
+		}
 	}
 
 	& input {
@@ -351,6 +355,7 @@ body {
 	overflow: overlay;
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
+
 	&::-webkit-scrollbar {
 		height: 24px;
 		width: 910px;
@@ -379,6 +384,7 @@ body {
 	background: #f5f5f5;
 	height: 100%;
 	margin-right: 27px;
+	transition: all 0.5s;
 	&:last-child {
 		margin-right: 0;
 	}
@@ -386,9 +392,10 @@ body {
 	// развернутый вид окна с карточками
 	&.--expand {
 		max-width: 996px;
+		transition: all 0.5s;
 		& .main__item-inner {
 			display: flex;
-			padding: 0 16px 0 24 px;
+			padding: 0 16px 0 24px;
 			min-width: 996px;
 			flex-wrap: wrap;
 		}
@@ -510,7 +517,8 @@ body {
 	padding: 0 8px 0 24px;
 	overflow-y: auto;
 	height: 100%;
-
+	min-width: 300px;
+	transition: all 0.3s ease;
 	&::-webkit-scrollbar {
 		width: 6px;
 		background-color: #f5f5f5;
@@ -644,6 +652,22 @@ body {
 	}
 }
 
+.profile-btn-20 {
+	&:hover circle,
+	&:hover path {
+		stroke: #212121;
+	}
+}
+
+.chatCircleDots-20,
+.bookmarkSimple-20,
+.monitorPlay-22,
+.delete-dark-20 {
+	&:hover path {
+		stroke: #212121;
+	}
+}
+
 .main__item-card-btns-large {
 	display: flex;
 	align-items: center;
@@ -665,6 +689,10 @@ body {
 
 .card-info-top.--big-card {
 	margin: 17px 0 2px 0;
+
+	& .item-cityAge-subtitle {
+		max-width: none;
+	}
 }
 // End: Карточка актера, крупное фото
 

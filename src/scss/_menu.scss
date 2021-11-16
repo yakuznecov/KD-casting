@@ -36,6 +36,9 @@
 	border-radius: 50%;
 	background-color: #408bd1;
 	transition: 0.2s ease all;
+	&.active {
+		background-color: #70a8dd;
+	}
 }
 
 .dropdown-question .question-button:hover {
@@ -163,6 +166,9 @@
 	border-radius: 100px;
 	background-color: #408bd1;
 	transition: 0.2s ease all;
+	&.active {
+		background-color: #70a8dd;
+	}
 }
 
 .dropdown-language .language-button:hover {

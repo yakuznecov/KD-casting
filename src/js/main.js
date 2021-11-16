@@ -22,119 +22,51 @@
 
 	// End: actor profile
 
-	// Start: focus input
+	// Start: add/remove border active focus
 
-	$('.main-header-top-search input').focus(function () {
-		$('.main-header-top-search').addClass('active');
-	});
+	function addActiveBorderFocus(parent, child) {
+		$(parent)
+			.focus(function () {
+				$(child).addClass('active');
+			})
+			.focusout(function () {
+				$(child).removeClass('active');
+			});
+	}
 
-	// End: focus input
+	addActiveBorderFocus('.main-header-top-search input', '.main-header-top-search');
 
-	$('.question-menu,  .question-button').mouseover(function () {
-		$('.question-button').css('background-color', '#70a8dd');
-	});
+	// End: add/remove border active focus
 
-	$('.question-menu, .question-button').mouseout(function () {
-		$('.question-button').css('background-color', '#408bd1');
-	});
+	// Start: add/remove class active on hover
 
-	$('.language-menu, .language-button').mouseover(function () {
-		$('.language-button').css('background-color', '#70a8dd');
-	});
+	function addActiveHover(parent, child) {
+		$(parent)
+			.mouseover(function () {
+				$(child).addClass('active');
+			})
+			.mouseout(function () {
+				$(child).removeClass('active');
+			});
+	}
 
-	$('.language-menu, .language-button').mouseout(function () {
-		$('.language-button').css('background-color', '#408bd1');
-	});
+	addActiveHover('.dropdown-blue-points', '.points-blue-btn-sidebar');
+	addActiveHover('.dropdown-grey-points', '.points-grey-btn-header');
+	addActiveHover('.question-menu,  .question-button', '.question-button');
+	addActiveHover('.language-menu, .language-button', '.language-button');
+	addActiveHover('.dropdown-request', '.request-btn');
+	addActiveHover('.dropdown-approved', '.approved-btn');
+	addActiveHover('.dropdown-mainRole', '.mainRole-dropdown-btn');
+	addActiveHover('.main-header-top-filter', '.filter-dropdown-btn');
+	addActiveHover('.sidebar-burger', '.burger-btn');
+	addActiveHover('.sidebar-dropdown-question', '.sidebar-question-btn');
+	addActiveHover('.sidebar-dropdown-calendar', '.sidebar-calendar-btn');
 
-	$('.dropdown-grey-points').mouseover(function () {
-		$('.points-grey-btn-header').addClass('active');
-	});
-
-	$('.dropdown-grey-points').mouseout(function () {
-		$('.points-grey-btn-header').removeClass('active');
-	});
-
-	// $('.dropdown-blue-points').mouseover(function () {
-	// 	$('.points-blue-btn-sidebar').addClass('active');
-	// });
-
-	// $('.dropdown-blue-points').mouseout(function () {
-	// 	$('.points-blue-btn-sidebar').removeClass('active');
-	// });
-
-	$('.dropdown-request').mouseover(function () {
-		$('.request-btn').addClass('active');
-	});
-
-	$('.dropdown-request').mouseout(function () {
-		$('.request-btn').removeClass('active');
-	});
-
-	$('.dropdown-approved').mouseover(function () {
-		$('.approved-btn').addClass('active');
-	});
-
-	$('.dropdown-approved').mouseout(function () {
-		$('.approved-btn').removeClass('active');
-	});
-
-	$('.dropdown-mainRole').mouseover(function () {
-		$('.mainRole-dropdown-btn').addClass('active');
-	});
-
-	$('.dropdown-mainRole').mouseout(function () {
-		$('.mainRole-dropdown-btn').removeClass('active');
-	});
-
-	$('.main-header-top-filter').mouseover(function () {
-		$('.filter-dropdown-btn').addClass('active');
-	});
-
-	$('.main-header-top-filter').mouseout(function () {
-		$('.filter-dropdown-btn').removeClass('active');
-	});
-
-	$('.sidebar-burger').mouseover(function () {
-		$('.burger-btn').addClass('active');
-	});
-
-	$('.sidebar-burger').mouseout(function () {
-		$('.burger-btn').removeClass('active');
-	});
-
-	// $('.sidebar-dropdown-question').mouseover(function () {
-	// 	$('.sidebar-question-btn').addClass('active');
-	// });
-
-	// $('.sidebar-dropdown-question').mouseout(function () {
-	// 	$('.sidebar-question-btn').removeClass('active');
-	// });
-
-	// $('.sidebar-dropdown-calendar').mouseover(function () {
-	// 	$('.sidebar-calendar-btn').addClass('active');
-	// });
-
-	// $('.sidebar-dropdown-calendar').mouseout(function () {
-	// 	$('.sidebar-calendar-btn').removeClass('active');
-	// });
+	// End: add/remove class active on hover
 
 	$('.filter-dropdown-input').click(function () {
 		$(this).toggleClass('active');
 	});
-
-	function addActive(parent, child) {
-		$(parent).mouseover(function () {
-			$(child).addClass('active');
-		});
-	}
-
-	addActive('.dropdown-blue-points', '.points-blue-btn-sidebar');
-
-	function removeActive(parent, child) {
-		$(parent).mouseover(function () {
-			$(child).removeClass('active');
-		});
-	}
 
 	// Start: двойное меню с переключением
 	$(function () {
@@ -363,4 +295,17 @@
 				updateView.call(this);
 			});
 	});
+
+	// Разворачивание колонки с заявками
+
+	const toggleRequest = document.querySelector('.request-js');
+	const mainItemRequest = document.querySelector('.main__item');
+
+	toggleRequest.onclick = function () {
+		mainItemRequest.classList.toggle('--expand');
+	};
+
+	// Скрытие сайдбара
+
+	const 
 })(jQuery);
