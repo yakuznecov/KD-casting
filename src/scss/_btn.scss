@@ -10,11 +10,11 @@
 
 // Создать кастинг
 .wide-btn {
-	display: inline-block;
-	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	min-width: 250px;
 	height: 40px;
-	line-height: 39px;
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -55,11 +55,11 @@
 
 // Средняя кнопка в дропдауне фильтр
 .middle-btn {
-	display: inline-block;
-	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	min-width: 120px;
 	height: 32px;
-	line-height: 32px;
 	font-size: 15px;
 	padding: 0 20px;
 	letter-spacing: 0.5px;
@@ -144,18 +144,15 @@
 
 // Белая широкая кнопка в dropdown
 .white-dropdown-btn {
-	display: inline-block;
-	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	min-width: 296px;
 	height: 40px;
-	line-height: 39px;
 	font-size: 12px;
 	text-transform: uppercase;
 	padding: 0 20px;
 	letter-spacing: 0.4px;
-	border: none;
-	outline: none;
-	text-decoration: none;
 	border-radius: 4px;
 	color: #212121;
 	background: #fff;
@@ -499,7 +496,7 @@
 }
 
 .white-btn-48 {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	width: 48px;

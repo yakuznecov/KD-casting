@@ -307,24 +307,24 @@
 
 	// Скрытие сайдбара
 
-	const sidebarBtn = document.querySelector('.roll-up-btn');
-	const sidebar = document.querySelector('.sidebar');
-	const sidebarTabs = document.querySelector('.sidebar__tabs');
-	const sidebarHeaderTitle = document.querySelector('.sidebar-header-title');
+	// const sidebarBtn = document.querySelector('.roll-up-btn');
+	// const sidebar = document.querySelector('.sidebar');
+	// const sidebarTabs = document.querySelector('.sidebar-tabs-js');
+	// const sidebarHeaderTitle = document.querySelector('.sidebar-header-title');
 
-	sidebarBtn.onclick = function () {
-		setTimeout(function () {
-			sidebarTabs.classList.toggle('done');
-			sidebarHeaderTitle.classList.toggle('done');
+	// sidebarBtn.onclick = function () {
+	// 	setTimeout(function () {
+	// 		sidebarTabs.classList.toggle('done');
+	// 		sidebarHeaderTitle.classList.toggle('done');
 
-			setTimeout(function () {
-				sidebarTabs.classList.add('hide');
-				sidebarHeaderTitle.classList.add('hide');
-			}, 200);
-		}, 300);
+	// 		setTimeout(function () {
+	// 			sidebarTabs.classList.add('hide');
+	// 			sidebarHeaderTitle.classList.add('hide');
+	// 		}, 200);
+	// 	}, 300);
 
-		setTimeout(function () {
-			sidebar.classList.toggle('--rolled');
-		}, 300);
-	};
+	// 	setTimeout(function () {
+	// 		sidebar.classList.toggle('--rolled');
+	// 	}, 300);
+	// };
 })(jQuery);

@@ -7,6 +7,11 @@
 	transition: all 0.3s ease;
 }
 
+.sidebar-plus {
+	display: inline-block;
+	margin-bottom: 16px;
+}
+
 .sidebar.--rolled {
 	padding: 0 28px 0 40px;
 	flex: 0 0 128px;
@@ -37,9 +42,7 @@
 		display: none;
 	}
 
-	& .arowSquareRight,
-	& .sidebar-burger,
-	& .sidebar-plus {
+	& .arowSquareRight {
 		display: block;
 	}
 }
@@ -158,11 +161,6 @@
 }
 
 .arowSquareRight {
-	display: none;
-}
-
-.sidebar-header-buttons .sidebar-burger,
-.sidebar-header-buttons .sidebar-plus {
 	display: none;
 }
 
@@ -368,11 +366,6 @@
 }
 
 // End: sidebar-burger
-
-.sidebar-plus {
-	display: inline-block;
-	margin-bottom: 16px;
-}
 
 .sidebar__castings-loading {
 	width: 100%;
