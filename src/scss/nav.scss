@@ -303,12 +303,17 @@ body {
 		width: 100%;
 		font-size: 14px;
 		letter-spacing: 0.25px;
-		color: #616161;
+		color: #212121;
+		&::placeholder {
+			color: #616161;
+			letter-spacing: 0.25px;
+		}
 	}
 
 	& button {
 		display: flex;
 		margin-right: 4px;
+		cursor: auto;
 	}
 }
 
@@ -350,7 +355,7 @@ body {
 .main-items-wrapper {
 	display: flex;
 	height: calc(100vh - 263px);
-	width: calc(100vw - 408px);
+	width: calc(100vw - 407px);
 	overflow-x: auto;
 	overflow: overlay;
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
@@ -386,7 +391,7 @@ body {
 	margin-right: 27px;
 	transition: all 0.5s;
 	&:last-child {
-		margin-right: 0;
+		margin-right: 40px;
 	}
 
 	// развернутый вид окна с карточками
@@ -471,10 +476,15 @@ body {
 	padding: 0 11px;
 	margin-bottom: 12px;
 	background: #fff;
+	transition: all 0.2s;
+	&:hover {
+		border: 1px solid #bdbdbd;
+	}
 
 	&.active {
 		background: #f3f9fe;
 		border: 2px solid rgba(112, 168, 221, 0.7);
+		padding: 0 10px;
 		& .arrow-right path {
 			stroke: #70a8dd;
 		}
@@ -537,7 +547,12 @@ body {
 	border-radius: 8px;
 	margin-bottom: 16px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	cursor: pointer;
 	background: #ffffff;
+	transition: all 0.2s;
+	&:hover {
+		box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	}
 }
 
 .main__item-card-info {
@@ -698,10 +713,10 @@ body {
 
 // End: Основная страница
 
-.done {
-	opacity: 0;
+.main-header-top-line {
+	margin-left: 27px;
 }
 
-.hide {
-	display: none;
+.dropdown-grey-points {
+	margin-left: 27px;
 }

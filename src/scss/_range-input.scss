@@ -71,19 +71,33 @@
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	bottom: -81%;
 	left: 50%;
-	transform: translate(-50%, 0);
-	&:before {
-		content: '';
-		position: absolute;
-		top: -4px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 0 2px 4px 2px;
-		border-color: transparent transparent #424242 transparent;
-	}
+	transform: translateX(-9px);
+}
+
+.outputOne:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 2px 4px 2px;
+	border-color: transparent transparent #424242 transparent;
+}
+
+.outputTwo:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 2px 4px 2px;
+	border-color: transparent transparent #424242 transparent;
 }
 
 .output.outputTwo {

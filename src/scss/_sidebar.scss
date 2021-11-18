@@ -294,11 +294,21 @@
 	margin: auto 0 6px -14px;
 	padding: 9px;
 	& button {
+		position: relative;
 		width: 42px;
 		height: 42px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			right: -80px;
+			bottom: 0;
+		}
 	}
 	& span {
 		font-size: 15px;
@@ -339,7 +349,7 @@
 
 .burger-btn.active {
 	background: #f3f9fe;
-	border: 1px solid #70a8dd;
+	border: 2px solid #70a8ddb3;
 	& svg path {
 		stroke: #70a8dd;
 	}
@@ -347,7 +357,7 @@
 
 .sidebar-question-btn.active {
 	background: #f3f9fe;
-	border: 1px solid #70a8dd;
+	border: 2px solid #70a8ddb3;
 	& svg path {
 		stroke: #70a8dd;
 	}
@@ -355,7 +365,7 @@
 
 .sidebar-calendar-btn.active {
 	background: #f3f9fe;
-	border: 1px solid #70a8dd;
+	border: 2px solid #70a8ddb3;
 	& svg path {
 		stroke: #70a8dd;
 	}

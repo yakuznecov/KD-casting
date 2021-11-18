@@ -270,9 +270,9 @@
 		updateView = function () {
 			if (this.getAttribute('name') === 'rangeOne') {
 				outputOne.innerHTML = this.value;
-				outputOne.style.left = (this.value / this.getAttribute('max')) * 100 + '%';
+				outputOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
 			} else {
-				outputTwo.style.left = (this.value / this.getAttribute('max')) * 100 + '%';
+				outputTwo.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
 				outputTwo.innerHTML = this.value;
 			}
 			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {

@@ -3,16 +3,16 @@
 	height: 100%;
 }
 
-.tabs-container {
+.actor__profile-tabs {
 	width: 100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-end;
 }
 
-#tabs-nav {
+#actor__profile-tabs-nav {
 	margin-right: -4px;
-	margin-top: 19px;
+	margin-top: 75px;
 	position: relative;
 	flex: 0 0 40px;
 }
@@ -22,12 +22,12 @@ a.tabs-menu {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 47px;
-	height: 41px;
+	width: 48px;
+	height: 42px;
 	background-color: #fafafa;
 	text-decoration: none;
 	border-right: 0;
-	margin-bottom: 33px;
+	margin-bottom: 31px;
 	border-radius: 6px 6px 0 0;
 	z-index: 2;
 	cursor: pointer;
@@ -52,14 +52,14 @@ a.tabs-menu:after {
 
 a.tabs-menu:before {
 	right: -8px;
-	transform: skew(19deg, 0deg);
+	transform: skew(22deg, 0deg);
 	border-radius: 0 6px 0 0;
 	box-shadow: rgba(0, 0, 0, 0.1) 3px 2px 5px, inset rgba(0, 0, 0, 0.1) -1px 0 0 0;
 }
 
 a.tabs-menu:after {
 	left: -8px;
-	transform: skew(-19deg, 0deg);
+	transform: skew(-22deg, 0deg);
 	border-radius: 6px 0 0 0;
 	box-shadow: rgba(0, 0, 0, 0.1) -3px 2px 5px, inset rgba(0, 0, 0, 0.1) 1px 0 0 0;
 }
@@ -110,9 +110,79 @@ a.tabs-menu.tabs-menu-active .tabs-img-5 path:nth-child(7) {
 }
 .tabs-panel {
 	display: none;
-	min-height: 150px;
 	overflow: auto;
-	padding: 10px;
-	height: 200px;
-	font-size: 14px;
+	padding: 32px;
+	height: 100%;
+}
+
+.actor__profile-foto {
+	display: flex;
+	justify-content: space-between;
+}
+
+.actor__profile-foto-large {
+	width: 305px;
+	height: 512px;
+}
+
+.actor__profile-foto-small {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.actor__profile-foto-small-img {
+	width: 178px;
+	height: 254px;
+}
+
+.actor__profile-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 15px;
+}
+
+.actor__profile-nav-title {
+	font-size: 21px;
+	line-height: 31px;
+	letter-spacing: 0.15px;
+	color: #212121;
+	margin-top: 4px;
+}
+
+.actor__profile-nav-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.actor__profile-nav-icons {
+	margin: 0 9px 0 0;
+}
+
+.actor__profile-nav-btn {
+	margin: 0 0 0 15px;
+}
+
+.actor__profile-content {
+	display: flex;
+}
+
+.actor__profile-content-item {
+	display: flex;
+	align-items: center;
+}
+
+.actor__profile-content-item-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: #fafafa;
+	border: 1px solid #e7e7e7;
 }

@@ -9,7 +9,7 @@
 	top: 36px;
 	right: 0;
 	z-index: 100;
-	padding: 11px 14px;
+	padding: 11px 8px;
 	border: 1px solid #e7e7e7;
 	background-color: #fff;
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
@@ -19,7 +19,11 @@
 	// visibility: visible;
 
 	& li {
-		padding: 8px 0;
+		padding: 8px;
+		&:hover {
+			background: #f2f2f2;
+			border-radius: 4px;
+		}
 	}
 
 	& button {
@@ -41,7 +45,6 @@
 
 .dropdown-btn {
 	position: relative;
-	transition: all 0.2s;
 
 	&:before {
 		content: '';
@@ -57,8 +60,6 @@
 
 // Start: Серая кнопка с тремя точками и дропдаун (класс active)
 .points-grey-btn-header {
-	margin-left: 27px;
-
 	&.active {
 		background: #e0e0e0;
 		& span {
@@ -148,7 +149,7 @@
 	text-transform: uppercase;
 	height: 20px;
 	min-width: 115px;
-	border: 1px solid #e0e0e0;
+	border: 1px solid transparent;
 	border-radius: 4px;
 	letter-spacing: 0.4px;
 	color: #757575;
@@ -156,6 +157,7 @@
 	transition: all 0.2s;
 	&.active {
 		color: #424242;
+		border: 1px solid #e0e0e0;
 		& .mainRole-dropdown-arrow-box svg path {
 			fill: #757575;
 		}
@@ -238,7 +240,6 @@
 	position: relative;
 	display: flex;
 	min-width: 112px;
-	margin-right: 27px;
 	margin-left: 8px;
 }
 
@@ -314,6 +315,20 @@
 	background-color: #fff;
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	border-radius: 8px;
+}
+
+.main-header-top-filter .filter-dropdown-menu {
+	// opacity: 1;
+	// visibility: visible;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s;
+}
+
+.main-header-top-filter:hover .filter-dropdown-menu {
+	opacity: 1;
+	visibility: visible;
 }
 
 .filter-dropdown-menu-title {
@@ -418,17 +433,6 @@
 .filter-dropdown-skills {
 	font-size: 0;
 	margin-top: 20px;
-}
-
-.main-header-top-filter .filter-dropdown-menu {
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.2s;
-}
-
-.main-header-top-filter:hover .filter-dropdown-menu {
-	opacity: 1;
-	visibility: visible;
 }
 
 .main-header-top-filter:hover .dropdown-arrow {
