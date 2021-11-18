@@ -484,3 +484,25 @@
 	color: #474747;
 }
 // End: dropdown tags в карточке актёра
+
+// Start: sidebar-dropdown-header-title
+.header-title-inner {
+	width: 203px;
+	padding: 8px;
+}
+
+.header-title-inner .header-title-item {
+	padding: 8px 12px;
+	&:hover {
+		background: #f2f2f2;
+		border-radius: 4px;
+	}
+}
+
+.header-title-btn {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #424242;
+}
+// End: sidebar-dropdown-header-title
