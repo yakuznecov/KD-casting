@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	flex: 0 0 376px;
-	padding: 0 40px;
+	padding: 0 12px 0 40px;
 	transition: all 0.3s ease;
 }
 
@@ -12,11 +12,23 @@
 	margin-bottom: 16px;
 }
 
+.sidebar-plus-btn:hover {
+	background: #f3f9fe;
+	border: 2px solid #70a8ddb3;
+	& svg path {
+		stroke: #70a8dd;
+	}
+}
+
 .sidebar.--rolled {
 	padding: 0 28px 0 40px;
 	flex: 0 0 128px;
+
 	& .sidebar-dropdown-question {
 		margin-bottom: 16px;
+	}
+	& .sidebar-header-buttons {
+		margin-left: 0;
 	}
 
 	& .sidebar-dropdown-question-slide {
@@ -27,6 +39,7 @@
 		top: 0;
 		left: 52px;
 	}
+
 	& .roll-up-box {
 		margin-left: -14px;
 		margin-bottom: 5px;
@@ -50,7 +63,6 @@
 .sidebar-header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	margin-bottom: 37px;
 	opacity: 1;
 	visibility: visible;
@@ -65,11 +77,17 @@
 	color: #212121;
 }
 
+.sidebar-header-buttons {
+	margin-left: 41px;
+	font-size: 0;
+}
+
 // Start: sidebar-dropdown-question
 
 .sidebar-dropdown-question {
 	position: relative;
 	display: inline-block;
+	margin-right: 8px;
 	transition: all 0.3s;
 	&:hover {
 		background: #e0e0e0;
@@ -256,7 +274,6 @@
 
 .sidebar__tabs-buttons {
 	display: flex;
-	justify-content: space-between;
 	margin-top: 24px;
 }
 
@@ -331,12 +348,14 @@
 	top: 0;
 	left: 52px;
 	width: 344px;
-	padding: 24px 24px 12px 24px;
+	padding: 24px 23px 12px 23px;
 	z-index: 100;
 	border-radius: 4px;
 	background: #ffffff;
 	border: 1px solid #e7e7e7;
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	// opacity: 1;
+	// visibility: visible;
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.2s;

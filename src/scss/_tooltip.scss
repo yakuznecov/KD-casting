@@ -1,4 +1,6 @@
-// <span data-tooltip="Tooltip help here!" data-flow="right">CSS Tooltips</span>
+// <span class="color-dot" data-tooltip="Находится на проверке" data-flow="right"> </span>
+// <span class="color-dot --green" data-tooltip="Прошёл проверку" data-flow="right"></span>
+// <span class="color-dot --grey" data-tooltip="Заблокирован" data-flow="right"></span>
 
 [data-tooltip] {
 	position: relative;

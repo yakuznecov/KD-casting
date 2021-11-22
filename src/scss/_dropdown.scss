@@ -20,6 +20,7 @@
 
 	& li {
 		padding: 8px;
+		cursor: pointer;
 		&:hover {
 			background: #f2f2f2;
 			border-radius: 4px;
@@ -60,6 +61,7 @@
 
 // Start: Серая кнопка с тремя точками и дропдаун (класс active)
 .points-grey-btn-header {
+	transition: all 0.2s;
 	&.active {
 		background: #e0e0e0;
 		& span {
@@ -82,6 +84,7 @@
 }
 
 .points-blue-btn-sidebar {
+	transition: all 0.2s;
 	&.active {
 		background: #a0cfff;
 		& span {
@@ -489,10 +492,25 @@
 .header-title-inner {
 	width: 203px;
 	padding: 8px;
+	left: 20px;
+	top: 33px;
+	border-radius: 8px;
+}
+
+.sidebar-dropdown-header-title .header-title-inner {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s;
+}
+
+.sidebar-dropdown-header-title:hover .header-title-inner {
+	opacity: 1;
+	visibility: visible;
 }
 
 .header-title-inner .header-title-item {
 	padding: 8px 12px;
+	cursor: pointer;
 	&:hover {
 		background: #f2f2f2;
 		border-radius: 4px;
@@ -505,4 +523,20 @@
 	letter-spacing: 0.25px;
 	color: #424242;
 }
+
+.sidebar-header-arrow-box {
+	margin-left: 3px;
+}
+
+.sidebar-dropdown-header-title .sidebar-header-arrow {
+	transition: transform 0.2s;
+}
+
+.sidebar-dropdown-header-title:hover .sidebar-header-arrow {
+	transform: rotate(180deg);
+}
 // End: sidebar-dropdown-header-title
+
+.dropdown-blue-points {
+	margin-left: 6px;
+}

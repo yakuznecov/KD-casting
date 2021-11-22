@@ -289,9 +289,14 @@ body {
 	padding: 0 12px;
 	border-radius: 4px;
 	background: #f5f5f5;
-	border: 2px solid transparent;
+	border: 1px solid #e0e0e0;
+	&:hover {
+		border: 1px solid #bdbdbd;
+	}
+
 	&.active {
 		border: 2px solid rgba(112, 168, 221, 0.7);
+		padding: 0 11px;
 		& button svg path,
 		button svg circle {
 			stroke: #70a8dd;
@@ -378,6 +383,13 @@ body {
 		background-clip: padding-box;
 		border: 8px solid rgba(0, 0, 0, 0); // для отступа снизу
 	}
+	@media (max-height: 410px) {
+		height: 100%;
+	}
+}
+
+.main-items-wrapper.--rolled {
+	width: calc(100vw - 156px);
 }
 
 .main__item {
@@ -396,12 +408,12 @@ body {
 
 	// развернутый вид окна с карточками
 	&.--expand {
-		max-width: 996px;
+		max-width: 1004px;
 		transition: all 0.5s;
 		& .main__item-inner {
 			display: flex;
-			padding: 0 16px 0 24px;
-			min-width: 996px;
+			padding: 0 8px 0 24px;
+			min-width: 988px;
 			flex-wrap: wrap;
 		}
 		& .main__item-card {
@@ -450,7 +462,9 @@ body {
 .sidebar__castings {
 	margin-top: 24px;
 	height: calc(100vh - 399px);
-	// overflow-y: auto;
+	padding-right: 22px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	z-index: 99;
 
 	&::-webkit-scrollbar {
@@ -460,6 +474,7 @@ body {
 	&::-webkit-scrollbar-thumb {
 		background-color: #e0e0e0;
 		border-radius: 100px;
+		box-shadow: inset 0 -12px 0 0 #f5f5f5;
 	}
 }
 
@@ -476,9 +491,20 @@ body {
 	padding: 0 11px;
 	margin-bottom: 12px;
 	background: #fff;
-	transition: all 0.2s;
+
 	&:hover {
 		border: 1px solid #bdbdbd;
+		& .arrow-right path {
+			stroke: #616161;
+		}
+	}
+
+	&:hover.active {
+		border: 1px solid #106db3;
+		padding: 0 11px;
+		& .arrow-right path {
+			stroke: #106db3;
+		}
 	}
 
 	&.active {
@@ -531,11 +557,14 @@ body {
 	transition: all 0.3s ease;
 	&::-webkit-scrollbar {
 		width: 6px;
+		height: 376px;
 		background-color: #f5f5f5;
+		bottom: -50px;
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: #e0e0e0;
 		border-radius: 100px;
+		box-shadow: inset 0 -16px 0 0 #f5f5f5;
 	}
 }
 
