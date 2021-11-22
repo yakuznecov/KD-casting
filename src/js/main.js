@@ -97,22 +97,6 @@
 		$('.menu-header__info').addClass('active');
 	});
 
-	$('.appStore-box')
-		.mouseover(function () {
-			$('.appStoreDark').show();
-		})
-		.mouseout(function () {
-			$('.appStoreDark').hide();
-		});
-
-	$('.googlePlay-box')
-		.mouseover(function () {
-			$('.googlePlayDark').show();
-		})
-		.mouseout(function () {
-			$('.googlePlayDark').hide();
-		});
-
 	const burgerWrapper = $('.burger__menu-wrapper');
 	const burgerMenuBtn = $('.burger__menu-btn');
 	const menuHeader = $('.menu-header');

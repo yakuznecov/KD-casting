@@ -262,14 +262,24 @@
 }
 
 .sidebar__tabs-item-content {
+	position: relative;
 	order: 99;
 	flex-grow: 1;
 	width: 100%;
-	border-top: 2px solid #e0e0e0;
+	// border-top: 2px solid #e0e0e0;
 	display: none;
 	background: transparent;
 	margin-top: -2px;
 	z-index: 1;
+	&::after {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 296px;
+		height: 2px;
+		background-color: #e0e0e0;
+	}
 }
 
 .sidebar__tabs-buttons {
@@ -279,6 +289,7 @@
 
 .sidebar__first-casting-info {
 	text-align: center;
+	width: 296px;
 	border-radius: 8px;
 	padding: 32px 24px 24px 24px;
 	margin-top: 24px;
@@ -402,4 +413,12 @@
 	background: #eeeeee;
 	border-radius: 8px;
 	margin-bottom: 12px;
+}
+
+.delete-casting {
+	margin-left: 6px;
+}
+
+.points-blue-btn-empty {
+	margin-left: 6px;
 }

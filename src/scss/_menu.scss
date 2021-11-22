@@ -440,52 +440,42 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 0 22px;
 	border-top: 1px solid #e1e5e9;
 	background-color: #f2f2f2;
 }
 
 .profile-menu-footer-links {
 	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 
-.profile-menu-footer-links a {
-	margin: 0px 2px;
+.appStore-box,
+.googlePlay-box {
+	position: relative;
+	width: 96px;
+	height: 32px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .appStore-box {
-	position: relative;
+	background: url(../images/app-store.svg) center center no-repeat;
+	&:hover {
+		background: url(../images/app-store-dark.svg) center center no-repeat;
+		border: none;
+	}
 }
 
 .googlePlay-box {
-	position: relative;
-}
-
-.appStore {
-	z-index: 1;
-}
-
-.googlePlay {
-	z-index: 1;
-}
-
-.appStoreDark {
-	display: none;
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 96px;
-	height: 32px;
-}
-
-.googlePlayDark {
-	display: none;
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 96px;
-	height: 32px;
+	width: 108px;
+	background: url(../images/google-play.svg) center center no-repeat;
+	&:hover {
+		background: url(../images/google-play-dark.svg) center center no-repeat;
+		border: none;
+	}
 }
 
 // End: Меню профайла
