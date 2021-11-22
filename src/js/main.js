@@ -311,4 +311,28 @@
 	// 		sidebar.classList.toggle('--rolled');
 	// 	}, 300);
 	// };
+
+	// Start: Tabs Массовый перенос актёров
+	(function () {
+		var tabs_menu = document.getElementsByClassName('transfer-actors-tabs-menu');
+		for (var k = 0; k < tabs_menu.length; k++) {
+			tabs_menu[k].onclick = js_tabs;
+		}
+		function js_tabs() {
+			var tab_id = this.getAttribute('data-target');
+			var tabs_panel = document.getElementsByClassName('tabs-panel');
+
+			for (var i = 0; i < tabs_panel.length; i++) {
+				tabs_panel[i].style.display = 'none';
+			}
+			for (var j = 0; j < tabs_menu.length; j++) {
+				tabs_menu[j].className = tabs_menu[j].className.replace(' transfer-actors-active', '');
+			}
+			this.className += ' transfer-actors-active';
+			document.getElementById(tab_id).style.display = 'block';
+			return false;
+		}
+	})();
+
+	// End: Tabs Массовый перенос актёров
 })(jQuery);

@@ -177,12 +177,10 @@
 								<div class="profile-menu-footer">
 									<div class="profile-menu-footer-links">
 										<div class="appStore-box">
-											<a class="appStore" href="#"><img src="images/appStore.png" /></a>
-											<a class="appStoreDark" href="#"><img src="images/appStoreDark.png" /></a>
+											<a class="appStore" href="#"></a>
 										</div>
 										<div class="googlePlay-box">
-											<a class="googlePlay" href="#"><img src="images/googlePlay.png" /></a>
-											<a class="googlePlayDark" href="#"><img src="images/googlePlayDark.png" /></a>
+											<a class="googlePlay" href="#"></a>
 										</div>
 									</div>
 								</div>
@@ -510,7 +508,8 @@
 					<div class="main-header-top">
 						<div class="main-header-top-title">Больше чем фрукт</div>
 						<div class="main-header-top-btn">
-							<div class="vl-20 main-header-top-line"></div>
+							<button class="send-invitation-btn">oтправить приглашение</button>
+							<div class="vl-20"></div>
 							<div class="main-header-top-search">
 								<button type="submit"><img src="search-icon-16.svg" /></button>
 								<input type="text" placeholder="Актёры в этом кастинге" />
@@ -713,6 +712,12 @@
 									<div class="dropdown-inner dropdown-request-inner">
 										<ul>
 											<li>
+												<button>
+													<img src="сheck-square-20.svg" />
+													<span class="points-blue-text dropdown-text">Массовое одобрение актёров</span>
+												</button>
+											</li>
+											<li>
 												<button class="request-js">
 													<img src="arrowFatLinesRight-20.svg" />
 													<span class="points-blue-text dropdown-text">Развернуть колонку</span>
@@ -725,6 +730,28 @@
 												</button>
 											</li>
 										</ul>
+									</div>
+									<div class="dropdown-inner dropdown-transfer-actors">
+										<div class="dropdown-transfer-actors-title">массовый перенос актёров</div>
+										<div id="transfer-actors" class="transfer-actors-container">
+											<div id="transfer-actors-nav">
+												<a href="#" data-target="tab_1" class="transfer-actors-tabs-menu transfer-actors-active">Tab 1</a>
+												<a href="#" data-target="tab_2" class="transfer-actors-tabs-menu">Tab 2</a>
+											</div>
+
+											<div class="tabs-content">
+												<div id="tab_1" class="tabs-panel" style="display: block">
+													<div class="flex-content">Перенести всех</div>
+												</div>
+
+												<div id="tab_2" class="tabs-panel">
+													<div class="flex-content">Количество</div>
+												</div>
+											</div>
+										</div>
+										<button class="transfer-actors-close-btn">
+											<img src="x-close-16.svg" />
+										</button>
 									</div>
 								</div>
 							</div>

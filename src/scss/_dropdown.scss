@@ -101,7 +101,7 @@
 
 // Start: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
 .dropdown-request-inner {
-	width: 214px;
+	width: 280px;
 	right: 0;
 	top: 27px;
 }
@@ -120,6 +120,36 @@
 	}
 }
 // End: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
+
+// Start: Дропдаун Массовый перенос актёров
+.dropdown-transfer-actors {
+	width: 328px;
+	right: 0;
+	top: 27px;
+	padding: 20px 24px;
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+// .dropdown-wrapper .dropdown-transfer-actors {
+// 	display: none;
+// }
+
+.dropdown-request .dropdown-transfer-actors {
+	opacity: 1;
+	visibility: visible;
+}
+
+.dropdown-transfer-actors-title {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 14px;
+	letter-spacing: 0.4px;
+	color: #a0afbb;
+}
+// End: Дропдаун Массовый перенос актёров
 
 // Start: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Одобренные
 .dropdown-approved-inner {
