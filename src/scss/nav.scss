@@ -387,6 +387,9 @@ body {
 	@media (max-height: 410px) {
 		height: auto;
 	}
+	@media (max-width: 1400px) {
+		overflow: overlay;
+	}
 }
 
 .main-items-wrapper.--rolled {
