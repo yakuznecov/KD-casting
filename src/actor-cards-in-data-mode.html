@@ -714,7 +714,7 @@
 											<li>
 												<button>
 													<img src="сheck-square-20.svg" />
-													<span class="points-blue-text dropdown-text">Массовое одобрение актёров</span>
+													<span class="points-blue-text dropdown-text dropdown-text-js">Массовое одобрение актёров</span>
 												</button>
 											</li>
 											<li>
@@ -731,21 +731,40 @@
 											</li>
 										</ul>
 									</div>
-									<div class="dropdown-inner dropdown-transfer-actors">
+									<div class="dropdown-transfer-actors">
 										<div class="dropdown-transfer-actors-title">массовый перенос актёров</div>
 										<div id="transfer-actors" class="transfer-actors-container">
 											<div id="transfer-actors-nav">
-												<a href="#" data-target="tab_1" class="transfer-actors-tabs-menu transfer-actors-active">Tab 1</a>
-												<a href="#" data-target="tab_2" class="transfer-actors-tabs-menu">Tab 2</a>
+												<button data-target="tab_1" class="transfer-actors-tabs-menu transfer-actors-active">Перенести всех</button>
+												<button data-target="tab_2" class="transfer-actors-tabs-menu">Количество</button>
 											</div>
 
-											<div class="tabs-content">
-												<div id="tab_1" class="tabs-panel" style="display: block">
-													<div class="flex-content">Перенести всех</div>
+											<div class="transfer-actors-tabs-content">
+												<div id="tab_1" class="transfer-actors-tabs-panel" style="display: block">
+													<div class="transfer-actors-notification">Все актёры массовых сцен, будут автоматически перенесены из этой колонки в колонку «Одобренные»</div>
+													<button class="transfer-actors-notification-btn">Переместить</button>
 												</div>
 
-												<div id="tab_2" class="tabs-panel">
-													<div class="flex-content">Количество</div>
+												<div id="tab_2" class="transfer-actors-tabs-panel">
+													<div class="transfer-actors-range-slider">
+														<span class="transfer-output outputTransferOne"></span>
+														<span class="transfer-full-range"></span>
+														<span class="transfer-incl-range"></span>
+														<input name="rangeTransferOne" value="14800" min="0" max="20000" step="1" type="range" />
+													</div>
+													<div class="transfer-actors-sum">
+														<span class="range-slider-number">0</span>
+														<span class="range-slider-dot transfer-actors-item"></span>
+														<span class="range-slider-number transfer-actors-item">5к</span>
+														<span class="range-slider-dot transfer-actors-item"></span>
+														<span class="range-slider-number transfer-actors-item">10к</span>
+														<span class="range-slider-dot transfer-actors-item"></span>
+														<span class="range-slider-number transfer-actors-item">15к</span>
+														<span class="range-slider-dot transfer-actors-item"></span>
+														<span class="range-slider-number transfer-actors-item">20к</span>
+													</div>
+													<div class="transfer-actors-notification --right">Выбранное количество АМС, будет автоматически перенесено из этой колонки в колонку «Одобренные»</div>
+													<button class="transfer-actors-notification-btn">Переместить</button>
 												</div>
 											</div>
 										</div>

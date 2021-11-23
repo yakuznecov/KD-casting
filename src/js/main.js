@@ -245,7 +245,7 @@
 		false
 	);
 
-	// Range input slider in filter
+	// Start: Range input slider in filter
 	var rangeOne = document.querySelector('input[name="rangeOne"]'),
 		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
 		outputOne = document.querySelector('.outputOne'),
@@ -279,6 +279,36 @@
 				updateView.call(this);
 			});
 	});
+
+	// End: Range input slider in filter
+
+	// Start: Range input slider in transfer-actors
+	var rangeTransferOne = document.querySelector('input[name="rangeTransferOne"]'),
+		outputTransferOne = document.querySelector('.outputTransferOne'),
+		transferinclRange = document.querySelector('.transfer-incl-range'),
+		updateTransferView = function () {
+			if (this.getAttribute('name') === 'rangeTransferOne') {
+				outputTransferOne.innerHTML = this.value;
+				outputTransferOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+			}
+
+			if (parseInt(rangeTransferOne.value)) {
+				transferinclRange.style.width = (rangeTransferOne.value / this.getAttribute('max')) * 100 + '%';
+			}
+		};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		updateTransferView.call(rangeTransferOne);
+		$('input[type="range"]')
+			.on('mouseup', function () {
+				this.blur();
+			})
+			.on('mousedown input', function () {
+				updateTransferView.call(this);
+			});
+	});
+
+	// End: Range input slider in transfer-actors
 
 	// Разворачивание колонки с заявками
 
@@ -314,18 +344,18 @@
 
 	// Start: Tabs Массовый перенос актёров
 	(function () {
-		var tabs_menu = document.getElementsByClassName('transfer-actors-tabs-menu');
-		for (var k = 0; k < tabs_menu.length; k++) {
+		let tabs_menu = document.querySelectorAll('.transfer-actors-tabs-menu');
+		for (let k = 0; k < tabs_menu.length; k++) {
 			tabs_menu[k].onclick = js_tabs;
 		}
 		function js_tabs() {
-			var tab_id = this.getAttribute('data-target');
-			var tabs_panel = document.getElementsByClassName('tabs-panel');
+			let tab_id = this.getAttribute('data-target');
+			let tabs_panel = document.querySelectorAll('.transfer-actors-tabs-panel');
 
-			for (var i = 0; i < tabs_panel.length; i++) {
+			for (let i = 0; i < tabs_panel.length; i++) {
 				tabs_panel[i].style.display = 'none';
 			}
-			for (var j = 0; j < tabs_menu.length; j++) {
+			for (let j = 0; j < tabs_menu.length; j++) {
 				tabs_menu[j].className = tabs_menu[j].className.replace(' transfer-actors-active', '');
 			}
 			this.className += ' transfer-actors-active';
@@ -335,4 +365,12 @@
 	})();
 
 	// End: Tabs Массовый перенос актёров
+
+	$('.dropdown-text-js').click(function () {
+		$('.dropdown-transfer-actors').addClass('active');
+	});
+
+	$('.transfer-actors-close-btn').click(function () {
+		$('.dropdown-transfer-actors').removeClass('active');
+	});
 })(jQuery);

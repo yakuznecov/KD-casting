@@ -190,3 +190,184 @@ input[type='range']:focus {
 .incl-range {
 	background: #1991eb;
 }
+
+// Start: Range in transfer-actors ------------------------------------------------
+
+.transfer-actors-range-slider {
+	position: relative;
+	width: 100%;
+	height: 26px;
+	margin-top: 26px;
+}
+
+.transfer-actors-range-slider input {
+	pointer-events: none;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	top: -5px;
+	width: 100%;
+	outline: none;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.transfer-actors-range-slider input::-webkit-slider-thumb {
+	pointer-events: all;
+	position: relative;
+	z-index: 1;
+	outline: 0;
+}
+
+.transfer-actors-range-slider input::-moz-range-thumb {
+	pointer-events: all;
+	position: relative;
+	z-index: 10;
+	-moz-appearance: none;
+	width: 10px;
+}
+
+.transfer-actors-range-slider input::-moz-range-track {
+	position: relative;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 1);
+	border: 0;
+}
+
+.transfer-actors-range-slider input:last-of-type::-moz-range-track {
+	-moz-appearance: none;
+	background: none transparent;
+	border: 0;
+}
+
+.transfer-actors-range-slider input[type='range']::-moz-focus-outer {
+	border: 0;
+}
+
+.rangeValue {
+	width: 30px;
+}
+
+.transfer-output {
+	position: absolute;
+	border: 1px solid #757575;
+	width: 52px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	border-radius: 4px;
+	display: inline-block;
+	background: #424242;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	bottom: -83%;
+	left: 50%;
+	transform: translateX(-21px);
+}
+
+.outputTransferOne:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 2px 4px 2px;
+	border-color: transparent transparent #424242 transparent;
+}
+
+input[type='range'] {
+	-webkit-appearance: none;
+	background: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+	height: 5px;
+	border: none;
+	border-radius: 3px;
+	background: transparent;
+}
+
+input[type='range']::-ms-track {
+	height: 5px;
+	background: transparent;
+	border: none;
+	border-radius: 3px;
+}
+
+input[type='range']::-moz-range-track {
+	height: 5px;
+	background: transparent;
+	border: none;
+	border-radius: 3px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	border: 1px solid #e0e0e0;
+	height: 20px;
+	width: 10px;
+	border-radius: 4px;
+	background: #fff;
+	margin-top: -8px;
+	position: relative;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	z-index: 10000;
+}
+
+input[type='range']::-ms-thumb {
+	-webkit-appearance: none;
+	border: none;
+	border: 1px solid #e0e0e0;
+	height: 20px;
+	width: 10px;
+	border-radius: 4px;
+	background: #fff;
+	margin-top: -8px;
+	position: relative;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	z-index: 10000;
+}
+
+input[type='range']::-moz-range-thumb {
+	-webkit-appearance: none;
+	border: none;
+	border: 1px solid #e0e0e0;
+	height: 20px;
+	width: 10px;
+	border-radius: 4px;
+	background: #fff;
+	margin-top: -8px;
+	position: relative;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	z-index: 10000;
+}
+
+input[type='range']:focus {
+	outline: none;
+}
+
+.transfer-full-range,
+.transfer-incl-range {
+	width: 100%;
+	height: 6px;
+	left: 0;
+	top: 6px;
+	position: absolute;
+	border-radius: 100px;
+	background: #eee;
+}
+
+.transfer-incl-range {
+	background: #1991eb;
+}
+
+// End: Range in transfer-actors

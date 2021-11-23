@@ -123,23 +123,33 @@
 
 // Start: Дропдаун Массовый перенос актёров
 .dropdown-transfer-actors {
+	position: absolute;
+	right: 0;
+	z-index: 100;
+	border: 1px solid #e7e7e7;
+	background-color: #fff;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
 	width: 328px;
 	right: 0;
 	top: 27px;
 	padding: 20px 24px;
+}
 
+.dropdown-wrapper .dropdown-transfer-actors {
 	opacity: 0;
 	visibility: hidden;
 }
 
-// .dropdown-wrapper .dropdown-transfer-actors {
-// 	display: none;
-// }
-
-.dropdown-request .dropdown-transfer-actors {
+.dropdown-wrapper .dropdown-transfer-actors.active {
 	opacity: 1;
 	visibility: visible;
 }
+
+// .dropdown-request .dropdown-transfer-actors {
+// 	opacity: 1;
+// 	visibility: visible;
+// }
 
 .dropdown-transfer-actors-title {
 	font-size: 12px;
@@ -148,6 +158,7 @@
 	line-height: 14px;
 	letter-spacing: 0.4px;
 	color: #a0afbb;
+	margin-bottom: 24px;
 }
 // End: Дропдаун Массовый перенос актёров
 

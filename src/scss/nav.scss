@@ -358,10 +358,13 @@ body {
 	display: flex;
 	height: calc(100vh - 263px);
 	width: calc(100vw - 407px);
-	overflow-x: auto;
-	overflow: overlay;
+
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
+
+	&.--scroll {
+		overflow: overlay;
+	}
 
 	&::-webkit-scrollbar {
 		height: 24px;
@@ -371,6 +374,7 @@ body {
 	/* Track */
 	&::-webkit-scrollbar-track {
 		background: transparent;
+		margin: 0 40px 0 0;
 	}
 
 	/* Handle */
@@ -379,10 +383,9 @@ body {
 		border-radius: 100px;
 		background-clip: padding-box;
 		border: 8px solid rgba(0, 0, 0, 0); // для отступа снизу
-		-webkit-box-shadow: inset -41px 0 0 0 #ffffff00;
 	}
 	@media (max-height: 410px) {
-		scroll-behavior: auto;
+		height: auto;
 	}
 }
 
@@ -751,47 +754,106 @@ body {
 .transfer-actors-container {
 	width: 100%;
 }
-div#transfer-actors-nav {
+
+#transfer-actors-nav {
 	position: relative;
 	display: flex;
-	justify-content: flex-start;
+	align-items: center;
+	justify-content: center;
+	min-height: 31px;
+	background: #eee;
+	border-radius: 4px;
 }
-div#transfer-actors-nav a:nth-child(even) {
-	margin: 0 3px;
+
+.transfer-actors-tabs-menu {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 27px;
+	min-width: 137px;
+	font-size: 13px;
+	letter-spacing: 0.4px;
+	color: #616161;
+	border-radius: 2px;
+	background-color: #eee;
 }
-a.transfer-actors-tabs-menu {
-	display: inline-block;
-	background-color: #1179ac;
-	font-size: 12px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #fff;
-	padding: 5px 10px;
-	font-weight: bold;
-	text-decoration: none;
-	border: solid 2px #1179ac;
-	border-bottom: 0;
-	border-radius: 3px 3px 0 0;
-}
-a.transfer-actors-tabs-menu.transfer-actors-active {
+
+.transfer-actors-tabs-menu.transfer-actors-active {
 	background-color: #fff;
-	border: solid 2px #1179ac;
-	color: #6b6b6b;
-	border-bottom: 0;
 }
-.tabs-content {
-	border: solid 2px #1179ac;
+
+.transfer-actors-tabs-content {
 	margin-top: -2px;
 	background-color: #fff;
-	overflow: hidden;
-	line-height: 1.5;
 }
-.tabs-panel {
+
+.transfer-actors-tabs-panel {
 	display: none;
-	min-height: 150px;
-	overflow: auto;
-	padding: 10px;
-	height: 200px;
-	font-size: 14px;
+}
+
+.transfer-actors-notification {
+	padding: 8px 12px;
+	color: #1991eb;
+	letter-spacing: 0.4px;
+	font-size: 13px;
+	line-height: 18px;
+	background: #dbedff;
+	border-radius: 4px;
+	margin-top: 24px;
+	&.--right {
+		margin-top: 29px;
+	}
+}
+
+.transfer-actors-notification-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 134px;
+	height: 32px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	padding: 0 5px;
+	border-radius: 4px;
+	margin-top: 16px;
+	color: #fff;
+	background: #1991eb;
+	transition: 0.2s ease;
+	&:hover {
+		background: #127fd1;
+	}
+}
+
+.transfer-actors-sum {
+	display: flex;
+	align-items: center;
+}
+
+.transfer-actors-item {
+	&:nth-child(2) {
+		margin-left: 24px;
+	}
+	&:nth-child(3) {
+		margin-left: 24px;
+	}
+	&:nth-child(4) {
+		margin-left: 25px;
+	}
+	&:nth-child(5) {
+		margin-left: 26px;
+	}
+	&:nth-child(6) {
+		margin-left: 19px;
+	}
+	&:nth-child(7) {
+		margin-left: 19px;
+	}
+	&:nth-child(8) {
+		margin-left: 19px;
+	}
+	&:last-child {
+		margin-left: 19px;
+	}
 }
 
 // End: Tabs Массовый перенос актёров

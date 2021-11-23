@@ -537,8 +537,8 @@
 
 .transfer-actors-close-btn {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 8px;
+	right: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -546,4 +546,8 @@
 	height: 30px;
 	cursor: pointer;
 	background: transparent;
+	transition: all 0.2s;
+	&:hover svg path {
+		stroke: #616161;
+	}
 }
