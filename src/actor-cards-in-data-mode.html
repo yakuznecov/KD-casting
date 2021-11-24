@@ -508,11 +508,15 @@
 					<div class="main-header-top">
 						<div class="main-header-top-title">Больше чем фрукт</div>
 						<div class="main-header-top-btn">
-							<button class="send-invitation-btn">oтправить приглашение</button>
+							<button class="send-invitation-btn">
+								<span>oтправить приглашение</span>
+								<img class="send-invitation-img" src="send-16.svg" />
+							</button>
+
 							<div class="vl-20"></div>
 							<div class="main-header-top-search">
 								<button type="submit"><img src="search-icon-16.svg" /></button>
-								<input type="text" placeholder="Актёры в этом кастинге" />
+								<input class="input-top-search-js" type="text" />
 							</div>
 							<!-- Start: filter-dropdown -->
 							<div class="main-header-top-filter">
@@ -680,12 +684,21 @@
 							</div>
 							<div class="vl-12 mainRole-line"></div>
 							<!-- End: dropdown на кнопке "Главная роль" -->
-							<span class="status-default status-mainRole">главная роль</span>
+							<!-- <span class="status-default status-mainRole">главная роль</span> -->
 							<span class="status-default">фильм</span>
-							<span class="status-default">кастинг</span>
-							<span class="status-default status-onCheck">на проверке</span>
-							<span class="status-default status-approved">одобрен</span>
-							<span class="status-default status-blocked">заблокирован</span>
+							<div class="hide-media-status">
+								<span class="status-default">кастинг</span>
+								<span class="status-default status-onCheck">на проверке</span>
+								<!-- <span class="status-default status-approved">одобрен</span> -->
+								<!-- <span class="status-default status-blocked">заблокирован</span> -->
+							</div>
+							<div class="status-counter-inner">
+								<div class="status-counter">+2</div>
+								<div class="status-counter-dropdown">
+									<span class="status-default">кастинг</span>
+									<span class="status-default status-onCheck">на проверке</span>
+								</div>
+							</div>
 						</div>
 						<div class="main-header-bottom-right">
 							<button class="data-filterBtn large-foto-btn">крупное фото</button>

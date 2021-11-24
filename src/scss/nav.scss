@@ -273,19 +273,21 @@ body {
 	font-size: 21px;
 	line-height: 31px;
 	letter-spacing: 0.15px;
+	white-space: nowrap;
 	color: #212121;
 }
 
 .main-header-top-btn {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 }
 
 .main-header-top-search {
 	display: inline-flex;
 	align-items: center;
 	height: 32px;
-	min-width: 216px;
+	flex: 0 0 216px;
 	padding: 0 12px;
 	margin-left: 12px;
 	border-radius: 4px;
@@ -298,6 +300,10 @@ body {
 		button svg circle {
 			stroke: #70a8dd;
 		}
+	}
+
+	&.transform {
+		flex: 0 0 216px;
 	}
 
 	& input {
@@ -317,6 +323,11 @@ body {
 		margin-right: 4px;
 		cursor: auto;
 	}
+
+	@media (max-width: 1280px) {
+		flex: 0 0 112px;
+		transition: flex 0.2s;
+	}
 }
 
 .main-header-bottom {
@@ -335,6 +346,13 @@ body {
 	display: flex;
 	align-items: center;
 	margin-top: 9px;
+}
+
+.hide-media-status {
+	display: flex;
+	@media (max-width: 1280px) {
+		display: none;
+	}
 }
 
 .large-foto-btn {

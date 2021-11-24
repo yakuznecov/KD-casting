@@ -373,4 +373,16 @@
 	$('.transfer-actors-close-btn').click(function () {
 		$('.dropdown-transfer-actors').removeClass('active');
 	});
+
+	// Смена плейсхолдера у инпута
+	if ($(window).width() < 1281) {
+		$('.input-top-search-js').attr('placeholder', 'Актёры');
+	} else {
+		$('.input-top-search-js').attr('placeholder', 'Актёры в этом кастинге');
+	}
+
+	$('.main-header-top-search').click(function () {
+		$(this).addClass('transform');
+		$('.send-invitation-btn').addClass('active');
+	});
 })(jQuery);
