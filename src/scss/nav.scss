@@ -15,6 +15,7 @@
 html,
 body {
 	position: relative;
+	height: 100vh;
 	overflow: hidden;
 	color: #212529;
 	font-size: 16px;
@@ -402,9 +403,10 @@ body {
 		background-clip: padding-box;
 		border: 8px solid rgba(0, 0, 0, 0); // для отступа снизу
 	}
-	@media (max-height: 410px) {
+	@media (max-height: 600px) {
 		height: auto;
 	}
+
 	@media (max-width: 1400px) {
 		overflow: overlay;
 	}

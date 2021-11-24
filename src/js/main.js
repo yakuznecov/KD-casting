@@ -375,6 +375,7 @@
 	});
 
 	// Смена плейсхолдера у инпута
+
 	if ($(window).width() < 1281) {
 		$('.input-top-search-js').attr('placeholder', 'Актёры');
 	} else {
@@ -385,4 +386,9 @@
 		$(this).addClass('transform');
 		$('.send-invitation-btn').addClass('active');
 	});
+
+	// Принудительное скрытие сайдбара при 1024px
+	// if ($(window).width() < 1025) {
+	// 	$('.sidebar').addClass('--rolled');
+	// }
 })(jQuery);
