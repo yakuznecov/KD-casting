@@ -315,32 +315,52 @@
 	const toggleRequest = document.querySelector('.request-js');
 	const mainItemRequest = document.querySelector('.main__item');
 
-	toggleRequest.onclick = function () {
+	toggleRequest.addEventListener('click', () => {
 		mainItemRequest.classList.toggle('--expand');
-	};
+	});
 
 	// Скрытие сайдбара
 
-	// const sidebarBtn = document.querySelector('.roll-up-btn');
-	// const sidebar = document.querySelector('.sidebar');
-	// const sidebarTabs = document.querySelector('.sidebar-tabs-js');
-	// const sidebarHeaderTitle = document.querySelector('.sidebar-header-title');
+	const sidebarBtn = document.querySelector('.roll-up-btn');
+	const sidebar = document.querySelector('.sidebar');
+	const sidebarTabs = document.querySelector('.sidebar-tabs-js');
+	const sidebarHeaderTitle = document.querySelector('.sidebar-dropdown-header-title');
+	const sidebarBurger = document.querySelector('.sidebar-burger');
+	const sidebarPlus = document.querySelector('.sidebar-plus');
+	const sidebarQuestionBtn = document.querySelector('.sidebar-dropdown-question .sidebar-header-btn');
+	const sidebarCalendarBtn = document.querySelector('.sidebar-dropdown-calendar .sidebar-header-btn');
 
-	// sidebarBtn.onclick = function () {
-	// 	setTimeout(function () {
-	// 		sidebarTabs.classList.toggle('done');
-	// 		sidebarHeaderTitle.classList.toggle('done');
+	sidebarBtn.addEventListener('click', function () {
+		setTimeout(function () {
+			sidebarTabs.classList.toggle('hide');
+			sidebarTabs.classList.toggle('done');
+			sidebarHeaderTitle.classList.toggle('done');
+			sidebarBurger.classList.toggle('done');
+			sidebarPlus.classList.toggle('done');
+			sidebarQuestionBtn.classList.toggle('white-btn-48');
+			sidebarQuestionBtn.classList.toggle('sidebar-question-btn');
+			sidebarCalendarBtn.classList.toggle('white-btn-48');
+			sidebarCalendarBtn.classList.toggle('sidebar-calendar-btn');
 
-	// 		setTimeout(function () {
-	// 			sidebarTabs.classList.add('hide');
-	// 			sidebarHeaderTitle.classList.add('hide');
-	// 		}, 200);
-	// 	}, 300);
+			setTimeout(function () {
+				sidebarHeaderTitle.classList.toggle('hide');
+			}, 300);
+		}, 300);
 
-	// 	setTimeout(function () {
-	// 		sidebar.classList.toggle('--rolled');
-	// 	}, 300);
-	// };
+		setTimeout(function () {
+			sidebar.classList.toggle('--rolled');
+		}, 300);
+	});
+
+	$('.sidebar-burger__tabs-item-input').click(function () {
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.sidebar__tabs-item-input').click(function () {
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+	});
 
 	// Start: Tabs Массовый перенос актёров
 	(function () {
@@ -383,7 +403,7 @@
 	}
 
 	$('.main-header-top-search').click(function () {
-		$(this).addClass('transform');
+		$('.main-header-top-search').addClass('transform');
 		$('.send-invitation-btn').addClass('active');
 	});
 
