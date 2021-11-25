@@ -321,35 +321,66 @@
 
 	// Скрытие сайдбара
 
-	const sidebarBtn = document.querySelector('.roll-up-btn');
+	const sidebarBtnLeft = document.querySelector('.roll-up-btn-left');
+	const sidebarBtnRight = document.querySelector('.roll-up-btn-right');
 	const sidebar = document.querySelector('.sidebar');
 	const sidebarTabs = document.querySelector('.sidebar-tabs-js');
 	const sidebarHeaderTitle = document.querySelector('.sidebar-dropdown-header-title');
 	const sidebarBurger = document.querySelector('.sidebar-burger');
 	const sidebarPlus = document.querySelector('.sidebar-plus');
-	const sidebarQuestionBtn = document.querySelector('.sidebar-dropdown-question .sidebar-header-btn');
-	const sidebarCalendarBtn = document.querySelector('.sidebar-dropdown-calendar .sidebar-header-btn');
+	const sidebarTopBtns = document.querySelector('.sidebar-top-btns');
+	const sidebarLeftBtns = document.querySelector('.sidebar-left-btns');
 
-	sidebarBtn.addEventListener('click', function () {
+	sidebarBtnLeft.addEventListener('click', function () {
+		sidebarTabs.classList.toggle('done');
+		sidebarHeaderTitle.classList.toggle('done');
+		sidebarTopBtns.classList.remove('active');
+
 		setTimeout(function () {
-			sidebarTabs.classList.toggle('hide');
-			sidebarTabs.classList.toggle('done');
-			sidebarHeaderTitle.classList.toggle('done');
+			sidebarLeftBtns.classList.add('active');
+		}, 300);
+
+		setTimeout(function () {
+			sidebarBurger.classList.toggle('hide');
+			sidebarPlus.classList.toggle('hide');
+		}, 500);
+
+		setTimeout(function () {
 			sidebarBurger.classList.toggle('done');
 			sidebarPlus.classList.toggle('done');
-			sidebarQuestionBtn.classList.toggle('white-btn-48');
-			sidebarQuestionBtn.classList.toggle('sidebar-question-btn');
-			sidebarCalendarBtn.classList.toggle('white-btn-48');
-			sidebarCalendarBtn.classList.toggle('sidebar-calendar-btn');
-
-			setTimeout(function () {
-				sidebarHeaderTitle.classList.toggle('hide');
-			}, 300);
 		}, 300);
 
 		setTimeout(function () {
 			sidebar.classList.toggle('--rolled');
 		}, 300);
+
+		sidebarBtnLeft.classList.toggle('active');
+		sidebarBtnRight.classList.toggle('active');
+	});
+
+	sidebarBtnRight.addEventListener('click', function () {
+		sidebarLeftBtns.classList.remove('active');
+
+		setTimeout(function () {
+			sidebarTopBtns.classList.add('active');
+		}, 500);
+
+		sidebarBurger.classList.toggle('hide');
+		sidebarPlus.classList.toggle('hide');
+
+		setTimeout(function () {
+			sidebarTabs.classList.toggle('done');
+			sidebarHeaderTitle.classList.toggle('done');
+			sidebarBurger.classList.toggle('done');
+			sidebarPlus.classList.toggle('done');
+		}, 500);
+
+		setTimeout(function () {
+			sidebar.classList.toggle('--rolled');
+		}, 300);
+
+		sidebarBtnLeft.classList.toggle('active');
+		sidebarBtnRight.classList.toggle('active');
 	});
 
 	$('.sidebar-burger__tabs-item-input').click(function () {
@@ -408,7 +439,7 @@
 	});
 
 	// Принудительное скрытие сайдбара при 1024px
-	// if ($(window).width() < 1025) {
-	// 	$('.sidebar').addClass('--rolled');
-	// }
+	if ($(window).width() < 1025) {
+		$('.sidebar').addClass('--rolled');
+	}
 })(jQuery);

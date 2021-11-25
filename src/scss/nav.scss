@@ -889,6 +889,14 @@ body {
 	display: none;
 }
 
-.showBlock {
-	display: block;
+.sidebar-top-btns,
+.sidebar-left-btns {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+.sidebar-top-btns-inner {
+	display: flex;
 }

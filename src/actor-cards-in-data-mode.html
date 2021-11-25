@@ -233,7 +233,7 @@
 					<!-- End: sidebar-dropdown-header-title -->
 					<div class="sidebar-header-buttons">
 						<!-- Start: sidebar-burger -->
-						<div class="sidebar-burger done">
+						<div class="sidebar-burger done hide">
 							<button class="burger-btn dropdown-btn white-btn-48">
 								<img src="burger-line.svg" />
 							</button>
@@ -401,54 +401,99 @@
 							</div>
 						</div>
 						<!-- End: sidebar-burger -->
-						<div class="sidebar-plus done">
+						<div class="sidebar-plus done hide">
 							<button class="sidebar-plus-btn white-btn-48">
 								<img src="plus-24.svg" />
 							</button>
 						</div>
-						<!-- Start: sidebar-dropdown-question -->
-						<div class="sidebar-dropdown-question">
-							<button class="square-btn-32 sidebar-header-btn">
-								<img class="sidebar-question-btn-show" src="question-20.svg" alt="question-icon" />
-								<img class="sidebar-question-btn-hide" src="question-24.svg" alt="question-icon" />
-							</button>
-							<div class="sidebar-dropdown-question-slide question-slide">
-								<div class="question-slide-content">
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">заявки</h3>
-										<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
-									</div>
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">одобренные</h3>
-										<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для связи с вами.</p>
-									</div>
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">отложенные</h3>
-										<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
-									</div>
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">отклоненные</h3>
-										<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+						<div class="sidebar-top-btns active">
+							<div class="sidebar-top-btns-inner">
+								<!-- Start: sidebar-dropdown-question -->
+								<div class="sidebar-dropdown-question">
+									<button class="square-btn-32 sidebar-header-btn">
+										<img src="question-20.svg" alt="question-icon" />
+									</button>
+									<div class="sidebar-dropdown-question-slide question-slide">
+										<div class="question-slide-content">
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">заявки</h3>
+												<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
+											</div>
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">одобренные</h3>
+												<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для связи с вами.</p>
+											</div>
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">отложенные</h3>
+												<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
+											</div>
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">отклоненные</h3>
+												<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+											</div>
+										</div>
+										<div class="question-slide-footer">
+											<a class="white-dropdown-btn" href="#">повторить обучение</a>
+										</div>
 									</div>
 								</div>
-								<div class="question-slide-footer">
-									<a class="white-dropdown-btn" href="#">повторить обучение</a>
-								</div>
-							</div>
-						</div>
-						<!-- End: sidebar-dropdown-question -->
+								<!-- End: sidebar-dropdown-question -->
 
-						<!-- Start: sidebar-dropdown-calendar -->
-						<div class="sidebar-dropdown-calendar">
-							<button class="square-btn-32 sidebar-header-btn">
-								<img class="sidebar-dropdown-calendar-show" src="calendar-20.svg" alt="calendar-icon" />
-								<img class="sidebar-dropdown-calendar-hide" src="calendar-24.svg" alt="calendar-icon" />
-							</button>
-							<div class="sidebar-dropdown-calendar-slide">
-								<img src="images/calendar.png" alt="" />
+								<!-- Start: sidebar-dropdown-calendar -->
+								<div class="sidebar-dropdown-calendar">
+									<button class="square-btn-32 sidebar-header-btn">
+										<img src="calendar-20.svg" alt="calendar-icon" />
+									</button>
+									<div class="sidebar-dropdown-calendar-slide">
+										<img src="images/calendar.png" alt="" />
+									</div>
+								</div>
+								<!-- End: sidebar-dropdown-calendar -->
 							</div>
 						</div>
-						<!-- End: sidebar-dropdown-calendar -->
+						<div class="sidebar-left-btns">
+							<!-- Start: sidebar-dropdown-question -->
+							<div class="sidebar-dropdown-question">
+								<button class="sidebar-question-btn square-btn-32 sidebar-header-btn white-btn-48">
+									<img src="question-24.svg" alt="question-icon" />
+								</button>
+								<div class="sidebar-dropdown-question-slide question-slide">
+									<div class="question-slide-content">
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">заявки</h3>
+											<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
+										</div>
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">одобренные</h3>
+											<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для связи с вами.</p>
+										</div>
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">отложенные</h3>
+											<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
+										</div>
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">отклоненные</h3>
+											<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+										</div>
+									</div>
+									<div class="question-slide-footer">
+										<a class="white-dropdown-btn" href="#">повторить обучение</a>
+									</div>
+								</div>
+							</div>
+							<!-- End: sidebar-dropdown-question -->
+
+							<!-- Start: sidebar-dropdown-calendar -->
+							<div class="sidebar-dropdown-calendar">
+								<button class="sidebar-calendar-btn square-btn-32 sidebar-header-btn white-btn-48">
+									<img src="calendar-24.svg" alt="calendar-icon" />
+								</button>
+								<div class="sidebar-dropdown-calendar-slide">
+									<img src="images/calendar.png" alt="" />
+								</div>
+							</div>
+							<!-- End: sidebar-dropdown-calendar -->
+						</div>
 					</div>
 				</div>
 				<!-- Start: Sidebar Tabs -->
@@ -668,8 +713,10 @@
 				<!-- End: Sidebar Tabs -->
 
 				<div class="roll-up-box">
-					<button class="roll-up-btn">
+					<button class="roll-up-btn roll-up-btn-left active">
 						<img class="arrowSquareLeft" src="arrowSquareLeft.svg" alt="arrowSquareLeft" />
+					</button>
+					<button class="roll-up-btn roll-up-btn-right">
 						<img class="arowSquareRight" src="ArrowSquareRight.svg" alt="ArrowSquareRight" />
 					</button>
 					<span>Свернуть</span>
