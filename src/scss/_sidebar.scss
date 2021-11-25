@@ -4,7 +4,7 @@
 	flex-direction: column;
 	flex: 0 0 376px;
 	padding: 0 12px 0 40px;
-	transition: flex 0.3s;
+	transition: flex 0.4s;
 }
 
 .sidebar-plus {
@@ -23,6 +23,10 @@
 .sidebar.--rolled {
 	padding: 0 28px 0 40px;
 	flex: 0 0 128px;
+
+	& .main-wrapper .main-items-wrapper {
+		width: calc(100vw - 156px);
+	}
 
 	& .sidebar-dropdown-question {
 		margin-bottom: 16px;
