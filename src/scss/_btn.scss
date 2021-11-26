@@ -177,6 +177,9 @@
 			& .send-invitation-img {
 				display: block;
 			}
+			&:hover svg path {
+				stroke: #127fd1;
+			}
 		}
 	}
 }
@@ -405,7 +408,7 @@
 	outline: none;
 }
 
-.switch-button .active-case {
+.switch-button .active-case-gender {
 	color: #61707d;
 	font-weight: 500;
 }

@@ -201,23 +201,23 @@
 	var activeSwitch = document.querySelector('.switch-button .active');
 
 	function switchLeft() {
-		switchBtnRight.classList.remove('active-case');
-		switchBtnMiddle.classList.remove('active-case');
-		switchBtnLeft.classList.add('active-case');
+		switchBtnRight.classList.remove('active-case-gender');
+		switchBtnMiddle.classList.remove('active-case-gender');
+		switchBtnLeft.classList.add('active-case-gender');
 		activeSwitch.style.left = '0%';
 	}
 
 	function switchRight() {
-		switchBtnRight.classList.add('active-case');
-		switchBtnLeft.classList.remove('active-case');
-		switchBtnMiddle.classList.remove('active-case');
+		switchBtnRight.classList.add('active-case-gender');
+		switchBtnLeft.classList.remove('active-case-gender');
+		switchBtnMiddle.classList.remove('active-case-gender');
 		activeSwitch.style.left = '33.33333%';
 	}
 
 	function switchMiddle() {
-		switchBtnMiddle.classList.add('active-case');
-		switchBtnLeft.classList.remove('active-case');
-		switchBtnRight.classList.remove('active-case');
+		switchBtnMiddle.classList.add('active-case-gender');
+		switchBtnLeft.classList.remove('active-case-gender');
+		switchBtnRight.classList.remove('active-case-gender');
 		activeSwitch.style.left = '67%';
 	}
 
@@ -435,13 +435,34 @@
 		$('.dropdown-transfer-actors').removeClass('active');
 	});
 
-	// Смена плейсхолдера у инпута
+	// Смена плейсхолдера у инпута -------------------------------------------------->
 
-	if ($(window).width() < 1281) {
-		$('.input-top-search-js').attr('placeholder', 'Актёры');
-	} else {
-		$('.input-top-search-js').attr('placeholder', 'Актёры в этом кастинге');
+	let isPlaceholderShort = false;
+	const inputTopSearch = document.querySelector('.input-top-search-js');
+
+	window.addEventListener('resize', function () {
+		if (window.innerWidth < 1281) {
+			if (!isPlaceholderShort) {
+				hideFullPlaceholder();
+			}
+		} else {
+			if (isPlaceholderShort) {
+				showFullPlaceholder();
+			}
+		}
+	});
+
+	function hideFullPlaceholder() {
+		inputTopSearch.placeholder = 'Актёры';
+		isPlaceholderShort = true;
 	}
+
+	function showFullPlaceholder() {
+		inputTopSearch.placeholder = 'Актёры в этом кастинге';
+		isPlaceholderShort = false;
+	}
+
+	// ------------------------------------------------------------------------------>
 
 	$('.main-header-top-search').click(function () {
 		$('.main-header-top-search').addClass('transform');
