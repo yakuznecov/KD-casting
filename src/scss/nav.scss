@@ -292,11 +292,15 @@ body {
 	padding: 0 12px;
 	margin-left: 12px;
 	border-radius: 4px;
+	border: 1px solid transparent;
 	background: #f5f5f5;
+	&:hover {
+		border: 1px solid #bdbdbd;
+	}
 
 	&.active {
 		border: 2px solid rgba(112, 168, 221, 0.7);
-		padding: 0 10px;
+		padding: 0 11px;
 		& button svg path,
 		button svg circle {
 			stroke: #70a8dd;
@@ -376,7 +380,7 @@ body {
 .main-items-wrapper {
 	display: flex;
 	height: calc(100vh - 263px);
-	width: calc(100vw - 407px);
+	width: calc(100vw - 408px);
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
 	&.active {
@@ -415,7 +419,7 @@ body {
 }
 
 .main-items-wrapper.--rolled {
-	width: calc(100vw - 156px);
+	width: calc(100vw - 160px);
 }
 
 .main__item {
@@ -526,9 +530,9 @@ body {
 	}
 
 	&:hover.active {
-		border: 2px solid #106db3;
+		border: 2px solid #70a8dd;
 		& .arrow-right path {
-			stroke: #106db3;
+			stroke: #70a8dd;
 		}
 	}
 
