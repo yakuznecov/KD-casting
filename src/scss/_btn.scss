@@ -168,18 +168,16 @@
 	}
 
 	&.active {
-		@media (max-width: 1280px) {
-			min-width: 32px;
-			padding: 0;
-			& span {
-				display: none;
-			}
-			& .send-invitation-img {
-				display: block;
-			}
-			&:hover svg path {
-				stroke: #127fd1;
-			}
+		min-width: 32px;
+		padding: 0;
+		& span {
+			display: none;
+		}
+		& .send-invitation-img {
+			display: block;
+		}
+		&:hover svg path {
+			stroke: #127fd1;
 		}
 	}
 }

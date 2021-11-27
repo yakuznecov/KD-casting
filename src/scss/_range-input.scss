@@ -51,10 +51,6 @@
 	border: 0;
 }
 
-.rangeValue {
-	width: 30px;
-}
-
 .output {
 	position: absolute;
 	border: 1px solid #757575;
@@ -104,33 +100,33 @@
 	left: 100%;
 }
 
-input[type='range'] {
+.double-range {
 	-webkit-appearance: none;
 	background: none;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+.double-range::-webkit-slider-runnable-track {
 	height: 5px;
 	border: none;
 	border-radius: 3px;
 	background: transparent;
 }
 
-input[type='range']::-ms-track {
+.double-range::-ms-track {
 	height: 5px;
 	background: transparent;
 	border: none;
 	border-radius: 3px;
 }
 
-input[type='range']::-moz-range-track {
+.double-range::-moz-range-track {
 	height: 5px;
 	background: transparent;
 	border: none;
 	border-radius: 3px;
 }
 
-input[type='range']::-webkit-slider-thumb {
+.double-range::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	border: none;
 	border: 1px solid #e0e0e0;
@@ -144,7 +140,7 @@ input[type='range']::-webkit-slider-thumb {
 	z-index: 10000;
 }
 
-input[type='range']::-ms-thumb {
+.double-range::-ms-thumb {
 	-webkit-appearance: none;
 	border: none;
 	border: 1px solid #e0e0e0;
@@ -158,7 +154,7 @@ input[type='range']::-ms-thumb {
 	z-index: 10000;
 }
 
-input[type='range']::-moz-range-thumb {
+.double-range::-moz-range-thumb {
 	-webkit-appearance: none;
 	border: none;
 	border: 1px solid #e0e0e0;
@@ -172,7 +168,7 @@ input[type='range']::-moz-range-thumb {
 	z-index: 10000;
 }
 
-input[type='range']:focus {
+.double-range:focus {
 	outline: none;
 }
 
@@ -246,10 +242,6 @@ input[type='range']:focus {
 	border: 0;
 }
 
-.rangeValue {
-	width: 30px;
-}
-
 .transfer-output {
 	position: absolute;
 	border: 1px solid #757575;
@@ -283,33 +275,33 @@ input[type='range']:focus {
 	border-color: transparent transparent #424242 transparent;
 }
 
-input[type='range'] {
+.rangeTransferOne {
 	-webkit-appearance: none;
 	background: none;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+.rangeTransferOne::-webkit-slider-runnable-track {
 	height: 5px;
 	border: none;
 	border-radius: 3px;
 	background: transparent;
 }
 
-input[type='range']::-ms-track {
+.rangeTransferOne::-ms-track {
 	height: 5px;
 	background: transparent;
 	border: none;
 	border-radius: 3px;
 }
 
-input[type='range']::-moz-range-track {
+.rangeTransferOne::-moz-range-track {
 	height: 5px;
 	background: transparent;
 	border: none;
 	border-radius: 3px;
 }
 
-input[type='range']::-webkit-slider-thumb {
+.rangeTransferOne::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	border: none;
 	border: 1px solid #e0e0e0;
@@ -323,7 +315,7 @@ input[type='range']::-webkit-slider-thumb {
 	z-index: 10000;
 }
 
-input[type='range']::-ms-thumb {
+.rangeTransferOne::-ms-thumb {
 	-webkit-appearance: none;
 	border: none;
 	border: 1px solid #e0e0e0;
@@ -337,7 +329,7 @@ input[type='range']::-ms-thumb {
 	z-index: 10000;
 }
 
-input[type='range']::-moz-range-thumb {
+.rangeTransferOne::-moz-range-thumb {
 	-webkit-appearance: none;
 	border: none;
 	border: 1px solid #e0e0e0;
@@ -351,7 +343,7 @@ input[type='range']::-moz-range-thumb {
 	z-index: 10000;
 }
 
-input[type='range']:focus {
+.rangeTransferOne:focus {
 	outline: none;
 }
 
@@ -370,4 +362,4 @@ input[type='range']:focus {
 	background: #1991eb;
 }
 
-// End: Range in transfer-actors
+// End: Range in transfer-actors -------------------------------------------------------->

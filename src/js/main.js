@@ -22,22 +22,6 @@
 
 	// End: actor profile
 
-	// Start: add/remove border active focus
-
-	function addActiveBorderFocus(parent, child) {
-		$(parent)
-			.focus(function () {
-				$(child).addClass('active');
-			})
-			.focusout(function () {
-				$(child).removeClass('active');
-			});
-	}
-
-	addActiveBorderFocus('.main-header-top-search input', '.main-header-top-search');
-
-	// End: add/remove border active focus
-
 	// Start: add/remove class active on hover
 
 	function addActiveHover(parent, child) {
@@ -109,10 +93,10 @@
 		questionMenuMobile.removeClass('active');
 	});
 
-	// menuHeader.on('click', (e) => {
-	// 	if (e.target.closest('.burger__menu-wrapper')) return;
-	// 	burgerWrapper.removeClass('active');
-	// });
+	menuHeader.on('click', (e) => {
+		if (e.target.closest('.burger__menu-wrapper')) return;
+		burgerWrapper.removeClass('active');
+	});
 
 	const langMenuMobile = $('.language-menu-mobile');
 	const languageBtnMobile = $('.language-btn-mobile');
@@ -160,7 +144,6 @@
 
 	// Кнопка переключения страна-город
 
-	var switchButton = document.querySelector('.switch-button-loc');
 	var switchBtnLocRight = document.querySelector('.switch-button-case-loc.right');
 	var switchBtnLocLeft = document.querySelector('.switch-button-case-loc.left');
 	var activeSwitchLoc = document.querySelector('.switch-button-loc .active');
@@ -194,7 +177,6 @@
 	);
 
 	// Кнопка с переключением пола
-	var switchButton = document.querySelector('.switch-button');
 	var switchBtnRight = document.querySelector('.switch-button-case.right');
 	var switchBtnLeft = document.querySelector('.switch-button-case.left');
 	var switchBtnMiddle = document.querySelector('.switch-button-case.middle');
@@ -245,77 +227,12 @@
 		false
 	);
 
-	// Start: Range input slider in filter
-	var rangeOne = document.querySelector('input[name="rangeOne"]'),
-		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
-		outputOne = document.querySelector('.outputOne'),
-		outputTwo = document.querySelector('.outputTwo'),
-		inclRange = document.querySelector('.incl-range'),
-		updateView = function () {
-			if (this.getAttribute('name') === 'rangeOne') {
-				outputOne.innerHTML = this.value;
-				outputOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
-			} else {
-				outputTwo.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
-				outputTwo.innerHTML = this.value;
-			}
-			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
-				inclRange.style.width = ((rangeOne.value - rangeTwo.value) / this.getAttribute('max')) * 100 + '%';
-				inclRange.style.left = (rangeTwo.value / this.getAttribute('max')) * 100 + '%';
-			} else {
-				inclRange.style.width = ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
-				inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
-			}
-		};
-
-	document.addEventListener('DOMContentLoaded', function () {
-		updateView.call(rangeOne);
-		updateView.call(rangeTwo);
-		$('input[type="range"]')
-			.on('mouseup', function () {
-				this.blur();
-			})
-			.on('mousedown input', function () {
-				updateView.call(this);
-			});
-	});
-
-	// End: Range input slider in filter
-
-	// Start: Range input slider in transfer-actors
-	var rangeTransferOne = document.querySelector('input[name="rangeTransferOne"]'),
-		outputTransferOne = document.querySelector('.outputTransferOne'),
-		transferinclRange = document.querySelector('.transfer-incl-range'),
-		updateTransferView = function () {
-			if (this.getAttribute('name') === 'rangeTransferOne') {
-				outputTransferOne.innerHTML = this.value;
-				outputTransferOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
-			}
-
-			if (parseInt(rangeTransferOne.value)) {
-				transferinclRange.style.width = (rangeTransferOne.value / this.getAttribute('max')) * 100 + '%';
-			}
-		};
-
-	document.addEventListener('DOMContentLoaded', function () {
-		updateTransferView.call(rangeTransferOne);
-		$('input[type="range"]')
-			.on('mouseup', function () {
-				this.blur();
-			})
-			.on('mousedown input', function () {
-				updateTransferView.call(this);
-			});
-	});
-
-	// End: Range input slider in transfer-actors
-
 	// Разворачивание колонки с заявками
 
 	const toggleRequest = document.querySelector('.request-js');
 	const mainItemRequest = document.querySelector('.main__item');
 
-	toggleRequest.addEventListener('click', () => {
+	toggleRequest.addEventListener('click', function () {
 		mainItemRequest.classList.toggle('--expand');
 	});
 
@@ -393,48 +310,6 @@
 		isSidebarHidden = false;
 	}
 
-	$('.sidebar-burger__tabs-item-input').click(function () {
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
-	});
-
-	$('.sidebar__tabs-item-input').click(function () {
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
-	});
-
-	// Start: Tabs Массовый перенос актёров
-	(function () {
-		let tabs_menu = document.querySelectorAll('.transfer-actors-tabs-menu');
-		for (let k = 0; k < tabs_menu.length; k++) {
-			tabs_menu[k].onclick = js_tabs;
-		}
-		function js_tabs() {
-			let tab_id = this.getAttribute('data-target');
-			let tabs_panel = document.querySelectorAll('.transfer-actors-tabs-panel');
-
-			for (let i = 0; i < tabs_panel.length; i++) {
-				tabs_panel[i].style.display = 'none';
-			}
-			for (let j = 0; j < tabs_menu.length; j++) {
-				tabs_menu[j].className = tabs_menu[j].className.replace(' transfer-actors-active', '');
-			}
-			this.className += ' transfer-actors-active';
-			document.getElementById(tab_id).style.display = 'block';
-			return false;
-		}
-	})();
-
-	// End: Tabs Массовый перенос актёров
-
-	$('.dropdown-text-js').click(function () {
-		$('.dropdown-transfer-actors').addClass('active');
-	});
-
-	$('.transfer-actors-close-btn').click(function () {
-		$('.dropdown-transfer-actors').removeClass('active');
-	});
-
 	// Смена плейсхолдера у инпута -------------------------------------------------->
 
 	let isPlaceholderShort = false;
@@ -464,8 +339,160 @@
 
 	// ------------------------------------------------------------------------------>
 
+	// Start: add/remove border active focus
+
+	function addActiveBorderFocus(parent, child) {
+		$(parent)
+			.focus(function () {
+				$(child).addClass('active');
+			})
+			.focusout(function () {
+				$(child).removeClass('active');
+			});
+	}
+
+	addActiveBorderFocus('.main-header-top-search input', '.main-header-top-search');
+
+	// End: add/remove border active focus
+
+	$('.sidebar-burger__tabs-item-input').click(function () {
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.sidebar__tabs-item-input').click(function () {
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.dropdown-text-js').click(function () {
+		$('.dropdown-transfer-actors').addClass('active');
+	});
+
+	$('.transfer-actors-close-btn').click(function () {
+		$('.dropdown-transfer-actors').removeClass('active');
+	});
+
 	$('.main-header-top-search').click(function () {
 		$('.main-header-top-search').addClass('transform');
 		$('.send-invitation-btn').addClass('active');
 	});
+
+	// Start: Range input slider in transfer-actors
+
+	var rangeTransferOne = document.querySelector('input[name="rangeTransferOne"]'),
+		outputTransferOne = document.querySelector('.outputTransferOne'),
+		transferinclRange = document.querySelector('.transfer-incl-range'),
+		updateTransferView = function () {
+			if (this.getAttribute('name') === 'rangeTransferOne') {
+				outputTransferOne.innerHTML = this.value;
+				outputTransferOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+			}
+
+			if (parseInt(rangeTransferOne.value)) {
+				transferinclRange.style.width = (rangeTransferOne.value / this.getAttribute('max')) * 100 + '%';
+			}
+		};
+
+	$(document).ready(function () {
+		updateTransferView.call(rangeTransferOne);
+		$('.rangeTransferOne')
+			.on('mouseup', function () {
+				this.blur();
+			})
+			.on('mousedown input', function () {
+				updateTransferView.call(this);
+			});
+	});
+
+	// End: Range input slider in transfer-actors
+
+	// Start: Range input slider in filter
+	var rangeOne = document.querySelector('input[name="rangeOne"]'),
+		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
+		outputOne = document.querySelector('.outputOne'),
+		outputTwo = document.querySelector('.outputTwo'),
+		inclRange = document.querySelector('.incl-range'),
+		updateView = function () {
+			if (this.getAttribute('name') === 'rangeOne') {
+				outputOne.innerHTML = this.value;
+				outputOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+			} else {
+				outputTwo.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+				outputTwo.innerHTML = this.value;
+			}
+			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
+				inclRange.style.width = ((rangeOne.value - rangeTwo.value) / this.getAttribute('max')) * 100 + '%';
+				inclRange.style.left = (rangeTwo.value / this.getAttribute('max')) * 100 + '%';
+			} else {
+				inclRange.style.width = ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
+				inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
+			}
+		};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		updateView.call(rangeOne);
+		updateView.call(rangeTwo);
+		$('.double-range')
+			.on('mouseup', function () {
+				this.blur();
+			})
+			.on('mousedown input', function () {
+				updateView.call(this);
+			});
+	});
+
+	// End: Range input slider in filter
+
+	// Start: Tabs Массовый перенос актёров
+	(function () {
+		var tabs_menu = document.getElementsByClassName('transfer-actors-tabs-menu');
+		for (var k = 0; k < tabs_menu.length; k++) {
+			tabs_menu[k].onclick = js_tabs;
+		}
+		function js_tabs() {
+			var tab_data = this.getAttribute('data-target');
+			var tabs_panel = document.getElementsByClassName('transfer-actors-tabs-panel');
+
+			for (var i = 0; i < tabs_panel.length; i++) {
+				tabs_panel[i].style.display = 'none';
+			}
+			for (var j = 0; j < tabs_menu.length; j++) {
+				tabs_menu[j].className = tabs_menu[j].className.replace(' transfer-actors-active', '');
+			}
+			this.className += ' transfer-actors-active';
+			document.getElementById(tab_data).style.display = 'block';
+			return false;
+		}
+	})();
+
+	// End: Tabs Массовый перенос актёров
+
+	// Трансформация кнопки ОТПРАВИТЬ ПРИГЛАШЕНИЕ ----------------------------------------->
+	const mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
+	const sendInvitationBtn = document.querySelector('.send-invitation-btn');
+
+	window.addEventListener('resize', resizeThrottler, false);
+
+	var resizeTimeout;
+	function resizeThrottler() {
+		// ignore resize events as long as an actualResizeHandler execution is in the queue
+		if (!resizeTimeout) {
+			resizeTimeout = setTimeout(function () {
+				resizeTimeout = null;
+				transformBtn();
+			}, 150);
+		}
+	}
+
+	function transformBtn() {
+		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
+		let sendLeft = sendInvitationBtn.offsetLeft;
+		console.log(mainLeft, sendLeft);
+		if (sendLeft < mainLeft) {
+			sendInvitationBtn.classList.add('active');
+		}
+	}
+
+	// ------------------------------------------------------------------------------------>
 })(jQuery);

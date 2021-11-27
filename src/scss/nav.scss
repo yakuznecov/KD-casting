@@ -381,6 +381,7 @@ body {
 	display: flex;
 	height: calc(100vh - 263px);
 	width: calc(100vw - 408px);
+	overflow: overlay;
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
 	&.active {
@@ -413,9 +414,9 @@ body {
 		height: auto;
 	}
 
-	@media (max-width: 1400px) {
-		overflow: overlay;
-	}
+	// @media (max-width: 1400px) {
+	// 	overflow: overlay;
+	// }
 }
 
 .main-items-wrapper.--rolled {
@@ -543,7 +544,20 @@ body {
 		& .arrow-right path {
 			stroke: #70a8dd;
 		}
+		& .sidebar__castings-item-img.active {
+			background: #e8f5ff;
+		}
 	}
+}
+
+.sidebar__castings-item-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 2px;
+	background: #f3f9fe;
 }
 
 .sidebar__castings-item-content {
