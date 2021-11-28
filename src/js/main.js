@@ -469,29 +469,41 @@
 	// End: Tabs Массовый перенос актёров
 
 	// Трансформация кнопки ОТПРАВИТЬ ПРИГЛАШЕНИЕ ----------------------------------------->
-	const mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
-	const sendInvitationBtn = document.querySelector('.send-invitation-btn');
 
-	window.addEventListener('resize', resizeThrottler, false);
+	let sendInvitationBtn = document.querySelector('.send-invitation-btn');
+	let mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
+	let isTransform = false;
 
-	var resizeTimeout;
-	function resizeThrottler() {
-		// ignore resize events as long as an actualResizeHandler execution is in the queue
-		if (!resizeTimeout) {
-			resizeTimeout = setTimeout(function () {
-				resizeTimeout = null;
-				transformBtn();
-			}, 150);
-		}
-	}
+	let timeout;
+
+	window.addEventListener('resize', function () {
+		clearTimeout(timeout);
+		timeout = setTimeout(function () {
+			let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
+			let sendLeft = sendInvitationBtn.offsetLeft;
+			console.log(mainLeft, sendLeft);
+			if (sendLeft < mainLeft) {
+				if (!isTransform) {
+					transformBtn();
+				}
+			} else {
+				if (isTransform) {
+					if (sendLeft) {
+						cancelTransformBtn();
+					}
+				}
+			}
+		}, 100);
+	});
 
 	function transformBtn() {
-		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
-		let sendLeft = sendInvitationBtn.offsetLeft;
-		console.log(mainLeft, sendLeft);
-		if (sendLeft < mainLeft) {
-			sendInvitationBtn.classList.add('active');
-		}
+		sendInvitationBtn.classList.add('active');
+		isTransform = true;
+	}
+
+	function cancelTransformBtn() {
+		sendInvitationBtn.classList.remove('active');
+		isTransform = false;
 	}
 
 	// ------------------------------------------------------------------------------------>
