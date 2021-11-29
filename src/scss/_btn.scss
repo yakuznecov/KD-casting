@@ -209,6 +209,11 @@
 	height: 12px;
 }
 
+.vl-16 {
+	border-left: 1px solid #e0e0e0;
+	height: 16px;
+}
+
 .vl-20 {
 	border-left: 1px solid #eee;
 	height: 20px;
@@ -583,5 +588,30 @@
 	transition: all 0.2s;
 	&:hover svg path {
 		stroke: #616161;
+	}
+}
+
+// Прозрачная кнопка назад с синим border
+.medium-secondary-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 75px;
+	height: 32px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	border-radius: 4px;
+	border: 1px solid #1991eb;
+	color: #1991eb;
+	background: transparent;
+	transition: all 0.2s;
+	&:focus-visible {
+		background: #f4f6f6;
+		border: 2px solid #7bb9f0;
+	}
+	&:hover,
+	&:active {
+		background: #f4f6f6;
+		border: 1px solid #0064c1;
 	}
 }

@@ -229,60 +229,335 @@
 					</div>
 					<!-- End: sidebar-dropdown-header-title -->
 					<div class="sidebar-header-buttons">
-						<!-- Start: sidebar-dropdown-question -->
-						<div class="sidebar-dropdown-question">
-							<button class="square-btn-32 sidebar-header-btn">
-								<img src="question-20.svg" alt="question-icon" />
+						<!-- Start: sidebar-burger -->
+						<div class="sidebar-burger done">
+							<button class="burger-btn dropdown-btn white-btn-48">
+								<img src="burger-line.svg" />
 							</button>
-							<div class="sidebar-dropdown-question-slide question-slide">
-								<div class="question-slide-content">
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">заявки</h3>
-										<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
+							<div class="sidebar-burger-inner">
+								<!-- Start: Sidebar Burger Tabs -->
+								<div class="sidebar-burger__tabs">
+									<input class="sidebar-burger__tabs-item-input active" type="radio" name="tabs" id="tabone-burger" />
+									<label class="sidebar-burger__tabs-item-label" for="tabone-burger">Активные</label>
+
+									<div class="sidebar-burger__tabs-item-content">
+										<!-- Start: Sidebar burger castings -->
+										<div class="sidebar-burger__castings">
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Маленький гном</div>
+														<span class="color-dot"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Больше чем фрукт</div>
+														<span class="color-dot"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Одарённый парень</div>
+														<span class="color-dot --green"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Казачье войско (2 сезон)</div>
+														<span class="color-dot"> </span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="ad-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Малолитражка Brabus</div>
+														<span class="color-dot --green"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Реклама</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="other-icon-24.svg" />
+												</div>
+
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Съёмка пранков</div>
+														<span class="color-dot --green"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Другое</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="tv-icon-24.svg" />
+												</div>
+
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Остаться в живых</div>
+														<span class="color-dot --grey"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">ТВ Шоу</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+										</div>
+										<!-- End: Sidebar castings -->
 									</div>
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">одобренные</h3>
-										<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для связи с вами.</p>
+
+									<input class="sidebar-burger__tabs-item-input" type="radio" name="tabs" id="tabtwo-burger" />
+									<label class="sidebar-burger__tabs-item-label" for="tabtwo-burger">Блок</label>
+									<div class="sidebar-burger__tabs-item-content">
+										<div class="sidebar__castings">
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Маленький гном</div>
+														<span class="color-dot"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Больше чем фрукт</div>
+														<span class="color-dot"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Одарённый парень</div>
+														<span class="color-dot --green"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+										</div>
 									</div>
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">отложенные</h3>
-										<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
-									</div>
-									<div class="question-slide-item">
-										<h3 class="question-slide-title">отклоненные</h3>
-										<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+
+									<input class="sidebar-burger__tabs-item-input" type="radio" name="tabs" id="tabthree-burger" />
+									<label class="sidebar-burger__tabs-item-label" for="tabthree-burger">Архив</label>
+									<div class="sidebar-burger__tabs-item-content">
+										<div class="sidebar__castings">
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Маленький гном</div>
+														<span class="color-dot"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+
+											<button class="sidebar__castings-item">
+												<div class="sidebar__castings-item-img">
+													<img src="movie-icon-24.svg" />
+												</div>
+												<div class="sidebar__castings-item-content">
+													<div class="sidebar__castings-item-top">
+														<div class="sidebar__castings-item-title">Одарённый парень</div>
+														<span class="color-dot --green"></span>
+													</div>
+													<div class="sidebar__castings-item-subtitle">Фильм</div>
+												</div>
+												<img class="arrow-right" src="caretRightGrey-16.svg" />
+											</button>
+										</div>
 									</div>
 								</div>
-								<div class="question-slide-footer">
-									<a class="white-dropdown-btn" href="#">повторить обучение</a>
+								<!-- End: Sidebar Burger Tabs -->
+							</div>
+						</div>
+						<!-- End: sidebar-burger -->
+						<div class="sidebar-plus done">
+							<button class="sidebar-plus-btn white-btn-48">
+								<img src="plus-24.svg" />
+							</button>
+						</div>
+						<div class="sidebar-top-btns active">
+							<div class="sidebar-top-btns-inner">
+								<!-- Start: sidebar-dropdown-question -->
+								<div class="sidebar-dropdown-question">
+									<button class="square-btn-32 sidebar-header-btn">
+										<img src="question-20.svg" alt="question-icon" />
+									</button>
+									<div class="sidebar-dropdown-question-slide question-slide">
+										<div class="question-slide-content">
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">заявки</h3>
+												<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
+											</div>
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">одобренные</h3>
+												<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для связи с вами.</p>
+											</div>
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">отложенные</h3>
+												<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
+											</div>
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">отклоненные</h3>
+												<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+											</div>
+										</div>
+										<div class="question-slide-footer">
+											<a class="white-dropdown-btn" href="#">повторить обучение</a>
+										</div>
+									</div>
+								</div>
+								<!-- End: sidebar-dropdown-question -->
+
+								<!-- Start: sidebar-dropdown-calendar -->
+								<div class="sidebar-dropdown-calendar">
+									<button class="square-btn-32 sidebar-header-btn">
+										<img src="calendar-20.svg" alt="calendar-icon" />
+									</button>
+									<div class="sidebar-dropdown-calendar-slide">
+										<img src="images/calendar.png" alt="" />
+									</div>
+								</div>
+								<!-- End: sidebar-dropdown-calendar -->
+							</div>
+						</div>
+						<div class="sidebar-left-btns">
+							<!-- Start: sidebar-dropdown-question -->
+							<div class="sidebar-dropdown-question">
+								<button class="sidebar-question-btn square-btn-32 sidebar-header-btn white-btn-48">
+									<img src="question-24.svg" alt="question-icon" />
+								</button>
+								<div class="sidebar-dropdown-question-slide question-slide">
+									<div class="question-slide-content">
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">заявки</h3>
+											<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
+										</div>
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">одобренные</h3>
+											<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для связи с вами.</p>
+										</div>
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">отложенные</h3>
+											<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
+										</div>
+										<div class="question-slide-item">
+											<h3 class="question-slide-title">отклоненные</h3>
+											<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+										</div>
+									</div>
+									<div class="question-slide-footer">
+										<a class="white-dropdown-btn" href="#">повторить обучение</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!-- End: sidebar-dropdown-question -->
-						<!-- Start: sidebar-dropdown-calendar -->
-						<div class="sidebar-dropdown-calendar">
-							<button class="square-btn-32 sidebar-header-btn">
-								<img src="calendar-20.svg" alt="calendar-icon" />
-							</button>
-							<div class="sidebar-dropdown-calendar-slide">
-								<img src="images/calendar.png" alt="" />
+							<!-- End: sidebar-dropdown-question -->
+
+							<!-- Start: sidebar-dropdown-calendar -->
+							<div class="sidebar-dropdown-calendar">
+								<button class="sidebar-calendar-btn square-btn-32 sidebar-header-btn white-btn-48">
+									<img src="calendar-24.svg" alt="calendar-icon" />
+								</button>
+								<div class="sidebar-dropdown-calendar-slide">
+									<img src="images/calendar.png" alt="" />
+								</div>
 							</div>
+							<!-- End: sidebar-dropdown-calendar -->
 						</div>
-						<!-- End: sidebar-dropdown-calendar -->
 					</div>
 				</div>
 				<!-- Start: Sidebar Tabs -->
-				<div class="sidebar__tabs">
-					<input class="sidebar__tabs-item-input" type="radio" name="tabs" checked="checked" id="tabone" />
+				<div class="sidebar__tabs sidebar-tabs-js">
+					<input class="sidebar__tabs-item-input active" type="radio" name="tabs" id="tabone" />
 					<label class="sidebar__tabs-item-label" for="tabone">Активные</label>
 
 					<div class="sidebar__tabs-item-content">
 						<div class="sidebar__tabs-buttons">
 							<button class="wide-btn">Создать кастинг</button>
-							<div class="delete-casting">
-								<button class="delete-casting-btn">
-									<img src="x-close-blue-18.svg" />
+							<div class="dropdown-wrapper dropdown-blue-points">
+								<button class="points-blue-btn points-blue-btn-sidebar dropdown-btn">
+									<span></span>
+									<span></span>
+									<span></span>
 								</button>
+								<div class="dropdown-inner dropdown-blue-inner">
+									<ul>
+										<li>
+											<button>
+												<img src="arrowsDownUp-20.svg" />
+												<span class="points-blue-text dropdown-text">Изменить порядок</span>
+											</button>
+										</li>
+										<li>
+											<button>
+												<img src="rename-20.svg" />
+												<span class="points-blue-text dropdown-text">Переименовать</span>
+											</button>
+										</li>
+										<li>
+											<button>
+												<img src="delete-20.svg" />
+												<span class="points-blue-text dropdown-text">Удалить</span>
+											</button>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
@@ -344,7 +619,6 @@
 								<div class="sidebar__castings-item-img">
 									<img src="ad-icon-24.svg" />
 								</div>
-
 								<div class="sidebar__castings-item-content">
 									<div class="sidebar__castings-item-top">
 										<div class="sidebar__castings-item-title">Малолитражка Brabus</div>
@@ -420,6 +694,7 @@
 								<div class="sidebar__castings-item-img">
 									<img src="movie-icon-24.svg" />
 								</div>
+
 								<div class="sidebar__castings-item-content">
 									<div class="sidebar__castings-item-top">
 										<div class="sidebar__castings-item-title">Маленький гном</div>
@@ -430,6 +705,9 @@
 								<img class="arrow-right" src="caretRightGrey-16.svg" />
 							</button>
 							<button class="sidebar__castings-item">
+								<div class="sidebar__castings-item-img">
+									<img src="movie-icon-24.svg" />
+								</div>
 								<div class="sidebar__castings-item-content">
 									<div class="sidebar__castings-item-top">
 										<div class="sidebar__castings-item-title">Больше чем фрукт</div>
@@ -440,6 +718,9 @@
 								<img class="arrow-right" src="caretRightGrey-16.svg" />
 							</button>
 							<button class="sidebar__castings-item">
+								<div class="sidebar__castings-item-img">
+									<img src="movie-icon-24.svg" />
+								</div>
 								<div class="sidebar__castings-item-content">
 									<div class="sidebar__castings-item-top">
 										<div class="sidebar__castings-item-title">Одарённый парень</div>
@@ -460,6 +741,7 @@
 								<div class="sidebar__castings-item-img">
 									<img src="movie-icon-24.svg" />
 								</div>
+
 								<div class="sidebar__castings-item-content">
 									<div class="sidebar__castings-item-top">
 										<div class="sidebar__castings-item-title">Маленький гном</div>
@@ -471,6 +753,9 @@
 							</button>
 
 							<button class="sidebar__castings-item">
+								<div class="sidebar__castings-item-img">
+									<img src="movie-icon-24.svg" />
+								</div>
 								<div class="sidebar__castings-item-content">
 									<div class="sidebar__castings-item-top">
 										<div class="sidebar__castings-item-title">Одарённый парень</div>
@@ -486,7 +771,12 @@
 				<!-- End: Sidebar Tabs -->
 
 				<div class="roll-up-box">
-					<button class="roll-up-left-btn"><img src="arrowSquareLeft.svg" alt="arrowSquareLeft" /></button>
+					<button class="roll-up-btn roll-up-btn-left active">
+						<img class="arrowSquareLeft" src="arrowSquareLeft.svg" alt="arrowSquareLeft" />
+					</button>
+					<button class="roll-up-btn roll-up-btn-right">
+						<img class="arowSquareRight" src="ArrowSquareRight.svg" alt="ArrowSquareRight" />
+					</button>
 					<span>Свернуть</span>
 				</div>
 			</div>
@@ -504,14 +794,13 @@
 							</div>
 							<!-- Start: filter-dropdown -->
 							<div class="main-header-top-filter">
-								<button class="filter-dropdown-btn --hasForFilterBtn">
+								<button class="filter-dropdown-btn">
 									<span class="filter-dropdown-icon"></span>
-									<span class="filter-dropdown-title">Фильтр:</span>
-									<span class="filter-dropdown-num">
-										<span>2</span>
+									<span class="filter-dropdown-title">Фильтр</span>
+									<span class="filter-dropdown-arrow">
+										<img class="dropdown-arrow" src="arrow-down-dropdown.svg" />
 									</span>
 								</button>
-
 								<div class="filter-dropdown-menu">
 									<div class="filter-dropdown-menu-title">страна или город</div>
 									<!-- Start: Кнопка переключения страна-город -->
@@ -545,8 +834,8 @@
 										<span class="output outputTwo"></span>
 										<span class="full-range"></span>
 										<span class="incl-range"></span>
-										<input name="rangeOne" value="19" min="0" max="100" step="1" type="range" />
-										<input name="rangeTwo" value="52" min="0" max="100" step="1" type="range" />
+										<input class="double-range" name="rangeOne" value="19" min="0" max="99" step="1" type="range" />
+										<input class="double-range" name="rangeTwo" value="52" min="0" max="99" step="1" type="range" />
 									</div>
 									<div class="range-slider-age">
 										<span class="range-slider-number">0</span>

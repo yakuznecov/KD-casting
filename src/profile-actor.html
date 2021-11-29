@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>profile-actor</title>
-
 		<link rel="stylesheet" href="css/nav.min.css" />
 	</head>
 	<body>
@@ -60,9 +59,8 @@
 							</svg>
 						</a>
 					</div>
-
-					<div class="tabs-content">
-						<div id="tab-1" class="tabs-panel" style="display: block">
+					<div class="actor__profile-container">
+						<div class="actor__profile-inner">
 							<div class="actor__profile-foto">
 								<div class="actor__profile-foto-large">
 									<img src="images/dana1.png" alt="" />
@@ -95,143 +93,209 @@
 										</div>
 									</div>
 									<div class="vl-20"></div>
-									<button class="points-grey-btn actor__profile-nav-btn">
-										<span></span>
-										<span></span>
-										<span></span>
-									</button>
-								</div>
-							</div>
-							<div class="actor__profile-content">
-								<div class="actor__profile-content-left">
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-city-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Город:</div>
-											<div class="actor__profile-text-details">Санкт-Петербург</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-gender-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Пол:</div>
-											<div class="actor__profile-text-details">Женский</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-age-icon-16.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Возраст:</div>
-											<div class="actor__profile-text-details">35</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-height-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Рост:</div>
-											<div class="actor__profile-text-details">168</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-weight-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Вес:</div>
-											<div class="actor__profile-text-details">54</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-qualities-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Особенности:</div>
-											<div class="actor__profile-text-details">Крупные татуировки, шрамы, залысина, борода</div>
-										</div>
-									</div>
-								</div>
-								<div class="actor__profile-content-right">
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-sport-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Телосложение:</div>
-											<div class="actor__profile-text-details">Спортивное</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-color-hair-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Цвет волос:</div>
-											<div class="actor__profile-text-details">Светло-русые</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-hair-length-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Длина волос:</div>
-											<div class="actor__profile-text-details">44</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-color-eyes-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Цвет глаз:</div>
-											<div class="actor__profile-text-details">Голубые</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-qualities-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Тип внешности:</div>
-											<div class="actor__profile-text-details">Славянская</div>
-										</div>
-									</div>
-									<div class="actor__profile-content-item">
-										<div class="actor__profile-content-item-img">
-											<img src="profile-hat-icon-18.svg" />
-										</div>
-										<div class="actor__profile-content-item-text">
-											<div class="text-small-gray">Студенческие работы:</div>
-											<div class="actor__profile-text-details">Не рассматриваю</div>
+									<div class="dropdown-wrapper actor__profile-nav-btn">
+										<button class="points-grey-btn points-grey-btn-profile dropdown-btn">
+											<span></span>
+											<span></span>
+											<span></span>
+										</button>
+										<div class="dropdown-inner">
+											<ul>
+												<li>
+													<button>
+														<img src="download-pdf-20.svg" />
+														<span class="points-grey-text dropdown-text">Скачать PDF</span>
+													</button>
+												</li>
+												<li>
+													<button>
+														<img src="printer-20.svg" />
+														<span class="points-grey-text dropdown-text">Распечатать</span>
+													</button>
+												</li>
+												<li>
+													<button>
+														<img src="envelope-20.svg" />
+														<span class="points-grey-text dropdown-text">Отправить</span>
+													</button>
+												</li>
+												<li>
+													<button>
+														<img src="share-20.svg" />
+														<span class="points-grey-text dropdown-text">Поделиться</span>
+													</button>
+												</li>
+											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<div class="tabs-content">
+								<div id="tab-1" class="tabs-panel" style="display: block">
+									<div class="actor__profile-content">
+										<div class="actor__profile-content-left">
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-city-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Город:</div>
+													<div class="actor__profile-text-details">Санкт-Петербург</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-gender-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Пол:</div>
+													<div class="actor__profile-text-details">Женский</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-age-icon-16.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Возраст:</div>
+													<div class="actor__profile-text-details">35</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-height-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Рост:</div>
+													<div class="actor__profile-text-details">168</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-weight-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Вес:</div>
+													<div class="actor__profile-text-details">54</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-qualities-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Особенности:</div>
+													<div class="actor__profile-text-details">Крупные татуировки, шрамы, залысина, борода</div>
+												</div>
+											</div>
+										</div>
+										<div class="actor__profile-content-right">
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-sport-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Телосложение:</div>
+													<div class="actor__profile-text-details">Спортивное</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-color-hair-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Цвет волос:</div>
+													<div class="actor__profile-text-details">Светло-русые</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-hair-length-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Длина волос:</div>
+													<div class="actor__profile-text-details">44</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-color-eyes-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Цвет глаз:</div>
+													<div class="actor__profile-text-details">Голубые</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-qualities-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Тип внешности:</div>
+													<div class="actor__profile-text-details">Славянская</div>
+												</div>
+											</div>
+											<div class="actor__profile-content-item">
+												<div class="actor__profile-content-item-img">
+													<img src="profile-hat-icon-18.svg" />
+												</div>
+												<div class="actor__profile-content-item-text">
+													<div class="text-small-gray">Студенческие работы:</div>
+													<div class="actor__profile-text-details">Не рассматриваю</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 
-						<div id="tab-2" class="tabs-panel">
-							<div class="flex-content">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine....</div>
-						</div>
+								<div id="tab-2" class="tabs-panel">
+									<div class="flex-content">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine....</div>
+								</div>
 
-						<div id="tab-3" class="tabs-panel">
-							<div class="flex-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo....</div>
-						</div>
+								<div id="tab-3" class="tabs-panel">
+									<div class="flex-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo....</div>
+								</div>
 
-						<div id="tab-4" class="tabs-panel">
-							<div class="flex-content">lorem</div>
-						</div>
+								<div id="tab-4" class="tabs-panel">
+									<div class="flex-content">lorem</div>
+								</div>
 
-						<div id="tab-5" class="tabs-panel">
-							<div class="flex-content">Ipsum</div>
+								<div id="tab-5" class="tabs-panel">
+									<div class="flex-content">Ipsum</div>
+								</div>
+							</div>
+						</div>
+						<div class="actor__profile-footer">
+							<div class="actor__profile-footer-select">
+								<div class="filter-dropdown-input --profile-actor">
+									<input class="dropdown-input" type="text" placeholder="Отклонённые" />
+									<div class="vl-16"></div>
+									<span class="inputText filter-dropdown-input-text">Профиль 2 / 15</span>
+									<img src="arrow-topBottom.svg" />
+									<div class="filter-dropdown-input-list --profile-actor">
+										<button class="filter-dropdown-input-btn">
+											<span class="filter-dropdown-input-btn-text">Заявки</span>
+											<span class="filter-dropdown-input-btn-add">15 актёров</span>
+										</button>
+										<button class="filter-dropdown-input-btn">
+											<span class="filter-dropdown-input-btn-text">Одобренные</span>
+											<span class="filter-dropdown-input-btn-add">3 актёра</span>
+										</button>
+										<button class="filter-dropdown-input-btn">
+											<span class="filter-dropdown-input-btn-text">Отложенные</span>
+											<span class="filter-dropdown-input-btn-add">7 актёров</span>
+										</button>
+										<button class="filter-dropdown-input-btn">
+											<span class="filter-dropdown-input-btn-text">Отклонённые</span>
+											<span class="filter-dropdown-input-btn-add">2 актёра</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="actor__profile-footer-buttons">
+								<button class="back-btn medium-secondary-btn">Назад</button>
+								<button class="forward-btn medium-secondary-btn">Дальше</button>
+							</div>
 						</div>
 					</div>
 				</div>

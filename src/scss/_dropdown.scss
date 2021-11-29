@@ -76,7 +76,19 @@
 }
 // End: Серая кнопка с тремя точками и дропдаун (класс active)
 
-// Start: Синяя кнопка с тремя точками и дропдаун (класс active)
+// Start: Серая кнопка с тремя точками и дропдаун в профиле актера (класс active)
+.points-grey-btn-profile {
+	transition: all 0.2s;
+	&.active {
+		background: #e0e0e0;
+		& span {
+			background-color: #757575;
+		}
+	}
+}
+
+// End: Серая кнопка с тремя точками и дропдаун в профиле актера (класс active)
+
 .dropdown-blue-inner {
 	left: 0;
 	width: 206px;
@@ -322,14 +334,30 @@
 }
 
 .filter-dropdown-icon {
-	display: flex;
-	background: url(../images/dropdown-filter.svg) 0 0 no-repeat;
+	position: relative;
 	width: 16px;
 	height: 16px;
+	& svg {
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+}
+
+.filter-dropdown-icon-second {
+	opacity: 0;
+	filter: alpha (opacity=0);
 }
 
 .main-header-top-filter:hover .filter-dropdown-icon {
-	background: url(../images/dropdown-filter-blue.svg) 0 0 no-repeat;
+	& .filter-dropdown-icon-first {
+		opacity: 0;
+		filter: alpha (opacity=0);
+	}
+	& .filter-dropdown-icon-second {
+		opacity: 1;
+		filter: alpha (opacity=100);
+	}
 }
 
 .filter-dropdown-title {

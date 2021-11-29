@@ -1,4 +1,160 @@
 (function ($) {
+	const setListener = (element, type, handler) => {
+		if (!element) {
+			return;
+		}
+		element.addEventListener(type, handler);
+	};
+
+	// Разворачивание колонки с заявками ----------------------------------------------------->
+
+	const toggleRequest = document.querySelector('.request-js');
+	const mainItemRequest = document.querySelector('.main__item');
+
+	setListener(toggleRequest, 'click', () => {
+		mainItemRequest.classList.toggle('--expand');
+	});
+	// ---------------------------------------------------------------------------------------->
+
+	// Убрать overflow у блока, чтобы отобразить dropdown и вернуть обратно при клике на кнопку закрыть --------------------->
+
+	const massActors = document.querySelector('.dropdown-text-js');
+	const transferActorsCloseBtn = document.querySelector('.transfer-actors-close-btn');
+
+	setListener(massActors, 'click', () => {
+		mainItemsWrapper.style.overflow = 'inherit';
+	});
+
+	setListener(transferActorsCloseBtn, 'click', () => {
+		mainItemsWrapper.style.overflow = 'overlay';
+	});
+
+	// ------------------------------------------------------------------------------------------------------------------------>
+
+	// Смена плейсхолдера у инпута ------------------------------------------------------------>
+
+	let isPlaceholderShort = false;
+	const inputTopSearch = document.querySelector('.input-top-search-js');
+
+	setListener(window, 'resize', () => {
+		if (window.innerWidth < 1281) {
+			if (!isPlaceholderShort) {
+				hideFullPlaceholder();
+			}
+		} else {
+			if (isPlaceholderShort) {
+				showFullPlaceholder();
+			}
+		}
+	});
+
+	function hideFullPlaceholder() {
+		inputTopSearch.placeholder = 'Актёры';
+		isPlaceholderShort = true;
+	}
+
+	function showFullPlaceholder() {
+		inputTopSearch.placeholder = 'Актёры в этом кастинге';
+		isPlaceholderShort = false;
+	}
+
+	// --------------------------------------------------------------------------------------->
+
+	// Трансформация кнопки ОТПРАВИТЬ ПРИГЛАШЕНИЕ ---------------------------------------------->
+
+	let sendInvitationBtn = document.querySelector('.send-invitation-btn');
+	let mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
+	let isTransform = false;
+
+	let timeout;
+
+	setListener(document, 'DOMContentLoaded', () => {
+		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
+		let sendLeft = sendInvitationBtn.offsetLeft;
+		console.log(mainLeft, sendLeft);
+
+		if (sendLeft < mainLeft) {
+			if (!isTransform) {
+				transformBtn();
+			}
+		}
+
+		if (sendLeft - mainLeft > 150) {
+			if (isTransform) {
+				cancelTransformBtn();
+			}
+		}
+	});
+
+	setListener(window, 'resize', () => {
+		clearTimeout(timeout);
+		timeout = setTimeout(function () {
+			let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
+			let sendLeft = sendInvitationBtn.offsetLeft;
+
+			if (sendLeft < mainLeft) {
+				if (!isTransform) {
+					transformBtn();
+				}
+			}
+
+			if (sendLeft - mainLeft > 160) {
+				if (isTransform) {
+					cancelTransformBtn();
+				}
+			}
+		}, 80);
+	});
+
+	function transformBtn() {
+		sendInvitationBtn.classList.add('active');
+		isTransform = true;
+	}
+
+	function cancelTransformBtn() {
+		sendInvitationBtn.classList.remove('active');
+		isTransform = false;
+	}
+
+	// ------------------------------------------------------------------------------------>
+
+	// Start: Range input slider in filter ---------------------------------------------------------------------------->
+	var rangeOne = document.querySelector('input[name="rangeOne"]'),
+		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
+		outputOne = document.querySelector('.outputOne'),
+		outputTwo = document.querySelector('.outputTwo'),
+		inclRange = document.querySelector('.incl-range'),
+		updateView = function () {
+			if (this.getAttribute('name') === 'rangeOne') {
+				outputOne.innerHTML = this.value;
+				outputOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+			} else {
+				outputTwo.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+				outputTwo.innerHTML = this.value;
+			}
+			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
+				inclRange.style.width = ((rangeOne.value - rangeTwo.value) / this.getAttribute('max')) * 100 + '%';
+				inclRange.style.left = (rangeTwo.value / this.getAttribute('max')) * 100 + '%';
+			} else {
+				inclRange.style.width = ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
+				inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
+			}
+		};
+
+	setListener(document, 'DOMContentLoaded', () => {
+		updateView.call(rangeOne);
+		updateView.call(rangeTwo);
+		$('.double-range')
+			.on('mouseup', function () {
+				this.blur();
+			})
+			.on('mousedown input', function () {
+				updateView.call(this);
+			});
+	});
+
+	// End: Range input slider in filter ------------------------------------------------------------------------------->
+
 	// Start: actor profile
 
 	var tabs_menu = document.getElementsByClassName('tabs-menu');
@@ -45,10 +201,15 @@
 	addActiveHover('.sidebar-burger', '.burger-btn');
 	addActiveHover('.sidebar-dropdown-question', '.sidebar-question-btn');
 	addActiveHover('.sidebar-dropdown-calendar', '.sidebar-calendar-btn');
+	addActiveHover('.actor__profile-nav-btn', '.points-grey-btn-profile');
 
 	// End: add/remove class active on hover
 
 	$('.filter-dropdown-input').click(function () {
+		$(this).toggleClass('active');
+	});
+
+	$('.filter-dropdown-input .--profile-actor').click(function () {
 		$(this).toggleClass('active');
 	});
 
@@ -160,17 +321,19 @@
 		activeSwitchLoc.style.left = '50%';
 	}
 
-	switchBtnLocLeft.addEventListener(
+	setListener(
+		switchBtnLocLeft,
 		'click',
-		function () {
+		() => {
 			switchLocLeft();
 		},
 		false
 	);
 
-	switchBtnLocRight.addEventListener(
+	setListener(
+		switchBtnLocRight,
 		'click',
-		function () {
+		() => {
 			switchLocRight();
 		},
 		false
@@ -203,40 +366,34 @@
 		activeSwitch.style.left = '67%';
 	}
 
-	switchBtnLeft.addEventListener(
+	setListener(
+		switchBtnLeft,
 		'click',
-		function () {
+		() => {
 			switchLeft();
 		},
 		false
 	);
 
-	switchBtnMiddle.addEventListener(
+	setListener(
+		switchBtnMiddle,
 		'click',
-		function () {
+		() => {
 			switchMiddle();
 		},
 		false
 	);
 
-	switchBtnRight.addEventListener(
+	setListener(
+		switchBtnRight,
 		'click',
-		function () {
+		() => {
 			switchRight();
 		},
 		false
 	);
 
-	// Разворачивание колонки с заявками
-
-	const toggleRequest = document.querySelector('.request-js');
-	const mainItemRequest = document.querySelector('.main__item');
-
-	toggleRequest.addEventListener('click', function () {
-		mainItemRequest.classList.toggle('--expand');
-	});
-
-	// Скрытие сайдбара
+	// Скрытие сайдбара ------------------------------------------------------------------------------------------------->
 
 	const sidebarBtnLeft = document.querySelector('.roll-up-btn-left');
 	const sidebarBtnRight = document.querySelector('.roll-up-btn-right');
@@ -251,7 +408,7 @@
 
 	let isSidebarHidden = false;
 
-	window.addEventListener('resize', function () {
+	setListener(window, 'resize', () => {
 		if (window.innerWidth < 1025) {
 			if (!isSidebarHidden) {
 				hideSidebar();
@@ -263,7 +420,7 @@
 		}
 	});
 
-	sidebarBtnLeft.addEventListener('click', hideSidebar);
+	setListener(sidebarBtnLeft, 'click', hideSidebar);
 
 	function hideSidebar() {
 		mainItemsWrapper.classList.add('active');
@@ -285,7 +442,7 @@
 		isSidebarHidden = true;
 	}
 
-	sidebarBtnRight.addEventListener('click', showSidebar);
+	setListener(sidebarBtnRight, 'click', showSidebar);
 
 	function showSidebar() {
 		mainItemsWrapper.classList.remove('active');
@@ -310,34 +467,7 @@
 		isSidebarHidden = false;
 	}
 
-	// Смена плейсхолдера у инпута -------------------------------------------------->
-
-	let isPlaceholderShort = false;
-	const inputTopSearch = document.querySelector('.input-top-search-js');
-
-	window.addEventListener('resize', function () {
-		if (window.innerWidth < 1281) {
-			if (!isPlaceholderShort) {
-				hideFullPlaceholder();
-			}
-		} else {
-			if (isPlaceholderShort) {
-				showFullPlaceholder();
-			}
-		}
-	});
-
-	function hideFullPlaceholder() {
-		inputTopSearch.placeholder = 'Актёры';
-		isPlaceholderShort = true;
-	}
-
-	function showFullPlaceholder() {
-		inputTopSearch.placeholder = 'Актёры в этом кастинге';
-		isPlaceholderShort = false;
-	}
-
-	// ------------------------------------------------------------------------------>
+	// ---------------------------------------------------------------------------------------------------------------->
 
 	// Start: add/remove border active focus
 
@@ -374,8 +504,10 @@
 	});
 
 	$('.main-header-top-search').click(function () {
-		$('.main-header-top-search').addClass('transform');
-		$('.send-invitation-btn').addClass('active');
+		if (window.innerWidth < 1280) {
+			$('.main-header-top-search').addClass('transform');
+			$('.send-invitation-btn').addClass('active');
+		}
 	});
 
 	// Start: Range input slider in transfer-actors
@@ -407,43 +539,6 @@
 
 	// End: Range input slider in transfer-actors
 
-	// Start: Range input slider in filter
-	var rangeOne = document.querySelector('input[name="rangeOne"]'),
-		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
-		outputOne = document.querySelector('.outputOne'),
-		outputTwo = document.querySelector('.outputTwo'),
-		inclRange = document.querySelector('.incl-range'),
-		updateView = function () {
-			if (this.getAttribute('name') === 'rangeOne') {
-				outputOne.innerHTML = this.value;
-				outputOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
-			} else {
-				outputTwo.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
-				outputTwo.innerHTML = this.value;
-			}
-			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
-				inclRange.style.width = ((rangeOne.value - rangeTwo.value) / this.getAttribute('max')) * 100 + '%';
-				inclRange.style.left = (rangeTwo.value / this.getAttribute('max')) * 100 + '%';
-			} else {
-				inclRange.style.width = ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
-				inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
-			}
-		};
-
-	document.addEventListener('DOMContentLoaded', function () {
-		updateView.call(rangeOne);
-		updateView.call(rangeTwo);
-		$('.double-range')
-			.on('mouseup', function () {
-				this.blur();
-			})
-			.on('mousedown input', function () {
-				updateView.call(this);
-			});
-	});
-
-	// End: Range input slider in filter
-
 	// Start: Tabs Массовый перенос актёров
 	(function () {
 		var tabs_menu = document.getElementsByClassName('transfer-actors-tabs-menu');
@@ -467,44 +562,4 @@
 	})();
 
 	// End: Tabs Массовый перенос актёров
-
-	// Трансформация кнопки ОТПРАВИТЬ ПРИГЛАШЕНИЕ ----------------------------------------->
-
-	let sendInvitationBtn = document.querySelector('.send-invitation-btn');
-	let mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
-	let isTransform = false;
-
-	let timeout;
-
-	window.addEventListener('resize', function () {
-		clearTimeout(timeout);
-		timeout = setTimeout(function () {
-			let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
-			let sendLeft = sendInvitationBtn.offsetLeft;
-			console.log(mainLeft, sendLeft);
-			if (sendLeft < mainLeft) {
-				if (!isTransform) {
-					transformBtn();
-				}
-			} else {
-				if (isTransform) {
-					if (sendLeft) {
-						cancelTransformBtn();
-					}
-				}
-			}
-		}, 100);
-	});
-
-	function transformBtn() {
-		sendInvitationBtn.classList.add('active');
-		isTransform = true;
-	}
-
-	function cancelTransformBtn() {
-		sendInvitationBtn.classList.remove('active');
-		isTransform = false;
-	}
-
-	// ------------------------------------------------------------------------------------>
 })(jQuery);
