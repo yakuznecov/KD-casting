@@ -451,31 +451,43 @@
 	width: 100%;
 }
 
-.appStore-box,
-.googlePlay-box {
+// .appStore-box,
+// .googlePlay-box {
+// 	position: relative;
+// 	width: 96px;
+// 	height: 32px;
+// 	border: 1px solid #000;
+// 	border-radius: 5px;
+// 	cursor: pointer;
+// }
+
+.googlePlay,
+.appStore {
+	display: block;
 	position: relative;
 	width: 96px;
 	height: 32px;
-	border: 1px solid #000;
 	border-radius: 5px;
 	cursor: pointer;
+	overflow: hidden;
 }
 
-.appStore-box {
-	background: url(../images/app-store.svg) center center no-repeat;
-	&:hover {
-		background: url(../images/app-store-dark.svg) center center no-repeat;
-		border: none;
-	}
-}
-
-.googlePlay-box {
+.googlePlay {
 	width: 108px;
-	background: url(../images/google-play.svg) center center no-repeat;
-	&:hover {
-		background: url(../images/google-play-dark.svg) center center no-repeat;
-		border: none;
-	}
+}
+
+.appStore-first,
+.googlePlay-first {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.3s ease;
+}
+
+.appStore:hover .appStore-first,
+.googlePlay:hover .googlePlay-first {
+	opacity: 1;
 }
 
 // End: Меню профайла

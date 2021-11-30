@@ -172,11 +172,14 @@
 								</div>
 								<div class="profile-menu-footer">
 									<div class="profile-menu-footer-links">
-										<div class="appStore-box">
-											<a class="appStore" href="#"></a>
+										<div class="appStore" href="#">
+											<img class="appStore-first" src="app-store-dark.svg" />
+											<img src="app-store.svg" />
 										</div>
-										<div class="googlePlay-box">
-											<a class="googlePlay" href="#"></a>
+
+										<div class="googlePlay" href="#">
+											<img class="googlePlay-first" src="google-play-dark.svg" />
+											<img src="google-play.svg" />
 										</div>
 									</div>
 								</div>
@@ -776,7 +779,7 @@
 					<button class="roll-up-btn roll-up-btn-right">
 						<img class="arowSquareRight" src="ArrowSquareRight.svg" alt="ArrowSquareRight" />
 					</button>
-					<span>Свернуть</span>
+					<span class="wrap-text">Свернуть</span>
 				</div>
 			</div>
 			<!-- End: Sidebar -->
@@ -1012,10 +1015,11 @@
 													<span class="points-blue-text dropdown-text dropdown-text-js">Массовое одобрение актёров</span>
 												</button>
 											</li>
-											<li>
-												<button class="request-js">
+											<li class="request-js">
+												<button>
 													<img src="arrowFatLinesRight-20.svg" />
-													<span class="points-blue-text dropdown-text">Развернуть колонку</span>
+													<span class="points-blue-text dropdown-text expand-column">Развернуть колонку</span>
+													<span class="points-blue-text dropdown-text collapse-column">Свернуть колонку</span>
 												</button>
 											</li>
 											<li>
@@ -1134,8 +1138,10 @@
 												<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
 											</div>
 											<div class="card-btns-small-box">
-												<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-												<div class="chatCircleCounter">2</div>
+												<button class="chatCircle-btn">
+													<img class="chatCircleDots-20" src="chatCircleDots-20.svg" />
+													<div class="chatCircleCounter">2</div>
+												</button>
 											</div>
 											<div class="card-btns-small-box">
 												<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>

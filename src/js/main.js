@@ -178,7 +178,14 @@
 
 	// End: actor profile
 
-	// Start: add/remove class active on hover
+	// Start: Скрытие окна Массовое одобрение актеров --------------------------------------------->
+
+	setListener(document.querySelector('.dropdown-transfer-actors'), 'mouseleave', (event) => {
+		event.target.classList.remove('active');
+	});
+	// End: Скрытие окна Массовое одобрение актеров ----------------------------------------------->
+
+	// Start: add/remove class active on hover -------------------------------------------------------------->
 
 	function addActiveHover(parent, child) {
 		$(parent)
@@ -203,7 +210,7 @@
 	addActiveHover('.sidebar-dropdown-calendar', '.sidebar-calendar-btn');
 	addActiveHover('.actor__profile-nav-btn', '.points-grey-btn-profile');
 
-	// End: add/remove class active on hover
+	// End: add/remove class active on hover -------------------------------------------------------------->
 
 	$('.filter-dropdown-input').click(function () {
 		$(this).toggleClass('active');
@@ -405,6 +412,7 @@
 	const sidebarTopBtns = document.querySelector('.sidebar-top-btns');
 	const sidebarLeftBtns = document.querySelector('.sidebar-left-btns');
 	const mainItemsWrapper = document.querySelector('.main-items-wrapper');
+	const wrapText = document.querySelector('.wrap-text');
 
 	let isSidebarHidden = false;
 
@@ -424,6 +432,7 @@
 
 	function hideSidebar() {
 		mainItemsWrapper.classList.add('active');
+		wrapText.classList.add('active');
 		sidebarTabs.classList.toggle('done');
 		sidebarHeaderTitle.classList.toggle('done');
 		sidebarTopBtns.classList.remove('active');
@@ -452,12 +461,13 @@
 
 		setTimeout(function () {
 			sidebarTopBtns.classList.add('active');
-		}, 350);
+			wrapText.classList.remove('active');
+		}, 280);
 
 		setTimeout(function () {
 			sidebarTabs.classList.toggle('done');
 			sidebarHeaderTitle.classList.toggle('done');
-		}, 350);
+		}, 280);
 
 		sidebar.classList.toggle('--rolled');
 

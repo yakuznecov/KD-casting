@@ -131,6 +131,10 @@
 		}
 	}
 }
+
+.collapse-column {
+	display: none;
+}
 // End: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
 
 // Start: Дропдаун Массовый перенос актёров
@@ -447,7 +451,10 @@
 	width: 100%;
 	font-size: 14px;
 	letter-spacing: 0.25px;
-	color: #616161;
+	color: #424242;
+	&::placeholder {
+		color: #616161;
+	}
 }
 
 .filter-dropdown-input-list {

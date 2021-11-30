@@ -4,7 +4,7 @@
 	flex-direction: column;
 	flex: 0 0 376px;
 	padding: 0 12px 0 40px;
-	transition: flex 0.4s;
+	transition: flex 0.3s;
 }
 
 .sidebar-plus {
@@ -46,7 +46,6 @@
 
 	& .roll-up-box {
 		margin-left: -14px;
-		margin-bottom: 5px;
 	}
 }
 
@@ -300,13 +299,16 @@
 	align-items: center;
 	margin: auto 0 6px -14px;
 	padding: 9px;
+}
 
-	& span {
-		font-size: 15px;
-		line-height: 15px;
-		letter-spacing: 0.5px;
-		color: #212121;
-		margin: 2px 0 0 3px;
+.wrap-text {
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: 0.5px;
+	color: #212121;
+	margin: 2px 0 0 3px;
+	&.active {
+		display: none;
 	}
 }
 

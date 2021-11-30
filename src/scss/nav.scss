@@ -205,11 +205,11 @@ body {
 .main-inner {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 1527px;
+	width: 100%;
 	background: #fff;
-	height: calc(100vh - 142px);
 	box-shadow: -1px 4px 8px rgba(0, 0, 0, 0.1);
 	border-radius: 8px 0px 0px 0px;
+	transition: width 0.3s;
 }
 
 // Start: Пустое рабочее пространство
@@ -374,18 +374,19 @@ body {
 
 .main-wrapper {
 	height: 100%;
-	padding: 24px 0 0 32px;
+	padding: 24px 0 0 31px;
 }
 
 .main-items-wrapper {
 	display: flex;
 	height: calc(100vh - 263px);
-	width: calc(100vw - 408px);
+	width: calc(100vw - 407px);
 	overflow: overlay;
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
+	transition: width 0.3s;
 	&.active {
-		width: calc(100vw - 216px);
+		width: calc(100vw - 159px);
 	}
 
 	&.--scroll {
@@ -452,6 +453,15 @@ body {
 			&:nth-child(3n) {
 				margin-right: 0;
 			}
+		}
+		& .request-js svg {
+			transform: rotate(180deg);
+		}
+		& .request-js .collapse-column {
+			display: block;
+		}
+		& .request-js .expand-column {
+			display: none;
 		}
 	}
 }
@@ -542,7 +552,7 @@ body {
 		border: 2px solid rgba(112, 168, 221, 0.7);
 		padding: 0 10px;
 		& .arrow-right path {
-			stroke: #70a8dd;
+			stroke: rgba(112, 168, 221, 0.7);
 		}
 		& .sidebar__castings-item-img.active {
 			background: #e8f5ff;
@@ -737,6 +747,10 @@ body {
 	&.--monitorPlay {
 		margin-top: -1px;
 	}
+}
+
+.chatCircle-btn:hover .chatCircleDots-20 path {
+	stroke: #212121;
 }
 
 .profile-btn-20 {
