@@ -112,10 +112,25 @@
 // End: Синяя кнопка с тремя точками и дропдаун (класс active)
 
 // Start: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
+.dropdown-request-js {
+	position: relative;
+}
+
+.dropdown-request-js .dropdown-request-inner {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.dropdown-request-js .dropdown-request-inner.active {
+	opacity: 1;
+	visibility: visible;
+}
+
 .dropdown-request-inner {
 	width: 280px;
 	right: 0;
 	top: 27px;
+	transition: all 0.2s;
 }
 
 .item-points-grey-btn {
@@ -138,6 +153,10 @@
 // End: Серая маленькая кнопка с тремя точками и дропдаун (класс active), где Заявки
 
 // Start: Дропдаун Массовый перенос актёров
+.dropdown-transfer {
+	position: relative;
+}
+
 .dropdown-transfer-actors {
 	position: absolute;
 	right: 0;
@@ -152,12 +171,12 @@
 	padding: 20px 24px;
 }
 
-.dropdown-wrapper .dropdown-transfer-actors {
+.dropdown-transfer .dropdown-transfer-actors {
 	opacity: 0;
 	visibility: hidden;
 }
 
-.dropdown-wrapper .dropdown-transfer-actors.active {
+.dropdown-transfer .dropdown-transfer-actors.active {
 	opacity: 1;
 	visibility: visible;
 }
@@ -575,6 +594,18 @@
 }
 // End: dropdown tags в карточке актёра
 
+// Srart: dropdown tags в actor__profile slide #2
+.number-tag-actor__profile {
+	width: 171px;
+	left: 0;
+	top: auto;
+	bottom: 23px;
+	padding: 3px 4px 7px 12px;
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 6px;
+}
+// End: dropdown tags в actor__profile slide #2
+
 // Start: sidebar-dropdown-header-title
 .header-title-inner {
 	width: 203px;
@@ -646,7 +677,7 @@
 		right: 0;
 		bottom: -2px;
 	}
-	@media (max-width: 1280px) {
+	@media (max-width: 1366px) {
 		display: flex;
 	}
 }
@@ -677,3 +708,27 @@
 	visibility: visible;
 }
 // End: Dropdown статусов в шапке сайта ---------------------------------->
+
+// Start: Dropdown block в actor__profile ---------------------------------->
+.actor__profile-dropdown-block {
+	right: 200px;
+	width: 246px;
+	padding: 19px 19px 19px 18px;
+}
+
+.actor__profile-dropdown-block-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 65px;
+	height: 65px;
+	border-radius: 4px;
+	background-color: #edb6b6;
+	margin-bottom: 20px;
+}
+
+.actor__profile-dropdown-block-btn {
+	margin-top: 16px;
+	width: 206px;
+}
+// End: Dropdown block в actor__profile ---------------------------------->

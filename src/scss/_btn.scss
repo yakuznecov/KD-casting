@@ -8,6 +8,38 @@
 	border-radius: 4px;
 }
 
+.blue-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 120px;
+	height: 24px;
+	font-size: 13px;
+	letter-spacing: 0.4px;
+	border-radius: 4px;
+	color: #fff;
+	background: #1991eb;
+	transition: 0.2s ease;
+	&.--medium {
+		height: 32px;
+		font-size: 15px;
+		letter-spacing: 0.5px;
+	}
+	&.--large {
+		height: 40px;
+		font-size: 16px;
+		letter-spacing: 0.5px;
+	}
+	&:hover,
+	&:active {
+		background: #127fd1;
+	}
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+}
+
 // Создать кастинг
 .wide-btn {
 	display: inline-flex;
@@ -203,27 +235,6 @@
 	}
 }
 
-// Вертикальные линии
-.vl-12 {
-	border-left: 1px solid #eee;
-	height: 12px;
-}
-
-.vl-16 {
-	border-left: 1px solid #e0e0e0;
-	height: 16px;
-}
-
-.vl-20 {
-	border-left: 1px solid #eee;
-	height: 20px;
-}
-
-.vl-30 {
-	border-left: 1px solid #e0e0e0;
-	height: 30px;
-}
-
 // Статусы
 .status-default {
 	display: inline-flex;
@@ -311,7 +322,7 @@
 // Большая кнопка в карточке актера
 .card-large-btn {
 	display: inline-flex;
-	justify-content: center;
+	justify-content: space-between;
 	height: 24px;
 	min-width: 105px;
 	font-size: 13px;
@@ -337,10 +348,6 @@
 		background: #127fd1;
 	}
 
-	& span {
-		margin-left: 8px;
-	}
-
 	&.--accept {
 		background: #df8282;
 
@@ -360,7 +367,10 @@
 
 	&.--return {
 		background: #009a61;
-
+		padding: 0 8px 0 10px;
+		& span {
+			margin-top: 1px;
+		}
 		&:hover {
 			background: #008755;
 		}

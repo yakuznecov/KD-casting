@@ -12,14 +12,13 @@
 @import 'null';
 @import 'actor-profile';
 
-html,
 body {
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
 	color: #212529;
 	font-size: 16px;
-	padding: 0;
+	padding-top: 142px;
 	background: #f2f2f2;
 }
 
@@ -199,7 +198,6 @@ body {
 .main {
 	display: flex;
 	width: 100%;
-	padding-top: 142px;
 }
 
 .main-inner {
@@ -217,9 +215,14 @@ body {
 .empty__wrapper {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 	text-align: center;
-	margin-top: 97px;
+	padding: 97px 56px 0;
+}
+
+.empty__wrapper-bg {
+	max-width: 938px;
 }
 
 .empty__wrapper-bg svg {
@@ -355,7 +358,7 @@ body {
 
 .hide-media-status {
 	display: flex;
-	@media (max-width: 1280px) {
+	@media (max-width: 1366px) {
 		display: none;
 	}
 }

@@ -179,9 +179,14 @@
 	// End: actor profile
 
 	// Start: Скрытие окна Массовое одобрение актеров --------------------------------------------->
+	let dropTransferActors = document.querySelector('.dropdown-transfer-actors');
+	setListener(dropTransferActors, 'mouseover', (event) => {
+		event.stopPropagation();
+	});
 
-	setListener(document.querySelector('.dropdown-transfer-actors'), 'mouseleave', (event) => {
+	setListener(dropTransferActors, 'mouseleave', (event) => {
 		event.target.classList.remove('active');
+		mainItemsWrapper.style.overflow = 'overlay';
 	});
 	// End: Скрытие окна Массовое одобрение актеров ----------------------------------------------->
 
@@ -209,6 +214,7 @@
 	addActiveHover('.sidebar-dropdown-question', '.sidebar-question-btn');
 	addActiveHover('.sidebar-dropdown-calendar', '.sidebar-calendar-btn');
 	addActiveHover('.actor__profile-nav-btn', '.points-grey-btn-profile');
+	addActiveHover('.dropdown-request-js', '.dropdown-request-inner');
 
 	// End: add/remove class active on hover -------------------------------------------------------------->
 
@@ -572,4 +578,28 @@
 	})();
 
 	// End: Tabs Массовый перенос актёров
+
+	// Start: Tabs Profile Actor Foto Video -------------------------------------------------------->
+	(function () {
+		var tabs_menu = document.getElementsByClassName('actor__profile-media-tabs-menu');
+		for (var k = 0; k < tabs_menu.length; k++) {
+			tabs_menu[k].onclick = js_tabs;
+		}
+		function js_tabs() {
+			var tab_data = this.getAttribute('data-target');
+			var tabs_panel = document.getElementsByClassName('actor__profile-media-tabs-panel');
+
+			for (var i = 0; i < tabs_panel.length; i++) {
+				tabs_panel[i].style.display = 'none';
+			}
+			for (var j = 0; j < tabs_menu.length; j++) {
+				tabs_menu[j].className = tabs_menu[j].className.replace(' actor__profile-media-active', '');
+			}
+			this.className += ' actor__profile-media-active';
+			document.getElementById(tab_data).style.display = 'block';
+			return false;
+		}
+	})();
+
+	// End: Tabs Tabs Profile Actor Foto Video -------------------------------------------------------->
 })(jQuery);
