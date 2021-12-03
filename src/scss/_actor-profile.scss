@@ -92,6 +92,10 @@
 	transform: rotate(90deg);
 }
 
+.tabs-menu[data-target='tab-1'] {
+	z-index: 5;
+}
+
 .tabs-menu[data-target='tab-2'] {
 	z-index: 4;
 }
@@ -135,9 +139,7 @@
 
 .tabs-menu.tabs-menu-active {
 	background: #fff;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-	box-shadow: none;
-	z-index: 5;
+	z-index: 6;
 }
 
 .tabs-menu.tabs-menu-active:after,

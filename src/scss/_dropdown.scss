@@ -44,6 +44,13 @@
 	visibility: visible;
 }
 
+.dropdown-wrapper:hover .points-grey-btn {
+	background: #e0e0e0;
+	& span {
+		background: #757575;
+	}
+}
+
 .dropdown-btn {
 	position: relative;
 
@@ -732,3 +739,10 @@
 	width: 206px;
 }
 // End: Dropdown block в actor__profile ---------------------------------->
+
+// Start: Dropdown header casting__data ---------------------------------->
+
+.casting__data-header-dropdown-inner {
+	width: 198px;
+}
+// End: Dropdown header casting__data ---------------------------------->
