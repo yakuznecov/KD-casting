@@ -9,7 +9,20 @@ let gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssnano = require('gulp-cssnano'),
 	changed = require('gulp-changed'),
+	fileinclude = require('gulp-file-include'),
 	tildeImporter = require('node-sass-tilde-importer');
+
+gulp.task('fileinclude', function () {
+	return gulp
+		.src('src/pages/**/*.html')
+		.pipe(
+			fileinclude({
+				prefix: '@@',
+				basepath: 'src/components',
+			})
+		)
+		.pipe(gulp.dest('./'));
+});
 
 let paths = {
 	src: {
