@@ -24,6 +24,11 @@ gulp.task('fileinclude', function () {
 		.pipe(gulp.dest('./'));
 });
 
+gulp.task('reload', function (done) {
+	browserSync.reload();
+	done();
+});
+
 let paths = {
 	src: {
 		html: 'src/**/*.html',
@@ -32,7 +37,7 @@ let paths = {
 		js: 'src/js/**/*.js',
 	},
 	build: {
-		html: 'dist',
+		html: 'dist/',
 		css: 'dist/css',
 		images: 'dist/images',
 		js: 'dist/js',
@@ -96,12 +101,14 @@ gulp.task('browser-sync', function () {
 		ghostMode: false,
 		watch: false,
 		server: {
-			baseDir: 'dist/',
+			baseDir: 'src/',
 		},
 	});
 });
 
 gulp.task('watch', async function () {
+	gulp.watch(['./src/**/*.*'], gulp.series('fileinclude'));
+	gulp.watch(['./ru/*.*', './en/*.*', './dist/**/*.*'], gulp.series('reload'));
 	gulp.watch(paths.src.scss, gulp.parallel('scss'));
 	gulp.watch(paths.src.html, gulp.parallel('html'));
 	gulp.watch(paths.src.js, gulp.parallel('js'));
@@ -110,4 +117,4 @@ gulp.task('watch', async function () {
 
 gulp.task('build', gulp.series('clean', 'scss', 'html', 'js', 'images'));
 
-gulp.task('default', gulp.parallel('scss', 'html', 'js', 'images', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('fileinclude', 'scss', 'html', 'js', 'images', 'browser-sync', 'watch'));

@@ -1,0 +1,5 @@
+# Ignore all HTML files:
+# *.html
+head.html
+# игнорируются только те файлы, перед которыми стоит такой комментарий
+# <!-- prettier-ignore -->
