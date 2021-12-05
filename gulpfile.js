@@ -21,7 +21,7 @@ gulp.task('fileinclude', function () {
 				basepath: 'src/components',
 			})
 		)
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('dist/'));
 });
 
 gulp.task('reload', function (done) {
@@ -37,7 +37,7 @@ let paths = {
 		js: 'src/js/**/*.js',
 	},
 	build: {
-		html: 'dist/',
+		html: 'dist/ru',
 		css: 'dist/css',
 		images: 'dist/images',
 		js: 'dist/js',
@@ -101,20 +101,20 @@ gulp.task('browser-sync', function () {
 		ghostMode: false,
 		watch: false,
 		server: {
-			baseDir: 'src/',
+			baseDir: 'dist',
 		},
 	});
 });
 
 gulp.task('watch', async function () {
-	gulp.watch(['./src/**/*.*'], gulp.series('fileinclude'));
-	gulp.watch(['./ru/*.*', './en/*.*', './dist/**/*.*'], gulp.series('reload'));
 	gulp.watch(paths.src.scss, gulp.parallel('scss'));
 	gulp.watch(paths.src.html, gulp.parallel('html'));
 	gulp.watch(paths.src.js, gulp.parallel('js'));
 	gulp.watch(paths.src.images, gulp.parallel('images'));
+	gulp.watch(['./src/**/*.*'], gulp.series('fileinclude'));
+	gulp.watch(['./dist/*.*', './dist/*.*', './dist/**/*.*'], gulp.series('reload'));
 });
 
 gulp.task('build', gulp.series('clean', 'scss', 'html', 'js', 'images'));
 
-gulp.task('default', gulp.parallel('fileinclude', 'scss', 'html', 'js', 'images', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('scss', 'html', 'js', 'images', 'fileinclude', 'browser-sync', 'watch'));
