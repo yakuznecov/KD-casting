@@ -618,10 +618,12 @@
 	&:focus-visible {
 		background: #f4f6f6;
 		border: 2px solid #7bb9f0;
+		color: #0064c1;
 	}
 	&:hover,
 	&:active {
 		background: #f4f6f6;
 		border: 1px solid #0064c1;
+		color: #0064c1;
 	}
 }

@@ -110,7 +110,7 @@
 								</div>
 							</div>
 							<div class="tabs-content">
-								<div id="tab-1" class="tabs-panel" style="display: block">
+								<div id="tab-1" class="tabs-panel">
 									<div class="actor__profile-content">
 										<div class="actor__profile-content-left">
 											<div class="actor__profile-content-item">
@@ -300,16 +300,19 @@
 								</div>
 								<!-- End: Second Slide ------------------------------------------- -->
 								<!-- Start: Third Slide ------------------------------------------- -->
-								<div id="tab-3" class="tabs-panel">
+								<div id="tab-3" class="tabs-panel" style="display: block">
 									<section class="actor__profile-media">
 										<div class="actor__profile-media-container">
 											<div class="actor__profile-media-nav">
-												<button data-target="media-tab_1" class="actor__profile-media-tabs-menu actor__profile-media-active">Фото</button>
-												<button data-target="media-tab_2" class="actor__profile-media-tabs-menu">Видео</button>
+												<div class="actor__profile-media-nav-inner">
+													<span class="actor__profile-media-active-btn"></span>
+													<button class="actor__profile-media-tabs-menu left">Фото</button>
+													<button class="actor__profile-media-tabs-menu right">Видео</button>
+												</div>
 											</div>
 
 											<div class="actor__profile-media-tabs-content">
-												<div id="media-tab_1" class="actor__profile-media-tabs-panel" style="display: block">
+												<div id="media-tab_1" class="actor__profile-media-tabs-panel active">
 													<div class="actor__profile-media-foto">
 														<div class="actor__profile-media-foto-box">
 															<img src="images/actor-picture.png" />
@@ -329,7 +332,7 @@
 													</div>
 												</div>
 
-												<div id="media-tab_2" class="actor__profile-media-tabs-panel" style="display: none">
+												<div id="media-tab_2" class="actor__profile-media-tabs-panel">
 													<div class="actor__profile-media-video">
 														<div class="actor__profile-media-video-box">
 															<img src="images/actor-video.png" />

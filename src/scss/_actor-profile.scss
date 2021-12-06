@@ -29,7 +29,7 @@
 }
 
 .actor__profile-inner {
-	height: calc(100vh - 105px);
+	height: calc(100vh - 96px);
 	min-width: 505px;
 	padding: 32px 18px 0 0;
 	overflow-y: auto;
@@ -279,13 +279,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 41px;
+	margin-top: 32px;
 	max-width: 487px;
 }
 
 .actor__profile-footer-select {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 // Start: Select в footer profile actor ---------------------------------->
@@ -296,6 +297,7 @@
 	margin-bottom: 0;
 	& .dropdown-input {
 		width: 98px;
+		cursor: pointer;
 		&::placeholder {
 			color: #424242;
 		}
@@ -386,15 +388,42 @@
 	width: 100%;
 }
 
+.actor__profile-contacts-inner {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.actor__profile-media-active-btn {
+	color: #61707d;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 240px;
+	height: 100%;
+	z-index: -1;
+	transition: all 0.2s ease-out;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+	border-radius: 2px;
+}
+
 .actor__profile-media-nav {
 	position: relative;
-	display: flex;
-	align-items: center;
-	padding: 0 2px;
-	justify-content: space-between;
+	padding: 2px;
 	min-height: 31px;
 	background: #eee;
 	border-radius: 4px;
+}
+
+.actor__profile-media-nav-inner {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 27px;
+	text-align: center;
+	will-change: transform;
+	cursor: pointer;
 }
 
 .actor__profile-media-tabs-menu {
@@ -402,14 +431,17 @@
 	align-items: center;
 	justify-content: center;
 	height: 27px;
-	min-width: 240px;
+	min-width: 49%;
 	font-size: 13px;
 	letter-spacing: 0.4px;
 	color: #616161;
-	border-radius: 2px;
-	background-color: #eee;
-	&.actor__profile-media-active {
-		background-color: #fff;
+	background-color: none;
+}
+
+.actor__profile-media-tabs-panel {
+	display: none;
+	&.active {
+		display: block;
 	}
 }
 
@@ -420,21 +452,27 @@
 	overflow-x: auto;
 	scrollbar-color: #e0e0e0 transparent;
 	scrollbar-width: thin;
-	padding-bottom: 8px;
+	padding-bottom: 4px;
 	margin-top: 24px;
+	cursor: pointer;
 	&::-webkit-scrollbar {
-		height: 4px;
+		height: 12px;
 		width: 254px;
 	}
 
 	&::-webkit-scrollbar-track {
-		background: transparent;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		background-clip: padding-box;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background: #e0e0e0;
+		position: relative;
+		background-color: #e0e0e0;
 		border-radius: 100px;
 		background-clip: padding-box;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
 	}
 }
 
@@ -498,12 +536,6 @@
 // Start: Fifth Slide ---------------------------------------------------->
 .actor__profile-contacts {
 	margin-top: 24px;
-}
-
-.actor__profile-contacts-inner {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
 }
 
 .actor__profile-contacts-item {

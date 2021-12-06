@@ -222,6 +222,13 @@
 		$(this).toggleClass('active');
 	});
 
+	$(document).mouseup(function (e) {
+		var modal = $('.filter-dropdown-input');
+		if (!modal.is(e.target) && modal.has(e.target).length === 0) {
+			$('.filter-dropdown-input').removeClass('active');
+		}
+	});
+
 	$('.filter-dropdown-input .--profile-actor').click(function () {
 		$(this).toggleClass('active');
 	});
@@ -580,26 +587,27 @@
 	// End: Tabs Массовый перенос актёров
 
 	// Start: Tabs Profile Actor Foto Video -------------------------------------------------------->
-	(function () {
-		var tabs_menu = document.getElementsByClassName('actor__profile-media-tabs-menu');
-		for (var k = 0; k < tabs_menu.length; k++) {
-			tabs_menu[k].onclick = js_tabs;
-		}
-		function js_tabs() {
-			var tab_data = this.getAttribute('data-target');
-			var tabs_panel = document.getElementsByClassName('actor__profile-media-tabs-panel');
+	const actorProfileBtnLeft = document.querySelector('.actor__profile-media-tabs-menu.left');
+	const actorProfileBtnRight = document.querySelector('.actor__profile-media-tabs-menu.right');
+	const actorProfileActiveBtn = document.querySelector('.actor__profile-media-active-btn');
+	const actorProfileTabsPanelFirst = document.querySelector('#media-tab_1');
+	const actorProfileTabsPanelSecond = document.querySelector('#media-tab_2');
 
-			for (var i = 0; i < tabs_panel.length; i++) {
-				tabs_panel[i].style.display = 'none';
-			}
-			for (var j = 0; j < tabs_menu.length; j++) {
-				tabs_menu[j].className = tabs_menu[j].className.replace(' actor__profile-media-active', '');
-			}
-			this.className += ' actor__profile-media-active';
-			document.getElementById(tab_data).style.display = 'block';
-			return false;
-		}
-	})();
+	actorProfileBtnLeft.addEventListener('click', switchToLeft);
+
+	actorProfileBtnRight.addEventListener('click', switchToRight);
+
+	function switchToLeft() {
+		actorProfileTabsPanelFirst.classList.add('active');
+		actorProfileTabsPanelSecond.classList.remove('active');
+		actorProfileActiveBtn.style.left = '0%';
+	}
+
+	function switchToRight() {
+		actorProfileTabsPanelFirst.classList.remove('active');
+		actorProfileTabsPanelSecond.classList.add('active');
+		actorProfileActiveBtn.style.left = '50%';
+	}
 
 	// End: Tabs Tabs Profile Actor Foto Video -------------------------------------------------------->
 })(jQuery);
