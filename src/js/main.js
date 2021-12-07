@@ -36,17 +36,17 @@
 	let isPlaceholderShort = false;
 	const inputTopSearch = document.querySelector('.input-top-search-js');
 
-	setListener(window, 'resize', () => {
-		if (window.innerWidth < 1281) {
-			if (!isPlaceholderShort) {
-				hideFullPlaceholder();
-			}
-		} else {
-			if (isPlaceholderShort) {
-				showFullPlaceholder();
-			}
-		}
-	});
+	// setListener(window, 'resize', () => {
+	// 	if (window.innerWidth < 1281) {
+	// 		if (!isPlaceholderShort) {
+	// 			hideFullPlaceholder();
+	// 		}
+	// 	} else {
+	// 		if (isPlaceholderShort) {
+	// 			showFullPlaceholder();
+	// 		}
+	// 	}
+	// });
 
 	function hideFullPlaceholder() {
 		inputTopSearch.placeholder = 'Актёры';
@@ -64,6 +64,8 @@
 
 	let sendInvitationBtn = document.querySelector('.send-invitation-btn');
 	let mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
+	let sendInvitationBtnTextJs = document.querySelector('.send-invitation-btn-text-js');
+	let mainHeaderTopSearch = document.querySelector('.main-header-top-search');
 	let isTransform = false;
 
 	let timeout;
@@ -71,17 +73,33 @@
 	setListener(document, 'DOMContentLoaded', () => {
 		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
 		let sendLeft = sendInvitationBtn.offsetLeft;
-		console.log(mainLeft, sendLeft);
 
 		if (sendLeft < mainLeft) {
 			if (!isTransform) {
-				transformBtn();
+				lowerSearch();
+				hideFullPlaceholder();
 			}
 		}
 
-		if (sendLeft - mainLeft > 150) {
+		if (mainHeaderTopSearch.classList.contains('lower')) {
+			if (sendLeft - mainLeft < 150) {
+				if (isTransform) {
+					transformBtn();
+				} else {
+					cancelTransformBtn();
+				}
+			}
+		}
+
+		if (sendLeft < mainLeft) {
 			if (isTransform) {
-				cancelTransformBtn();
+			}
+		}
+
+		if (sendLeft - mainLeft > 180) {
+			if (isTransform) {
+				maxSearch();
+				showFullPlaceholder();
 			}
 		}
 	});
@@ -94,13 +112,26 @@
 
 			if (sendLeft < mainLeft) {
 				if (!isTransform) {
-					transformBtn();
+					lowerSearch();
+					hideFullPlaceholder();
+				}
+			}
+			console.log(sendLeft - mainLeft);
+
+			if (mainHeaderTopSearch.classList.contains('lower')) {
+				if (sendLeft - mainLeft < 100) {
+					if (isTransform) {
+						transformBtn();
+					}
+				} else {
+					cancelTransformBtn();
 				}
 			}
 
-			if (sendLeft - mainLeft > 160) {
+			if (sendLeft - mainLeft > 180) {
 				if (isTransform) {
-					cancelTransformBtn();
+					maxSearch();
+					showFullPlaceholder();
 				}
 			}
 		}, 80);
@@ -108,11 +139,23 @@
 
 	function transformBtn() {
 		sendInvitationBtn.classList.add('active');
+		sendInvitationBtnTextJs.classList.add('hide');
 		isTransform = true;
 	}
 
 	function cancelTransformBtn() {
 		sendInvitationBtn.classList.remove('active');
+		sendInvitationBtnTextJs.classList.remove('hide');
+		isTransform = false;
+	}
+
+	function lowerSearch() {
+		mainHeaderTopSearch.classList.add('lower');
+		isTransform = true;
+	}
+
+	function maxSearch() {
+		mainHeaderTopSearch.classList.remove('lower');
 		isTransform = false;
 	}
 
@@ -526,10 +569,21 @@
 		$('.dropdown-transfer-actors').removeClass('active');
 	});
 
-	$('.main-header-top-search').click(function () {
+	$('.input-top-search-js').focus(function () {
 		if (window.innerWidth < 1280) {
 			$('.main-header-top-search').addClass('transform');
 			$('.send-invitation-btn').addClass('active');
+			$('.send-invitation-btn-text-js').addClass('hide');
+		}
+	});
+
+	$('.input-top-search-js').focusout(function () {
+		if (window.innerWidth < 1280) {
+			$('.main-header-top-search').removeClass('transform');
+			$('.send-invitation-btn').removeClass('active');
+			setTimeout(function () {
+				$('.send-invitation-btn-text-js').removeClass('hide');
+			}, 200);
 		}
 	});
 

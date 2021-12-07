@@ -202,9 +202,7 @@
 	&.active {
 		min-width: 32px;
 		padding: 0;
-		& span {
-			display: none;
-		}
+
 		& .send-invitation-img {
 			display: block;
 		}

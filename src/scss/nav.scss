@@ -12,18 +12,26 @@
 @import 'null';
 @import 'actor-profile';
 @import 'casting-data';
+@import '404-page';
+
+html,
+body {
+	height: 100%;
+}
 
 body {
 	position: relative;
-	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 	color: #212529;
 	font-size: 16px;
-	padding-top: 142px;
 	background: #f2f2f2;
 }
 
 /* main kinolift */
+
+.main-container {
+	padding-top: 142px;
+}
 
 .site-header {
 	position: fixed;
@@ -333,7 +341,7 @@ body {
 		cursor: auto;
 	}
 
-	@media (max-width: 1280px) {
+	&.lower {
 		flex: 0 0 112px;
 		transition: flex 0.2s;
 	}
@@ -918,6 +926,10 @@ body {
 }
 
 // End: Tabs Массовый перенос актёров
+
+.send-invitation-btn-text-js.hide {
+	display: none;
+}
 
 .hide {
 	opacity: 0;

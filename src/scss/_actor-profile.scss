@@ -298,6 +298,7 @@
 	& .dropdown-input {
 		width: 98px;
 		cursor: pointer;
+		caret-color: transparent;
 		&::placeholder {
 			color: #424242;
 		}
