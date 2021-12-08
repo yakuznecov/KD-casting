@@ -9,11 +9,24 @@ let gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssnano = require('gulp-cssnano'),
 	changed = require('gulp-changed'),
-	tildeImporter = require('node-sass-tilde-importer');
+	tildeImporter = require('node-sass-tilde-importer'),
+	fileinclude = require('gulp-file-include');
+
+gulp.task('fileinclude', function () {
+	gulp
+		.src('src/*.html')
+		.pipe(
+			fileinclude({
+				prefix: '@@',
+				basepath: 'src/components',
+			})
+		)
+		.pipe(gulp.dest('dist'));
+});
 
 let paths = {
 	src: {
-		html: 'src/**/*.html',
+		html: 'src/*.html',
 		scss: 'src/scss/**/*.scss',
 		images: 'src/images/**/*.*',
 		js: 'src/js/**/*.js',
@@ -67,6 +80,7 @@ gulp.task('html', function () {
 		)
 		.on('error', swallowError)
 		.pipe(gulp.dest(paths.build.html))
+		.pipe(fileinclude())
 		.pipe(browserSync.stream());
 });
 
@@ -90,11 +104,11 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', async function () {
 	gulp.watch(paths.src.scss, gulp.parallel('scss'));
-	gulp.watch(paths.src.html, gulp.parallel('html'));
+	gulp.watch(paths.src.html, gulp.parallel('html'), gulp.series('fileinclude'));
 	gulp.watch(paths.src.js, gulp.parallel('js'));
 	gulp.watch(paths.src.images, gulp.parallel('images'));
 });
 
-gulp.task('build', gulp.series('clean', 'scss', 'html', 'js', 'images'));
+gulp.task('build', gulp.series('clean', 'scss', 'html', 'fileinclude', 'js', 'images'));
 
-gulp.task('default', gulp.parallel('scss', 'html', 'js', 'images', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('scss', 'html', 'js', 'images', 'fileinclude', 'browser-sync', 'watch'));
