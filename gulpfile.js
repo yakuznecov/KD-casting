@@ -9,25 +9,7 @@ let gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssnano = require('gulp-cssnano'),
 	changed = require('gulp-changed'),
-	fileinclude = require('gulp-file-include'),
 	tildeImporter = require('node-sass-tilde-importer');
-
-gulp.task('fileinclude', function () {
-	return gulp
-		.src('src/pages/**/*.html')
-		.pipe(
-			fileinclude({
-				prefix: '@@',
-				basepath: 'src/components',
-			})
-		)
-		.pipe(gulp.dest('dist/'));
-});
-
-gulp.task('reload', function (done) {
-	browserSync.reload();
-	done();
-});
 
 let paths = {
 	src: {
@@ -37,7 +19,7 @@ let paths = {
 		js: 'src/js/**/*.js',
 	},
 	build: {
-		html: 'dist/ru',
+		html: 'dist',
 		css: 'dist/css',
 		images: 'dist/images',
 		js: 'dist/js',
@@ -101,7 +83,7 @@ gulp.task('browser-sync', function () {
 		ghostMode: false,
 		watch: false,
 		server: {
-			baseDir: 'dist',
+			baseDir: 'dist/',
 		},
 	});
 });
@@ -111,10 +93,8 @@ gulp.task('watch', async function () {
 	gulp.watch(paths.src.html, gulp.parallel('html'));
 	gulp.watch(paths.src.js, gulp.parallel('js'));
 	gulp.watch(paths.src.images, gulp.parallel('images'));
-	gulp.watch(['./src/**/*.*'], gulp.series('fileinclude'));
-	gulp.watch(['./dist/*.*', './dist/*.*', './dist/**/*.*'], gulp.series('reload'));
 });
 
 gulp.task('build', gulp.series('clean', 'scss', 'html', 'js', 'images'));
 
-gulp.task('default', gulp.parallel('scss', 'html', 'js', 'images', 'fileinclude', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('scss', 'html', 'js', 'images', 'browser-sync', 'watch'));
