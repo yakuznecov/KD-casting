@@ -20,6 +20,13 @@
 	color: #fff;
 	background: #1991eb;
 	transition: 0.2s ease;
+	&.--inactive {
+		background: #c6e4fa;
+		&:hover,
+		&:active {
+			background: #c6e4fa;
+		}
+	}
 	&.--medium {
 		height: 32px;
 		font-size: 15px;
@@ -539,6 +546,16 @@
 		border: 1px solid #757575;
 		color: #424242;
 	}
+
+	&.--inactive {
+		color: #e0e0e0;
+		&:hover,
+		&:active {
+			background: transparent;
+			border: 1px solid #e0e0e0;
+			color: #e0e0e0;
+		}
+	}
 }
 
 .cancelPopup-btn {
@@ -623,5 +640,32 @@
 		background: #f4f6f6;
 		border: 1px solid #0064c1;
 		color: #0064c1;
+	}
+}
+
+// Прозрачная кнопка закрытия с border
+.close-btn-32 {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 32px;
+	height: 32px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	background: transparent;
+	transition: all 0.2s;
+	&:focus-visible {
+		border: 2px solid #7bb9f0;
+		background: #f4f6f6;
+	}
+	&:hover,
+	&:active {
+		background: #e0e0e0;
+		color: #424242;
+
+		& svg path {
+			transition: all 0.2s;
+			stroke: #757575;
+		}
 	}
 }

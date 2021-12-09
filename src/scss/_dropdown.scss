@@ -684,9 +684,12 @@
 		right: 0;
 		bottom: -2px;
 	}
-	@media (max-width: 1366px) {
+	&.show {
 		display: flex;
 	}
+	// @media (max-width: 1366px) {
+	// 	display: flex;
+	// }
 }
 
 .status-counter-dropdown {

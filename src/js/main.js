@@ -66,6 +66,10 @@
 	let mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
 	let sendInvitationBtnTextJs = document.querySelector('.send-invitation-btn-text-js');
 	let mainHeaderTopSearch = document.querySelector('.main-header-top-search');
+	let hideMediaStatus = document.querySelector('.hide-media-status');
+	let statusCounterInner = document.querySelector('.status-counter-inner');
+	let statusDefault = document.querySelector('.status-default');
+
 	let isTransform = false;
 
 	let timeout;
@@ -73,6 +77,7 @@
 	setListener(document, 'DOMContentLoaded', () => {
 		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
 		let sendLeft = sendInvitationBtn.offsetLeft;
+		let statusleft = statusDefault.offsetLeft;
 
 		if (sendLeft < mainLeft) {
 			if (!isTransform) {
@@ -81,22 +86,23 @@
 			}
 		}
 
-		if (mainHeaderTopSearch.classList.contains('lower')) {
-			if (sendLeft - mainLeft < 150) {
+		if (mainLeft - sendLeft > 10) {
+			if (mainHeaderTopSearch.classList.contains('lower')) {
 				if (isTransform) {
 					transformBtn();
-				} else {
-					cancelTransformBtn();
 				}
 			}
 		}
 
-		if (sendLeft < mainLeft) {
-			if (isTransform) {
+		if (statusleft - sendLeft > 10) {
+			if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
+				if (isTransform) {
+					hideStatus();
+				}
 			}
 		}
 
-		if (sendLeft - mainLeft > 180) {
+		if (sendLeft - mainLeft > 150) {
 			if (isTransform) {
 				maxSearch();
 				showFullPlaceholder();
@@ -109,6 +115,9 @@
 		timeout = setTimeout(function () {
 			let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
 			let sendLeft = sendInvitationBtn.offsetLeft;
+			let statusleft = statusDefault.offsetLeft + 287;
+
+			console.log(sendLeft, statusleft);
 
 			if (sendLeft < mainLeft) {
 				if (!isTransform) {
@@ -116,19 +125,24 @@
 					hideFullPlaceholder();
 				}
 			}
-			console.log(sendLeft - mainLeft);
 
-			if (mainHeaderTopSearch.classList.contains('lower')) {
-				if (sendLeft - mainLeft < 100) {
+			if (mainLeft - sendLeft > 10) {
+				if (mainHeaderTopSearch.classList.contains('lower')) {
 					if (isTransform) {
 						transformBtn();
 					}
-				} else {
-					cancelTransformBtn();
 				}
 			}
 
-			if (sendLeft - mainLeft > 180) {
+			if (statusleft - sendLeft > 10) {
+				if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
+					if (isTransform) {
+						hideStatus();
+					}
+				}
+			}
+
+			if (sendLeft - mainLeft > 150) {
 				if (isTransform) {
 					maxSearch();
 					showFullPlaceholder();
@@ -157,6 +171,16 @@
 	function maxSearch() {
 		mainHeaderTopSearch.classList.remove('lower');
 		isTransform = false;
+	}
+
+	function hideStatus() {
+		hideMediaStatus.classList.add('hide');
+		statusCounterInner.classList.add('show');
+	}
+
+	function showStatus() {
+		hideMediaStatus.classList.remove('hide');
+		statusCounterInner.classList.remove('show');
 	}
 
 	// ------------------------------------------------------------------------------------>

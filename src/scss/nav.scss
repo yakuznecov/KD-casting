@@ -372,9 +372,12 @@ body {
 
 .hide-media-status {
 	display: flex;
-	@media (max-width: 1366px) {
+	&.hide {
 		display: none;
 	}
+	// @media (max-width: 1366px) {
+	//
+	// }
 }
 
 .large-foto-btn {

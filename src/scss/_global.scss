@@ -144,6 +144,16 @@
 	color: #424242;
 }
 
+.text-blackBrown-small {
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.4px;
+	color: #212121;
+	&.--active {
+		color: #1991eb;
+	}
+}
+
 .text-blackBrown {
 	font-size: 13px;
 	line-height: 16px;
@@ -294,7 +304,77 @@
 	margin-top: 3px;
 }
 
+.ml-8 {
+	margin-left: 8px;
+}
+
 // Высота строки line-height
 .lh-17 {
 	line-height: 17px;
+}
+
+.myLoader {
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/border-preloader.png);
+	background-repeat: no-repeat;
+	animation: 1s myAnim linear infinite;
+}
+
+@keyframes myAnim {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.number-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 4px;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #616161;
+	background: #eeeeee;
+	&.--active {
+		background: #80c7fc;
+		color: #fff;
+	}
+}
+
+// Inputs
+
+.input-box-empty {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	background: #fafafa;
+	& input {
+		width: 100%;
+		background: transparent;
+		font-size: 14px;
+		letter-spacing: 0.25px;
+		color: #424242;
+	}
+	&:hover {
+		border: 1px solid #bdbdbd;
+	}
+	&:focus-within {
+		padding: 11px;
+		border: 2px solid rgba(112, 168, 221, 0.7);
+	}
+	// error UI Elements /  Inputs & Actions
+	&.--error {
+		padding: 11px;
+		border: 2px solid rgba(223, 130, 130, 0.7);
+	}
 }
