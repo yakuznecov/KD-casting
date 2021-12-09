@@ -64,12 +64,11 @@
 	position: absolute;
 	bottom: 40px;
 	left: 96px;
+	width: 57.08vw;
+	height: 40.52vw;
 
 	@media (max-width: 1440px) {
 		display: none;
-	}
-	@media (max-height: 830px) {
-		width: 800px;
 	}
 }
 
@@ -77,8 +76,8 @@
 	position: absolute;
 	bottom: 40px;
 	left: 96px;
-	width: 795px;
-	height: 674px;
+	width: 55.21vw;
+	height: 46.81vw;
 	display: none;
 	@media (max-width: 1440px) {
 		display: block;
@@ -86,16 +85,16 @@
 	@media (max-height: 700px) {
 		width: 700px;
 		height: 505px;
+		left: 0;
 	}
-	@media (max-width: 1280px) {
-		width: 700px;
-		height: 505px;
-	}
+
 	@media (max-width: 1024px) {
 		position: relative;
+		width: auto;
+		height: auto;
 		top: auto;
 		left: auto;
-		margin: 10% auto 0;
+		margin: 3% auto 0;
 		max-width: 100%;
 		height: auto;
 	}
