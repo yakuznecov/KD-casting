@@ -304,6 +304,10 @@
 	margin-top: 3px;
 }
 
+.mt-1 {
+	margin-top: 1px;
+}
+
 .ml-8 {
 	margin-left: 8px;
 }
@@ -354,7 +358,7 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	padding: 12px;
+	padding: 9px;
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 	background: #fafafa;
@@ -369,10 +373,41 @@
 		border: 1px solid #bdbdbd;
 	}
 	&:focus-within {
-		padding: 11px;
+		padding: 8px;
 		border: 2px solid rgba(112, 168, 221, 0.7);
 	}
 	// error UI Elements /  Inputs & Actions
+	&.--error {
+		padding: 8px;
+		border: 2px solid rgba(223, 130, 130, 0.7);
+	}
+}
+
+// Area
+
+.area-field {
+	display: flex;
+	font-size: 14px;
+	line-height: 16px;
+	width: 100%;
+	height: 196px;
+	resize: none;
+	letter-spacing: 0.25px;
+	padding: 12px;
+	color: #424242;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	background: #fafafa;
+	cursor: text;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	&:hover {
+		border: 1px solid #bdbdbd;
+	}
+	&:focus-within {
+		padding: 11px;
+		border: 2px solid rgba(112, 168, 221, 0.7);
+	}
 	&.--error {
 		padding: 11px;
 		border: 2px solid rgba(223, 130, 130, 0.7);
