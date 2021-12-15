@@ -9,11 +9,24 @@ let gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssnano = require('gulp-cssnano'),
 	changed = require('gulp-changed'),
-	tildeImporter = require('node-sass-tilde-importer');
+	tildeImporter = require('node-sass-tilde-importer'),
+	fileinclude = require('gulp-file-include');
+
+// gulp.task('fileinclude', function () {
+// 	gulp
+// 		.src('src/*.html')
+// 		.pipe(
+// 			fileinclude({
+// 				prefix: '@@',
+// 				basepath: 'src/components',
+// 			})
+// 		)
+// 		.pipe(gulp.dest('dist'));
+// });
 
 let paths = {
 	src: {
-		html: 'src/**/*.html',
+		html: 'src/*.html',
 		scss: 'src/scss/**/*.scss',
 		images: 'src/images/**/*.*',
 		js: 'src/js/**/*.js',
@@ -57,17 +70,27 @@ gulp.task('scss', function () {
 });
 
 gulp.task('html', function () {
-	return gulp
-		.src(paths.src.html)
-		.pipe(changed(paths.build.html))
-		.pipe(
-			injectSvg({
-				base: '/src/inline-svgs/',
-			})
-		)
-		.on('error', swallowError)
-		.pipe(gulp.dest(paths.build.html))
-		.pipe(browserSync.stream());
+	return (
+		gulp
+			.src(paths.src.html)
+			// .pipe(changed(paths.build.html))
+
+			.on('error', swallowError)
+
+			.pipe(
+				fileinclude({
+					prefix: '@@',
+					basepath: 'src/components',
+				})
+			)
+			.pipe(
+				injectSvg({
+					base: '/src/inline-svgs/',
+				})
+			)
+			.pipe(gulp.dest(paths.build.html))
+			.pipe(browserSync.stream())
+	);
 });
 
 gulp.task('js', function () {
