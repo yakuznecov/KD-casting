@@ -296,6 +296,22 @@
 		}
 	});
 
+	function addActiveOnClick (name) {
+		$(name).click(function (e) {
+			$(this).addClass('--active');
+
+		});
+
+		$(document).click(function (e) {
+			let field = $(name);
+			if (!field.is(e.target) && field.has(e.target).length === 0) {
+				field.removeClass('--active');
+			}
+		});
+	}
+
+	addActiveOnClick('.dropdown-date');
+
 	$('.filter-dropdown-input .--profile-actor').click(function () {
 		$(this).toggleClass('active');
 	});

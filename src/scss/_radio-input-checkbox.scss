@@ -66,3 +66,70 @@
     }
 
 }
+
+// checkbox small
+
+.checkbox-small-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+
+    & .checkmark:after {
+        left: 1px;
+        top: 3px;
+        width: 10px;
+        height: 7px;
+        background: url('../images/check-for-checkbox.svg') no-repeat center center;
+    }
+}
+
+.checkbox-small {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+        animation: pop 0.3s;
+        animation-direction: alternate;
+        border: 2px solid #1991EB;
+    }
+
+    &:checked ~ .checkmark:after {
+        display: block;
+    }
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    transition: all 0.3s;
+    border-radius: 2px;
+    border: 2px solid #DDE3E8;
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
