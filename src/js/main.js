@@ -1,4 +1,43 @@
 (function ($) {
+	function showDropdownSelect() {
+		let intervalId;
+
+		document.querySelectorAll('.dropdown-select-btn').forEach((e) => {
+			e.addEventListener('click', (e) => {
+				const menu = e.currentTarget.dataset.path;
+				document.querySelectorAll('.dropdown-select-menu').forEach((e) => {
+					const target = document.querySelector(`[data-target=${menu}]`);
+
+					if (!target.classList.contains('open')) {
+						target.classList.add('menu-active');
+						intervalId = setTimeout(() => {
+							target.classList.add('open');
+						}, 0);
+					}
+
+					if (target.classList.contains('open')) {
+						clearTimeout(intervalId);
+						target.classList.remove('menu-active');
+						intervalId = setTimeout(() => {
+							target.classList.remove('open');
+						}, 0);
+					}
+
+					window.onclick = (e) => {
+						if (e.target == target || e.target == document.querySelector(`[data-path=${menu}]`)) {
+							return;
+						} else {
+							target.classList.remove('menu-active');
+							target.classList.remove('open');
+						}
+					};
+				});
+			});
+		});
+	}
+
+	showDropdownSelect();
+
 	const setListener = (element, type, handler) => {
 		if (!element) {
 			return;
@@ -296,10 +335,9 @@
 		}
 	});
 
-	function addActiveOnClick (name) {
+	function addActiveOnClick(name) {
 		$(name).click(function (e) {
 			$(this).addClass('--active');
-
 		});
 
 		$(document).click(function (e) {

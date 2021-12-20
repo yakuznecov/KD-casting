@@ -361,7 +361,7 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	padding: 9px;
+	padding: 9px 12px;
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 	background: #fafafa;
@@ -376,12 +376,12 @@
 		border: 1px solid #bdbdbd;
 	}
 	&:focus-within {
-		padding: 8px;
+		padding: 8px 11px;
 		border: 2px solid rgba(112, 168, 221, 0.7);
 	}
 	// error UI Elements /  Inputs & Actions
 	&.--error {
-		padding: 8px;
+		padding: 8px 11px;
 		border: 2px solid rgba(223, 130, 130, 0.7);
 	}
 }
