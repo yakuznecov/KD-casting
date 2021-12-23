@@ -12,18 +12,6 @@ let gulp = require('gulp'),
 	tildeImporter = require('node-sass-tilde-importer'),
 	fileinclude = require('gulp-file-include');
 
-// gulp.task('fileinclude', function () {
-// 	gulp
-// 		.src('src/*.html')
-// 		.pipe(
-// 			fileinclude({
-// 				prefix: '@@',
-// 				basepath: 'src/components',
-// 			})
-// 		)
-// 		.pipe(gulp.dest('dist'));
-// });
-
 let paths = {
 	src: {
 		html: 'src/*.html',
@@ -70,27 +58,24 @@ gulp.task('scss', function () {
 });
 
 gulp.task('html', function () {
-	return (
-		gulp
-			.src(paths.src.html)
-			// .pipe(changed(paths.build.html))
+	return gulp
+		.src(paths.src.html)
 
-			.on('error', swallowError)
+		.on('error', swallowError)
 
-			.pipe(
-				fileinclude({
-					prefix: '@@',
-					basepath: 'src/components',
-				})
-			)
-			.pipe(
-				injectSvg({
-					base: '/src/inline-svgs/',
-				})
-			)
-			.pipe(gulp.dest(paths.build.html))
-			.pipe(browserSync.stream())
-	);
+		.pipe(
+			fileinclude({
+				prefix: '@@',
+				basepath: 'src/components',
+			})
+		)
+		.pipe(
+			injectSvg({
+				base: '/src/inline-svgs/',
+			})
+		)
+		.pipe(gulp.dest(paths.build.html))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('js', function () {

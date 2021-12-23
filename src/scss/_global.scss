@@ -154,6 +154,12 @@
 	}
 }
 
+.text-blackBrown-regular {
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #212121;
+}
+
 .text-blackBrown {
 	font-size: 13px;
 	line-height: 16px;
@@ -310,6 +316,14 @@
 
 .ml-8 {
 	margin-left: 8px;
+}
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+.mr-auto {
+	margin-right: auto;
 }
 
 // Высота строки line-height

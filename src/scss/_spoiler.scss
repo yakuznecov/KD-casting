@@ -1,0 +1,54 @@
+.spoiler {
+	max-width: 256px;
+}
+
+.spoiler-item {
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	background-color: #fafafa;
+	margin-bottom: 8px;
+	&.active {
+		border: 1px solid #9dc6ee;
+	}
+}
+
+.spoiler-item-header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	color: #424242;
+	min-height: 40px;
+	padding: 10px 12px;
+	cursor: pointer;
+	&.active .spoiler-item-icon {
+		transition: all 0.3s;
+		transform: rotate(180deg);
+	}
+	&.active .spoiler-item-icon path {
+		fill: #1991eb;
+	}
+}
+
+.spoiler-item-icon {
+	transition: all 0.3s;
+}
+
+.spoiler-item-title {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #424242;
+	margin-right: auto;
+}
+
+.spoiler-item-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+
+.spoiler-item-body-content {
+	padding: 10px 12px 12px;
+}

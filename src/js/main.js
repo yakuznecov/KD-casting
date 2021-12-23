@@ -5,11 +5,14 @@
 		document.querySelectorAll('.dropdown-select-btn').forEach((e) => {
 			e.addEventListener('click', (e) => {
 				const menu = e.currentTarget.dataset.path;
+				const dropdownSelect = e.path[1];
+
 				document.querySelectorAll('.dropdown-select-menu').forEach((e) => {
 					const target = document.querySelector(`[data-target=${menu}]`);
 
 					if (!target.classList.contains('open')) {
 						target.classList.add('menu-active');
+						dropdownSelect.classList.add('dropdown-select_active');
 						intervalId = setTimeout(() => {
 							target.classList.add('open');
 						}, 0);
@@ -18,6 +21,7 @@
 					if (target.classList.contains('open')) {
 						clearTimeout(intervalId);
 						target.classList.remove('menu-active');
+						dropdownSelect.classList.remove('dropdown-select_active');
 						intervalId = setTimeout(() => {
 							target.classList.remove('open');
 						}, 0);
@@ -29,6 +33,7 @@
 						} else {
 							target.classList.remove('menu-active');
 							target.classList.remove('open');
+							dropdownSelect.classList.remove('dropdown-select_active');
 						}
 					};
 				});
@@ -37,6 +42,27 @@
 	}
 
 	showDropdownSelect();
+
+	function openSpoiler() {
+		const spoilerItemHeaders = document.querySelectorAll('.spoiler-item-header');
+
+		spoilerItemHeaders.forEach((spoilerItemHeader) => {
+			spoilerItemHeader.addEventListener('click', (event) => {
+				const spoilerItem = spoilerItemHeader.parentNode;
+				spoilerItem.classList.toggle('active');
+				spoilerItemHeader.classList.toggle('active');
+				const spoilerItemBody = spoilerItemHeader.nextElementSibling;
+
+				if (spoilerItemHeader.classList.contains('active')) {
+					spoilerItemBody.style.maxHeight = spoilerItemBody.scrollHeight + 'px';
+				} else {
+					spoilerItemBody.style.maxHeight = 0;
+				}
+			});
+		});
+	}
+
+	openSpoiler();
 
 	const setListener = (element, type, handler) => {
 		if (!element) {
@@ -337,7 +363,7 @@
 
 	function addActiveOnClick(name) {
 		$(name).click(function (e) {
-			$(this).addClass('--active');
+			$(this).toggleClass('--active');
 		});
 
 		$(document).click(function (e) {

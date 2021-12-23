@@ -74,6 +74,7 @@
 
 .sidebar-dropdown-question {
 	position: relative;
+	display: flex;
 	margin-right: 8px;
 	transition: all 0.3s;
 	&:hover {

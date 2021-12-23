@@ -15,6 +15,7 @@
 @import '404-page';
 @import 'create-casting';
 @import 'radio-input-checkbox';
+@import 'spoiler';
 
 html,
 body {
@@ -23,7 +24,7 @@ body {
 
 body {
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
 	color: #212529;
 	font-size: 16px;
 	background: #f2f2f2;
@@ -37,6 +38,7 @@ body {
 
 .main-container {
 	padding-top: 142px;
+	overflow: hidden;
 }
 
 .site-header {

@@ -826,6 +826,22 @@
 	background: #fafafa;
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
+	&:hover {
+		border: 1px solid #bdbdbd;
+		& .dropdown-select-btn-icon path {
+			fill: #9e9e9e;
+		}
+	}
+
+	&.dropdown-select_active {
+		border: 2px solid rgba(112, 168, 221, 0.7);
+		& .dropdown-select-btn {
+			padding: 8px 11px;
+		}
+		& .dropdown-select-btn-icon path {
+			fill: #9e9e9e;
+		}
+	}
 }
 
 .dropdown-select-btn {
