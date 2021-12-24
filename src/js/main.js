@@ -1,47 +1,40 @@
 (function ($) {
 	function showDropdownSelect() {
-		let intervalId;
+		$('.dropdown-select-btn').click(function () {
+			$(this).siblings('.dropdown-select-menu').toggleClass('menu-active');
+		});
 
-		document.querySelectorAll('.dropdown-select-btn').forEach((e) => {
-			e.addEventListener('click', (e) => {
-				const menu = e.currentTarget.dataset.path;
-				const dropdownSelect = e.path[1];
-
-				document.querySelectorAll('.dropdown-select-menu').forEach((e) => {
-					const target = document.querySelector(`[data-target=${menu}]`);
-
-					if (!target.classList.contains('open')) {
-						target.classList.add('menu-active');
-						dropdownSelect.classList.add('dropdown-select_active');
-						intervalId = setTimeout(() => {
-							target.classList.add('open');
-						}, 0);
-					}
-
-					if (target.classList.contains('open')) {
-						clearTimeout(intervalId);
-						target.classList.remove('menu-active');
-						dropdownSelect.classList.remove('dropdown-select_active');
-						intervalId = setTimeout(() => {
-							target.classList.remove('open');
-						}, 0);
-					}
-
-					window.onclick = (e) => {
-						if (e.target == target || e.target == document.querySelector(`[data-path=${menu}]`)) {
-							return;
-						} else {
-							target.classList.remove('menu-active');
-							target.classList.remove('open');
-							dropdownSelect.classList.remove('dropdown-select_active');
-						}
-					};
-				});
-			});
+		$(document).click(function (e) {
+			let area = $('.dropdown-select');
+			if (!area.is(e.target) && area.has(e.target).length === 0) {
+				$('.dropdown-select-menu').removeClass('menu-active');
+			}
 		});
 	}
 
 	showDropdownSelect();
+
+	function showDropdownFixed() {
+		const fixedMenu = $('.dropdown-fixed-menu');
+		const selectBtn = $('.dropdown-select-btn');
+		const area = $('.dropdown-select');
+
+		selectBtn.click(function () {
+			$(this).siblings(fixedMenu).toggleClass('--active');
+
+			let top = $(this).offset().top + selectBtn.outerHeight();
+			let left = $(this).offset().left;
+			fixedMenu.css({ top: top + 2 + 'px', left: left - 2 + 'px' });
+		});
+
+		$(document).click(function (e) {
+			if (!area.is(e.target) && area.has(e.target).length === 0) {
+				fixedMenu.removeClass('--active');
+			}
+		});
+	}
+
+	showDropdownFixed();
 
 	function openSpoiler() {
 		const spoilerItemHeaders = document.querySelectorAll('.spoiler-item-header');
@@ -49,8 +42,11 @@
 		spoilerItemHeaders.forEach((spoilerItemHeader) => {
 			spoilerItemHeader.addEventListener('click', (event) => {
 				const spoilerItem = spoilerItemHeader.parentNode;
+				console.log(event);
+
 				spoilerItem.classList.toggle('active');
 				spoilerItemHeader.classList.toggle('active');
+
 				const spoilerItemBody = spoilerItemHeader.nextElementSibling;
 
 				if (spoilerItemHeader.classList.contains('active')) {
@@ -471,94 +467,160 @@
 	});
 
 	// Кнопка переключения страна-город
+	function switchDoubleLocation() {
+		var switchBtnLocRight = document.querySelector('.switch-button-case-loc.right');
+		var switchBtnLocLeft = document.querySelector('.switch-button-case-loc.left');
+		var activeSwitchLoc = document.querySelector('.switch-button-loc .active');
 
-	var switchBtnLocRight = document.querySelector('.switch-button-case-loc.right');
-	var switchBtnLocLeft = document.querySelector('.switch-button-case-loc.left');
-	var activeSwitchLoc = document.querySelector('.switch-button-loc .active');
+		function switchLocLeft() {
+			switchBtnLocRight.classList.remove('active-case');
+			switchBtnLocLeft.classList.add('active-case');
+			activeSwitchLoc.style.left = '0%';
+		}
 
-	function switchLocLeft() {
-		switchBtnLocRight.classList.remove('active-case');
-		switchBtnLocLeft.classList.add('active-case');
-		activeSwitchLoc.style.left = '0%';
+		function switchLocRight() {
+			switchBtnLocRight.classList.add('active-case');
+			switchBtnLocLeft.classList.remove('active-case');
+			activeSwitchLoc.style.left = '50%';
+		}
+
+		setListener(
+			switchBtnLocLeft,
+			'click',
+			() => {
+				switchLocLeft();
+			},
+			false
+		);
+
+		setListener(
+			switchBtnLocRight,
+			'click',
+			() => {
+				switchLocRight();
+			},
+			false
+		);
 	}
 
-	function switchLocRight() {
-		switchBtnLocRight.classList.add('active-case');
-		switchBtnLocLeft.classList.remove('active-case');
-		activeSwitchLoc.style.left = '50%';
-	}
-
-	setListener(
-		switchBtnLocLeft,
-		'click',
-		() => {
-			switchLocLeft();
-		},
-		false
-	);
-
-	setListener(
-		switchBtnLocRight,
-		'click',
-		() => {
-			switchLocRight();
-		},
-		false
-	);
+	switchDoubleLocation();
 
 	// Кнопка с переключением пола
-	var switchBtnRight = document.querySelector('.switch-button-case.right');
-	var switchBtnLeft = document.querySelector('.switch-button-case.left');
-	var switchBtnMiddle = document.querySelector('.switch-button-case.middle');
-	var activeSwitch = document.querySelector('.switch-button .active');
+	function switchGender() {
+		var switchBtnRight = document.querySelector('.switch-button-case.right');
+		var switchBtnLeft = document.querySelector('.switch-button-case.left');
+		var switchBtnMiddle = document.querySelector('.switch-button-case.middle');
+		var activeSwitch = document.querySelector('.switch-button .active');
 
-	function switchLeft() {
-		switchBtnRight.classList.remove('active-case-gender');
-		switchBtnMiddle.classList.remove('active-case-gender');
-		switchBtnLeft.classList.add('active-case-gender');
-		activeSwitch.style.left = '0%';
+		function switchLeft() {
+			switchBtnRight.classList.remove('active-case-gender');
+			switchBtnMiddle.classList.remove('active-case-gender');
+			switchBtnLeft.classList.add('active-case-gender');
+			activeSwitch.style.left = '0%';
+		}
+
+		function switchRight() {
+			switchBtnRight.classList.add('active-case-gender');
+			switchBtnLeft.classList.remove('active-case-gender');
+			switchBtnMiddle.classList.remove('active-case-gender');
+			activeSwitch.style.left = '33.33333%';
+		}
+
+		function switchMiddle() {
+			switchBtnMiddle.classList.add('active-case-gender');
+			switchBtnLeft.classList.remove('active-case-gender');
+			switchBtnRight.classList.remove('active-case-gender');
+			activeSwitch.style.left = '67%';
+		}
+
+		setListener(
+			switchBtnLeft,
+			'click',
+			() => {
+				switchLeft();
+			},
+			false
+		);
+
+		setListener(
+			switchBtnMiddle,
+			'click',
+			() => {
+				switchMiddle();
+			},
+			false
+		);
+
+		setListener(
+			switchBtnRight,
+			'click',
+			() => {
+				switchRight();
+			},
+			false
+		);
 	}
 
-	function switchRight() {
-		switchBtnRight.classList.add('active-case-gender');
-		switchBtnLeft.classList.remove('active-case-gender');
-		switchBtnMiddle.classList.remove('active-case-gender');
-		activeSwitch.style.left = '33.33333%';
+	switchGender();
+
+	// Переключение город-страна в create casting filter
+
+	function switchLocationFilter() {
+		let switchBtnRight = document.querySelector('.spoiler-item-location-button-case.right');
+		let switchBtnLeft = document.querySelector('.spoiler-item-location-button-case.left');
+		let switchBtnMiddle = document.querySelector('.spoiler-item-location-button-case.middle');
+		let activeSwitch = document.querySelector('.spoiler-item-location-button .active');
+
+		function switchLeft() {
+			switchBtnRight.classList.remove('active-case-location');
+			switchBtnMiddle.classList.remove('active-case-location');
+			switchBtnLeft.classList.add('active-case-location');
+			activeSwitch.style.left = '0%';
+		}
+
+		function switchRight() {
+			switchBtnRight.classList.add('active-case-location');
+			switchBtnLeft.classList.remove('active-case-location');
+			switchBtnMiddle.classList.remove('active-case-location');
+			activeSwitch.style.left = '33.33333%';
+		}
+
+		function switchMiddle() {
+			switchBtnMiddle.classList.add('active-case-location');
+			switchBtnLeft.classList.remove('active-case-location');
+			switchBtnRight.classList.remove('active-case-location');
+			activeSwitch.style.left = '67%';
+		}
+
+		setListener(
+			switchBtnLeft,
+			'click',
+			() => {
+				switchLeft();
+			},
+			false
+		);
+
+		setListener(
+			switchBtnMiddle,
+			'click',
+			() => {
+				switchMiddle();
+			},
+			false
+		);
+
+		setListener(
+			switchBtnRight,
+			'click',
+			() => {
+				switchRight();
+			},
+			false
+		);
 	}
 
-	function switchMiddle() {
-		switchBtnMiddle.classList.add('active-case-gender');
-		switchBtnLeft.classList.remove('active-case-gender');
-		switchBtnRight.classList.remove('active-case-gender');
-		activeSwitch.style.left = '67%';
-	}
-
-	setListener(
-		switchBtnLeft,
-		'click',
-		() => {
-			switchLeft();
-		},
-		false
-	);
-
-	setListener(
-		switchBtnMiddle,
-		'click',
-		() => {
-			switchMiddle();
-		},
-		false
-	);
-
-	setListener(
-		switchBtnRight,
-		'click',
-		() => {
-			switchRight();
-		},
-		false
-	);
+	switchLocationFilter();
 
 	// Скрытие сайдбара ------------------------------------------------------------------------------------------------->
 

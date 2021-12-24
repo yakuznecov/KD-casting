@@ -1,7 +1,6 @@
 .create__casting-container {
-	margin-bottom: 300px;
 	max-width: 896px;
-	margin: 0 auto;
+	margin: 0 auto 300px;
 }
 
 .create__casting {
@@ -238,4 +237,7 @@
 	font-size: 16px;
 	letter-spacing: 0.5px;
 	color: #70a8dd;
+	&:hover {
+		color: #106db3;
+	}
 }
