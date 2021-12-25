@@ -14,47 +14,10 @@
 
 	showDropdownSelect();
 
-	function showDropdownFixed() {
-		const fixedMenu = $('.dropdown-fixed-menu');
-		const selectBtn = $('.dropdown-select-btn');
-		const area = $('.dropdown-select');
-
-		selectBtn.click(function () {
-			$(this).siblings(fixedMenu).toggleClass('--active');
-
-			let top = $(this).offset().top + selectBtn.outerHeight();
-			let left = $(this).offset().left;
-			fixedMenu.css({ top: top + 2 + 'px', left: left - 2 + 'px' });
-		});
-
-		$(document).click(function (e) {
-			if (!area.is(e.target) && area.has(e.target).length === 0) {
-				fixedMenu.removeClass('--active');
-			}
-		});
-	}
-
-	showDropdownFixed();
-
 	function openSpoiler() {
-		const spoilerItemHeaders = document.querySelectorAll('.spoiler-item-header');
-
-		spoilerItemHeaders.forEach((spoilerItemHeader) => {
-			spoilerItemHeader.addEventListener('click', (event) => {
-				const spoilerItem = spoilerItemHeader.parentNode;
-				console.log(event);
-
-				spoilerItem.classList.toggle('active');
-				spoilerItemHeader.classList.toggle('active');
-
-				const spoilerItemBody = spoilerItemHeader.nextElementSibling;
-
-				if (spoilerItemHeader.classList.contains('active')) {
-					spoilerItemBody.style.maxHeight = spoilerItemBody.scrollHeight + 'px';
-				} else {
-					spoilerItemBody.style.maxHeight = 0;
-				}
-			});
+		$('.spoiler-item-header').click(function () {
+			$(this).next('.spoiler-item-body').slideToggle();
+			$(this).parent().toggleClass('active');
 		});
 	}
 
@@ -465,6 +428,28 @@
 				$('.dropdown-language > .language-button span').html($(this).html());
 			});
 	});
+
+	// Start: Связанный проект 2 кнопки
+	function switchDoubleButtons(left, right, active) {
+		let switchBtnLeft = $(left);
+		let switchBtnRight = $(right);
+		let switchBtnActive = $(active);
+
+		switchBtnLeft.click(function () {
+			switchBtnRight.removeClass('active-case');
+			switchBtnLeft.addClass('active-case');
+			switchBtnActive.css('left', '0%');
+		});
+
+		switchBtnRight.click(function () {
+			switchBtnRight.addClass('active-case');
+			switchBtnLeft.removeClass('active-case');
+			switchBtnActive.css('left', '50%');
+		});
+	}
+
+	switchDoubleButtons('.switch-button.--left', '.switch-button.--right', '.switch-active');
+	// End: Связанный проект 2 кнопки
 
 	// Кнопка переключения страна-город
 	function switchDoubleLocation() {
