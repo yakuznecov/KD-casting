@@ -391,123 +391,252 @@
 								</div>
 							</div>
 
-							<div class="title-blackBluish-small mb-8">название проекта</div>
-							<div class="dropdown-select mb-24">
-								<button class="dropdown-select-btn">
-									Нажмите, чтобы выбрать проект
-									<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
-								</button>
-								<div class="dropdown-select-menu">
-									<div class="dropdown-select-menu-header">
-										<div class="text-lightGrey-small-high mb-16">
-											Выберите интересующий вас проект из списка или воспользуйтесь <br />
-											полем для поиска ниже
-										</div>
-										<div class="input-box">
-											<input type="text" placeholder="Поиск проектов" />
-										</div>
-									</div>
-									<ul class="dropdown-select-menu-inner --project-name mt-16">
-										<li class="dropdown-select-menu-item">Реклама отбеливателя</li>
-										<li class="dropdown-select-menu-item --active">
-											Громкий разговор (2 сезон)
-											<img class="check-black" src="check-black-12.svg" />
-										</li>
-										<li class="dropdown-select-menu-item">Достучаться до соседа</li>
-										<li class="dropdown-select-menu-item">Молчание ветчины</li>
-										<li class="dropdown-select-menu-item">Матрица: Революция</li>
-										<li class="dropdown-select-menu-item">Железный человек</li>
-										<li class="dropdown-select-menu-item">Первый мститель</li>
-										<li class="dropdown-select-menu-item">Ночной дозор</li>
-									</ul>
-									<div class="dropdown-select-menu-footer">
-										<button class="blue-btn --medium">Выбрать</button>
-									</div>
+							<div class="create-new-one">
+								<div class="title-blackBluish-small mb-8">название проекта</div>
+								<div class="input-box">
+									<input type="text" />
 								</div>
+
+								<section class="create__casting-roles">
+									<div class="title-blackBluish-small mb-8">ансамбль ролей</div>
+									<div class="input-box mb-24">
+										<input type="text" />
+									</div>
+									<div class="title-blackBluish-small mb-8">роль</div>
+									<div class="input-box mb-24">
+										<input type="text" />
+									</div>
+									<div class="title-blackBluish-small mb-8">тип роли</div>
+									<div class="checkbox-container mb-24">
+										<div class="checkbox-button --main-role">
+											<input type="radio" class="checkbox-main" id="create-casting-main-role" name="radio-item" />
+											<label for="create-casting-main-role" class="label-main">Главная роль</label>
+										</div>
+										<div class="checkbox-button ml-12">
+											<input type="radio" class="checkbox-main" id="create-casting-second-main-role" name="radio-item" />
+											<label for="create-casting-second-main-role" class="label-main">2-ая Главная роль</label>
+										</div>
+										<div class="checkbox-button --episode ml-12">
+											<input type="radio" class="checkbox-main" id="create-casting-episode" name="radio-item" />
+											<label for="create-casting-episode" class="label-main">Эпизод</label>
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">гонорар</div>
+									<div class="input-sum-wrapper mb-40">
+										<div class="input-box --sum">
+											<input type="text" />
+										</div>
+										<div class="dropdown-sum-select">
+											<div class="dropdown-sum-select-inner"></div>
+											<div class="dropdown-sum-select-icon"><img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" /></div>
+											<ul class="dropdown-select-items inactive">
+												<li data-option="1">₽</li>
+												<li data-option="2">$</li>
+												<li data-option="3">€</li>
+											</ul>
+											<input type="hidden" value="null" />
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">добавить референс</div>
+									<div class="drag-area mb-24">
+										<div class="text-dullGrey-small mb-4">Загрузите сюда изображение референса (jpeg, png)</div>
+										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">текст для проб</div>
+									<div class="drag-area mb-24">
+										<div class="text-dullGrey-small mb-4">Загрузите сюда файл с текстом для проб (txt, pdf, docx)</div>
+										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+									</div>
+									<div class="create-casting-video-tests">
+										<label class="checkbox-small-container">
+											<input type="checkbox" class="checkbox-small" />
+											<div class="checkmark"></div>
+										</label>
+										<span class="text-blackBluish-small-high ml-10 create-casting-video-tests-text">Актеры должны загрузить видеопробы, которые вы сможете посмотреть на странице созданного кастинга или в проекте на Рабочем столе</span>
+									</div>
+								</section>
 							</div>
 
-							<div class="title-blackBluish-small mb-8">тип события</div>
-							<div class="checkbox-container mb-24">
-								<div class="checkbox-button">
-									<input type="radio" class="checkbox-main" id="create-casting-cast" name="radio-item" />
-									<label for="create-casting-cast" class="label-main">Кастинг</label>
+							<div class="select-existing-one d-none">
+								<div class="title-blackBluish-small mb-8">название проекта</div>
+								<div class="dropdown-select">
+									<button class="dropdown-select-btn">
+										Нажмите, чтобы выбрать проект
+										<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+									</button>
+									<div class="dropdown-select-menu">
+										<div class="dropdown-select-menu-header">
+											<div class="text-lightGrey-small-high mb-16">
+												Выберите интересующий вас проект из списка или воспользуйтесь <br />
+												полем для поиска ниже
+											</div>
+											<div class="input-box">
+												<input type="text" placeholder="Поиск проектов" />
+											</div>
+										</div>
+										<ul class="dropdown-select-menu-inner --project-name mt-16">
+											<li class="dropdown-select-menu-item">Реклама отбеливателя</li>
+											<li class="dropdown-select-menu-item --active">
+												Громкий разговор (2 сезон)
+												<img class="check-black" src="check-black-12.svg" />
+											</li>
+											<li class="dropdown-select-menu-item">Достучаться до соседа</li>
+											<li class="dropdown-select-menu-item">Молчание ветчины</li>
+											<li class="dropdown-select-menu-item">Матрица: Революция</li>
+											<li class="dropdown-select-menu-item">Железный человек</li>
+											<li class="dropdown-select-menu-item">Первый мститель</li>
+											<li class="dropdown-select-menu-item">Ночной дозор</li>
+										</ul>
+										<div class="dropdown-select-menu-footer">
+											<button class="blue-btn --medium">Выбрать</button>
+										</div>
+									</div>
 								</div>
-								<div class="checkbox-button ml-12">
-									<input type="radio" class="checkbox-main" id="create-casting-filming" name="radio-item" />
-									<label for="create-casting-filming" class="label-main">Съёмки</label>
-								</div>
-								<div class="checkbox-button ml-12">
-									<input type="radio" class="checkbox-main" id="create-casting-other-event" name="radio-item" />
-									<label for="create-casting-other-event" class="label-main">Другое</label>
-								</div>
+
+								<section class="create__casting-roles">
+									<div class="title-blackBluish-small mb-8">ансамбль ролей</div>
+									<div class="dropdown-select mb-24">
+										<button class="dropdown-select-btn">
+											Нажмите, чтобы выбрать или создать ансамбль
+											<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+										</button>
+										<div class="dropdown-select-menu">
+											<div class="dropdown-select-menu-header">
+												<div class="text-lightGrey-small-high mb-16">
+													Выберите интересующий ансамбль из списка или воспользуйтесь <br />
+													поиском. Также, отсюда вы можете создать новый ансамбль
+												</div>
+												<div class="input-box">
+													<input type="text" placeholder="Поиск ансамблей" />
+												</div>
+											</div>
+											<ul class="dropdown-select-menu-inner --project-name mt-16">
+												<button class="dropdown-select-menu-item --create">Создать новый ансамбль</button>
+												<div class="create-new-object">
+													<div class="input-box">
+														<input type="text" />
+													</div>
+													<button class="close-btn-40 new-role-btn-close-js ml-8">
+														<img src="x-close-18.svg" />
+													</button>
+													<button class="light-blue-btn ml-4">Создать</button>
+												</div>
+												<li class="dropdown-select-menu-item --active">
+													Семья Петровых
+													<img class="check-black" src="check-black-12.svg" />
+												</li>
+												<li class="dropdown-select-menu-item">Прохожие в первой сцене</li>
+												<li class="dropdown-select-menu-item">Общая массовка</li>
+												<li class="dropdown-select-menu-item">Банковские служащие</li>
+												<li class="dropdown-select-menu-item">Офисные сотрудники</li>
+												<li class="dropdown-select-menu-item">Школьные друзья</li>
+												<li class="dropdown-select-menu-item">Сотрудники корпорации</li>
+											</ul>
+											<div class="dropdown-select-menu-footer">
+												<button class="blue-btn --medium">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">роль</div>
+									<div class="dropdown-select mb-24">
+										<button class="dropdown-select-btn">
+											Нажмите, чтобы выбрать или создать роль
+											<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+										</button>
+										<div class="dropdown-select-menu">
+											<div class="dropdown-select-menu-header">
+												<div class="text-lightGrey-small-high mb-16">
+													Выберите интересующую роль из списка или воспользуйтесь <br />
+													поиском. Также, отсюда вы можете создать новую роль
+												</div>
+												<div class="input-box">
+													<input type="text" placeholder="Поиск ролей" />
+												</div>
+											</div>
+											<ul class="dropdown-select-menu-inner --project-name mt-16">
+												<button class="dropdown-select-menu-item --create">Создать новую роль</button>
+												<div class="create-new-object">
+													<div class="input-box">
+														<input type="text" />
+													</div>
+													<button class="close-btn-40 new-role-btn-close-js ml-8">
+														<img src="x-close-18.svg" />
+													</button>
+													<button class="light-blue-btn ml-4">Создать</button>
+												</div>
+												<li class="dropdown-select-menu-item --active">
+													Пакет сока
+													<img class="check-black" src="check-black-12.svg" />
+												</li>
+												<li class="dropdown-select-menu-item">Куст у кирпичной стены</li>
+												<li class="dropdown-select-menu-item">Можевельник под стеной</li>
+												<li class="dropdown-select-menu-item">Волочкова</li>
+												<li class="dropdown-select-menu-item">Гриб в поле</li>
+												<li class="dropdown-select-menu-item">Цветок на лугу</li>
+												<li class="dropdown-select-menu-item">Камень у моря</li>
+											</ul>
+											<div class="dropdown-select-menu-footer">
+												<button class="blue-btn --medium">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">тип роли</div>
+									<div class="checkbox-container mb-24">
+										<div class="checkbox-button --main-role">
+											<input type="radio" class="checkbox-main" id="create-casting-main-role" name="radio-item" />
+											<label for="create-casting-main-role" class="label-main">Главная роль</label>
+										</div>
+										<div class="checkbox-button ml-12">
+											<input type="radio" class="checkbox-main" id="create-casting-second-main-role" name="radio-item" />
+											<label for="create-casting-second-main-role" class="label-main">2-ая Главная роль</label>
+										</div>
+										<div class="checkbox-button --episode ml-12">
+											<input type="radio" class="checkbox-main" id="create-casting-episode" name="radio-item" />
+											<label for="create-casting-episode" class="label-main">Эпизод</label>
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">гонорар</div>
+									<div class="input-sum-wrapper mb-40">
+										<div class="input-box --sum">
+											<input type="text" />
+										</div>
+										<div class="dropdown-sum-select">
+											<div class="dropdown-sum-select-inner"></div>
+											<div class="dropdown-sum-select-icon"><img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" /></div>
+											<ul class="dropdown-select-items inactive">
+												<li data-option="1">₽</li>
+												<li data-option="2">$</li>
+												<li data-option="3">€</li>
+											</ul>
+											<input type="hidden" value="null" />
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">добавить референс</div>
+									<div class="drag-area mb-24">
+										<div class="text-dullGrey-small mb-4">Загрузите сюда изображение референса (jpeg, png)</div>
+										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">текст для проб</div>
+									<div class="drag-area mb-24">
+										<div class="text-dullGrey-small mb-4">Загрузите сюда файл с текстом для проб (txt, pdf, docx)</div>
+										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+									</div>
+									<div class="create-casting-video-tests">
+										<label class="checkbox-small-container">
+											<input type="checkbox" class="checkbox-small" />
+											<div class="checkmark"></div>
+										</label>
+										<span class="text-blackBluish-small-high ml-10 create-casting-video-tests-text">Актеры должны загрузить видеопробы, которые вы сможете посмотреть на странице созданного кастинга или в проекте на Рабочем столе</span>
+									</div>
+								</section>
 							</div>
-							<div class="create-casting-student-work">
-								<label class="checkbox-small-container">
-									<input type="checkbox" class="checkbox-small" />
-									<div class="checkmark"></div>
-								</label>
-								<span class="text-blackBluis-regular ml-10">Студенческая работа</span>
+
+							<div class="add-role-box mb-32">
+								<button class="add-role">
+									<img class="plus-blue-icon" src="plus-blue-12.svg" />
+									Добавить еще одну роль
+								</button>
 							</div>
-							<section class="create__casting-date">
-								<div class="title-blackBluish-small mb-8">дата проведения</div>
-								<div class="create__casting-date-container">
-									<div class="dropdown-date">
-										<button class="dropdown-btn dropdown-date-btn">
-											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
-											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
-										</button>
-										<div class="dropdown-inner dropdown-date-inner">
-											<img src="calendar-image.svg" />
-											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
-										</div>
-									</div>
-									<div class="dropdown-date">
-										<button class="dropdown-btn dropdown-date-btn">
-											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
-											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
-										</button>
-										<div class="dropdown-inner dropdown-date-inner">
-											<img src="calendar-image.svg" />
-											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
-										</div>
-									</div>
-								</div>
-								<div class="create__casting-extra-information">
-									<div class="warning-box">
-										<img src="warning-icon-20.svg" class="warning-icon" />
-									</div>
-									<p class="create__casting-extra-information-text text-lightGrey-small">Период, когда Актёр может принять приглашение на кастинг (продолжительность кастинга) и быть вызван, если Вы подтвердили его кандидатуру.</p>
-								</div>
-								<div class="title-blackBluish-small mb-8">предварительная дата съёмок</div>
-								<div class="create__casting-date-container">
-									<div class="dropdown-date">
-										<button class="dropdown-btn dropdown-date-btn">
-											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
-											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
-										</button>
-										<div class="dropdown-inner dropdown-date-inner">
-											<img src="calendar-image.svg" />
-											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
-										</div>
-									</div>
-									<div class="dropdown-date">
-										<button class="dropdown-btn dropdown-date-btn">
-											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
-											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
-										</button>
-										<div class="dropdown-inner dropdown-date-inner">
-											<img src="calendar-image.svg" />
-											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
-										</div>
-									</div>
-								</div>
-								<div class="create__casting-extra-information">
-									<div class="warning-box">
-										<img src="warning-icon-20.svg" class="warning-icon" />
-									</div>
-									<p class="create__casting-extra-information-text text-lightGrey-small">Актёру / Агенту нужно знать предварительную дату съёмок, чтобы планировать свой график.</p>
-								</div>
-							</section>
 
 							<div class="create__casting-form-buttons">
 								<button class="secondary-btn --inactive">Назад</button>

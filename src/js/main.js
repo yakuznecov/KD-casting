@@ -1,13 +1,16 @@
 (function ($) {
 	function showDropdownSelect() {
+		const area = $('.dropdown-select');
+
 		$('.dropdown-select-btn').click(function () {
 			$(this).siblings('.dropdown-select-menu').toggleClass('menu-active');
+			$(this).parent().toggleClass('dropdown-select_active');
 		});
 
 		$(document).click(function (e) {
-			let area = $('.dropdown-select');
 			if (!area.is(e.target) && area.has(e.target).length === 0) {
 				$('.dropdown-select-menu').removeClass('menu-active');
+				area.removeClass('dropdown-select_active');
 			}
 		});
 	}
@@ -29,6 +32,80 @@
 		}
 		element.addEventListener(type, handler);
 	};
+
+	// Создание новой роли
+	function createNewObject() {
+		$('.dropdown-select-menu-item.--create').click(function () {
+			$(this).addClass('--hide-js');
+			$('.create-new-object').addClass('--active');
+		});
+
+		$('.new-role-btn-close-js').click(function () {
+			$('.create-new-object').removeClass('--active');
+			$('.dropdown-select-menu-item.--create').removeClass('--hide-js');
+		});
+	}
+
+	createNewObject();
+
+	// Start: custom select dropdown
+	(function ($) {
+		$.fn.initDropdown = function (option) {
+			let config = $.extend(
+				{
+					default_value: '₽',
+					default_element: 1,
+				},
+				option
+			);
+
+			let dropSumInner = this.find('.dropdown-sum-select-inner');
+			let items = this.find('li');
+			let input = this.find('input');
+			let items_list = this.find('.dropdown-select-items');
+
+			dropSumInner.html(config.default_value);
+			input.attr('value', 'null');
+			items_list.addClass('inactive');
+
+			if (config.default_element != 0) {
+				dropSumInner.html(items[config.default_element - 1].innerHTML);
+				input.attr('value', '1');
+			}
+
+			$(this).click(function () {
+				items_list.toggleClass('inactive');
+				$(this).toggleClass('active');
+			});
+
+			items.mousedown(function () {
+				let container = $(this).parents('.dropdown-sum-select');
+				let input = container.find('input');
+				let dropdown = container.find('.dropdown-sum-select-inner');
+				let items_list = container.find('.dropdown-select-items');
+
+				$(this).attr('class', 'selected');
+				items_list.toggleClass('inactive');
+				dropdown.html($(this).html());
+				container.toggleClass('active');
+				input.attr('value', $(this).attr('data-option'));
+			});
+
+			$(document).on('mousedown', function (e) {
+				let dropdowns = $('.dropdown-sum-select.active');
+				let items_list = dropdowns.find('.dropdown-select-items');
+
+				if (!dropdowns.is(e.target) && !items_list.is(e.target)) {
+					dropdowns.removeClass('active');
+					items_list.addClass('inactive');
+				}
+			});
+		};
+	})(jQuery);
+
+	$('.dropdown-sum-select').initDropdown();
+
+	// End: custom select dropdown
 
 	// Разворачивание колонки с заявками ----------------------------------------------------->
 
@@ -429,7 +506,7 @@
 			});
 	});
 
-	// Start: Связанный проект 2 кнопки
+	// Start: 2 кнопки переключения
 	function switchDoubleButtons(left, right, active) {
 		let switchBtnLeft = $(left);
 		let switchBtnRight = $(right);
@@ -449,7 +526,7 @@
 	}
 
 	switchDoubleButtons('.switch-button.--left', '.switch-button.--right', '.switch-active');
-	// End: Связанный проект 2 кнопки
+	// End: 2 кнопки переключения
 
 	// Кнопка переключения страна-город
 	function switchDoubleLocation() {

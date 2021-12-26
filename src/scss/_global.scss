@@ -217,6 +217,13 @@
 	color: #424242;
 }
 
+.text-blackBluish-small-high {
+	font-size: 12px;
+	line-height: 17px;
+	letter-spacing: 0.4px;
+	color: #424242;
+}
+
 .text-blackBluish {
 	font-size: 13px;
 	line-height: 16px;
@@ -301,6 +308,10 @@
 	margin-bottom: 3px;
 }
 
+.mb-4 {
+	margin-bottom: 4px;
+}
+
 .mb-6 {
 	margin-bottom: 6px;
 }
@@ -347,6 +358,10 @@
 
 .mt-16 {
 	margin-top: 16px;
+}
+
+.ml-4 {
+	margin-left: 4px;
 }
 
 .ml-6 {
@@ -446,6 +461,11 @@
 		padding: 8px 11px;
 		border: 2px solid rgba(223, 130, 130, 0.7);
 	}
+
+	&.--sum {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
 }
 
 // Area
@@ -477,4 +497,8 @@
 		padding: 11px;
 		border: 2px solid rgba(223, 130, 130, 0.7);
 	}
+}
+
+.d-none {
+	display: none;
 }
