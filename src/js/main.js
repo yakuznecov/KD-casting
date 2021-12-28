@@ -49,61 +49,39 @@
 	createNewObject();
 
 	// Start: custom select dropdown
-	(function ($) {
-		$.fn.initDropdown = function (option) {
-			let config = $.extend(
-				{
-					default_value: '₽',
-					default_element: 1,
-				},
-				option
-			);
+	function showDropSelect() {
+		const dropdown = $('.dropdown-sum-select');
+		const items = dropdown.find('li');
 
-			let dropSumInner = this.find('.dropdown-sum-select-inner');
-			let items = this.find('li');
-			let input = this.find('input');
-			let items_list = this.find('.dropdown-select-items');
+		$('.dropdown-sum-select').click(function () {
+			$(this).children('.dropdown-select-items').toggleClass('inactive');
+			$(this).toggleClass('active');
+		});
 
-			dropSumInner.html(config.default_value);
-			input.attr('value', 'null');
-			items_list.addClass('inactive');
+		items.mousedown(function () {
+			let container = $(this).parents('.dropdown-sum-select');
+			let input = container.find('input');
+			let inner = container.find('.dropdown-sum-select-inner');
+			let items_list = container.find('.dropdown-select-items');
 
-			if (config.default_element != 0) {
-				dropSumInner.html(items[config.default_element - 1].innerHTML);
-				input.attr('value', '1');
+			items_list.toggleClass('inactive');
+			inner.html($(this).html());
+			container.toggleClass('active');
+			input.attr('value', $(this).attr('data-option'));
+		});
+
+		$(document).mousedown(function (e) {
+			let dropdowns = $('.dropdown-sum-select.active');
+			let items_list = dropdowns.find('.dropdown-select-items');
+
+			if (!dropdowns.is(e.target) && !items_list.is(e.target)) {
+				dropdowns.removeClass('active');
+				items_list.addClass('inactive');
 			}
+		});
+	}
 
-			$(this).click(function () {
-				items_list.toggleClass('inactive');
-				$(this).toggleClass('active');
-			});
-
-			items.mousedown(function () {
-				let container = $(this).parents('.dropdown-sum-select');
-				let input = container.find('input');
-				let dropdown = container.find('.dropdown-sum-select-inner');
-				let items_list = container.find('.dropdown-select-items');
-
-				$(this).attr('class', 'selected');
-				items_list.toggleClass('inactive');
-				dropdown.html($(this).html());
-				container.toggleClass('active');
-				input.attr('value', $(this).attr('data-option'));
-			});
-
-			$(document).on('mousedown', function (e) {
-				let dropdowns = $('.dropdown-sum-select.active');
-				let items_list = dropdowns.find('.dropdown-select-items');
-
-				if (!dropdowns.is(e.target) && !items_list.is(e.target)) {
-					dropdowns.removeClass('active');
-					items_list.addClass('inactive');
-				}
-			});
-		};
-	})(jQuery);
-
-	$('.dropdown-sum-select').initDropdown();
+	showDropSelect();
 
 	// End: custom select dropdown
 
@@ -511,17 +489,23 @@
 		let switchBtnLeft = $(left);
 		let switchBtnRight = $(right);
 		let switchBtnActive = $(active);
+		let createNewOne = $('.create-new-one');
+		let selectExistingOne = $('.select-existing-one');
 
 		switchBtnLeft.click(function () {
 			switchBtnRight.removeClass('active-case');
 			switchBtnLeft.addClass('active-case');
 			switchBtnActive.css('left', '0%');
+			selectExistingOne.addClass('d-none');
+			createNewOne.removeClass('d-none');
 		});
 
 		switchBtnRight.click(function () {
 			switchBtnRight.addClass('active-case');
 			switchBtnLeft.removeClass('active-case');
 			switchBtnActive.css('left', '50%');
+			selectExistingOne.removeClass('d-none');
+			createNewOne.addClass('d-none');
 		});
 	}
 
@@ -632,26 +616,38 @@
 		let switchBtnLeft = document.querySelector('.spoiler-item-location-button-case.left');
 		let switchBtnMiddle = document.querySelector('.spoiler-item-location-button-case.middle');
 		let activeSwitch = document.querySelector('.spoiler-item-location-button .active');
+		let city = document.querySelector('.spoiler-item-location-city');
+		let country = document.querySelector('.spoiler-item-location-country');
+		let world = document.querySelector('.spoiler-item-location-world');
 
 		function switchLeft() {
 			switchBtnRight.classList.remove('active-case-location');
 			switchBtnMiddle.classList.remove('active-case-location');
 			switchBtnLeft.classList.add('active-case-location');
 			activeSwitch.style.left = '0%';
+			city.classList.remove('d-none');
+			country.classList.add('d-none');
+			world.classList.add('d-none');
 		}
 
-		function switchRight() {
+		function switchMiddle() {
 			switchBtnRight.classList.add('active-case-location');
 			switchBtnLeft.classList.remove('active-case-location');
 			switchBtnMiddle.classList.remove('active-case-location');
 			activeSwitch.style.left = '33.33333%';
+			city.classList.add('d-none');
+			country.classList.remove('d-none');
+			world.classList.add('d-none');
 		}
 
-		function switchMiddle() {
+		function switchRight() {
 			switchBtnMiddle.classList.add('active-case-location');
 			switchBtnLeft.classList.remove('active-case-location');
 			switchBtnRight.classList.remove('active-case-location');
 			activeSwitch.style.left = '67%';
+			city.classList.add('d-none');
+			country.classList.add('d-none');
+			world.classList.remove('d-none');
 		}
 
 		setListener(

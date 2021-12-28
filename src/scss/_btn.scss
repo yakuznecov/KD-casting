@@ -731,7 +731,7 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 32px;
+	height: 16px;
 	font-size: 14px;
 	letter-spacing: 0.25px;
 	padding: 0 8px;
@@ -743,5 +743,62 @@
 		& .plus-blue-icon path {
 			stroke: #127fd1;
 		}
+	}
+}
+
+.close-circle-btn {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	width: 32px;
+	background: transparent;
+	transition: 0.2s ease;
+}
+
+.close-circle-blue-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	width: 32px;
+	background: transparent;
+	transition: 0.2s ease;
+}
+
+.edit-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	font-size: 12px;
+	letter-spacing: 0.4px;
+	color: #1991eb;
+	background: transparent;
+	transition: 0.2s ease;
+}
+
+.link-btn-light-blue {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #acd4fa;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		bottom: 2px;
+		left: 0;
+		height: 1px;
+		background-color: #acd4fa;
+	}
+	&:hover {
+		color: #87c2f8;
 	}
 }
