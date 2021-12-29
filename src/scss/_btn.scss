@@ -767,6 +767,9 @@
 	width: 32px;
 	background: transparent;
 	transition: 0.2s ease;
+	&:hover svg path {
+		fill: #127fd1;
+	}
 }
 
 .edit-btn {
@@ -779,6 +782,10 @@
 	color: #1991eb;
 	background: transparent;
 	transition: 0.2s ease;
+	&:hover,
+	&:active {
+		color: #106db3;
+	}
 }
 
 .link-btn-light-blue {

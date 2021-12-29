@@ -315,6 +315,10 @@
 	&.--warning {
 		background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23E7A1A1FF' stroke-width='1' stroke-dasharray='7%2c 9' stroke-dashoffset='32' stroke-linecap='round'/%3e%3c/svg%3e");
 	}
+
+	&.--editing {
+		background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2370A8DDFF' stroke-width='1' stroke-dasharray='7%2c 9' stroke-dashoffset='32' stroke-linecap='round'/%3e%3c/svg%3e");
+	}
 }
 
 .edit-fields {
@@ -322,6 +326,7 @@
 	padding: 20px;
 	border-radius: 8px;
 	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2370A8DDFF' stroke-width='1' stroke-dasharray='7%2c 9' stroke-dashoffset='32' stroke-linecap='round'/%3e%3c/svg%3e");
+	background-color: #f8fbff;
 }
 
 .edit-fields-buttons {
@@ -407,4 +412,10 @@
 	text-align: center;
 	margin: 48px auto 0;
 	max-width: 470px;
+}
+
+.close-circle-blue-btn.--edit {
+	position: absolute;
+	right: 6px;
+	top: 6px;
 }

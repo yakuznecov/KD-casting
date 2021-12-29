@@ -34,7 +34,7 @@
 				</div>
 				<div class="create__casting-wrapper">
 					<div class="create__casting-left">
-						<div class="create__casting-filter">
+						<div class="create__casting-filter mb-20">
 							<div class="create__casting-filter-head">
 								<div class="text-blackBrown-regular">Настраиваемая роль</div>
 							</div>
@@ -47,16 +47,16 @@
 								<div class="dropdown-sum-select-icon"><img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" /></div>
 								<ul class="dropdown-select-items dropdown-config-role-items inactive">
 									<li class="dropdown-config-role-item" data-option="1">
-										<span class="dropdown-config-role-title">Брат</span>
-										<span class="dropdown-config-role-text">Семья Петровых</span>
+										<span class="dropdown-config-role-item-title">Брат</span>
+										<span class="dropdown-config-role-item-text">Семья Петровых</span>
 									</li>
 									<li class="dropdown-config-role-item" data-option="2">
-										<span class="dropdown-config-role-title">Соседка</span>
-										<span class="dropdown-config-role-text">Второстепенные роли</span>
+										<span class="dropdown-config-role-item-title">Соседка</span>
+										<span class="dropdown-config-role-item-text">Второстепенные роли</span>
 									</li>
 									<li class="dropdown-config-role-item" data-option="3">
-										<span class="dropdown-config-role-title">Главная роль</span>
-										<span class="dropdown-config-role-text">Звёздные актёры</span>
+										<span class="dropdown-config-role-item-title">Главная роль</span>
+										<span class="dropdown-config-role-item-text">Звёздные актёры</span>
 									</li>
 								</ul>
 								<input type="hidden" value="null" />
@@ -635,6 +635,82 @@
 										<div class="checkbox-button --episode ml-12">
 											<input type="radio" class="checkbox-main" id="create-casting-episode3" name="radio-item" />
 											<label for="create-casting-episode3" class="label-main">Эпизод</label>
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">гонорар</div>
+									<div class="input-sum-wrapper mb-24">
+										<div class="input-box --sum">
+											<input type="text" />
+										</div>
+										<div class="sum-select-container">
+											<div class="dropdown-sum-select">
+												<div class="dropdown-sum-select-inner">₽</div>
+												<div class="dropdown-sum-select-icon"><img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" /></div>
+												<ul class="dropdown-select-items inactive">
+													<li data-option="1">₽</li>
+													<li data-option="2">$</li>
+													<li data-option="3">€</li>
+												</ul>
+												<input type="hidden" value="null" />
+											</div>
+										</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">добавить референс</div>
+									<div class="drag-area mb-24">
+										<div class="text-dullGrey-small mb-4">Загрузите сюда изображение референса (jpeg, png)</div>
+										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+									</div>
+									<div class="title-blackBluish-small mb-8">текст для проб</div>
+									<div class="drag-area mb-24">
+										<div class="text-dullGrey-small mb-4">Загрузите сюда файл с текстом для проб (txt, pdf, docx)</div>
+										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+									</div>
+									<div class="create-casting-video-tests">
+										<label class="checkbox-small-container">
+											<input type="checkbox" class="checkbox-small" />
+											<div class="checkmark"></div>
+										</label>
+										<span class="text-blackBluish-small-high ml-10 create-casting-video-tests-text">Актеры должны загрузить видеопробы, которые вы сможете посмотреть на странице созданного кастинга или в проекте на Рабочем столе</span>
+									</div>
+								</section>
+
+								<section class="create__casting-roles --editing">
+									<button class="close-circle-blue-btn --edit">
+										<img src="x-close-blue-20.svg" alt="close" />
+									</button>
+									<div class="title-blackBluish-small mb-8">ансамбль ролей</div>
+									<div class="input-box mb-16">
+										<input type="text" />
+									</div>
+									<div class="create__casting-extra-information align-items-center">
+										<div class="warning-box">
+											<img src="warning-icon-20.svg" class="warning-icon" />
+										</div>
+										<p class="create__casting-extra-information-text text-lightGrey-small">Например: Семья Петровых или Влюбленная пара и т.п.</p>
+									</div>
+									<div class="title-blackBluish-small mb-8">роль</div>
+									<div class="input-box mb-16">
+										<input type="text" />
+									</div>
+									<div class="create__casting-extra-information align-items-center">
+										<div class="warning-box">
+											<img src="warning-icon-20.svg" class="warning-icon" />
+										</div>
+										<p class="create__casting-extra-information-text text-lightGrey-small">Например: Главная роль или Олег и т.п.</p>
+									</div>
+									<div class="title-blackBluish-small mb-8">тип роли</div>
+									<div class="checkbox-container mb-24">
+										<div class="checkbox-button --main-role">
+											<input type="radio" class="checkbox-main" id="create-casting-main-role2" name="radio-item" />
+											<label for="create-casting-main-role2" class="label-main">Главная роль</label>
+										</div>
+										<div class="checkbox-button ml-12">
+											<input type="radio" class="checkbox-main" id="create-casting-second-main-role2" name="radio-item" />
+											<label for="create-casting-second-main-role2" class="label-main">2-ая Главная роль</label>
+										</div>
+										<div class="checkbox-button --episode ml-12">
+											<input type="radio" class="checkbox-main" id="create-casting-episode2" name="radio-item" />
+											<label for="create-casting-episode2" class="label-main">Эпизод</label>
 										</div>
 									</div>
 									<div class="title-blackBluish-small mb-8">гонорар</div>

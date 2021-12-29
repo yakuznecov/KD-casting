@@ -64,21 +64,30 @@
 			let inner = container.find('.dropdown-sum-select-inner');
 			let items_list = container.find('.dropdown-select-items');
 
-			items_list.toggleClass('inactive');
 			inner.html($(this).html());
 			container.toggleClass('active');
+			items_list.addClass('inactive');
 			input.attr('value', $(this).attr('data-option'));
 		});
 
-		$(document).mousedown(function (e) {
-			let dropdowns = $('.dropdown-sum-select.active');
-			let items_list = dropdowns.find('.dropdown-select-items');
+		$(document).click(function (e) {
+			let dropdowns = $('.dropdown-sum-select');
 
-			if (!dropdowns.is(e.target) && !items_list.is(e.target)) {
+			if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
 				dropdowns.removeClass('active');
-				items_list.addClass('inactive');
+				$('.dropdown-select-items').addClass('inactive');
 			}
 		});
+
+		// $(document).click(function (e) {
+		// 	let dropdowns = $('.dropdown-sum-select');
+		// 	let items_list = dropdowns.find('.dropdown-select-items');
+
+		// 	if (!dropdowns.is(e.target) && !items_list.is(e.target)) {
+		// 		dropdowns.removeClass('active');
+		// 		items_list.addClass('inactive');
+		// 	}
+		// });
 	}
 
 	showDropSelect();
