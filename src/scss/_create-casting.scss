@@ -419,3 +419,102 @@
 	right: 6px;
 	top: 6px;
 }
+
+.send-invitation {
+	display: flex;
+	justify-content: space-between;
+	padding: 32px;
+	background: #fafafa;
+	margin-bottom: 40px;
+}
+
+.send-invitation-text {
+	max-width: 210px;
+}
+
+.create__casting-date-container-left {
+	width: 100%;
+}
+
+.create__casting-date-container-right {
+	width: 100%;
+	margin-left: 12px;
+
+	&.--online {
+		min-width: 111px;
+		width: auto;
+	}
+}
+
+.dropdown-date-invite {
+	margin-left: 0;
+}
+
+.dropdown-map-menu {
+	padding: 0;
+}
+
+.dropdown-map-menu-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.create__casting-contact-number {
+	display: flex;
+}
+
+.flag-select-container {
+	min-width: 56px;
+}
+
+.flag-select-container .dropdown-flag-select {
+	border-radius: 4px 0 0 4px;
+}
+
+.dropdown-flag-btn-icon {
+	margin-left: auto;
+}
+
+.dropdown-sum-select .dropdown-select-items.dropdown-flag-items {
+	left: -2px;
+	top: 40px;
+	width: 56px;
+	min-height: 144px;
+}
+
+.dropdown-sum-select .dropdown-flag-items .dropdown-flag-item {
+	width: 36px;
+	min-height: 32px;
+}
+
+.dropdown-flag-items-inner {
+	margin-right: -2px;
+	padding: 0 4px 0 2px;
+	height: 100vh;
+	overflow-y: auto;
+	scrollbar-color: #e0e0e0 transparent;
+	scrollbar-width: thin;
+	&::-webkit-scrollbar {
+		width: 3px;
+		height: 71px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: transparent;
+		margin-bottom: 2px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #e0e0e0;
+		border-radius: 100px;
+		background-clip: padding-box;
+	}
+}
+
+.phone-input-box {
+	border-radius: 0 4px 4px 0;
+}

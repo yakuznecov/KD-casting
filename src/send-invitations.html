@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>send-invitations</title>
+		<link rel="stylesheet" href="css/nav.min.css" />
+	</head>
+	<body>
+		@@include('header.html')
+		<div class="main-container">
+			<div class="create__casting-container">
+				<div class="create__casting-form">
+					<div class="create__casting-head">
+						<div class="text-blackBluis-large">Рассылка приглашений</div>
+						<button class="close-btn-32 mt-1">
+							<img src="x-close-20.svg" />
+						</button>
+					</div>
+					<div class="create__casting-form-inner">
+						<div class="send-invitation">
+							<img src="send-invitation.svg" />
+							<div class="send-invitation-text">
+								<div class="text-blackBrown mb-12">Вы собираетесь разослать приглашение на кастинг выбранным актёрам</div>
+								<div class="text-lightGrey-medium-higher">Обратите внимание, приглашение будет отправлено всем актёрам, находящимся в колонке «Одобренные»</div>
+							</div>
+						</div>
+						<div class="title-blackBluish-small mb-8">как проводится кастинг</div>
+						<div class="switch-double-buttons-wrapper mb-40">
+							<div class="switch-double-buttons">
+								<span class="switch-active" style="left: 0%"></span>
+								<button class="switch-button --left active-case">Оффлайн пробы</button>
+								<button class="switch-button --right">Онлайн пробы</button>
+							</div>
+						</div>
+						<div class="send-invitation-wrapper">
+							<div class="create__casting-date-container">
+								<div class="create__casting-date-container-left">
+									<div class="title-blackBluish-small mb-8">дата проведения</div>
+									<div class="dropdown-date dropdown-date-invite">
+										<button class="dropdown-btn dropdown-date-btn">
+											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
+											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
+										</button>
+										<div class="dropdown-inner dropdown-date-inner">
+											<img src="calendar-image.svg" />
+											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
+										</div>
+									</div>
+								</div>
+								<div class="create__casting-date-container-right">
+									<div class="title-blackBluish-small mb-8">время вызова</div>
+									<div class="input-box">
+										<input type="text" placeholder="ЧЧ:ММ" />
+									</div>
+								</div>
+							</div>
+							<div class="create__casting-extra-information">
+								<div class="warning-box">
+									<img src="warning-icon-20.svg" class="warning-icon" />
+								</div>
+								<p class="create__casting-extra-information-text text-lightGrey-small">Укажите, в какой день и в какое время вы хотите пригласить актёров на кастинг. Вы создаете Оффлайн кастинг, а это значит, что актёры прибудут на указанный ниже адрес к назначенному времени.</p>
+							</div>
+							<div class="title-blackBluish-small mb-8">адрес проведения</div>
+							<div class="dropdown-select mb-24">
+								<button class="dropdown-select-btn">
+									Введите адрес или нажмите на иконку, чтобы выбрать на карте
+									<img class="dropdown-select-btn-icon --map" src="mapPin.svg" />
+								</button>
+								<div class="dropdown-select-menu dropdown-map-menu">
+									<div class="dropdown-map-menu-img">
+										<img src="images/map.png" alt="" />
+									</div>
+
+									<div class="dropdown-select-menu-footer">
+										<button class="blue-btn --medium">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="title-blackBluish-small mb-8">контактный номер телефона</div>
+							<div class="create__casting-contact-number mb-24">
+								<div class="flag-select-container">
+									<div class="dropdown-sum-select dropdown-flag-select">
+										<div class="dropdown-sum-select-inner">
+											<img src="ru-flag-20.svg" />
+										</div>
+										<div class="dropdown-sum-select-icon"><img class="dropdown-flag-btn-icon" src="flag-caret-down-12.svg" /></div>
+										<ul class="dropdown-select-items inactive dropdown-flag-items">
+											<div class="dropdown-flag-items-inner">
+												<li class="dropdown-flag-item" data-option="1">
+													<img src="ru-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="2">
+													<img src="gb-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="3">
+													<img src="kw-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="4">
+													<img src="ro-flag.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="2">
+													<img src="gb-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="3">
+													<img src="kw-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="4">
+													<img src="ro-flag.svg" />
+												</li>
+											</div>
+										</ul>
+										<input type="hidden" value="null" />
+									</div>
+								</div>
+								<div class="input-box phone-input-box">
+									<input type="text" placeholder="+7 (999) 888-77-66" />
+								</div>
+							</div>
+							<div class="title-blackBluish-small mb-8">сообщение для актёров</div>
+							<div class="create__casting-form-area">
+								<textarea class="area-field" name="text"></textarea>
+							</div>
+						</div>
+						<div class="send-invitation-wrapper --online d-none">
+							<div class="create__casting-date-container">
+								<div class="create__casting-date-container-left">
+									<div class="title-blackBluish-small mb-8">дата проведения</div>
+									<div class="dropdown-date dropdown-date-invite">
+										<button class="dropdown-btn dropdown-date-btn">
+											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
+											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
+										</button>
+										<div class="dropdown-inner dropdown-date-inner">
+											<img src="calendar-image.svg" />
+											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
+										</div>
+									</div>
+								</div>
+								<div class="create__casting-date-container-right --online">
+									<div class="title-blackBluish-small mb-8">время с</div>
+									<div class="input-box">
+										<input type="text" placeholder="ЧЧ:ММ" />
+									</div>
+								</div>
+								<div class="create__casting-date-container-right --online">
+									<div class="title-blackBluish-small mb-8">время по</div>
+									<div class="input-box">
+										<input type="text" placeholder="ЧЧ:ММ" />
+									</div>
+								</div>
+							</div>
+							<div class="create__casting-extra-information">
+								<div class="warning-box">
+									<img src="warning-icon-20.svg" class="warning-icon" />
+								</div>
+								<p class="create__casting-extra-information-text text-lightGrey-small">Укажите, в какой день и в какое время вы хотите пригласить актёров на кастинг. Вы создаете Оффлайн кастинг, а это значит, что актёры прибудут на указанный ниже адрес к назначенному времени.</p>
+							</div>
+
+							<div class="title-blackBluish-small mb-8">контактный номер телефона</div>
+							<div class="create__casting-contact-number mb-24">
+								<div class="flag-select-container">
+									<div class="dropdown-sum-select dropdown-flag-select">
+										<div class="dropdown-sum-select-inner">
+											<img src="ru-flag-20.svg" />
+										</div>
+										<div class="dropdown-sum-select-icon"><img class="dropdown-flag-btn-icon" src="flag-caret-down-12.svg" /></div>
+										<ul class="dropdown-select-items inactive dropdown-flag-items">
+											<div class="dropdown-flag-items-inner">
+												<li class="dropdown-flag-item" data-option="1">
+													<img src="ru-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="2">
+													<img src="gb-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="3">
+													<img src="kw-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="4">
+													<img src="ro-flag.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="2">
+													<img src="gb-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="3">
+													<img src="kw-flag-20.svg" />
+												</li>
+												<li class="dropdown-flag-item" data-option="4">
+													<img src="ro-flag.svg" />
+												</li>
+											</div>
+										</ul>
+										<input type="hidden" value="null" />
+									</div>
+								</div>
+								<div class="input-box phone-input-box">
+									<input type="text" placeholder="+7 (999) 888-77-66" />
+								</div>
+							</div>
+							<div class="title-blackBluish-small mb-8">сообщение для актёров</div>
+							<div class="create__casting-form-area">
+								<textarea class="area-field" name="text"></textarea>
+							</div>
+						</div>
+						<div class="create__casting-form-buttons">
+							<button class="blue-btn &#45;&#45;large ml-8">Разослать приглашения</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

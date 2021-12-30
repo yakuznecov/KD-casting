@@ -54,7 +54,6 @@
 		const items = dropdown.find('li');
 
 		$('.dropdown-sum-select').click(function () {
-			$(this).children('.dropdown-select-items').toggleClass('inactive');
 			$(this).toggleClass('active');
 		});
 
@@ -62,32 +61,21 @@
 			let container = $(this).parents('.dropdown-sum-select');
 			let input = container.find('input');
 			let inner = container.find('.dropdown-sum-select-inner');
-			let items_list = container.find('.dropdown-select-items');
 
 			inner.html($(this).html());
 			container.toggleClass('active');
-			items_list.addClass('inactive');
 			input.attr('value', $(this).attr('data-option'));
+
+			$('.dropdown-flag-btn-icon').css({ transition: 'transform 0.2s', transform: 'rotate("180"deg)' });
 		});
 
-		$(document).click(function (e) {
+		$(document).mousedown(function (e) {
 			let dropdowns = $('.dropdown-sum-select');
 
 			if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
 				dropdowns.removeClass('active');
-				$('.dropdown-select-items').addClass('inactive');
 			}
 		});
-
-		// $(document).click(function (e) {
-		// 	let dropdowns = $('.dropdown-sum-select');
-		// 	let items_list = dropdowns.find('.dropdown-select-items');
-
-		// 	if (!dropdowns.is(e.target) && !items_list.is(e.target)) {
-		// 		dropdowns.removeClass('active');
-		// 		items_list.addClass('inactive');
-		// 	}
-		// });
 	}
 
 	showDropSelect();
@@ -520,6 +508,34 @@
 
 	switchDoubleButtons('.switch-button.--left', '.switch-button.--right', '.switch-active');
 	// End: 2 кнопки переключения
+
+	// Start: 2 кнопки переключения рассылка приглашений
+	function switchDoubleInviteButtons(left, right, active) {
+		let switchBtnLeft = $(left);
+		let switchBtnRight = $(right);
+		let switchBtnActive = $(active);
+		let sendInvitation = $('.send-invitation-wrapper');
+		let sendInvitationOnline = $('.send-invitation-wrapper.--online');
+
+		switchBtnLeft.click(function () {
+			switchBtnRight.removeClass('active-case');
+			switchBtnLeft.addClass('active-case');
+			switchBtnActive.css('left', '0%');
+			sendInvitation.removeClass('d-none');
+			sendInvitationOnline.addClass('d-none');
+		});
+
+		switchBtnRight.click(function () {
+			switchBtnRight.addClass('active-case');
+			switchBtnLeft.removeClass('active-case');
+			switchBtnActive.css('left', '50%');
+			sendInvitation.addClass('d-none');
+			sendInvitationOnline.removeClass('d-none');
+		});
+	}
+
+	switchDoubleInviteButtons('.switch-button.--left', '.switch-button.--right', '.switch-active');
+	// End: 2 кнопки переключения рассылка приглашений
 
 	// Кнопка переключения страна-город
 	function switchDoubleLocation() {
