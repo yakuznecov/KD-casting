@@ -643,6 +643,23 @@
 	}
 }
 
+.close-x-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 24px;
+	height: 24px;
+	background: transparent;
+	transition: all 0.2s;
+	&:hover,
+	&:active {
+		& svg path {
+			transition: all 0.2s;
+			stroke: #212121;
+		}
+	}
+}
+
 // Прозрачная кнопка закрытия с border
 .close-btn-32 {
 	display: inline-flex;
