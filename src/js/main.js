@@ -82,6 +82,22 @@
 
 	// End: custom select dropdown
 
+	// Start: Tabs
+	$('.tabs-wrapper').each(function () {
+		let thisEl = $(this);
+		thisEl.find('.tab-item').not(':first').hide();
+		thisEl
+			.find('.tab')
+			.click(function () {
+				thisEl.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+				thisEl.find('.tab-item').hide().eq($(this).index()).fadeIn();
+			})
+			.eq(0)
+			.addClass('active');
+	});
+
+	// End: Tabs
+
 	// Разворачивание колонки с заявками ----------------------------------------------------->
 
 	const toggleRequest = document.querySelector('.request-js');
@@ -300,24 +316,24 @@
 
 	// Start: actor profile
 
-	var tabs_menu = document.getElementsByClassName('tabs-menu');
-	for (var k = 0; k < tabs_menu.length; k++) {
-		tabs_menu[k].onclick = js_tabs;
-	}
-	function js_tabs() {
-		var tab_id = this.getAttribute('data-target');
-		var tabs_panel = document.getElementsByClassName('tabs-panel');
+	// var tabs_menu = document.getElementsByClassName('tabs-menu');
+	// for (var k = 0; k < tabs_menu.length; k++) {
+	// 	tabs_menu[k].onclick = js_tabs;
+	// }
+	// function js_tabs() {
+	// 	var tab_id = this.getAttribute('data-target');
+	// 	var tabs_panel = document.getElementsByClassName('tabs-panel');
 
-		for (var i = 0; i < tabs_panel.length; i++) {
-			tabs_panel[i].style.display = 'none';
-		}
-		for (var j = 0; j < tabs_menu.length; j++) {
-			tabs_menu[j].className = tabs_menu[j].className.replace(' tabs-menu-active', '');
-		}
-		this.className += ' tabs-menu-active';
-		document.getElementById(tab_id).style.display = 'block';
-		return false;
-	}
+	// 	for (var i = 0; i < tabs_panel.length; i++) {
+	// 		tabs_panel[i].style.display = 'none';
+	// 	}
+	// 	for (var j = 0; j < tabs_menu.length; j++) {
+	// 		tabs_menu[j].className = tabs_menu[j].className.replace(' tabs-menu-active', '');
+	// 	}
+	// 	this.className += ' tabs-menu-active';
+	// 	document.getElementById(tab_id).style.display = 'block';
+	// 	return false;
+	// }
 
 	// End: actor profile
 
@@ -800,15 +816,15 @@
 
 	// End: add/remove border active focus
 
-	$('.sidebar-burger__tabs-item-input').click(function () {
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
-	});
+	// $('.sidebar-burger__tabs-item-input').click(function () {
+	// 	$(this).siblings().removeClass('active');
+	// 	$(this).addClass('active');
+	// });
 
-	$('.sidebar__tabs-item-input').click(function () {
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
-	});
+	// $('.sidebar__tabs-item-input').click(function () {
+	// 	$(this).siblings().removeClass('active');
+	// 	$(this).addClass('active');
+	// });
 
 	$('.dropdown-text-js').click(function () {
 		$('.dropdown-transfer-actors').addClass('active');
