@@ -637,11 +637,11 @@
 									<div class="filter-dropdown-menu">
 										<div class="filter-dropdown-menu-title">страна или город</div>
 										<!-- Start: Кнопка переключения страна-город -->
-										<div class="filter-dropdown-location">
-											<div class="switch-button-loc">
-												<span class="active"></span>
-												<button class="switch-button-case-loc left active-case">По стране</button>
-												<button class="switch-button-case-loc right">По городу</button>
+										<div class="switch__wrapper mb-16">
+											<div class="switch">
+												<span class="switch__slider"></span>
+												<button class="switch__item" data-index="0">По стране</button>
+												<button class="switch__item" data-index="1">По городу</button>
 											</div>
 										</div>
 										<!-- End: Кнопка переключения страна-город -->
@@ -652,12 +652,12 @@
 										</div>
 										<div class="filter-dropdown-menu-title">пол</div>
 										<!-- Start: Кнопка переключения пола человека -->
-										<div class="filter-dropdown-gender">
-											<div class="switch-button">
-												<span class="active"></span>
-												<button class="switch-button-case left active-case-gender">Все</button>
-												<button class="switch-button-case right">Мужчина</button>
-												<button class="switch-button-case middle">Женщина</button>
+										<div class="switch__wrapper mb-32">
+											<div class="switch">
+												<span class="switch__slider"></span>
+												<button class="switch__item" data-index="0">Все</button>
+												<button class="switch__item" data-index="1">Мужчина</button>
+												<button class="switch__item" data-index="2">Женщина</button>
 											</div>
 										</div>
 										<!-- End: Кнопка переключения пола человека -->
@@ -885,6 +885,6 @@
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="js/main.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

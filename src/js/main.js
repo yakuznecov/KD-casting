@@ -1,4 +1,24 @@
 (function ($) {
+	// Start: Все кнопки с переключением
+	$(document).ready(function () {
+		$('.switch__wrapper').each(function () {
+			const switchItem = $(this).find('.switch__item');
+			const switchSlider = $(this).find('.switch__slider');
+			const switchItemsCount = switchItem.length;
+			const step = switchItemsCount && 100 / switchItemsCount;
+
+			switchItem.css('width', `${step}%`);
+			switchSlider.css('width', `${step}%`);
+
+			$(this).click(function (e) {
+				const targetIndex = $(e.target.closest('.switch__item')).data('index');
+				switchSlider.css('left', `${step * targetIndex}%`);
+			});
+		});
+	});
+	// End: Все кнопки с переключением
+
+	// Start: Dropdown Select
 	function showDropdownSelect() {
 		const area = $('.dropdown-select');
 
@@ -17,6 +37,9 @@
 
 	showDropdownSelect();
 
+	// End: Dropdown Select
+
+	// Start: Открытие спойлеров в сайдбаре
 	function openSpoiler() {
 		$('.spoiler-item-header').click(function () {
 			$(this).next('.spoiler-item-body').slideToggle();
@@ -26,15 +49,10 @@
 
 	openSpoiler();
 
-	const setListener = (element, type, handler) => {
-		if (!element) {
-			return;
-		}
-		element.addEventListener(type, handler);
-	};
+	// End: Открытие спойлеров
 
-	// Создание новой роли
-	function createNewObject() {
+	// Start: Создание новой роли
+	function createNewRole() {
 		$('.dropdown-select-menu-item.--create').click(function () {
 			$(this).addClass('--hide-js');
 			$('.create-new-object').addClass('--active');
@@ -46,7 +64,8 @@
 		});
 	}
 
-	createNewObject();
+	createNewRole();
+	// End: Создание новой роли
 
 	// Start: custom select dropdown
 	function showDropSelect() {
@@ -82,7 +101,7 @@
 
 	// End: custom select dropdown
 
-	// Start: Tabs
+	// Start: All Tabs
 	$('.tabs-wrapper').each(function () {
 		let thisEl = $(this);
 		thisEl.find('.tab-item').not(':first').hide();
@@ -95,33 +114,20 @@
 			.eq(0)
 			.addClass('active');
 	});
+	// End: All Tabs
 
-	// End: Tabs
+	// Start: Разворачивание колонки с заявками
+	const expandColumnRequest = () => {
+		const toggleRequest = $('.request-js');
+		const mainItemRequest = $('.main__item');
 
-	// Разворачивание колонки с заявками ----------------------------------------------------->
+		toggleRequest.click(function () {
+			mainItemRequest.toggleClass('--expand');
+		});
+	};
 
-	const toggleRequest = document.querySelector('.request-js');
-	const mainItemRequest = document.querySelector('.main__item');
-
-	setListener(toggleRequest, 'click', () => {
-		mainItemRequest.classList.toggle('--expand');
-	});
-	// ---------------------------------------------------------------------------------------->
-
-	// Убрать overflow у блока, чтобы отобразить dropdown и вернуть обратно при клике на кнопку закрыть --------------------->
-
-	const massActors = document.querySelector('.dropdown-text-js');
-	const transferActorsCloseBtn = document.querySelector('.transfer-actors-close-btn');
-
-	setListener(massActors, 'click', () => {
-		mainItemsWrapper.style.overflow = 'inherit';
-	});
-
-	setListener(transferActorsCloseBtn, 'click', () => {
-		mainItemsWrapper.style.overflow = 'overlay';
-	});
-
-	// ------------------------------------------------------------------------------------------------------------------------>
+	expandColumnRequest();
+	// End: Разворачивание колонки с заявками
 
 	// Смена плейсхолдера у инпута ------------------------------------------------------------>
 
@@ -166,82 +172,82 @@
 
 	let timeout;
 
-	setListener(document, 'DOMContentLoaded', () => {
-		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
-		let sendLeft = sendInvitationBtn.offsetLeft;
-		let statusleft = statusDefault.offsetLeft;
+	// setListener(document, 'DOMContentLoaded', () => {
+	// 	let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
+	// 	let sendLeft = sendInvitationBtn.offsetLeft;
+	// 	let statusleft = statusDefault.offsetLeft;
 
-		if (sendLeft < mainLeft) {
-			if (!isTransform) {
-				lowerSearch();
-				hideFullPlaceholder();
-			}
-		}
+	// 	if (sendLeft < mainLeft) {
+	// 		if (!isTransform) {
+	// 			lowerSearch();
+	// 			hideFullPlaceholder();
+	// 		}
+	// 	}
 
-		if (mainLeft - sendLeft > 10) {
-			if (mainHeaderTopSearch.classList.contains('lower')) {
-				if (isTransform) {
-					transformBtn();
-				}
-			}
-		}
+	// 	if (mainLeft - sendLeft > 10) {
+	// 		if (mainHeaderTopSearch.classList.contains('lower')) {
+	// 			if (isTransform) {
+	// 				transformBtn();
+	// 			}
+	// 		}
+	// 	}
 
-		if (statusleft - sendLeft > 10) {
-			if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
-				if (isTransform) {
-					hideStatus();
-				}
-			}
-		}
+	// 	if (statusleft - sendLeft > 10) {
+	// 		if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
+	// 			if (isTransform) {
+	// 				hideStatus();
+	// 			}
+	// 		}
+	// 	}
 
-		if (sendLeft - mainLeft > 150) {
-			if (isTransform) {
-				maxSearch();
-				showFullPlaceholder();
-			}
-		}
-	});
+	// 	if (sendLeft - mainLeft > 150) {
+	// 		if (isTransform) {
+	// 			maxSearch();
+	// 			showFullPlaceholder();
+	// 		}
+	// 	}
+	// });
 
-	setListener(window, 'resize', () => {
-		clearTimeout(timeout);
-		timeout = setTimeout(function () {
-			let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
-			let sendLeft = sendInvitationBtn.offsetLeft;
-			let statusleft = statusDefault.offsetLeft + 287;
+	// setListener(window, 'resize', () => {
+	// 	clearTimeout(timeout);
+	// 	timeout = setTimeout(function () {
+	// 		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
+	// 		let sendLeft = sendInvitationBtn.offsetLeft;
+	// 		let statusleft = statusDefault.offsetLeft + 287;
 
-			console.log(sendLeft, statusleft);
+	// 		console.log(sendLeft, statusleft);
 
-			if (sendLeft < mainLeft) {
-				if (!isTransform) {
-					lowerSearch();
-					hideFullPlaceholder();
-				}
-			}
+	// 		if (sendLeft < mainLeft) {
+	// 			if (!isTransform) {
+	// 				lowerSearch();
+	// 				hideFullPlaceholder();
+	// 			}
+	// 		}
 
-			if (mainLeft - sendLeft > 10) {
-				if (mainHeaderTopSearch.classList.contains('lower')) {
-					if (isTransform) {
-						transformBtn();
-					}
-				}
-			}
+	// 		if (mainLeft - sendLeft > 10) {
+	// 			if (mainHeaderTopSearch.classList.contains('lower')) {
+	// 				if (isTransform) {
+	// 					transformBtn();
+	// 				}
+	// 			}
+	// 		}
 
-			if (statusleft - sendLeft > 10) {
-				if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
-					if (isTransform) {
-						hideStatus();
-					}
-				}
-			}
+	// 		if (statusleft - sendLeft > 10) {
+	// 			if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
+	// 				if (isTransform) {
+	// 					hideStatus();
+	// 				}
+	// 			}
+	// 		}
 
-			if (sendLeft - mainLeft > 150) {
-				if (isTransform) {
-					maxSearch();
-					showFullPlaceholder();
-				}
-			}
-		}, 80);
-	});
+	// 		if (sendLeft - mainLeft > 150) {
+	// 			if (isTransform) {
+	// 				maxSearch();
+	// 				showFullPlaceholder();
+	// 			}
+	// 		}
+	// 	}, 80);
+	// });
 
 	function transformBtn() {
 		sendInvitationBtn.classList.add('active');
@@ -277,77 +283,53 @@
 
 	// ------------------------------------------------------------------------------------>
 
-	// Start: Range input slider in filter ---------------------------------------------------------------------------->
-	var rangeOne = document.querySelector('input[name="rangeOne"]'),
-		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
-		outputOne = document.querySelector('.outputOne'),
-		outputTwo = document.querySelector('.outputTwo'),
-		inclRange = document.querySelector('.incl-range'),
-		updateView = function () {
-			if (this.getAttribute('name') === 'rangeOne') {
-				outputOne.innerHTML = this.value;
-				outputOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+	// Start: Range input slider in filter
+	function rangeFilterSlider() {
+		const rangeOne = $('input[name="rangeOne"]');
+		const rangeTwo = $('input[name="rangeTwo"]');
+		const outputOne = $('.outputOne');
+		const outputTwo = $('.outputTwo');
+		const inclRange = $('.incl-range');
+		const updateView = function () {
+			const oneLeft = (this.val() / this.attr('max')) * (100 - 3.5) + '%';
+			const twoLeft = (this.val() / this.attr('max')) * (100 - 3.5) + '%';
+			const inclRangeWidthFirst = ((rangeOne.val() - rangeTwo.val()) / this.attr('max')) * 100 + '%';
+			const inclRangeWidthSecond = ((rangeTwo.val() - rangeOne.val()) / this.attr('max')) * 100 + '%';
+			const inclRangeLeftFirst = (rangeTwo.val() / this.attr('max')) * 100 + '%';
+			const inclRangeLeftSecond = (rangeOne.val() / this.attr('max')) * 100 + '%';
+
+			if (this.attr('name') === 'rangeOne') {
+				outputOne.html(this.val());
+				outputOne.css('left', `${oneLeft}`);
 			} else {
-				outputTwo.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
-				outputTwo.innerHTML = this.value;
+				outputTwo.html(this.val());
+				outputTwo.css('left', `${twoLeft}`);
 			}
-			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
-				inclRange.style.width = ((rangeOne.value - rangeTwo.value) / this.getAttribute('max')) * 100 + '%';
-				inclRange.style.left = (rangeTwo.value / this.getAttribute('max')) * 100 + '%';
+			if (parseInt(rangeOne.val()) > parseInt(rangeTwo.val())) {
+				inclRange.css('width', `${inclRangeWidthFirst}`);
+				inclRange.css('left', `${inclRangeLeftFirst}`);
 			} else {
-				inclRange.style.width = ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
-				inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
+				inclRange.css('width', `${inclRangeWidthSecond}`);
+				inclRange.css('left', `${inclRangeLeftSecond}`);
 			}
 		};
 
-	setListener(document, 'DOMContentLoaded', () => {
-		updateView.call(rangeOne);
-		updateView.call(rangeTwo);
-		$('.double-range')
-			.on('mouseup', function () {
-				this.blur();
-			})
-			.on('mousedown input', function () {
-				updateView.call(this);
-			});
-	});
+		$(document).ready(function () {
+			updateView.call(rangeOne);
+			updateView.call(rangeTwo);
+			$('.double-range')
+				.on('mouseup', function () {
+					this.blur();
+				})
+				.on('mousedown input', function () {
+					updateView.call($(this));
+				});
+		});
+	}
+
+	rangeFilterSlider();
 
 	// End: Range input slider in filter ------------------------------------------------------------------------------->
-
-	// Start: actor profile
-
-	// var tabs_menu = document.getElementsByClassName('tabs-menu');
-	// for (var k = 0; k < tabs_menu.length; k++) {
-	// 	tabs_menu[k].onclick = js_tabs;
-	// }
-	// function js_tabs() {
-	// 	var tab_id = this.getAttribute('data-target');
-	// 	var tabs_panel = document.getElementsByClassName('tabs-panel');
-
-	// 	for (var i = 0; i < tabs_panel.length; i++) {
-	// 		tabs_panel[i].style.display = 'none';
-	// 	}
-	// 	for (var j = 0; j < tabs_menu.length; j++) {
-	// 		tabs_menu[j].className = tabs_menu[j].className.replace(' tabs-menu-active', '');
-	// 	}
-	// 	this.className += ' tabs-menu-active';
-	// 	document.getElementById(tab_id).style.display = 'block';
-	// 	return false;
-	// }
-
-	// End: actor profile
-
-	// Start: Скрытие окна Массовое одобрение актеров --------------------------------------------->
-	let dropTransferActors = document.querySelector('.dropdown-transfer-actors');
-	setListener(dropTransferActors, 'mouseover', (event) => {
-		event.stopPropagation();
-	});
-
-	setListener(dropTransferActors, 'mouseleave', (event) => {
-		event.target.classList.remove('active');
-		mainItemsWrapper.style.overflow = 'overlay';
-	});
-	// End: Скрытие окна Массовое одобрение актеров ----------------------------------------------->
 
 	// Start: add/remove class active on hover -------------------------------------------------------------->
 
@@ -497,308 +479,201 @@
 			});
 	});
 
-	// Start: 2 кнопки переключения
-	function switchDoubleButtons(left, right, active) {
-		let switchBtnLeft = $(left);
-		let switchBtnRight = $(right);
-		let switchBtnActive = $(active);
+	// Start: Переключение проектов в create-step-3
+	const switchProjects = () => {
 		let createNewOne = $('.create-new-one');
 		let selectExistingOne = $('.select-existing-one');
+		let switchBtnLeft = $('.switch-button-case-project.--left');
+		let switchBtnRight = $('.switch-button-case-project.--right');
 
 		switchBtnLeft.click(function () {
-			switchBtnRight.removeClass('active-case');
-			switchBtnLeft.addClass('active-case');
-			switchBtnActive.css('left', '0%');
-			selectExistingOne.addClass('d-none');
-			createNewOne.removeClass('d-none');
+			selectExistingOne.hide();
+			createNewOne.show();
 		});
 
 		switchBtnRight.click(function () {
-			switchBtnRight.addClass('active-case');
-			switchBtnLeft.removeClass('active-case');
-			switchBtnActive.css('left', '50%');
-			selectExistingOne.removeClass('d-none');
-			createNewOne.addClass('d-none');
+			selectExistingOne.show();
+			createNewOne.hide();
 		});
-	}
+	};
 
-	switchDoubleButtons('.switch-button.--left', '.switch-button.--right', '.switch-active');
-	// End: 2 кнопки переключения
+	switchProjects();
+
+	// End: Переключение проектов в create-step-3
 
 	// Start: 2 кнопки переключения рассылка приглашений
-	function switchDoubleInviteButtons(left, right, active) {
-		let switchBtnLeft = $(left);
-		let switchBtnRight = $(right);
-		let switchBtnActive = $(active);
+	const switchDoubleInviteButtons = () => {
+		let switchBtnLeft = $('.switch-button-left');
+		let switchBtnRight = $('.switch-button-right');
 		let sendInvitation = $('.send-invitation-wrapper');
 		let sendInvitationOnline = $('.send-invitation-wrapper.--online');
 
 		switchBtnLeft.click(function () {
-			switchBtnRight.removeClass('active-case');
-			switchBtnLeft.addClass('active-case');
-			switchBtnActive.css('left', '0%');
-			sendInvitation.removeClass('d-none');
-			sendInvitationOnline.addClass('d-none');
+			sendInvitation.show();
+			sendInvitationOnline.hide();
 		});
 
 		switchBtnRight.click(function () {
-			switchBtnRight.addClass('active-case');
-			switchBtnLeft.removeClass('active-case');
-			switchBtnActive.css('left', '50%');
-			sendInvitation.addClass('d-none');
-			sendInvitationOnline.removeClass('d-none');
+			sendInvitation.hide();
+			sendInvitationOnline.show();
 		});
-	}
+	};
 
-	switchDoubleInviteButtons('.switch-button.--left', '.switch-button.--right', '.switch-active');
+	switchDoubleInviteButtons();
 	// End: 2 кнопки переключения рассылка приглашений
 
-	// Кнопка переключения страна-город
-	function switchDoubleLocation() {
-		var switchBtnLocRight = document.querySelector('.switch-button-case-loc.right');
-		var switchBtnLocLeft = document.querySelector('.switch-button-case-loc.left');
-		var activeSwitchLoc = document.querySelector('.switch-button-loc .active');
+	// Start: Переключение локации в спойлере Территория
+	const switchLocation = () => {
+		let city = $('.spoiler-item-location-city');
+		let country = $('.spoiler-item-location-country');
+		let world = $('.spoiler-item-location-world');
+		let switchBtnLeft = $('.spoiler-item-location-left');
+		let switchBtnMiddle = $('.spoiler-item-location-middle');
+		let switchBtnRight = $('.spoiler-item-location-right');
 
-		function switchLocLeft() {
-			switchBtnLocRight.classList.remove('active-case');
-			switchBtnLocLeft.classList.add('active-case');
-			activeSwitchLoc.style.left = '0%';
-		}
+		switchBtnLeft.click(function () {
+			city.show();
+			country.hide();
+			world.hide();
+		});
 
-		function switchLocRight() {
-			switchBtnLocRight.classList.add('active-case');
-			switchBtnLocLeft.classList.remove('active-case');
-			activeSwitchLoc.style.left = '50%';
-		}
+		switchBtnMiddle.click(function () {
+			city.hide();
+			country.show();
+			world.hide();
+		});
 
-		setListener(
-			switchBtnLocLeft,
-			'click',
-			() => {
-				switchLocLeft();
-			},
-			false
-		);
+		switchBtnRight.click(function () {
+			city.hide();
+			country.hide();
+			world.show();
+		});
+	};
 
-		setListener(
-			switchBtnLocRight,
-			'click',
-			() => {
-				switchLocRight();
-			},
-			false
-		);
-	}
+	switchLocation();
 
-	switchDoubleLocation();
+	// End: Переключение локации в спойлере Территория
 
-	// Кнопка с переключением пола
-	function switchGender() {
-		var switchBtnRight = document.querySelector('.switch-button-case.right');
-		var switchBtnLeft = document.querySelector('.switch-button-case.left');
-		var switchBtnMiddle = document.querySelector('.switch-button-case.middle');
-		var activeSwitch = document.querySelector('.switch-button .active');
+	// Start: Скрытие сайдбара
+	function removeSidebar() {
+		const sidebarBtnLeft = $('.roll-up-btn-left');
+		const sidebarBtnRight = $('.roll-up-btn-right');
+		const sidebar = $('.sidebar');
+		const sidebarTabs = $('.sidebar-tabs-js');
+		const sidebarHeaderTitle = $('.sidebar-dropdown-header-title');
+		const sidebarBurger = $('.sidebar-burger');
+		const sidebarPlus = $('.sidebar-plus');
+		const sidebarTopBtns = $('.sidebar-top-btns');
+		const sidebarLeftBtns = $('.sidebar-left-btns');
+		const mainItemsWrapper = $('.main-items-wrapper');
+		const wrapText = $('.wrap-text');
 
-		function switchLeft() {
-			switchBtnRight.classList.remove('active-case-gender');
-			switchBtnMiddle.classList.remove('active-case-gender');
-			switchBtnLeft.classList.add('active-case-gender');
-			activeSwitch.style.left = '0%';
-		}
+		let isSidebarHidden = false;
 
-		function switchRight() {
-			switchBtnRight.classList.add('active-case-gender');
-			switchBtnLeft.classList.remove('active-case-gender');
-			switchBtnMiddle.classList.remove('active-case-gender');
-			activeSwitch.style.left = '33.33333%';
-		}
-
-		function switchMiddle() {
-			switchBtnMiddle.classList.add('active-case-gender');
-			switchBtnLeft.classList.remove('active-case-gender');
-			switchBtnRight.classList.remove('active-case-gender');
-			activeSwitch.style.left = '67%';
-		}
-
-		setListener(
-			switchBtnLeft,
-			'click',
-			() => {
-				switchLeft();
-			},
-			false
-		);
-
-		setListener(
-			switchBtnMiddle,
-			'click',
-			() => {
-				switchMiddle();
-			},
-			false
-		);
-
-		setListener(
-			switchBtnRight,
-			'click',
-			() => {
-				switchRight();
-			},
-			false
-		);
-	}
-
-	switchGender();
-
-	// Переключение город-страна в create casting filter
-
-	function switchLocationFilter() {
-		let switchBtnRight = document.querySelector('.spoiler-item-location-button-case.right');
-		let switchBtnLeft = document.querySelector('.spoiler-item-location-button-case.left');
-		let switchBtnMiddle = document.querySelector('.spoiler-item-location-button-case.middle');
-		let activeSwitch = document.querySelector('.spoiler-item-location-button .active');
-		let city = document.querySelector('.spoiler-item-location-city');
-		let country = document.querySelector('.spoiler-item-location-country');
-		let world = document.querySelector('.spoiler-item-location-world');
-
-		function switchLeft() {
-			switchBtnRight.classList.remove('active-case-location');
-			switchBtnMiddle.classList.remove('active-case-location');
-			switchBtnLeft.classList.add('active-case-location');
-			activeSwitch.style.left = '0%';
-			city.classList.remove('d-none');
-			country.classList.add('d-none');
-			world.classList.add('d-none');
-		}
-
-		function switchMiddle() {
-			switchBtnRight.classList.add('active-case-location');
-			switchBtnLeft.classList.remove('active-case-location');
-			switchBtnMiddle.classList.remove('active-case-location');
-			activeSwitch.style.left = '33.33333%';
-			city.classList.add('d-none');
-			country.classList.remove('d-none');
-			world.classList.add('d-none');
-		}
-
-		function switchRight() {
-			switchBtnMiddle.classList.add('active-case-location');
-			switchBtnLeft.classList.remove('active-case-location');
-			switchBtnRight.classList.remove('active-case-location');
-			activeSwitch.style.left = '67%';
-			city.classList.add('d-none');
-			country.classList.add('d-none');
-			world.classList.remove('d-none');
-		}
-
-		setListener(
-			switchBtnLeft,
-			'click',
-			() => {
-				switchLeft();
-			},
-			false
-		);
-
-		setListener(
-			switchBtnMiddle,
-			'click',
-			() => {
-				switchMiddle();
-			},
-			false
-		);
-
-		setListener(
-			switchBtnRight,
-			'click',
-			() => {
-				switchRight();
-			},
-			false
-		);
-	}
-
-	switchLocationFilter();
-
-	// Скрытие сайдбара ------------------------------------------------------------------------------------------------->
-
-	const sidebarBtnLeft = document.querySelector('.roll-up-btn-left');
-	const sidebarBtnRight = document.querySelector('.roll-up-btn-right');
-	const sidebar = document.querySelector('.sidebar');
-	const sidebarTabs = document.querySelector('.sidebar-tabs-js');
-	const sidebarHeaderTitle = document.querySelector('.sidebar-dropdown-header-title');
-	const sidebarBurger = document.querySelector('.sidebar-burger');
-	const sidebarPlus = document.querySelector('.sidebar-plus');
-	const sidebarTopBtns = document.querySelector('.sidebar-top-btns');
-	const sidebarLeftBtns = document.querySelector('.sidebar-left-btns');
-	const mainItemsWrapper = document.querySelector('.main-items-wrapper');
-	const wrapText = document.querySelector('.wrap-text');
-
-	let isSidebarHidden = false;
-
-	setListener(window, 'resize', () => {
-		if (window.innerWidth < 1025) {
-			if (!isSidebarHidden) {
-				hideSidebar();
+		$(window).resize(function () {
+			if ($(window).width() < 1025) {
+				if (!isSidebarHidden) {
+					hideSidebar();
+				}
+			} else {
+				if (isSidebarHidden) {
+					showSidebar();
+				}
 			}
-		} else {
-			if (isSidebarHidden) {
-				showSidebar();
-			}
+		});
+
+		sidebarBtnLeft.click(function () {
+			hideSidebar();
+		});
+
+		function hideSidebar() {
+			mainItemsWrapper.addClass('active');
+			wrapText.addClass('active');
+			sidebarTabs.toggleClass('done');
+			sidebarHeaderTitle.toggleClass('done');
+			sidebarTopBtns.removeClass('active');
+
+			setTimeout(function () {
+				sidebarBurger.toggleClass('done');
+				sidebarPlus.toggleClass('done');
+				sidebarLeftBtns.addClass('active');
+			}, 100);
+
+			sidebar.toggleClass('--rolled');
+
+			sidebarBtnLeft.toggleClass('active');
+			sidebarBtnRight.toggleClass('active');
+
+			isSidebarHidden = true;
 		}
-	});
 
-	setListener(sidebarBtnLeft, 'click', hideSidebar);
+		sidebarBtnRight.click(function () {
+			showSidebar();
+		});
 
-	function hideSidebar() {
-		mainItemsWrapper.classList.add('active');
-		wrapText.classList.add('active');
-		sidebarTabs.classList.toggle('done');
-		sidebarHeaderTitle.classList.toggle('done');
-		sidebarTopBtns.classList.remove('active');
+		function showSidebar() {
+			mainItemsWrapper.removeClass('active');
+			sidebarLeftBtns.removeClass('active');
+			sidebarBurger.toggleClass('done');
+			sidebarPlus.toggleClass('done');
 
-		setTimeout(function () {
-			sidebarBurger.classList.toggle('done');
-			sidebarPlus.classList.toggle('done');
-			sidebarLeftBtns.classList.add('active');
-		}, 100);
+			setTimeout(function () {
+				sidebarTopBtns.addClass('active');
+				wrapText.removeClass('active');
+			}, 280);
 
-		sidebar.classList.toggle('--rolled');
+			setTimeout(function () {
+				sidebarTabs.toggleClass('done');
+				sidebarHeaderTitle.toggleClass('done');
+			}, 280);
 
-		sidebarBtnLeft.classList.toggle('active');
-		sidebarBtnRight.classList.toggle('active');
+			sidebar.toggleClass('--rolled');
 
-		isSidebarHidden = true;
+			sidebarBtnLeft.toggleClass('active');
+			sidebarBtnRight.toggleClass('active');
+
+			isSidebarHidden = false;
+		}
+
+		// Start: Убрать overflow у блока, чтобы отобразить dropdown и вернуть обратно при клике при закрытии
+		const removeOverflowAtBlock = () => {
+			const massActors = $('.dropdown-text-js');
+			const transferActorsCloseBtn = $('.transfer-actors-close-btn');
+
+			massActors.click(function () {
+				mainItemsWrapper.css('overflow', 'inherit');
+			});
+
+			transferActorsCloseBtn.click(function () {
+				mainItemsWrapper.css('overflow', 'overlay');
+			});
+		};
+
+		removeOverflowAtBlock();
+		// End: Убрать overflow у блока, чтобы отобразить dropdown и вернуть обратно при закрытии
+
+		// Start: Скрытие окна Массовое одобрение актеров
+		const hideMassActors = () => {
+			let dropTransferActors = $('.dropdown-transfer-actors');
+
+			dropTransferActors.on('mouseenter', (event) => {
+				event.stopPropagation();
+			});
+
+			dropTransferActors.on('mouseleave', (event) => {
+				$(event.currentTarget).removeClass('active');
+				mainItemsWrapper.css('overflow', 'overlay');
+			});
+		};
+
+		hideMassActors();
+
+		// End: Скрытие окна Массовое одобрение актеров
 	}
 
-	setListener(sidebarBtnRight, 'click', showSidebar);
+	removeSidebar();
 
-	function showSidebar() {
-		mainItemsWrapper.classList.remove('active');
-		sidebarLeftBtns.classList.remove('active');
-		sidebarBurger.classList.toggle('done');
-		sidebarPlus.classList.toggle('done');
-
-		setTimeout(function () {
-			sidebarTopBtns.classList.add('active');
-			wrapText.classList.remove('active');
-		}, 280);
-
-		setTimeout(function () {
-			sidebarTabs.classList.toggle('done');
-			sidebarHeaderTitle.classList.toggle('done');
-		}, 280);
-
-		sidebar.classList.toggle('--rolled');
-
-		sidebarBtnLeft.classList.toggle('active');
-		sidebarBtnRight.classList.toggle('active');
-
-		isSidebarHidden = false;
-	}
-
-	// ---------------------------------------------------------------------------------------------------------------->
+	// End: Скрытие сайдбара
 
 	// Start: add/remove border active focus
 
@@ -816,16 +691,6 @@
 
 	// End: add/remove border active focus
 
-	// $('.sidebar-burger__tabs-item-input').click(function () {
-	// 	$(this).siblings().removeClass('active');
-	// 	$(this).addClass('active');
-	// });
-
-	// $('.sidebar__tabs-item-input').click(function () {
-	// 	$(this).siblings().removeClass('active');
-	// 	$(this).addClass('active');
-	// });
-
 	$('.dropdown-text-js').click(function () {
 		$('.dropdown-transfer-actors').addClass('active');
 	});
@@ -833,6 +698,8 @@
 	$('.transfer-actors-close-btn').click(function () {
 		$('.dropdown-transfer-actors').removeClass('active');
 	});
+
+	// Start: Трансформация инпута "Актеры" на главной
 
 	$('.input-top-search-js').focus(function () {
 		if (window.innerWidth < 1280) {
@@ -852,81 +719,90 @@
 		}
 	});
 
-	// Start: Range input slider in transfer-actors
+	// End: Трансформация инпута "Актеры" на главной
 
-	var rangeTransferOne = document.querySelector('input[name="rangeTransferOne"]'),
-		outputTransferOne = document.querySelector('.outputTransferOne'),
-		transferinclRange = document.querySelector('.transfer-incl-range'),
-		updateTransferView = function () {
-			if (this.getAttribute('name') === 'rangeTransferOne') {
-				outputTransferOne.innerHTML = this.value;
-				outputTransferOne.style.left = (this.value / this.getAttribute('max')) * (100 - 3.5) + '%';
+	// Start: Range input slider in transfer-actors
+	function showRangeSliderActors() {
+		const rangeTransferOne = $('input[name="rangeTransferOne"]');
+		const outputTransferOne = $('.outputTransferOne');
+		const transferinclRange = $('.transfer-incl-range');
+
+		const updateTransferView = function () {
+			if (this.attr('name') === 'rangeTransferOne') {
+				const left = (this.val() / this.attr('max')) * (100 - 3.5) + '%';
+				outputTransferOne.html(this.val());
+				outputTransferOne.css('left', `${left}`);
 			}
 
-			if (parseInt(rangeTransferOne.value)) {
-				transferinclRange.style.width = (rangeTransferOne.value / this.getAttribute('max')) * 100 + '%';
+			if (this.val()) {
+				const width = (this.val() / this.attr('max')) * 100 + '%';
+				transferinclRange.css('width', `${width}`);
 			}
 		};
 
-	$(document).ready(function () {
-		updateTransferView.call(rangeTransferOne);
-		$('.rangeTransferOne')
-			.on('mouseup', function () {
-				this.blur();
-			})
-			.on('mousedown input', function () {
-				updateTransferView.call(this);
-			});
-	});
+		$(document).ready(function () {
+			updateTransferView.call(rangeTransferOne);
+			$('.rangeTransferOne')
+				.on('mouseup', function () {
+					this.blur();
+				})
+				.on('mousedown input', function () {
+					updateTransferView.call($(this));
+				});
+		});
+	}
 
+	showRangeSliderActors();
 	// End: Range input slider in transfer-actors
 
 	// Start: Tabs Массовый перенос актёров
-	(function () {
-		var tabs_menu = document.getElementsByClassName('transfer-actors-tabs-menu');
-		for (var k = 0; k < tabs_menu.length; k++) {
-			tabs_menu[k].onclick = js_tabs;
-		}
-		function js_tabs() {
-			var tab_data = this.getAttribute('data-target');
-			var tabs_panel = document.getElementsByClassName('transfer-actors-tabs-panel');
+	const switchTabsMassTransferActors = () => {
+		let transferActorsFirst = $('.transfer-actors-first');
+		let transferActorsSecond = $('.transfer-actors-second');
+		let switchBtnLeft = $('.transfer-actors-btn-left');
+		let switchBtnRight = $('.transfer-actors-btn-right');
 
-			for (var i = 0; i < tabs_panel.length; i++) {
-				tabs_panel[i].style.display = 'none';
-			}
-			for (var j = 0; j < tabs_menu.length; j++) {
-				tabs_menu[j].className = tabs_menu[j].className.replace(' transfer-actors-active', '');
-			}
-			this.className += ' transfer-actors-active';
-			document.getElementById(tab_data).style.display = 'block';
-			return false;
-		}
-	})();
+		switchBtnLeft.click(function () {
+			transferActorsFirst.show();
+			transferActorsSecond.hide();
+		});
+
+		switchBtnRight.click(function () {
+			transferActorsFirst.hide();
+			transferActorsSecond.show();
+		});
+	};
+
+	switchTabsMassTransferActors();
 
 	// End: Tabs Массовый перенос актёров
 
-	// Start: Tabs Profile Actor Foto Video -------------------------------------------------------->
-	const actorProfileBtnLeft = document.querySelector('.actor__profile-media-tabs-menu.left');
-	const actorProfileBtnRight = document.querySelector('.actor__profile-media-tabs-menu.right');
-	const actorProfileActiveBtn = document.querySelector('.actor__profile-media-active-btn');
-	const actorProfileTabsPanelFirst = document.querySelector('#media-tab_1');
-	const actorProfileTabsPanelSecond = document.querySelector('#media-tab_2');
+	// Start: Tabs Profile Actor Foto Video
+	const switchTabsProfileMedia = () => {
+		let actorProfileTabsPanelFirst = $('#media-tab_1');
+		let actorProfileTabsPanelSecond = $('#media-tab_2');
+		let switchBtnLeft = $('.actor__profile-media-tabs-menu-left');
+		let switchBtnRight = $('.actor__profile-media-tabs-menu-right');
 
-	actorProfileBtnLeft.addEventListener('click', switchToLeft);
+		switchBtnLeft.click(function () {
+			actorProfileTabsPanelFirst.show();
+			actorProfileTabsPanelSecond.hide();
+		});
 
-	actorProfileBtnRight.addEventListener('click', switchToRight);
+		switchBtnRight.click(function () {
+			actorProfileTabsPanelFirst.hide();
+			actorProfileTabsPanelSecond.show();
+		});
+	};
 
-	function switchToLeft() {
-		actorProfileTabsPanelFirst.classList.add('active');
-		actorProfileTabsPanelSecond.classList.remove('active');
-		actorProfileActiveBtn.style.left = '0%';
-	}
+	switchTabsProfileMedia();
 
-	function switchToRight() {
-		actorProfileTabsPanelFirst.classList.remove('active');
-		actorProfileTabsPanelSecond.classList.add('active');
-		actorProfileActiveBtn.style.left = '50%';
-	}
+	// End: Tabs Tabs Profile Actor Foto Video
 
-	// End: Tabs Tabs Profile Actor Foto Video -------------------------------------------------------->
+	// Start: Tabs menu profile actor add class active
+	$('.tabs-menu').click(function () {
+		$(this).siblings().removeClass('tabs-menu-active');
+		$(this).addClass('tabs-menu-active');
+	});
+	// End: Tabs menu profile actor add class active
 })(jQuery);

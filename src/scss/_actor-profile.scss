@@ -30,7 +30,7 @@
 
 .actor__profile-inner {
 	height: calc(100vh - 96px);
-	min-width: 505px;
+	max-width: 505px;
 	padding: 32px 18px 0 0;
 	overflow-y: auto;
 	scrollbar-color: #e0e0e0 transparent;

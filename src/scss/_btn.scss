@@ -391,9 +391,9 @@
 	}
 }
 
-// Start: Кнопка переключения пола человека
+// Start: Switch buttons
 
-.filter-dropdown-gender {
+.switch__wrapper {
 	padding: 2px;
 	background: #eee;
 	border-radius: 4px;
@@ -401,43 +401,39 @@
 	margin-bottom: 32px;
 }
 
-.switch-button {
+.switch {
+	display: flex;
 	width: 100%;
 	height: 27px;
-	text-align: center;
 	will-change: transform;
 	cursor: pointer;
 	transition: 0.3s ease all;
 }
-.switch-button-case {
-	display: inline-block;
+
+.switch__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: none;
 	font-size: 13px;
 	letter-spacing: 0.4px;
-	width: 32%;
 	height: 100%;
 	color: #616161;
 	position: relative;
 	border: none;
 	transition: 0.3s ease all;
-	font-weight: 500;
 }
-.switch-button-case:focus {
+
+.switch__item:focus {
 	outline: none;
 }
 
-.switch-button .active-case-gender {
-	color: #61707d;
-	font-weight: 500;
-}
-
-.switch-button .active {
+.switch__slider {
 	color: #61707d;
 	background-color: #fff;
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 33%;
 	height: 100%;
 	z-index: -1;
 	transition: 0.3s ease-out all;
@@ -445,63 +441,7 @@
 	border-radius: 2px;
 }
 
-// End: Кнопка переключения пола человека
-
-// Start: Кнопка переключения страна-город
-
-.filter-dropdown-location {
-	padding: 2px;
-	background: #eee;
-	border-radius: 4px;
-	width: 100%;
-	margin-bottom: 16px;
-}
-
-.switch-button-loc {
-	width: 100%;
-	height: 27px;
-	text-align: center;
-	will-change: transform;
-	cursor: pointer;
-	transition: 0.3s ease all;
-}
-.switch-button-case-loc {
-	display: inline-block;
-	background: none;
-	font-size: 13px;
-	letter-spacing: 0.4px;
-	width: 49%;
-	height: 100%;
-	color: #616161;
-	position: relative;
-	border: none;
-	transition: 0.3s ease all;
-	font-weight: 500;
-}
-.switch-button-case-loc:focus {
-	outline: none;
-}
-
-.switch-button-loc .active-case {
-	color: #61707d;
-	font-weight: 500;
-}
-
-.switch-button-loc .active {
-	color: #61707d;
-	background-color: #fff;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 50%;
-	height: 100%;
-	z-index: -1;
-	transition: 0.3s ease-out all;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-	border-radius: 2px;
-}
-
-// End: Кнопка переключения страна-город
+// End: Switch buttons
 
 // Кнопка закрыть-удалить у фильтра
 .forFilterBtn {

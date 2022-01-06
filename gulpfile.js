@@ -79,7 +79,8 @@ gulp.task('html', function () {
 });
 
 gulp.task('js', function () {
-	return gulp.src(paths.src.js).pipe(concat('main.min.js')).pipe(uglify()).pipe(gulp.dest(paths.build.js)).pipe(browserSync.stream());
+	return gulp.src(paths.src.js).pipe(gulp.dest(paths.build.js)).pipe(browserSync.stream());
+	// return gulp.src(paths.src.js).pipe(concat('main.min.js')).pipe(uglify()).pipe(gulp.dest(paths.build.js)).pipe(browserSync.stream());
 });
 
 gulp.task('images', function () {
