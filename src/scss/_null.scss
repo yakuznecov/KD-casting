@@ -45,6 +45,12 @@ textarea {
 input::-ms-clear {
 	display: none;
 }
+
+// стрелки в инпуте при type='number'
+::-webkit-inner-spin-button {
+	display: none;
+}
+
 button {
 	cursor: pointer;
 	background: transparent;

@@ -52,7 +52,7 @@
 								<div class="create__casting-date-container-right">
 									<div class="title-blackBluish-small mb-8">время вызова</div>
 									<div class="input-box">
-										<input type="text" placeholder="ЧЧ:ММ" />
+										<input class="input-time" type="text" placeholder="ЧЧ:ММ" />
 									</div>
 								</div>
 							</div>
@@ -63,10 +63,11 @@
 								<p class="create__casting-extra-information-text text-lightGrey-small">Укажите, в какой день и в какое время вы хотите пригласить актёров на кастинг. Вы создаете Оффлайн кастинг, а это значит, что актёры прибудут на указанный ниже адрес к назначенному времени.</p>
 							</div>
 							<div class="title-blackBluish-small mb-8">адрес проведения</div>
-							<div class="dropdown-select mb-24">
-								<button class="dropdown-select-btn">
-									Введите адрес или нажмите на иконку, чтобы выбрать на карте
-									<img class="dropdown-select-btn-icon --map" src="mapPin.svg" />
+
+							<div class="input-box dropdown-map mb-24">
+								<input type="text" placeholder="Введите адрес или нажмите на иконку, чтобы выбрать на карте" />
+								<button class="select-btn-map">
+									<img class="select-btn-map-icon" src="mapPin.svg" />
 								</button>
 								<div class="dropdown-select-menu dropdown-map-menu">
 									<div class="dropdown-map-menu-img">
@@ -78,6 +79,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="title-blackBluish-small mb-8">контактный номер телефона</div>
 							<div class="create__casting-contact-number mb-24">
 								<div class="flag-select-container">
@@ -115,11 +117,11 @@
 									</div>
 								</div>
 								<div class="input-box phone-input-box">
-									<input type="text" placeholder="+7 (999) 888-77-66" />
+									<input class="input-phone" type="text" placeholder="+7 (999) 888-77-66" />
 								</div>
 							</div>
 							<div class="title-blackBluish-small mb-8">сообщение для актёров</div>
-							<div class="create__casting-form-area">
+							<div class="area-field-wrapper mb-40">
 								<textarea class="area-field" name="text"></textarea>
 							</div>
 						</div>
@@ -141,13 +143,13 @@
 								<div class="create__casting-date-container-right --online">
 									<div class="title-blackBluish-small mb-8">время с</div>
 									<div class="input-box">
-										<input type="text" placeholder="ЧЧ:ММ" />
+										<input class="input-time" type="text" placeholder="ЧЧ:ММ" />
 									</div>
 								</div>
 								<div class="create__casting-date-container-right --online">
 									<div class="title-blackBluish-small mb-8">время по</div>
 									<div class="input-box">
-										<input type="text" placeholder="ЧЧ:ММ" />
+										<input class="input-time" type="text" placeholder="ЧЧ:ММ" />
 									</div>
 								</div>
 							</div>
@@ -195,11 +197,11 @@
 									</div>
 								</div>
 								<div class="input-box phone-input-box">
-									<input type="text" placeholder="+7 (999) 888-77-66" />
+									<input class="input-phone" type="text" placeholder="+7 (999) 888-77-66" />
 								</div>
 							</div>
 							<div class="title-blackBluish-small mb-8">сообщение для актёров</div>
-							<div class="create__casting-form-area">
+							<div class="area-field-wrapper mb-40">
 								<textarea class="area-field" name="text"></textarea>
 							</div>
 						</div>
@@ -213,5 +215,6 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>
 	</body>
 </html>

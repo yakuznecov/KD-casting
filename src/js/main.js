@@ -1,4 +1,56 @@
 (function ($) {
+	$(function () {
+		$('.select-btn-map').mouseup(function () {
+			$('.dropdown-map-menu').toggleClass('active');
+			$('.select-btn-map-icon').toggleClass('active');
+		});
+
+		$(document).mousedown(function (e) {
+			let field = $('.dropdown-map');
+			if (!field.is(e.target) && field.has(e.target).length === 0) {
+				$('.dropdown-map-menu').removeClass('active');
+				$('.select-btn-map-icon').removeClass('active');
+			}
+		});
+	});
+
+	// Start: Появление бара с фильтрами
+
+	$(document).ready(function () {
+		const box = $('.smooth-appearance-js');
+		const castingForm = $('.create__casting-form');
+
+		setTimeout(function () {
+			if (box.hasClass('d-none')) {
+				box.removeClass('d-none');
+				setTimeout(function () {
+					box.removeClass('opacity-null');
+					castingForm.addClass('--filter');
+				}, 20);
+			}
+		}, 500);
+	});
+
+	// smooth-appearance-js
+	// d-none
+	// opacity-null
+	// configurable-role
+
+	// End: Появление бара с фильтрами
+
+	$(document).ready(function () {
+		const role = $('.configurable-role');
+
+		setTimeout(function () {
+			if (role.hasClass('d-none')) {
+				role.removeClass('d-none');
+				setTimeout(function () {
+					role.removeClass('opacity-null');
+				}, 20);
+			}
+		}, 1500);
+	});
+
 	// Start: Все кнопки с переключением
 	$(document).ready(function () {
 		$('.switch__wrapper').each(function () {
@@ -129,157 +181,120 @@
 	expandColumnRequest();
 	// End: Разворачивание колонки с заявками
 
-	// Смена плейсхолдера у инпута ------------------------------------------------------------>
+	// Start: Трансформация кнопок .main-header  (ОТПРАВИТЬ ПРИГЛАШЕНИЕ, input-top-search-js)
 
-	let isPlaceholderShort = false;
-	const inputTopSearch = document.querySelector('.input-top-search-js');
+	function transformMainHeaderBtn() {
+		let sendInvitationBtn = $('.send-invitation-btn');
+		let mainHeaderBottomLeft = $('.main-header-bottom-left');
+		let sendInvitationBtnTextJs = $('.send-invitation-btn-text-js');
+		let mainHeaderTopSearch = $('.main-header-top-search');
+		let hideMediaStatus = $('.hide-media-status');
+		let statusCounterInner = $('.status-counter-inner');
+		let statusDefault = $('.status-default');
+		let inputTopSearch = $('.input-top-search-js');
 
-	// setListener(window, 'resize', () => {
-	// 	if (window.innerWidth < 1281) {
-	// 		if (!isPlaceholderShort) {
-	// 			hideFullPlaceholder();
-	// 		}
-	// 	} else {
-	// 		if (isPlaceholderShort) {
-	// 			showFullPlaceholder();
-	// 		}
-	// 	}
-	// });
+		let isSearchSmall = false;
+		let isBtnSmall = false;
+		let isMediaStatusHide = false;
 
-	function hideFullPlaceholder() {
-		inputTopSearch.placeholder = 'Актёры';
-		isPlaceholderShort = true;
+		$(window).on('load resize', function () {
+			let mainLeft = mainHeaderBottomLeft.offset().left + mainHeaderBottomLeft.width() + 56;
+			let sendLeft = sendInvitationBtn.offset().left; // кнопка
+			let statusleft = statusDefault.offset().left;
+			let hideMediaStatusLeft = hideMediaStatus.offset().left + hideMediaStatus.width();
+			let topSearchLeft = mainHeaderTopSearch.offset().left;
+
+			if (topSearchLeft - mainLeft < 220) {
+				if (!isSearchSmall) {
+					smallTopSearch();
+				}
+			}
+
+			if (topSearchLeft - mainLeft > 350) {
+				fullTopSearch();
+			}
+
+			if (mainHeaderTopSearch.hasClass('lower') && topSearchLeft - mainLeft < 210) {
+				smallSendBtn();
+			}
+
+			if (sendLeft - mainLeft > 180 && !isMediaStatusHide) {
+				fullSendBtn();
+			}
+
+			if (sendLeft - hideMediaStatusLeft < 40 && isSearchSmall && isBtnSmall) {
+				hideMedia();
+			}
+
+			if (sendLeft - statusleft > 300 && isSearchSmall && isBtnSmall) {
+				showMedia();
+			}
+
+			// Start: Трансформация кнопки Отправить приглашение на главной при нажатии на инпут
+
+			$('.input-top-search-js').focus(function () {
+				if (mainHeaderTopSearch.hasClass('lower') && $(window).width() > 1366) {
+					$('.send-invitation-btn').addClass('active');
+					$('.send-invitation-btn-text-js').addClass('hide');
+					mainHeaderTopSearch.removeClass('lower');
+					mainHeaderTopSearch.addClass('transform');
+				}
+			});
+
+			$('.input-top-search-js').focusout(function () {
+				if (mainHeaderTopSearch.hasClass('transform')) {
+					if (sendLeft > mainLeft && $(window).width() > 1366) {
+						$('.send-invitation-btn').removeClass('active');
+						setTimeout(function () {
+							$('.send-invitation-btn-text-js').removeClass('hide');
+						}, 200);
+						mainHeaderTopSearch.removeClass('transform');
+						mainHeaderTopSearch.addClass('lower');
+					}
+				}
+			});
+
+			// End: Трансформация кнопки Отправить приглашение на главной при нажатии на инпут
+		});
+
+		function smallTopSearch() {
+			mainHeaderTopSearch.addClass('lower');
+			inputTopSearch.attr('placeholder', 'Актёры');
+			isSearchSmall = true;
+		}
+
+		function fullTopSearch() {
+			mainHeaderTopSearch.removeClass('lower');
+			inputTopSearch.attr('placeholder', 'Актёры в этом кастинге');
+			isSearchSmall = false;
+		}
+
+		function smallSendBtn() {
+			sendInvitationBtn.addClass('active');
+			sendInvitationBtnTextJs.addClass('hide');
+			isBtnSmall = true;
+		}
+
+		function fullSendBtn() {
+			sendInvitationBtn.removeClass('active');
+			sendInvitationBtnTextJs.removeClass('hide');
+			isBtnSmall = false;
+		}
+
+		function hideMedia() {
+			hideMediaStatus.addClass('hide');
+			statusCounterInner.addClass('show');
+			isMediaStatusHide = true;
+		}
+
+		function showMedia() {
+			hideMediaStatus.removeClass('hide');
+			statusCounterInner.removeClass('show');
+			isMediaStatusHide = false;
+		}
 	}
 
-	function showFullPlaceholder() {
-		inputTopSearch.placeholder = 'Актёры в этом кастинге';
-		isPlaceholderShort = false;
-	}
-
-	// --------------------------------------------------------------------------------------->
-
-	// Трансформация кнопки ОТПРАВИТЬ ПРИГЛАШЕНИЕ ---------------------------------------------->
-
-	let sendInvitationBtn = document.querySelector('.send-invitation-btn');
-	let mainHeaderBottomLeft = document.querySelector('.main-header-bottom-left');
-	let sendInvitationBtnTextJs = document.querySelector('.send-invitation-btn-text-js');
-	let mainHeaderTopSearch = document.querySelector('.main-header-top-search');
-	let hideMediaStatus = document.querySelector('.hide-media-status');
-	let statusCounterInner = document.querySelector('.status-counter-inner');
-	let statusDefault = document.querySelector('.status-default');
-
-	let isTransform = false;
-
-	let timeout;
-
-	// setListener(document, 'DOMContentLoaded', () => {
-	// 	let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
-	// 	let sendLeft = sendInvitationBtn.offsetLeft;
-	// 	let statusleft = statusDefault.offsetLeft;
-
-	// 	if (sendLeft < mainLeft) {
-	// 		if (!isTransform) {
-	// 			lowerSearch();
-	// 			hideFullPlaceholder();
-	// 		}
-	// 	}
-
-	// 	if (mainLeft - sendLeft > 10) {
-	// 		if (mainHeaderTopSearch.classList.contains('lower')) {
-	// 			if (isTransform) {
-	// 				transformBtn();
-	// 			}
-	// 		}
-	// 	}
-
-	// 	if (statusleft - sendLeft > 10) {
-	// 		if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
-	// 			if (isTransform) {
-	// 				hideStatus();
-	// 			}
-	// 		}
-	// 	}
-
-	// 	if (sendLeft - mainLeft > 150) {
-	// 		if (isTransform) {
-	// 			maxSearch();
-	// 			showFullPlaceholder();
-	// 		}
-	// 	}
-	// });
-
-	// setListener(window, 'resize', () => {
-	// 	clearTimeout(timeout);
-	// 	timeout = setTimeout(function () {
-	// 		let mainLeft = mainHeaderBottomLeft.offsetLeft + mainHeaderBottomLeft.offsetWidth + 56;
-	// 		let sendLeft = sendInvitationBtn.offsetLeft;
-	// 		let statusleft = statusDefault.offsetLeft + 287;
-
-	// 		console.log(sendLeft, statusleft);
-
-	// 		if (sendLeft < mainLeft) {
-	// 			if (!isTransform) {
-	// 				lowerSearch();
-	// 				hideFullPlaceholder();
-	// 			}
-	// 		}
-
-	// 		if (mainLeft - sendLeft > 10) {
-	// 			if (mainHeaderTopSearch.classList.contains('lower')) {
-	// 				if (isTransform) {
-	// 					transformBtn();
-	// 				}
-	// 			}
-	// 		}
-
-	// 		if (statusleft - sendLeft > 10) {
-	// 			if (mainHeaderTopSearch.classList.contains('lower') || sendInvitationBtn.classList.contains('active')) {
-	// 				if (isTransform) {
-	// 					hideStatus();
-	// 				}
-	// 			}
-	// 		}
-
-	// 		if (sendLeft - mainLeft > 150) {
-	// 			if (isTransform) {
-	// 				maxSearch();
-	// 				showFullPlaceholder();
-	// 			}
-	// 		}
-	// 	}, 80);
-	// });
-
-	function transformBtn() {
-		sendInvitationBtn.classList.add('active');
-		sendInvitationBtnTextJs.classList.add('hide');
-		isTransform = true;
-	}
-
-	function cancelTransformBtn() {
-		sendInvitationBtn.classList.remove('active');
-		sendInvitationBtnTextJs.classList.remove('hide');
-		isTransform = false;
-	}
-
-	function lowerSearch() {
-		mainHeaderTopSearch.classList.add('lower');
-		isTransform = true;
-	}
-
-	function maxSearch() {
-		mainHeaderTopSearch.classList.remove('lower');
-		isTransform = false;
-	}
-
-	function hideStatus() {
-		hideMediaStatus.classList.add('hide');
-		statusCounterInner.classList.add('show');
-	}
-
-	function showStatus() {
-		hideMediaStatus.classList.remove('hide');
-		statusCounterInner.classList.remove('show');
-	}
+	transformMainHeaderBtn();
 
 	// ------------------------------------------------------------------------------------>
 
@@ -570,7 +585,7 @@
 
 		let isSidebarHidden = false;
 
-		$(window).resize(function () {
+		$(window).on('load resize', function () {
 			if ($(window).width() < 1025) {
 				if (!isSidebarHidden) {
 					hideSidebar();
@@ -691,35 +706,16 @@
 
 	// End: add/remove border active focus
 
-	$('.dropdown-text-js').click(function () {
-		$('.dropdown-transfer-actors').addClass('active');
+	$(function () {
+		$('.dropdown-text-js').click(function () {
+			$('.dropdown-transfer-actors').addClass('active');
+			$('.request-btn').addClass('active');
+		});
+
+		$('.transfer-actors-close-btn').click(function () {
+			$('.dropdown-transfer-actors').removeClass('active');
+		});
 	});
-
-	$('.transfer-actors-close-btn').click(function () {
-		$('.dropdown-transfer-actors').removeClass('active');
-	});
-
-	// Start: Трансформация инпута "Актеры" на главной
-
-	$('.input-top-search-js').focus(function () {
-		if (window.innerWidth < 1280) {
-			$('.main-header-top-search').addClass('transform');
-			$('.send-invitation-btn').addClass('active');
-			$('.send-invitation-btn-text-js').addClass('hide');
-		}
-	});
-
-	$('.input-top-search-js').focusout(function () {
-		if (window.innerWidth < 1280) {
-			$('.main-header-top-search').removeClass('transform');
-			$('.send-invitation-btn').removeClass('active');
-			setTimeout(function () {
-				$('.send-invitation-btn-text-js').removeClass('hide');
-			}, 200);
-		}
-	});
-
-	// End: Трансформация инпута "Актеры" на главной
 
 	// Start: Range input slider in transfer-actors
 	function showRangeSliderActors() {
@@ -805,4 +801,38 @@
 		$(this).addClass('tabs-menu-active');
 	});
 	// End: Tabs menu profile actor add class active
+
+	// Маска для input-date
+	$(function () {
+		$('.input-time').mask('99:99');
+	});
+
+	$(function () {
+		$('.input-phone').mask('+7 (999) 999-99-99');
+	});
+
+	// Trigger focus input
+	$(function () {
+		$('.input-box').click(function () {
+			$(this).find('input').focus();
+		});
+	});
+
+	// Start: Trigger focus textarea and custom scroll
+	$(function () {
+		const field = $('.area-field-wrapper');
+
+		field.click(function () {
+			$(this).find('textarea').focus();
+			$(this).addClass('active');
+		});
+
+		$(document).click(function (e) {
+			if (!field.is(e.target) && field.has(e.target).length === 0) {
+				field.removeClass('active');
+			}
+		});
+	});
+
+	// End: Trigger focus textarea and custom scroll
 })(jQuery);

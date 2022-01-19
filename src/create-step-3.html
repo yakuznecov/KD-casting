@@ -11,7 +11,7 @@
 		@@include('header.html')
 		<div class="main-container">
 			<div class="create__casting-container">
-				<div class="create__casting-head create__casting-head-filter">
+				<div class="create__casting-head smooth-appearance-js opacity-null create__casting-head-filter">
 					<div class="text-blackBluis-large mr-auto">Создание кастинга</div>
 					<!-- Start: sidebar-dropdown-question -->
 					<div class="sidebar-dropdown-question">
@@ -32,9 +32,9 @@
 						<img src="x-close-20.svg" />
 					</button>
 				</div>
-				<div class="create__casting-wrapper">
-					<div class="create__casting-left">
-						<div class="create__casting-filter mb-20">
+				<div class="create__casting-wrapper create__casting-wrapper-js">
+					<div class="create__casting-left smooth-appearance-js d-none opacity-null">
+						<div class="create__casting-filter d-none opacity-null configurable-role mb-20">
 							<div class="create__casting-filter-head">
 								<div class="text-blackBrown-regular">Настраиваемая роль</div>
 							</div>
@@ -141,10 +141,10 @@
 											<div class="text-blackBluish-small">Возраст</div>
 											<div class="spoiler-item-body-content-fields">
 												<div class="input-box">
-													<input type="text" placeholder="От" />
+													<input type="number" placeholder="От" />
 												</div>
 												<div class="input-box ml-6">
-													<input type="text" placeholder="До" />
+													<input type="number" placeholder="До" />
 												</div>
 											</div>
 										</div>
@@ -161,19 +161,19 @@
 											<div class="text-blackBluish-small">рост (см)</div>
 											<div class="spoiler-item-body-content-fields mb-12">
 												<div class="input-box">
-													<input type="text" placeholder="От" />
+													<input type="number" placeholder="От" />
 												</div>
 												<div class="input-box ml-6">
-													<input type="text" placeholder="До" />
+													<input type="number" placeholder="До" />
 												</div>
 											</div>
 											<div class="text-blackBluish-small">вес (кг)</div>
 											<div class="spoiler-item-body-content-fields">
 												<div class="input-box">
-													<input type="text" placeholder="От" />
+													<input type="number" placeholder="От" />
 												</div>
 												<div class="input-box ml-6">
-													<input type="text" placeholder="До" />
+													<input type="number" placeholder="До" />
 												</div>
 											</div>
 											<div class="spoiler-item-body-content-select">
@@ -393,7 +393,7 @@
 						</div>
 					</div>
 
-					<div class="create__casting-form --filter">
+					<div class="create__casting-form">
 						<div class="create__casting-form-inner">
 							<div class="create__casting-form-inner-header">
 								<div class="create__casting-form-inner-item">
@@ -502,7 +502,7 @@
 										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
 									</div>
 									<div class="create-casting-video-tests">
-										<label class="checkbox-small-container">
+										<label class="checkbox-small-container --text-right">
 											<input type="checkbox" class="checkbox-small" />
 											<div class="checkmark"></div>
 										</label>
@@ -577,7 +577,7 @@
 										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
 									</div>
 									<div class="create-casting-video-tests">
-										<label class="checkbox-small-container">
+										<label class="checkbox-small-container --text-right">
 											<input type="checkbox" class="checkbox-small" />
 											<div class="checkmark"></div>
 										</label>
@@ -666,7 +666,7 @@
 										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
 									</div>
 									<div class="create-casting-video-tests">
-										<label class="checkbox-small-container">
+										<label class="checkbox-small-container --text-right">
 											<input type="checkbox" class="checkbox-small" />
 											<div class="checkmark"></div>
 										</label>
@@ -742,7 +742,7 @@
 										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
 									</div>
 									<div class="create-casting-video-tests">
-										<label class="checkbox-small-container">
+										<label class="checkbox-small-container --text-right">
 											<input type="checkbox" class="checkbox-small" />
 											<div class="checkmark"></div>
 										</label>
@@ -918,7 +918,7 @@
 										<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
 									</div>
 									<div class="create-casting-video-tests">
-										<label class="checkbox-small-container">
+										<label class="checkbox-small-container --text-right">
 											<input type="checkbox" class="checkbox-small" />
 											<div class="checkmark"></div>
 										</label>

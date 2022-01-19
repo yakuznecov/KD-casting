@@ -489,6 +489,7 @@
 
 	&.--inactive {
 		color: #e0e0e0;
+		cursor: auto;
 		&:hover,
 		&:active {
 			background: transparent;
@@ -713,7 +714,9 @@
 	height: 32px;
 	width: 32px;
 	background: transparent;
-	transition: 0.2s ease;
+	&:hover svg path {
+		fill: #9e9e9e;
+	}
 }
 
 .close-circle-blue-btn {
@@ -764,5 +767,34 @@
 	}
 	&:hover {
 		color: #87c2f8;
+	}
+}
+
+.btn-underline {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 0.25px;
+	border-bottom: 1px solid #1991eb;
+	color: #1991eb;
+	&:hover,
+	&:active {
+		color: #106db3;
+	}
+
+	&.--large {
+		font-size: 16px;
+		line-height: 16px;
+		letter-spacing: 0.5px;
+	}
+
+	&.--disabled {
+		color: #acd4fa;
+		border-bottom: 1px solid #acd4fa;
+		cursor: auto;
+		&:hover {
+			color: #acd4fa;
+			border-bottom: 1px solid #acd4fa;
+		}
 	}
 }

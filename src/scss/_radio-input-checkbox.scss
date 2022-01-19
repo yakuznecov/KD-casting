@@ -131,11 +131,22 @@
 // Start: checkbox small
 
 .checkbox-small-container {
+	position: relative;
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
 	font-size: 20px;
 	user-select: none;
+
+	&.--text-right:after {
+		content: '';
+		position: absolute;
+		display: block;
+		top: -5px;
+		left: -5px;
+		right: -150px;
+		bottom: -5px;
+	}
 
 	& .checkmark:after {
 		left: 1px;

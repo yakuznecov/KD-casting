@@ -264,19 +264,6 @@ body {
 	color: #757575;
 }
 
-.empty-btn {
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 16px;
-	letter-spacing: 0.5px;
-	border-bottom: 1px solid #1991eb;
-	color: #1991eb;
-	&:hover,
-	&:active {
-		color: #106db3;
-	}
-}
-
 // End: Пустое рабочее пространство
 
 // Start: main-header
@@ -334,6 +321,7 @@ body {
 
 	&.transform {
 		flex: 0 0 216px;
+		transition: flex 0.2s;
 	}
 
 	& input {

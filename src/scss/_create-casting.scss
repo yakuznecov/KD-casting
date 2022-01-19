@@ -73,18 +73,19 @@
 	margin-top: 25px;
 }
 
-.create__casting-cancel-btn {
-	min-width: 106px;
-}
-
 .create__casting-go-btn {
 	margin-left: 8px;
 	min-width: 143px;
+	cursor: auto;
+	&:hover {
+		background: #1991eb;
+	}
 }
 
 .create__casting-form {
 	max-width: 560px;
-	margin: 1px auto 24px;
+	margin: 0 auto 24px;
+
 	&.--filter {
 		margin: 0 0 0 40px;
 	}
@@ -94,6 +95,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	height: 32px;
 	margin-bottom: 32px;
 }
 
@@ -210,7 +212,7 @@
 }
 
 .create__casting-wrapper {
-	margin: 0 auto;
+	margin: 32px auto 0;
 	max-width: 896px;
 	display: flex;
 	height: 100%;
@@ -224,7 +226,6 @@
 
 .create__casting-head-filter {
 	max-width: 296px;
-	margin-bottom: 33px;
 }
 
 .create__casting-filter {
@@ -368,12 +369,10 @@
 
 .create__casting-end {
 	min-width: 114px;
-}
-
-.verify-container {
-	padding: 58px 40px 46px;
-	background: #f6f6f6;
-	border-radius: 8px;
+	cursor: auto;
+	&:hover {
+		background: #1991eb;
+	}
 }
 
 .happen-container {
@@ -420,6 +419,13 @@
 
 .dropdown-map-menu {
 	padding: 0;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		left: -2px;
+		width: 480px;
+	}
 }
 
 .dropdown-map-menu-img {
@@ -485,4 +491,36 @@
 
 .phone-input-box {
 	border-radius: 0 4px 4px 0;
+}
+
+.dropdown-map {
+	position: relative;
+	padding: 0 3px 0 12px;
+
+	&:focus-within {
+		padding: 0 2px 0 11px;
+	}
+}
+
+.select-btn-map {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	&:hover .select-btn-map-icon path {
+		fill: #9e9e9e;
+	}
+	&:hover .select-btn-map-icon.active path {
+		fill: #70a8dd;
+	}
+}
+
+.select-btn-map-icon {
+	margin-left: auto;
+	&.active path {
+		fill: #70a8dd;
+	}
+}
+
+.configurable-role {
+	transition: all 0.2s;
 }

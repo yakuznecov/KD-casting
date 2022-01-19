@@ -343,7 +343,6 @@
 .actor__profile-education-top {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
 	margin-bottom: 8px;
 }
 
@@ -353,6 +352,10 @@
 	border: 1px solid #e7e7e7;
 	border-bottom-width: 2px;
 	border-radius: 4px;
+	margin-right: 9px;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .actor__profile-education-content {
@@ -392,7 +395,6 @@
 
 .actor__profile-contacts-inner {
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
 }
 
@@ -502,7 +504,6 @@
 
 .filmography__inner {
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
 	margin-bottom: 8px;
 	&:last-child {
@@ -517,6 +518,10 @@
 	border: 1px solid #e7e7e7;
 	border-bottom-width: 2px;
 	border-radius: 4px;
+	margin-right: 9px;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .filmography__inner-item-icon {
@@ -546,6 +551,10 @@
 	border: 1px solid #e7e7e7;
 	border-bottom-width: 2px;
 	border-radius: 4px;
+	margin-left: 9px;
+	&:first-child {
+		margin-left: 0;
+	}
 }
 
 .actor__profile-contacts-item-content {
