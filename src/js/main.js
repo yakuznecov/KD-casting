@@ -31,11 +31,6 @@
 		}, 500);
 	});
 
-	// smooth-appearance-js
-	// d-none
-	// opacity-null
-	// configurable-role
-
 	// End: Появление бара с фильтрами
 
 	$(document).ready(function () {
