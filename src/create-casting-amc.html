@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>create-casting-amc</title>
+		<link rel="stylesheet" href="css/nav.min.css" />
+	</head>
+	<body>
+		@@include('header.html')
+		<div class="main-container">
+			<div class="create__casting-container">
+				<div class="create__casting-head smooth-appearance-js opacity-null create__casting-head-filter">
+					<div class="text-blackBluis-large mr-auto">Создание кастинга</div>
+					<!-- Start: sidebar-dropdown-question -->
+					<div class="sidebar-dropdown-question">
+						<div class="sidebar-dropdown-question-slide question-slide">
+							<div class="question-slide-content">
+								<div class="question-slide-item">
+									<h3 class="question-slide-title">внимание</h3>
+									<p class="question-slide-text">Выбор дополнительных параметров может существенно ограничить поиск актёров.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End: sidebar-dropdown-question -->
+					<button class="close-btn-32">
+						<img src="x-close-20.svg" />
+					</button>
+				</div>
+				<div class="create__casting-wrapper create__casting-wrapper-js">
+					<div class="create__casting-left smooth-appearance-js d-none opacity-null">
+						<div class="create__casting-filter">
+							<div class="create__casting-filter-head">
+								<div class="text-blackBrown-regular">Настройка</div>
+								<button class="create__casting-filter-head-btn">сбросить</button>
+							</div>
+							<div class="spoiler">
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="map-icon-20.svg" />
+										<span class="spoiler-item-title">Территория</span>
+										<span class="number-filter-select">(3)</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="switch__wrapper mb-16 mt-13">
+											<div class="switch">
+												<span class="switch__slider"></span>
+												<button class="switch__item spoiler-item-location-left" data-index="0">Город</button>
+												<button class="switch__item spoiler-item-location-middle" data-index="1">Страна</button>
+												<!-- <button class="switch__item spoiler-item-location-right" data-index="2">Мир</button> -->
+											</div>
+										</div>
+										<div class="spoiler-item-location-city">
+											<div class="input-box">
+												<input type="text" placeholder="Введите название города" />
+											</div>
+											<div class="spoiler-item-tags">
+												<div class="spoiler-item-tag">Санкт-Петербург</div>
+												<div class="spoiler-item-tag">Москва</div>
+												<div class="spoiler-item-tag">Владивосток</div>
+											</div>
+										</div>
+										<div class="spoiler-item-location-country d-none">
+											<div class="input-box">
+												<input type="text" placeholder="Введите название страны" />
+											</div>
+											<div class="spoiler-item-tags">
+												<div class="spoiler-item-tag">Россия</div>
+												<div class="spoiler-item-tag">США</div>
+												<div class="spoiler-item-tag">Италия</div>
+											</div>
+										</div>
+										<!-- <div class="spoiler-item-location-world d-none">
+											<div class="input-box">
+												<input type="text" placeholder="Введите название" />
+											</div>
+											<div class="spoiler-item-tags">
+												<div class="spoiler-item-tag">Выбраны все страны и города</div>
+											</div>
+										</div> -->
+									</div>
+								</div>
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="users-20.svg" />
+										<span class="spoiler-item-title">Пол и возраст</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="spoiler-item-body-content-gender">
+											<div class="text-blackBluish-small mb-7">Пол</div>
+											<div class="checkbox-button mb-8">
+												<input type="radio" class="checkbox-main" id="spoiler-gender-maleFemale" name="radio-gender" />
+												<label for="spoiler-gender-maleFemale" class="label-main">Мужской и женский</label>
+											</div>
+											<div class="checkbox-button mb-8">
+												<input type="radio" class="checkbox-main" id="spoiler-gender-male" name="radio-gender" />
+												<label for="spoiler-gender-male" class="label-main">Мужской</label>
+											</div>
+											<div class="checkbox-button attention-dropdown">
+												<input type="radio" class="checkbox-main" id="spoiler-gender-female" name="radio-gender" />
+												<label for="spoiler-gender-female" class="label-main">Женский</label>
+												<!-- <div class="attention-dropdown-text">Обратите внимание, это не выбор мужского и женского пола вместе</div> -->
+											</div>
+										</div>
+										<div class="spoiler-item-body-content-age">
+											<div class="text-blackBluish-small">Возраст</div>
+											<div class="spoiler-item-body-content-fields">
+												<div class="input-box">
+													<input type="number" placeholder="От" />
+												</div>
+												<div class="input-box ml-6">
+													<input type="number" placeholder="До" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="create__casting-form --filter">
+						<div class="create__casting-form-inner">
+							<div class="create-new-one">
+								<div class="title-blackBluish-small mb-8">название кастинга</div>
+								<div class="input-box mb-24">
+									<input type="text" />
+								</div>
+								<div class="title-blackBluish-small mb-8">описание</div>
+								<div class="area-field-wrapper mb-24">
+									<textarea class="area-field" name="text"></textarea>
+								</div>
+								<div class="title-blackBluish-small mb-8">куда зовём</div>
+								<div class="checkbox-container mb-12">
+									<div class="checkbox-button">
+										<input type="radio" class="checkbox-main" id="create-casting-film" name="radio-item" />
+										<label for="create-casting-film" class="label-main">Фильм</label>
+									</div>
+									<div class="checkbox-button ml-12">
+										<input type="radio" class="checkbox-main" id="create-casting-serial" name="radio-item" />
+										<label for="create-casting-serial" class="label-main">Сериал</label>
+									</div>
+								</div>
+
+								<div class="checkbox-container mb-24">
+									<div class="checkbox-button">
+										<input type="radio" class="checkbox-main" id="create-casting-ad" name="radio-item" />
+										<label for="create-casting-ad" class="label-main">Реклама</label>
+									</div>
+									<div class="checkbox-button ml-12">
+										<input type="radio" class="checkbox-main" id="create-casting-other" name="radio-item" />
+										<label for="create-casting-other" class="label-main">Другое</label>
+									</div>
+								</div>
+								<div class="title-blackBluish-small mb-8">гонорар</div>
+								<div class="input-sum-wrapper mb-24">
+									<div class="input-box --sum">
+										<input type="text" />
+									</div>
+									<div class="sum-select-container">
+										<div class="dropdown-sum-select">
+											<div class="dropdown-sum-select-inner">₽</div>
+											<div class="dropdown-sum-select-icon"><img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" /></div>
+											<ul class="dropdown-select-items inactive">
+												<li data-option="1">₽</li>
+												<li data-option="2">$</li>
+												<li data-option="3">€</li>
+											</ul>
+											<input type="hidden" value="null" />
+										</div>
+									</div>
+								</div>
+								<div class="title-blackBluish-small mb-8">дата проведения</div>
+								<div class="create__casting-date-container">
+									<div class="dropdown-date">
+										<button class="dropdown-btn dropdown-date-btn">
+											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
+											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
+										</button>
+										<div class="dropdown-inner dropdown-date-inner">
+											<img src="calendar-image.svg" />
+											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
+										</div>
+									</div>
+									<div class="dropdown-date">
+										<button class="dropdown-btn dropdown-date-btn">
+											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
+											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
+										</button>
+										<div class="dropdown-inner dropdown-date-inner">
+											<img src="calendar-image.svg" />
+											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
+										</div>
+									</div>
+								</div>
+								<div class="create__casting-extra-information">
+									<div class="warning-box">
+										<img src="warning-icon-20.svg" class="warning-icon" />
+									</div>
+									<p class="create__casting-extra-information-text text-lightGrey-small">Период, когда Актёр может принять приглашение на кастинг (продолжительность кастинга) и быть вызван, если Вы подтвердили его кандидатуру.</p>
+								</div>
+								<div class="title-blackBluish-small mb-8">предварительная дата съёмок</div>
+								<div class="create__casting-date-container">
+									<div class="dropdown-date">
+										<button class="dropdown-btn dropdown-date-btn">
+											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
+											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
+										</button>
+										<div class="dropdown-inner dropdown-date-inner">
+											<img src="calendar-image.svg" />
+											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
+										</div>
+									</div>
+									<div class="dropdown-date">
+										<button class="dropdown-btn dropdown-date-btn">
+											<span class="dropdown-date-btn-title text-lightGrey-regular">Выберите дату</span>
+											<img class="calendar-image-icon" src="calendar-create-casting-20.svg" />
+										</button>
+										<div class="dropdown-inner dropdown-date-inner">
+											<img src="calendar-image.svg" />
+											<button class="blue-btn --medium dropdown-date-inner-btn">Применить</button>
+										</div>
+									</div>
+								</div>
+								<div class="create__casting-extra-information">
+									<div class="warning-box">
+										<img src="warning-icon-20.svg" class="warning-icon" />
+									</div>
+									<p class="create__casting-extra-information-text text-lightGrey-small">Актёру / Агенту нужно знать предварительную дату съёмок, чтобы планировать свой график.</p>
+								</div>
+							</div>
+
+							<div class="create__casting-form-buttons mt-40">
+								<button class="blue-btn --large">Создать кастинг</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

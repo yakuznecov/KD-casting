@@ -18,32 +18,34 @@
 
 	$(document).ready(function () {
 		const box = $('.smooth-appearance-js');
-		const castingForm = $('.create__casting-form');
+		const form = $('.create__casting-form');
 
 		setTimeout(function () {
+			form.removeClass('--filter');
 			if (box.hasClass('d-none')) {
 				box.removeClass('d-none');
 				setTimeout(function () {
 					box.removeClass('opacity-null');
-					castingForm.addClass('--filter');
 				}, 20);
 			}
-		}, 500);
+		}, 1700);
 	});
 
 	// End: Появление бара с фильтрами
 
 	$(document).ready(function () {
 		const role = $('.configurable-role');
+		const filter = $('.sidebar-filter');
 
 		setTimeout(function () {
+			filter.removeClass('--animate');
 			if (role.hasClass('d-none')) {
 				role.removeClass('d-none');
 				setTimeout(function () {
 					role.removeClass('opacity-null');
 				}, 20);
 			}
-		}, 1500);
+		}, 2300);
 	});
 
 	// Start: Все кнопки с переключением
