@@ -507,11 +507,10 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 108px;
 	height: 40px;
 	font-size: 16px;
 	letter-spacing: 0.5px;
-	padding: 0 5px;
+	padding: 0 24px;
 	border-radius: 4px;
 	border: 2px solid transparent;
 	color: #fff;
@@ -616,7 +615,19 @@
 		border: 2px solid #7bb9f0;
 		background: #f4f6f6;
 	}
-	&:hover,
+
+	@media (min-width: 1280px) {
+		&:hover {
+			background: #e0e0e0;
+			color: #424242;
+
+			& svg path {
+				transition: all 0.2s;
+				stroke: #757575;
+			}
+		}
+	}
+
 	&:active {
 		background: #e0e0e0;
 		color: #424242;

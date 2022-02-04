@@ -832,4 +832,48 @@
 	});
 
 	// End: Trigger focus textarea and custom scroll
+
+	$(document).ready(function () {
+		$('.casting__training-slider').slick({
+			infinite: false,
+			speed: 300,
+			fade: true,
+			swipe: false,
+			cssEase: 'linear',
+			prevArrow: '<button type="button" data-role="none" class="secondary-btn --inactive slick-prev slick-arrow" aria-label="Previous" role="button" >Назад</button>',
+			nextArrow: '<button type="button" data-role="none" class="primary-btn slick-next slick-arrow" aria-label="Next" role="button" >Вперёд</button>',
+		});
+
+		$(function () {
+			const nextBtn = $('.primary-btn.slick-next');
+			const prevBtn = $('.secondary-btn.slick-prev');
+			const text = $('.casting__training-header-text');
+
+			const displayScore = function () {
+				const sliderItem = $('.casting__training-slider-item.slick-active').data('slick-index') + 1;
+				text.html(`Шаг ${sliderItem} из 13`);
+
+				if (sliderItem === 1) {
+					prevBtn.addClass('--inactive');
+				}
+
+				if (sliderItem === 13) {
+					nextBtn.html('Завершить');
+					prevBtn.addClass('--end');
+				} else {
+					nextBtn.html('Вперёд');
+					prevBtn.removeClass('--end');
+				}
+			};
+
+			nextBtn.click(function () {
+				displayScore();
+				prevBtn.removeClass('--inactive');
+			});
+
+			prevBtn.click(function () {
+				displayScore();
+			});
+		});
+	});
 })(jQuery);

@@ -562,3 +562,70 @@
 .configurable-role {
 	transition: all 0.2s;
 }
+
+// Start: Casting Training
+.casting__training-container {
+	padding-top: 142px;
+	height: 100vh;
+	background-color: #fcfcfe;
+	overflow-y: auto;
+}
+
+.casting__training {
+	padding: 90px 40px 0;
+	margin: 0 auto;
+	max-width: 1018px;
+}
+
+.casting__training-slider {
+	display: none;
+
+	&.slick-initialized {
+		display: block;
+	}
+}
+
+.casting__training-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 12px;
+}
+
+.casting__training-header-text {
+	line-height: 0;
+	margin-bottom: 5px;
+}
+
+.casting__training-slider-item-img {
+	margin-bottom: 32px;
+	height: 455px;
+	overflow: hidden;
+}
+
+.casting__training-slider-item-content-title {
+	font-size: 25px;
+	line-height: 37px;
+	color: #212121;
+	margin-bottom: 16px;
+}
+
+.casting__training-slider .slick-next {
+	position: absolute;
+	right: 0;
+	top: 487px;
+	z-index: 99;
+}
+
+.casting__training-slider .slick-prev {
+	position: absolute;
+	right: 116px;
+	top: 487px;
+	z-index: 99;
+
+	&.--end {
+		right: 141px;
+	}
+}
+
+// End: Casting Training
