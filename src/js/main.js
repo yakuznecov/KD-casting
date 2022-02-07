@@ -836,7 +836,7 @@
 	$(document).ready(function () {
 		$('.casting__training-slider').slick({
 			infinite: false,
-			speed: 300,
+			speed: 100,
 			fade: true,
 			swipe: false,
 			cssEase: 'linear',

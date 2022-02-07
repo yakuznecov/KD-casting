@@ -480,7 +480,15 @@
 	&:focus-visible {
 		border: 2px solid #7bb9f0;
 	}
-	&:hover,
+
+	@media (min-width: 1025px) {
+		&:hover {
+			background: #fafafa;
+			border: 1px solid #757575;
+			color: #424242;
+		}
+	}
+
 	&:active {
 		background: #fafafa;
 		border: 1px solid #757575;
@@ -521,7 +529,13 @@
 		background: #1991eb;
 		border: 2px solid #7bb9f0;
 	}
-	&:hover,
+
+	@media (min-width: 1025px) {
+		&:hover {
+			background: #127fd1;
+		}
+	}
+
 	&:active {
 		background: #127fd1;
 	}
