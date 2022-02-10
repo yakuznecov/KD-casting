@@ -576,7 +576,8 @@
 	margin: 0 auto;
 	max-width: 1018px;
 
-	@media (max-width: 1439px) {
+	@media (max-width: 1440px) {
+		max-width: 100%;
 		padding: 2px 40px 0;
 	}
 }
@@ -601,6 +602,16 @@
 	margin-bottom: 5px;
 }
 
+.casting__training-slider-item {
+	@media (max-width: 1440px) {
+		display: flex !important;
+	}
+
+	@media (max-width: 896px) {
+		display: block !important;
+	}
+}
+
 .casting__training-slider-item-img {
 	position: relative;
 	width: 100%;
@@ -609,6 +620,33 @@
 	overflow: hidden;
 	border-radius: 8px;
 	background-color: #f5f5f5;
+
+	@media (max-width: 1440px) {
+		min-width: 880px;
+	}
+
+	@media (max-width: 1280px) {
+		max-width: 800px;
+		min-width: auto;
+	}
+
+	@media (max-width: 896px) {
+		max-width: none;
+	}
+}
+
+.casting__training-slider-item-content {
+	@media (max-width: 1440px) {
+		margin-left: 32px;
+	}
+
+	@media (max-width: 1280px) {
+		flex: 0 0 332px;
+	}
+
+	@media (max-width: 896px) {
+		margin-left: 0;
+	}
 }
 
 .casting__training-slider-item-content-title {
@@ -616,6 +654,7 @@
 	line-height: 37px;
 	color: #212121;
 	margin-bottom: 16px;
+	pointer-events: none;
 
 	&.--actorsAmc {
 		@media (max-width: 924px) {
@@ -629,11 +668,29 @@
 	}
 }
 
+.casting__training-slider-item-content-text br {
+	@media (max-width: 1440px) {
+		display: none;
+	}
+
+	@media (max-width: 896px) {
+		display: block;
+	}
+}
+
 .casting__training-slider .slick-next {
 	position: absolute;
 	right: 0;
 	top: 487px;
 	z-index: 99;
+
+	@media (max-width: 1440px) {
+		top: 414px;
+	}
+
+	@media (max-width: 896px) {
+		top: 487px;
+	}
 }
 
 .casting__training-slider .slick-prev {
@@ -644,6 +701,14 @@
 
 	&.--end {
 		right: 141px;
+	}
+
+	@media (max-width: 1440px) {
+		top: 414px;
+	}
+
+	@media (max-width: 896px) {
+		top: 487px;
 	}
 }
 
@@ -699,35 +764,35 @@
 
 .casting__training-slide-8 {
 	position: absolute;
-	top: 55%;
+	bottom: -9px;
 	left: 50%;
 	width: 96%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 }
 
 .casting__training-slide-9,
 .casting__training-slide-10 {
 	position: absolute;
-	top: 54%;
 	left: 50%;
+	bottom: -1px;
 	width: 96%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 }
 
 .casting__training-slide-11 {
 	position: absolute;
-	top: 55%;
 	left: 50%;
+	bottom: -9px;
 	width: 96%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 }
 
 .casting__training-slide-12 {
 	position: absolute;
-	top: 54%;
 	left: 50%;
+	bottom: -1px;
 	width: 96%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 }
 
 .casting__training-slide-13 {
@@ -736,6 +801,10 @@
 	left: 51.4%;
 	width: 100%;
 	transform: translate(-50%, -50%);
+}
+
+.slide-13-icons {
+	margin-left: -7px;
 }
 
 // End: Casting Training

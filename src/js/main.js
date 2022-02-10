@@ -838,7 +838,7 @@
 			infinite: false,
 			speed: 100,
 			fade: true,
-			swipe: false,
+			swipe: true,
 			cssEase: 'linear',
 			prevArrow: '<button type="button" data-role="none" class="secondary-btn --inactive slick-prev slick-arrow" aria-label="Previous" role="button" >Назад</button>',
 			nextArrow: '<button type="button" data-role="none" class="primary-btn slick-next slick-arrow" aria-label="Next" role="button" >Вперёд</button>',
