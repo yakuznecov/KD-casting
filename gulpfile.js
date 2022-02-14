@@ -1,6 +1,6 @@
-let gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browserSync = require('browser-sync'),
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+let browserSync = require('browser-sync'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
@@ -28,7 +28,7 @@ let paths = {
 };
 
 function swallowError(error) {
-	console.log(error.toString());
+	console.log(error.toString()); 
 	this.emit('end');
 }
 

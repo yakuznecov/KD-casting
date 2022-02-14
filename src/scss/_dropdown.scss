@@ -405,19 +405,16 @@
 
 .filter-dropdown-icon-second {
 	opacity: 0;
-	filter: alpha (opacity=0);
 }
 
 .main-header-top-filter:hover .filter-dropdown-icon {
 	& .filter-dropdown-icon-first {
 		opacity: 0;
-		filter: alpha (opacity=0);
 	}
 
 	& .filter-dropdown-icon-second {
 		opacity: 1;
-		filter: alpha (opacity=100);
-	}
+ 	}
 }
 
 .filter-dropdown-title {
