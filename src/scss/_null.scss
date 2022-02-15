@@ -1,78 +1,78 @@
 * {
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 *,
 *:before,
 *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 :focus,
 :active {
-	outline: none;
+    outline: none;
 }
 a:focus,
 a:active {
-	outline: none;
+    outline: none;
 }
 aside,
 nav,
 footer,
 header,
 section {
-	display: block;
+    display: block;
 }
 html,
 body {
-	min-width: 320px;
+    min-width: 320px;
 }
 body {
-	font-family: 'Circe', sans-serif;
-	text-rendering: optimizeLegibility;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'Circe', sans-serif;
+    text-rendering: optimizeLegibility;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 input,
 button,
 textarea {
-	font-family: 'Circe';
+    font-family: 'Circe';
 }
 input::-ms-clear {
-	display: none;
+    display: none;
 }
 
 // стрелки в инпуте при type='number'
 ::-webkit-inner-spin-button {
-	display: none;
+    display: none;
 }
 
 button {
-	cursor: pointer;
-	background: transparent;
-	-webkit-appearance: none !important;
+    cursor: pointer;
+    background: transparent;
+    -webkit-appearance: none !important;
 }
 button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
+    padding: 0;
+    border: 0;
 }
 a,
 a:visited {
-	text-decoration: none;
-	-webkit-appearance: none !important;
+    text-decoration: none;
+    -webkit-appearance: none !important;
 }
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 ul li {
-	list-style: none;
+    list-style: none;
 }
 img {
-	vertical-align: top;
+    vertical-align: top;
 }
 p,
 h1,
@@ -81,8 +81,20 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: inherit;
-	font-size: inherit;
-	margin: 0;
-	overflow-wrap: break-word;
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+label,
+div,
+span {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
