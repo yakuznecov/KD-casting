@@ -39,15 +39,17 @@
             }
         }
 
-        nextBtn.addEventListener('click', function () {
-            next();
-            changeEl();
-        });
+        nextBtn &&
+            nextBtn.addEventListener('click', function () {
+                next();
+                changeEl();
+            });
 
-        prevBtn.addEventListener('click', function () {
-            prev();
-            changeEl();
-        });
+        prevBtn &&
+            prevBtn.addEventListener('click', function () {
+                prev();
+                changeEl();
+            });
     };
 
     trainingSlider();
