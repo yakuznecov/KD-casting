@@ -670,7 +670,8 @@ body {
 
 .item-cityAge {
 	display: flex;
-	margin-top: 8px;
+	justify-content: space-between;
+	margin: 8px 20px 0 0;
 }
 
 .item-cityAge-left {
@@ -691,7 +692,7 @@ body {
 	letter-spacing: 0.4px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	max-width: 106px;
+	max-width: 125px;
 	overflow: hidden;
 	color: #424242;
 }
@@ -701,9 +702,19 @@ body {
 }
 
 .item-cityAge-right {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	margin-right: 5px;
+
+	&:before {
+		position: absolute;
+		content: '';
+		left: -7px;
+		top: 0;
+		width: 1px;
+		height: 30px;
+		background-color: #E0E0E0;
+	}
 }
 
 .item-tags-wrapper {
@@ -715,7 +726,6 @@ body {
 	width: 96px;
 	height: 144px;
 	border-radius: 4px;
-	margin-left: 20px;
 }
 
 .card-info-bottom {

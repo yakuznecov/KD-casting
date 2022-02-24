@@ -332,6 +332,10 @@
 	font-size: 14px;
 	line-height: 16px;
 	letter-spacing: 0.25px;
+	max-width: 215px;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 	color: #bdbdbd;
 }
 
