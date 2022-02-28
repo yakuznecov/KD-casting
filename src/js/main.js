@@ -274,61 +274,63 @@
         let isMediaStatusHide = false;
 
         $(window).on('load resize', function () {
-            let mainLeft = mainHeaderBottomLeft.offset().left + mainHeaderBottomLeft.width() + 56;
-            let sendLeft = sendInvitationBtn.offset().left; // кнопка
-            let statusleft = statusDefault.offset().left;
-            let hideMediaStatusLeft = hideMediaStatus.offset().left + hideMediaStatus.width();
-            let topSearchLeft = mainHeaderTopSearch.offset().left;
+            if (mainHeaderBottomLeft.length > 0) {
+                let mainLeft = mainHeaderBottomLeft.offset().left + mainHeaderBottomLeft.width() + 56;
+                let sendLeft = sendInvitationBtn.offset().left; // кнопка
+                let statusleft = statusDefault.offset().left;
+                let hideMediaStatusLeft = hideMediaStatus.offset().left + hideMediaStatus.width();
+                let topSearchLeft = mainHeaderTopSearch.offset().left;
 
-            if (topSearchLeft - mainLeft < 220) {
-                if (!isSearchSmall) {
-                    smallTopSearch();
-                }
-            }
-
-            if (topSearchLeft - mainLeft > 350) {
-                fullTopSearch();
-            }
-
-            if (mainHeaderTopSearch.hasClass('lower') && topSearchLeft - mainLeft < 210) {
-                smallSendBtn();
-            }
-
-            if (sendLeft - mainLeft > 180 && !isMediaStatusHide) {
-                fullSendBtn();
-            }
-
-            if (sendLeft - hideMediaStatusLeft < 40 && isSearchSmall && isBtnSmall) {
-                hideMedia();
-            }
-
-            if (sendLeft - statusleft > 300 && isSearchSmall && isBtnSmall) {
-                showMedia();
-            }
-
-            // Start: Трансформация кнопки Отправить приглашение на главной при нажатии на инпут
-
-            $('.input-top-search-js').focus(function () {
-                if (mainHeaderTopSearch.hasClass('lower') && $(window).width() > 1366) {
-                    $('.send-invitation-btn').addClass('active');
-                    $('.send-invitation-btn-text-js').addClass('hide');
-                    mainHeaderTopSearch.removeClass('lower');
-                    mainHeaderTopSearch.addClass('transform');
-                }
-            });
-
-            $('.input-top-search-js').focusout(function () {
-                if (mainHeaderTopSearch.hasClass('transform')) {
-                    if (sendLeft > mainLeft && $(window).width() > 1366) {
-                        $('.send-invitation-btn').removeClass('active');
-                        setTimeout(function () {
-                            $('.send-invitation-btn-text-js').removeClass('hide');
-                        }, 200);
-                        mainHeaderTopSearch.removeClass('transform');
-                        mainHeaderTopSearch.addClass('lower');
+                if (topSearchLeft - mainLeft < 220) {
+                    if (!isSearchSmall) {
+                        smallTopSearch();
                     }
                 }
-            });
+
+                if (topSearchLeft - mainLeft > 350) {
+                    fullTopSearch();
+                }
+
+                if (mainHeaderTopSearch.hasClass('lower') && topSearchLeft - mainLeft < 210) {
+                    smallSendBtn();
+                }
+
+                if (sendLeft - mainLeft > 180 && !isMediaStatusHide) {
+                    fullSendBtn();
+                }
+
+                if (sendLeft - hideMediaStatusLeft < 40 && isSearchSmall && isBtnSmall) {
+                    hideMedia();
+                }
+
+                if (sendLeft - statusleft > 300 && isSearchSmall && isBtnSmall) {
+                    showMedia();
+                }
+
+                // Start: Трансформация кнопки Отправить приглашение на главной при нажатии на инпут
+
+                $('.input-top-search-js').focus(function () {
+                    if (mainHeaderTopSearch.hasClass('lower') && $(window).width() > 1366) {
+                        $('.send-invitation-btn').addClass('active');
+                        $('.send-invitation-btn-text-js').addClass('hide');
+                        mainHeaderTopSearch.removeClass('lower');
+                        mainHeaderTopSearch.addClass('transform');
+                    }
+                });
+
+                $('.input-top-search-js').focusout(function () {
+                    if (mainHeaderTopSearch.hasClass('transform')) {
+                        if (sendLeft > mainLeft && $(window).width() > 1366) {
+                            $('.send-invitation-btn').removeClass('active');
+                            setTimeout(function () {
+                                $('.send-invitation-btn-text-js').removeClass('hide');
+                            }, 200);
+                            mainHeaderTopSearch.removeClass('transform');
+                            mainHeaderTopSearch.addClass('lower');
+                        }
+                    }
+                });
+            }
 
             // End: Трансформация кнопки Отправить приглашение на главной при нажатии на инпут
         });
@@ -774,6 +776,12 @@
 
     // End: Скрытие сайдбара
 
+    // Start: Увеличение рабочей области
+    const increaseWorkspace = () => {};
+
+    increaseWorkspace();
+    // End: Разворачивание рабочей области
+
     // Start: add/remove border active focus
 
     function addActiveBorderFocus(parent, child) {
@@ -887,12 +895,11 @@
     // End: Tabs menu profile actor add class active
 
     // Маска для input-date
-    $(function () {
-        $('.input-time').mask('99:99');
-    });
-
-    $(function () {
-        $('.input-phone').mask('+7 (999) 999-99-99');
+    $(document).ready(function ($) {
+        if ($('.input-time').length > 0) {
+            $('.input-time').mask('99:99');
+            $('.input-phone').mask('+7 (999) 999-99-99');
+        }
     });
 
     // Trigger focus input
