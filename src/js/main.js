@@ -777,7 +777,96 @@
     // End: Скрытие сайдбара
 
     // Start: Увеличение рабочей области
-    const increaseWorkspace = () => {};
+    const increaseWorkspace = () => {
+        const expandBtnOut = $('.main-header-top-expandBtn.--out');
+        const expandBtnIn = $('.main-header-top-expandBtn.--in');
+        const sidebar = $('.sidebar');
+        const main = $('.main');
+        const mainInner = $('.main-inner');
+        const mainContainer = $('.main-container');
+        const mainItemsWrapper = $('.main-items-wrapper');
+
+        expandBtnOut.click(function () {
+            hideSidebar();
+        });
+
+        expandBtnIn.click(function () {
+            showSidebar();
+        });
+
+        function changeBtn() {
+            expandBtnOut.toggleClass('d-none');
+            expandBtnIn.toggleClass('d-none');
+        }
+
+        function hideSidebar() {
+            sidebar.addClass('opacity-null');
+
+            sidebar.one('transitionend', function (e) {
+                sidebar.addClass('d-none');
+                main.addClass('no-transition');
+                mainInner.addClass('active');
+
+                if (sidebar.hasClass('--rolled')) {
+                    main.addClass('shortSidebar');
+                } else {
+                    main.addClass('notSidebar');
+                }
+
+                setTimeout(function () {
+                    main.removeClass('no-transition');
+                    main.addClass('active');
+                    mainItemsWrapper.removeClass('active');
+                    mainItemsWrapper.addClass('expanded');
+                }, 200);
+
+                setTimeout(function () {
+                    mainContainer.addClass('isWorkspace');
+                    mainItemsWrapper.addClass('expanded_height');
+
+                    changeBtn();
+                }, 1000);
+            });
+        }
+
+        function showSidebar() {
+            if (sidebar.hasClass('d-none')) {
+                mainContainer.removeClass('isWorkspace');
+                mainItemsWrapper.removeClass('expanded_height');
+
+                setTimeout(function () {
+                    if (sidebar.hasClass('--rolled')) {
+                        main.removeClass('active');
+                        mainItemsWrapper.addClass('active');
+                    } else {
+                        main.addClass('notSidebar');
+                        main.removeClass('shortSidebar');
+                    }
+                }, 300);
+
+                setTimeout(function () {
+                    mainInner.removeClass('active');
+                    main.removeClass('active');
+                }, 400);
+
+                setTimeout(function () {
+                    mainItemsWrapper.removeClass('expanded');
+                }, 500);
+
+                setTimeout(function () {
+                    main.removeClass('notSidebar');
+                    main.removeClass('shortSidebar');
+                    sidebar.removeClass('d-none');
+
+                    setTimeout(function () {
+                        sidebar.removeClass('opacity-null');
+                    }, 20);
+                }, 800);
+
+                changeBtn();
+            }
+        }
+    };
 
     increaseWorkspace();
     // End: Разворачивание рабочей области

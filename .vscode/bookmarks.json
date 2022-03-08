@@ -1,0 +1,74 @@
+{
+	"files": [
+		{
+			"path": "src/js/main.js",
+			"bookmarks": [
+				{
+					"line": 659,
+					"column": 54,
+					"label": ""
+				},
+				{
+					"line": 778,
+					"column": 40,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_sidebar.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 316,
+					"column": 18,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_global.scss",
+			"bookmarks": [
+				{
+					"line": 575,
+					"column": 15,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/nav.scss",
+			"bookmarks": [
+				{
+					"line": 39,
+					"column": 17,
+					"label": ""
+				},
+				{
+					"line": 223,
+					"column": 7,
+					"label": ""
+				},
+				{
+					"line": 248,
+					"column": 13,
+					"label": ""
+				},
+				{
+					"line": 420,
+					"column": 28,
+					"label": ""
+				},
+				{
+					"line": 448,
+					"column": 21,
+					"label": ""
+				}
+			]
+		}
+	]
+}

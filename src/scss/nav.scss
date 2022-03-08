@@ -41,6 +41,13 @@ body {
     padding-top: 142px;
     overflow: hidden;
     user-select: none;
+    transition: padding-top 0.3s;
+
+    &.isWorkspace {
+        transition: padding-top 0.3s;
+        padding-top: 0;
+        height: 100%;
+    }
 }
 
 .site-header {
@@ -217,6 +224,26 @@ body {
 .main {
     display: flex;
     width: 100%;
+
+    &.notSidebar {
+        padding-left: 376px;
+        transition: all 0.4s;
+
+        &.active {
+            padding-left: 0;
+            transition: padding-left 0.4s;
+        }
+    }
+
+    &.shortSidebar {
+        padding-left: 128px;
+        transition: all 0.4s;
+
+        &.active {
+            padding-left: 0;
+            transition: padding-left 0.4s;
+        }
+    }
 }
 
 .main-inner {
@@ -227,6 +254,12 @@ body {
     box-shadow: -1px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px 0px 0px 0px;
     transition: width 0.3s;
+
+    &.active {
+        z-index: 9999;
+        overflow: hidden;
+        border-radius: 0;
+    }
 }
 
 // Start: Пустое рабочее пространство
@@ -402,10 +435,6 @@ body {
             stroke: #757575;
         }
     }
-
-    &.--in {
-        display: none;
-    }
 }
 
 // End: main-header
@@ -425,6 +454,15 @@ body {
     scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
     scrollbar-width: thin;
     transition: width 0.3s;
+
+    &.expanded {
+        width: calc(100vw - 31px);
+    }
+
+    &.expanded_height {
+        height: calc(100vh - 121px);
+    }
+
     &.active {
         width: calc(100vw - 159px);
     }
@@ -648,6 +686,7 @@ body {
     height: 100%;
     min-width: 300px;
     transition: all 0.3s ease;
+
     &::-webkit-scrollbar {
         width: 6px;
         height: 376px;
