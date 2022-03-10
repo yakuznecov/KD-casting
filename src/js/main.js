@@ -1,59 +1,4 @@
 (function ($) {
-    const trainingSlider = () => {
-        let slides = document.querySelectorAll('.casting__training-slider-item');
-        let nextBtn = document.querySelector('.training-slider-btnNext');
-        let prevBtn = document.querySelector('.training-slider-btnPrev');
-        let count = document.querySelector('.casting__training-header-text');
-        let index = 0;
-
-        function next() {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            prevBtn.classList.remove('--inactive');
-        }
-
-        function prev() {
-            slides[index].classList.remove('active');
-            index = (index - 1 + slides.length) % slides.length;
-        }
-
-        function changeEl() {
-            count.textContent = `Шаг ${index + 1} из 13`;
-            slides[index].classList.add('active');
-
-            if (index === 0) {
-                prevBtn.classList.add('--inactive');
-                prevBtn.disabled = true;
-            } else {
-                prevBtn.disabled = false;
-            }
-
-            if (index === 12) {
-                prevBtn.classList.add('--end');
-                nextBtn.textContent = 'Завершить';
-                nextBtn.disabled = true;
-            } else {
-                prevBtn.classList.remove('--end');
-                nextBtn.textContent = 'Вперёд';
-                nextBtn.disabled = false;
-            }
-        }
-
-        nextBtn &&
-            nextBtn.addEventListener('click', function () {
-                next();
-                changeEl();
-            });
-
-        prevBtn &&
-            prevBtn.addEventListener('click', function () {
-                prev();
-                changeEl();
-            });
-    };
-
-    trainingSlider();
-
     $(function () {
         const btnNext = $('.training-slider-btnNext');
         const btnPrev = $('.training-slider-btnPrev');
@@ -1016,3 +961,58 @@
 
     // End: Trigger focus textarea and custom scroll
 })(jQuery);
+
+const trainingSlider = () => {
+    let slides = document.querySelectorAll('.casting__training-slider-item');
+    let nextBtn = document.querySelector('.training-slider-btnNext');
+    let prevBtn = document.querySelector('.training-slider-btnPrev');
+    let count = document.querySelector('.casting__training-header-text');
+    let index = 0;
+
+    function next() {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        prevBtn.classList.remove('--inactive');
+    }
+
+    function prev() {
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+    }
+
+    function changeEl() {
+        count.textContent = `Шаг ${index + 1} из 13`;
+        slides[index].classList.add('active');
+
+        if (index === 0) {
+            prevBtn.classList.add('--inactive');
+            prevBtn.disabled = true;
+        } else {
+            prevBtn.disabled = false;
+        }
+
+        if (index === 12) {
+            prevBtn.classList.add('--end');
+            nextBtn.textContent = 'Завершить';
+            nextBtn.disabled = true;
+        } else {
+            prevBtn.classList.remove('--end');
+            nextBtn.textContent = 'Вперёд';
+            nextBtn.disabled = false;
+        }
+    }
+
+    nextBtn &&
+        nextBtn.addEventListener('click', function () {
+            next();
+            changeEl();
+        });
+
+    prevBtn &&
+        prevBtn.addEventListener('click', function () {
+            prev();
+            changeEl();
+        });
+};
+
+trainingSlider();
