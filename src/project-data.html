@@ -17,25 +17,10 @@
 		<section class="main">
 			<!-- Start: Sidebar -->
 			<div class="sidebar">
-				<div class="sidebar-header">
+				<div class="sidebar-header sidebar-header_project">
 					<!-- Start: sidebar-dropdown-header-title -->
 					<div class="sidebar-dropdown-header-title">
-						<button class="header-title-dropdown-btn dropdown-btn">
-							<span class="sidebar-header-title">Кастинги Актёры </span>
-							<span class="sidebar-header-arrow-box">
-								<img class="sidebar-header-arrow" src="arrow-down-6-12.svg" />
-							</span>
-						</button>
-						<div class="dropdown-inner header-title-inner">
-							<ul>
-								<li class="header-title-item">
-									<button class="header-title-btn">Кастинги Актёры</button>
-								</li>
-								<li class="header-title-item">
-									<button class="header-title-btn">Кастинги АМС</button>
-								</li>
-							</ul>
-						</div>
+						<span class="sidebar-header-title">Список проектов</span>
 					</div>
 					<!-- End: sidebar-dropdown-header-title -->
 					<div class="sidebar-header-buttons">
@@ -297,16 +282,7 @@
 								</div>
 								<!-- End: sidebar-dropdown-question -->
 
-								<!-- Start: sidebar-dropdown-calendar -->
-								<div class="sidebar-dropdown-calendar">
-									<button class="square-btn-32 sidebar-header-btn">
-										<img src="calendar-20.svg" alt="calendar-icon" />
-									</button>
-									<div class="sidebar-dropdown-calendar-slide">
-										<img src="images/calendar.png" alt="" />
-									</div>
-								</div>
-								<!-- End: sidebar-dropdown-calendar -->
+
 							</div>
 						</div>
 						<div class="sidebar-left-btns">
@@ -342,16 +318,7 @@
 							</div>
 							<!-- End: sidebar-dropdown-question -->
 
-							<!-- Start: sidebar-dropdown-calendar -->
-							<div class="sidebar-dropdown-calendar">
-								<button class="sidebar-calendar-btn square-btn-32 sidebar-header-btn white-btn-48">
-									<img src="calendar-24.svg" alt="calendar-icon" />
-								</button>
-								<div class="sidebar-dropdown-calendar-slide">
-									<img src="images/calendar.png" alt="" />
-								</div>
-							</div>
-							<!-- End: sidebar-dropdown-calendar -->
+
 						</div>
 					</div>
 				</div>
@@ -360,13 +327,12 @@
 				<div class="tabs-wrapper sidebar-tabs-js">
 					<div class="tabs sidebar__tabs">
 						<span class="tab sidebar__tab">Активные</span>
-						<span class="tab sidebar__tab">Блок</span>
 						<span class="tab sidebar__tab">Архив</span>
 					</div>
 					<div class="tabs-content sidebar__tabs-content">
 						<div class="tab-item">
 							<div class="sidebar__tabs-buttons">
-								<button class="wide-btn">Создать кастинг</button>
+								<button class="wide-btn">Создать проект</button>
 								<div class="dropdown-wrapper dropdown-blue-points">
 									<button class="points-blue-btn points-blue-btn-sidebar dropdown-btn">
 										<span></span>
@@ -520,50 +486,7 @@
 								</button>
 							</div>
 						</div>
-						<div class="tab-item">
-							<div class="sidebar__castings">
-								<button class="sidebar__castings-item">
-									<div class="sidebar__castings-item-img">
-										<img src="movie-icon-24.svg" />
-									</div>
 
-									<div class="sidebar__castings-item-content">
-										<div class="sidebar__castings-item-top">
-											<div class="sidebar__castings-item-title">Маленький гном</div>
-											<span class="color-dot"></span>
-										</div>
-										<div class="sidebar__castings-item-subtitle">Фильм</div>
-									</div>
-									<img class="arrow-right" src="caretRightGrey-16.svg" />
-								</button>
-								<button class="sidebar__castings-item">
-									<div class="sidebar__castings-item-img">
-										<img src="movie-icon-24.svg" />
-									</div>
-									<div class="sidebar__castings-item-content">
-										<div class="sidebar__castings-item-top">
-											<div class="sidebar__castings-item-title">Больше чем фрукт</div>
-											<span class="color-dot"></span>
-										</div>
-										<div class="sidebar__castings-item-subtitle">Фильм</div>
-									</div>
-									<img class="arrow-right" src="caretRightGrey-16.svg" />
-								</button>
-								<button class="sidebar__castings-item">
-									<div class="sidebar__castings-item-img">
-										<img src="movie-icon-24.svg" />
-									</div>
-									<div class="sidebar__castings-item-content">
-										<div class="sidebar__castings-item-top">
-											<div class="sidebar__castings-item-title">Одарённый парень</div>
-											<span class="color-dot --green"></span>
-										</div>
-										<div class="sidebar__castings-item-subtitle">Фильм</div>
-									</div>
-									<img class="arrow-right" src="caretRightGrey-16.svg" />
-								</button>
-							</div>
-						</div>
 						<div class="tab-item">
 							<div class="sidebar__castings">
 								<button class="sidebar__castings-item">
@@ -614,23 +537,59 @@
 
 			<div class="tabs-inner">
 				<div class="tabs tabs_project">
-					<div class="tab_project__inner tab_project_data-1">
-						<span class="tab tab_project_data ">Семья Петровых</span>
+					<div class="tabs__container">
+						<div class="tab_project__inner tab_project_data-1">
+							<span class="tab tab_project_data ">Семья Петровых</span>
+						</div>
+						<div class="tab_project__inner tab_project_data-2">
+							<span class="tab tab_project_data ">Семья Ивановых</span>
+						</div>
+						<div class="tab_project__inner tab_project_data-3">
+							<span class="tab tab_project_data ">Прохожие</span>
+						</div>
 					</div>
-					<div class="tab_project__inner tab_project_data-2">
-						<span class="tab tab_project_data ">Семья Ивановых</span>
+					<div class="dropdown-wrapper dropdown-mainRole">
+						<button class="ensemble-dropdown-btn dropdown-btn">
+							<span class="ensemble-dropdown-title">Управление ансамблями</span>
+							<span class="mainRole-dropdown-arrow-box">
+								<img class="mainRole-dropdown-arrow mt-1" src="arrow-down-dark4-8.svg" />
+							</span>
+						</button>
+						<div class="dropdown-inner dropdown-ensemble-inner">
+							<div class="text-lightGrey-small-high mb-16">Наведите курсор на интересующий ансамбль ролей, чтобы увидеть список возможных действий над ним</div>
+							<div class="dropdown-ensemble_wrapper">
+								<div class="input-box input-box_small">
+									<input type="text">
+								</div>
+								<button class="blue-btn --medium ml-8">Создать</button>
+							</div>
+						</div>
 					</div>
-					<div class="tab_project__inner tab_project_data-3">
-						<span class="tab tab_project_data ">Прохожие</span>
+					<div class="teamwork__container">
+						<div class="teamwork__users">
+							<div class="teamwork__users_img teamwork__users_img-1">
+								<img src="images/user1.png" alt="user">
+							</div>
+							<div class="teamwork__users_img teamwork__users_img-2">
+								<img src="images/user2.png" alt="user">
+							</div>
+							<div class="teamwork__users_img teamwork__users_img-3">
+								<img src="images/user3.png" alt="user">
+							</div>
+							<div class="teamwork__users_img teamwork__users_img-4">
+								<img src="images/user4.png" alt="user">
+							</div>
+						</div>
+						<div class="teamwork__dropdown">
+							<button class="teamwork_btn">командная работа</button>
+						</div>
 					</div>
-
-
 				</div>
 				<div class="main-inner main-inner_project">
 					<!-- Start: main-header -->
 					<div class="main-header">
 						<div class="main-header-top">
-							<div class="main-header-top-title">Больше чем фрукт</div>
+							<div class="main-header-top-title">Большие гонки</div>
 							<div class="main-header-top-btn">
 
 								<div class="main-header-top-search">
@@ -778,54 +737,9 @@
 						</div>
 						<div class="main-header-bottom">
 							<div class="main-header-bottom-left">
-								<!-- Start: dropdown на кнопке "Главная роль" -->
-								<div class="dropdown-wrapper dropdown-mainRole">
-									<button class="mainRole-dropdown-btn dropdown-btn">
-										<span class="mainRole-dropdown-title">Главная роль</span>
-										<span class="mainRole-dropdown-arrow-box">
-											<img class="mainRole-dropdown-arrow" src="arrow-down4-8.svg" />
-										</span>
-									</button>
-									<div class="dropdown-inner dropdown-mainRole-inner">
-										<ul>
-											<li class="dropdown-mainRole-item">
-												<button class="mainRole-btn">
-													<span class="dropdown-mainRole-item-title">Главная роль</span>
-													<span class="dropdown-mainRole-item-text">Звёздные актёры</span>
-												</button>
-											</li>
-											<li class="dropdown-mainRole-item">
-												<button class="mainRole-btn">
-													<span class="dropdown-mainRole-item-title">Соседка</span>
-													<span class="dropdown-mainRole-item-text">Второстепенные роли</span>
-												</button>
-											</li>
-											<li class="dropdown-mainRole-item">
-												<button class="mainRole-btn">
-													<span class="dropdown-mainRole-item-title">Брат</span>
-													<span class="dropdown-mainRole-item-text">Семья Ивановых</span>
-												</button>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="vl-12 mainRole-line"></div>
-								<!-- End: dropdown на кнопке "Главная роль" -->
-								<!-- <span class="status-default status-mainRole">главная роль</span> -->
 								<span class="status-default">фильм</span>
-								<div class="hide-media-status">
-									<span class="status-default">кастинг</span>
-									<span class="status-default status-onCheck">на проверке</span>
-									<!-- <span class="status-default status-approved">одобрен</span> -->
-									<!-- <span class="status-default status-blocked">заблокирован</span> -->
-								</div>
-								<div class="status-counter-inner">
-									<div class="status-counter">+2</div>
-									<div class="status-counter-dropdown">
-										<span class="status-default">кастинг</span>
-										<span class="status-default status-onCheck">на проверке</span>
-									</div>
-								</div>
+								<span class="status-default status-mainRole">командный проект</span>
+
 							</div>
 							<div class="main-header-bottom-right">
 								<button class="data-filterBtn large-foto-btn">крупное фото</button>
@@ -840,11 +754,11 @@
 					<div class="main-wrapper">
 						<div class="tabs-content">
 							<div class="tab-item">
-								<div class="main-items-wrapper">
+								<div class="main-items-wrapper main-items_project-wrapper">
 									<div class="main__item">
 										<div class="main__item-header">
-											<div class="item-title">Заявки</div>
-											<span class="item-counter main__item-header-counter">0</span>
+											<div class="item-title">Старший брат</div>
+											<span class="item-counter main__item-header-counter">5</span>
 											<div class="dropdown-transfer dropdown-request dropdown-request-js">
 												<button class="points-grey-btn item-points-grey-btn request-btn dropdown-btn">
 													<span></span>
@@ -919,6 +833,11 @@
 												</div>
 											</div>
 										</div>
+										<div class="main__item_plus-btn_box">
+											<button aria-label="btn" class="main__item_plus-btn">
+												<img src="plus-24-dark.svg" alt="plus">
+											</button>
+										</div>
 										<div class="main__item-inner">
 											<!-- Start: карточка актёра -->
 											<div class="main__item-card">
@@ -990,7 +909,7 @@
 															</button>
 														</div>
 														<div class="card-btns-small-box">
-															<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+															<button><img class="bookmarkSimple-20 " src="bookmarkSimple-20.svg" /></button>
 														</div>
 														<div class="card-btns-small-box --monitorPlay">
 															<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
@@ -1000,8 +919,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1084,8 +1003,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1168,8 +1087,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1180,8 +1099,8 @@
 
 									<div class="main__item">
 										<div class="main__item-header">
-											<div class="item-title">Одобренные</div>
-											<span class="item-counter main__item-header-counter">0</span>
+											<div class="item-title">Младший брат</div>
+											<span class="item-counter main__item-header-counter">1</span>
 											<div class="dropdown-wrapper dropdown-approved">
 												<button class="points-grey-btn item-points-grey-btn approved-btn dropdown-btn">
 													<span></span>
@@ -1199,6 +1118,11 @@
 													</ul>
 												</div>
 											</div>
+										</div>
+										<div class="main__item_plus-btn_box">
+											<button aria-label="btn" class="main__item_plus-btn">
+												<img src="plus-24-dark.svg" alt="plus">
+											</button>
 										</div>
 										<div class="main__item-inner">
 											<!-- Start: карточка актёра -->
@@ -1268,7 +1192,7 @@
 															<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
 														</div>
 														<div class="card-btns-small-box">
-															<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+															<button><img class="bookmarkSimple-20" src="bookmarkSimpleBlue-20.svg" /></button>
 														</div>
 
 														<div class="card-btns-small-box">
@@ -1276,8 +1200,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn --accept">
-															Отложить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1292,12 +1216,17 @@
 
 									<div class="main__item">
 										<div class="main__item-header">
-											<div class="item-title">Отложенные</div>
-											<span class="item-counter main__item-header-counter">0</span>
+											<div class="item-title">Отец</div>
+											<span class="item-counter main__item-header-counter">2</span>
 											<button class="points-grey-btn item-points-grey-btn">
 												<span></span>
 												<span></span>
 												<span></span>
+											</button>
+										</div>
+										<div class="main__item_plus-btn_box">
+											<button aria-label="btn" class="main__item_plus-btn">
+												<img src="plus-24-dark.svg" alt="plus">
 											</button>
 										</div>
 										<div class="main__item-inner">
@@ -1376,8 +1305,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1461,8 +1390,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1477,12 +1406,17 @@
 
 									<div class="main__item">
 										<div class="main__item-header">
-											<div class="item-title">Отклонённые</div>
-											<span class="item-counter main__item-header-counter">0</span>
+											<div class="item-title">Дядя</div>
+											<span class="item-counter main__item-header-counter">1</span>
 											<button class="points-grey-btn item-points-grey-btn">
 												<span></span>
 												<span></span>
 												<span></span>
+											</button>
+										</div>
+										<div class="main__item_plus-btn_box">
+											<button aria-label="btn" class="main__item_plus-btn">
+												<img src="plus-24-dark.svg" alt="plus">
 											</button>
 										</div>
 										<div class="main__item-inner">
@@ -1563,8 +1497,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn --return">
-															Вернуть <span><img src="refresh-10.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1579,11 +1513,11 @@
 								</div>
 							</div>
 							<div class="tab-item">
-								<div class="main-items-wrapper">
+								<div class="main-items-wrapper main-items_project-wrapper">
 									<div class="main__item">
 										<div class="main__item-header">
-											<div class="item-title">Заявки</div>
-											<span class="item-counter main__item-header-counter">0</span>
+											<div class="item-title">Старший брат </div>
+											<span class="item-counter main__item-header-counter">5</span>
 											<div class="dropdown-transfer dropdown-request dropdown-request-js">
 												<button class="points-grey-btn item-points-grey-btn request-btn dropdown-btn">
 													<span></span>
@@ -1739,8 +1673,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1823,8 +1757,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -1907,8 +1841,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2015,8 +1949,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn --accept">
-															Отложить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2115,8 +2049,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2200,8 +2134,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2302,8 +2236,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn --return">
-															Вернуть <span><img src="refresh-10.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2318,11 +2252,11 @@
 								</div>
 							</div>
 							<div class="tab-item">
-								<div class="main-items-wrapper">
+								<div class="main-items-wrapper main-items_project-wrapper">
 									<div class="main__item">
 										<div class="main__item-header">
-											<div class="item-title">Заявки</div>
-											<span class="item-counter main__item-header-counter">0</span>
+											<div class="item-title">Старший брат</div>
+											<span class="item-counter main__item-header-counter">5</span>
 											<div class="dropdown-transfer dropdown-request dropdown-request-js">
 												<button class="points-grey-btn item-points-grey-btn request-btn dropdown-btn">
 													<span></span>
@@ -2478,8 +2412,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2562,8 +2496,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2646,8 +2580,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2754,8 +2688,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn --accept">
-															Отложить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2854,8 +2788,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -2939,8 +2873,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn">
-															Одобрить <span><img src="arrow-inBtn.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -3041,8 +2975,8 @@
 														</div>
 													</div>
 													<div class="main__item-card-btns-large">
-														<button class="card-large-btn --return">
-															Вернуть <span><img src="refresh-10.svg" /></span>
+														<button class="action-btn">
+															Действия <span><img src="arrow-down-blue4-8.svg" /></span>
 														</button>
 													</div>
 												</div>
@@ -3057,7 +2991,44 @@
 								</div>
 							</div>
 						</div>
+						<div class="right__sidebar">
+							<div class="right__sidebar_item">
+								<div class="right__sidebar_item_image">
+									<img src="images/sidebar-user-1.png" alt="user">
+								</div>
+								<div class="right__sidebar_item_title">Маша ФрейяФрейяФрейя</div>
+								<div class="item-cityAge">
+									<div class="item-cityAge-left">
+										<div class="item-cityAge-title">Город</div>
+										<div class="item-cityAge-subtitle">Приморско-Ахтарск</div>
+									</div>
 
+									<div class="item-cityAge-right">
+										<div class="item-cityAge-title">Лет</div>
+										<div class="item-cityAge-subtitle">33</div>
+									</div>
+								</div>
+								<button class="addToProject-btn mt-8">Добавить в проект</button>
+							</div>
+							<div class="right__sidebar_item">
+								<div class="right__sidebar_item_image">
+									<img src="images/sidebar-user-2.png" alt="user">
+								</div>
+								<div class="right__sidebar_item_title">Алексей Сыромятников</div>
+								<div class="item-cityAge">
+									<div class="item-cityAge-left">
+										<div class="item-cityAge-title">Город</div>
+										<div class="item-cityAge-subtitle">Имеритинская низменность</div>
+									</div>
+
+									<div class="item-cityAge-right">
+										<div class="item-cityAge-title">Лет</div>
+										<div class="item-cityAge-subtitle">37</div>
+									</div>
+								</div>
+								<button class="addToProject-btn mt-8">Добавить в проект</button>
+							</div>
+						</div>
 					</div>
 					<!-- End: Main-wrapper -->
 				</div>
