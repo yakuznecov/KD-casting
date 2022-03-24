@@ -4,13 +4,33 @@
 			"path": "src/project-data.html",
 			"bookmarks": [
 				{
-					"line": 614,
+					"line": 610,
 					"column": 29,
 					"label": ""
 				},
 				{
-					"line": 627,
+					"line": 623,
 					"column": 38,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_projects.scss",
+			"bookmarks": [
+				{
+					"line": 141,
+					"column": 29,
+					"label": ""
+				},
+				{
+					"line": 172,
+					"column": 17,
+					"label": ""
+				},
+				{
+					"line": 181,
+					"column": 23,
 					"label": ""
 				}
 			]

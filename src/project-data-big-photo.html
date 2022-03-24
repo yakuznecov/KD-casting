@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>project data</title>
+	<title>project data big photo</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -258,18 +258,22 @@
 									<div class="sidebar-dropdown-question-slide question-slide">
 										<div class="question-slide-content">
 											<div class="question-slide-item">
-												<h3 class="question-slide-title">ансамбли ролей</h3>
-												<p class="question-slide-text">Используйте ансамбли, чтобы разделить проект на несколько частей.</p>
+												<h3 class="question-slide-title">заявки</h3>
+												<p class="question-slide-text">Сюда попадают все актёры, которые откликнулись на ваш кастинг.</p>
 											</div>
 											<div class="question-slide-item">
-												<h3 class="question-slide-title">роли</h3>
-												<p class="question-slide-text">В каждом ансамбле, вы можете создать неограниченное количество ролей, это поможет сегментировать проект еще лучше.</p>
+												<h3 class="question-slide-title">одобренные</h3>
+												<p class="question-slide-text">Подтверждая участие, вы вызываете актёра на кастинг. Актёр узнает точный адрес проведения и получит контактные данные для
+													связи с вами.</p>
 											</div>
 											<div class="question-slide-item">
-												<h3 class="question-slide-title">командная работа</h3>
-												<p class="question-slide-text">Пригласите в проект своих коллег, чтобы вместе работать над ним. Либо скопируйте ссылку с правами только на просмотр, чтобы быстро показать проект кому то на стороне.</p>
+												<h3 class="question-slide-title">отложенные</h3>
+												<p class="question-slide-text">В своём профиле, актёр увидит сообщение: «Ваше участие предварительно одобрено, ожидайте подтвержения».</p>
 											</div>
-											
+											<div class="question-slide-item">
+												<h3 class="question-slide-title">отклоненные</h3>
+												<p class="question-slide-text">Актёру отказано и он не сможет принять участие в событии.</p>
+											</div>
 										</div>
 										<div class="question-slide-footer">
 											<a class="white-dropdown-btn" href="#">повторить обучение</a>
@@ -700,30 +704,12 @@
 										<span></span>
 										<span></span>
 									</button>
-									<div class="dropdown-inner dropdown-grey-points_project">
+									<div class="dropdown-inner">
 										<ul>
 											<li>
 												<button>
-													<img src="sendText-20.svg" />
-													<span class="points-grey-text dropdown-text">Отправить текст всем актёрам</span>
-												</button>
-											</li>
-											<li>
-												<button>
-													<img src="download-arrow-pdf-20.svg" />
-													<span class="points-grey-text dropdown-text">Скачать проект в PDF</span>
-												</button>
-											</li>
-											<li>
-												<button>
-													<img src="email-20.svg" />
-													<span class="points-grey-text dropdown-text">Отправить по Email</span>
-												</button>
-											</li>
-											<li>
-												<button>
-													<img src="printer-20.svg" />
-													<span class="points-grey-text dropdown-text">Распечатать</span>
+													<img src="pencil-20.svg" />
+													<span class="points-grey-text dropdown-text">Редактировать</span>
 												</button>
 											</li>
 											<li>
@@ -744,19 +730,7 @@
 													<span class="points-grey-text dropdown-text">Удалить</span>
 												</button>
 											</li>
-											
-											
-											
 										</ul>
-									</div>
-									<div class="send_role_text__inner">
-										<div class="send_role_text-title">отправить текст роли</div>
-										<div class="drag-area mb-16">
-											<div class="text-dullGrey-small mb-4">Загрузите сюда файл с текстами для роли (txt, pdf, docx)</div>
-											<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
-										</div>
-										<div class="title-blackBluish-small mb-16">сообщение актёрам</div>
-										<button class="blue-btn --medium">Отправить</button>
 									</div>
 								</div>
 							</div>
@@ -777,9 +751,9 @@
 					<!-- End: main-header -->
 
 					<div class="main_project-container">
-					
+
 						<!-- Start: Main-wrapper -->
-						<div class="main-wrapper main_project-wrapper">
+						<div class="main-wrapper">
 							<div class="tabs-content">
 								<div class="tab-item">
 									<div class="main-items-wrapper main-items_project-wrapper">
@@ -818,7 +792,7 @@
 													</div>
 													<div class="dropdown-transfer-actors">
 														<div class="dropdown-transfer-actors-title">массовый перенос актёров</div>
-					
+	
 														<div class="switch__wrapper">
 															<div class="switch">
 																<span class="switch__slider"></span>
@@ -826,12 +800,12 @@
 																<button class="switch__item transfer-actors-btn-right" data-index="1">Количество</button>
 															</div>
 														</div>
-					
+	
 														<div class="transfer-actors-first">
 															<div class="transfer-actors-notification">Все актёры массовых сцен, будут автоматически перенесены из этой колонки в колонку «Одобренные»</div>
 															<button class="transfer-actors-notification-btn">Переместить</button>
 														</div>
-					
+	
 														<div class="transfer-actors-second d-none">
 															<div class="transfer-actors-range-slider">
 																<span class="transfer-output outputTransferOne"></span>
@@ -854,7 +828,7 @@
 																«Одобренные»</div>
 															<button class="transfer-actors-notification-btn">Переместить</button>
 														</div>
-					
+	
 														<button class="transfer-actors-close-btn">
 															<img src="x-close-16.svg" />
 														</button>
@@ -867,61 +841,74 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+	
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/ivan-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
+															<div class="card-info-top-content">
+																<div class="item-title">Иван Прусекин</div>
+																<div class="item-cityAge">
+																	<div class="item-cityAge-left">
+																		<div class="item-cityAge-title">Город</div>
+																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																	</div>
+																	
+																	<div class="item-cityAge-right">
+																		<div class="item-cityAge-title">Лет</div>
+																		<div class="item-cityAge-subtitle">36</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="main__item-card-btns">
+														<div class="main__item-card-btns-small">
+															<div class="card-btns-small-box">
+																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
+															</div>
+														</div>
+														<div class="main__item-card-btns-large">
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
+															</button>
+														</div>
+													</div>
+												</div>
+	
+												<div class="main__item-card --big-card">
+													<div class="main__item-card-info">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
 																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle js-cutText">Приморско-Ахтарск</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
 																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/leonid.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -931,13 +918,11 @@
 																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
 															</div>
 															<div class="card-btns-small-box">
-																<button class="chatCircle-btn">
-																	<img class="chatCircleDots-20" src="chatCircleDots-20.svg" />
-																	<div class="chatCircleCounter">2</div>
-																</button>
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20 " src="bookmarkSimple-20.svg" /></button>
+																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
 															</div>
 															<div class="card-btns-small-box --monitorPlay">
 																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
@@ -947,68 +932,32 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+	
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/paul-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Максим Феликс</div>
+																<div class="item-title">Paul Stormer</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle js-cutText">Воронеж Краснодар</div>
+																		<div class="item-cityAge-subtitle">Владивосток</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">31</div>
+																		<div class="item-cityAge-subtitle">38</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/maksim.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1031,100 +980,16 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn --accept">
+																Отложить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
-													<div class="main__item-card-info">
-														<div class="card-info-top">
-															<div class="card-info-top-content">
-																<div class="item-title">Dana Matranga</div>
-																<div class="item-cityAge">
-																	<div class="item-cityAge-left">
-																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">New York</div>
-																	</div>
-					
-																	<div class="item-cityAge-right">
-																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">27</div>
-																	</div>
-																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/maria.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
-															</div>
-														</div>
-													</div>
-													<div class="main__item-card-btns">
-														<div class="main__item-card-btns-small">
-															<div class="card-btns-small-box">
-																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box --monitorPlay">
-																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
-															</div>
-														</div>
-														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
-															</button>
-														</div>
-													</div>
-												</div>
-												<!-- End: карточка актёра -->
+	
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Младший брат</div>
@@ -1153,61 +1018,26 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+	
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Paul Stormer</div>
+																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Владивосток</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">38</div>
+																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/paul.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1218,30 +1048,33 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimpleBlue-20.svg" /></button>
+																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
 															</div>
-					
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
 															<div class="card-btns-small-box">
 																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+	
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
 												</div>
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Отец</div>
@@ -1258,61 +1091,26 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+	
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/ivan-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Фёдор Кусакин</div>
+																<div class="item-title">Иван Прусекин</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+																		<div class="item-cityAge-subtitle">Кишинёв</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">33</div>
+																		<div class="item-cityAge-subtitle">36</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/fedor.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1323,89 +1121,6 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
-															</div>
-					
-															<div class="card-btns-small-box">
-																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
-															</div>
-														</div>
-														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
-															</button>
-														</div>
-													</div>
-												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
-													<div class="main__item-card-info">
-														<div class="card-info-top">
-															<div class="card-info-top-content">
-																<div class="item-title">Luci Summer</div>
-																<div class="item-cityAge">
-																	<div class="item-cityAge-left">
-																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Москва</div>
-																	</div>
-					
-																	<div class="item-cityAge-right">
-																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">29</div>
-																	</div>
-																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/luci.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
-															</div>
-														</div>
-													</div>
-													<div class="main__item-card-btns">
-														<div class="main__item-card-btns-small">
-															<div class="card-btns-small-box">
-																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-																<div class="chatCircleCounter">3</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
@@ -1418,20 +1133,67 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn --return">
+																Отложить <span><img src="refresh-10.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+	
+												
+												<div class="main__item-card --big-card">
+													<div class="main__item-card-info">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/fedor-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
+															<div class="card-info-top-content">
+																<div class="item-title">Фёдор Кусакин</div>
+																<div class="item-cityAge">
+																	<div class="item-cityAge-left">
+																		<div class="item-cityAge-title">Город</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+																	</div>
+												
+																	<div class="item-cityAge-right">
+																		<div class="item-cityAge-title">Лет</div>
+																		<div class="item-cityAge-subtitle">33</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="main__item-card-btns">
+														<div class="main__item-card-btns-small">
+															<div class="card-btns-small-box">
+																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+															</div>
+												
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
+															</div>
+														</div>
+														<div class="main__item-card-btns-large">
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
+															</button>
+														</div>
+													</div>
+												</div>
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
 												</div>
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Дядя</div>
@@ -1448,61 +1210,26 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Иван Прусекин</div>
+																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">36</div>
+																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/ivan.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1513,6 +1240,7 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
@@ -1525,13 +1253,13 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
@@ -1577,7 +1305,7 @@
 													</div>
 													<div class="dropdown-transfer-actors">
 														<div class="dropdown-transfer-actors-title">массовый перенос актёров</div>
-					
+	
 														<div class="switch__wrapper">
 															<div class="switch">
 																<span class="switch__slider"></span>
@@ -1585,12 +1313,12 @@
 																<button class="switch__item transfer-actors-btn-right" data-index="1">Количество</button>
 															</div>
 														</div>
-					
+	
 														<div class="transfer-actors-first">
 															<div class="transfer-actors-notification">Все актёры массовых сцен, будут автоматически перенесены из этой колонки в колонку «Одобренные»</div>
 															<button class="transfer-actors-notification-btn">Переместить</button>
 														</div>
-					
+	
 														<div class="transfer-actors-second d-none">
 															<div class="transfer-actors-range-slider">
 																<span class="transfer-output outputTransferOne"></span>
@@ -1613,7 +1341,7 @@
 																«Одобренные»</div>
 															<button class="transfer-actors-notification-btn">Переместить</button>
 														</div>
-					
+	
 														<button class="transfer-actors-close-btn">
 															<img src="x-close-16.svg" />
 														</button>
@@ -1621,61 +1349,74 @@
 												</div>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+	
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/ivan-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
+															<div class="card-info-top-content">
+																<div class="item-title">Иван Прусекин</div>
+																<div class="item-cityAge">
+																	<div class="item-cityAge-left">
+																		<div class="item-cityAge-title">Город</div>
+																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																	</div>
+																	
+																	<div class="item-cityAge-right">
+																		<div class="item-cityAge-title">Лет</div>
+																		<div class="item-cityAge-subtitle">36</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="main__item-card-btns">
+														<div class="main__item-card-btns-small">
+															<div class="card-btns-small-box">
+																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
+															</div>
+														</div>
+														<div class="main__item-card-btns-large">
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
+															</button>
+														</div>
+													</div>
+												</div>
+	
+												<div class="main__item-card --big-card">
+													<div class="main__item-card-info">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
 																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle js-cutText">Приморско-Ахтарск</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
 																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/leonid.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1685,10 +1426,8 @@
 																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
 															</div>
 															<div class="card-btns-small-box">
-																<button class="chatCircle-btn">
-																	<img class="chatCircleDots-20" src="chatCircleDots-20.svg" />
-																	<div class="chatCircleCounter">2</div>
-																</button>
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
@@ -1701,68 +1440,32 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+	
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/paul-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Максим Феликс</div>
+																<div class="item-title">Paul Stormer</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle js-cutText">Воронеж Краснодар</div>
+																		<div class="item-cityAge-subtitle">Владивосток</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">31</div>
+																		<div class="item-cityAge-subtitle">38</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/maksim.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1785,100 +1488,16 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn --accept">
+																Отложить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
-													<div class="main__item-card-info">
-														<div class="card-info-top">
-															<div class="card-info-top-content">
-																<div class="item-title">Dana Matranga</div>
-																<div class="item-cityAge">
-																	<div class="item-cityAge-left">
-																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">New York</div>
-																	</div>
-					
-																	<div class="item-cityAge-right">
-																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">27</div>
-																	</div>
-																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/maria.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
-															</div>
-														</div>
-													</div>
-													<div class="main__item-card-btns">
-														<div class="main__item-card-btns-small">
-															<div class="card-btns-small-box">
-																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box --monitorPlay">
-																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
-															</div>
-														</div>
-														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
-															</button>
-														</div>
-													</div>
-												</div>
-												<!-- End: карточка актёра -->
+	
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Одобренные</div>
@@ -1902,61 +1521,26 @@
 												</div>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Paul Stormer</div>
+																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Владивосток</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">38</div>
+																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/paul.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -1967,30 +1551,33 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
 															</div>
-					
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
 															<div class="card-btns-small-box">
 																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
 												</div>
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Отложенные</div>
@@ -2002,10 +1589,13 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/fedor-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
 																<div class="item-title">Фёдор Кусакин</div>
 																<div class="item-cityAge">
@@ -2013,50 +1603,12 @@
 																		<div class="item-cityAge-title">Город</div>
 																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
+												
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
 																		<div class="item-cityAge-subtitle">33</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/fedor.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2068,77 +1620,42 @@
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
 															</div>
-															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+												
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
 															</div>
-					
 															<div class="card-btns-small-box">
 																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/ivan-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Luci Summer</div>
+																<div class="item-title">Иван Прусекин</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Москва</div>
+																		<div class="item-cityAge-subtitle">Кишинёв</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">29</div>
+																		<div class="item-cityAge-subtitle">36</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/luci.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2149,7 +1666,7 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-																<div class="chatCircleCounter">3</div>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
@@ -2162,20 +1679,20 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
 												</div>
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Отклонённые</div>
@@ -2187,61 +1704,26 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/paul-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Иван Прусекин</div>
+																<div class="item-title">Paul Stormer</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																		<div class="item-cityAge-subtitle">Владивосток</div>
 																	</div>
-					
+											
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">36</div>
+																		<div class="item-cityAge-subtitle">38</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/ivan.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2264,13 +1746,13 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn --accept">
+																Отложить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
@@ -2316,7 +1798,7 @@
 													</div>
 													<div class="dropdown-transfer-actors">
 														<div class="dropdown-transfer-actors-title">массовый перенос актёров</div>
-					
+	
 														<div class="switch__wrapper">
 															<div class="switch">
 																<span class="switch__slider"></span>
@@ -2324,12 +1806,12 @@
 																<button class="switch__item transfer-actors-btn-right" data-index="1">Количество</button>
 															</div>
 														</div>
-					
+	
 														<div class="transfer-actors-first">
 															<div class="transfer-actors-notification">Все актёры массовых сцен, будут автоматически перенесены из этой колонки в колонку «Одобренные»</div>
 															<button class="transfer-actors-notification-btn">Переместить</button>
 														</div>
-					
+	
 														<div class="transfer-actors-second d-none">
 															<div class="transfer-actors-range-slider">
 																<span class="transfer-output outputTransferOne"></span>
@@ -2352,7 +1834,7 @@
 																«Одобренные»</div>
 															<button class="transfer-actors-notification-btn">Переместить</button>
 														</div>
-					
+	
 														<button class="transfer-actors-close-btn">
 															<img src="x-close-16.svg" />
 														</button>
@@ -2360,61 +1842,73 @@
 												</div>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/ivan-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
+															<div class="card-info-top-content">
+																<div class="item-title">Иван Прусекин</div>
+																<div class="item-cityAge">
+																	<div class="item-cityAge-left">
+																		<div class="item-cityAge-title">Город</div>
+																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																	</div>
+											
+																	<div class="item-cityAge-right">
+																		<div class="item-cityAge-title">Лет</div>
+																		<div class="item-cityAge-subtitle">36</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="main__item-card-btns">
+														<div class="main__item-card-btns-small">
+															<div class="card-btns-small-box">
+																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
+															</div>
+														</div>
+														<div class="main__item-card-btns-large">
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
+															</button>
+														</div>
+													</div>
+												</div>
+											
+												<div class="main__item-card --big-card">
+													<div class="main__item-card-info">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
 																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle js-cutText">Приморско-Ахтарск</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
 																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/leonid.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2424,10 +1918,8 @@
 																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
 															</div>
 															<div class="card-btns-small-box">
-																<button class="chatCircle-btn">
-																	<img class="chatCircleDots-20" src="chatCircleDots-20.svg" />
-																	<div class="chatCircleCounter">2</div>
-																</button>
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
@@ -2440,68 +1932,32 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+											
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/paul-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Максим Феликс</div>
+																<div class="item-title">Paul Stormer</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle js-cutText">Воронеж Краснодар</div>
+																		<div class="item-cityAge-subtitle">Владивосток</div>
 																	</div>
-					
+											
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">31</div>
+																		<div class="item-cityAge-subtitle">38</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/maksim.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2524,100 +1980,15 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn --accept">
+																Отложить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
-													<div class="main__item-card-info">
-														<div class="card-info-top">
-															<div class="card-info-top-content">
-																<div class="item-title">Dana Matranga</div>
-																<div class="item-cityAge">
-																	<div class="item-cityAge-left">
-																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">New York</div>
-																	</div>
-					
-																	<div class="item-cityAge-right">
-																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">27</div>
-																	</div>
-																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/maria.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
-															</div>
-														</div>
-													</div>
-													<div class="main__item-card-btns">
-														<div class="main__item-card-btns-small">
-															<div class="card-btns-small-box">
-																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box --monitorPlay">
-																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
-															</div>
-														</div>
-														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
-															</button>
-														</div>
-													</div>
-												</div>
-												<!-- End: карточка актёра -->
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Одобренные</div>
@@ -2641,61 +2012,25 @@
 												</div>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Paul Stormer</div>
+																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Владивосток</div>
+																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">38</div>
+																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/paul.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2706,30 +2041,33 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
 															</div>
-					
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
 															<div class="card-btns-small-box">
 																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
 												</div>
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Отложенные</div>
@@ -2741,61 +2079,25 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/leonid-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Фёдор Кусакин</div>
+																<div class="item-title">Леонид Стоцкий</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
 																		<div class="item-cityAge-subtitle">Санкт-Петербург</div>
 																	</div>
-					
+																	
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">33</div>
+																		<div class="item-cityAge-subtitle">26</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/fedor.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -2806,89 +2108,7 @@
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
-															</div>
-					
-															<div class="card-btns-small-box">
-																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
-															</div>
-														</div>
-														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
-															</button>
-														</div>
-													</div>
-												</div>
-												<!-- End: карточка актёра -->
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
-													<div class="main__item-card-info">
-														<div class="card-info-top">
-															<div class="card-info-top-content">
-																<div class="item-title">Luci Summer</div>
-																<div class="item-cityAge">
-																	<div class="item-cityAge-left">
-																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Москва</div>
-																	</div>
-					
-																	<div class="item-cityAge-right">
-																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">29</div>
-																	</div>
-																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/luci.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
-															</div>
-														</div>
-													</div>
-													<div class="main__item-card-btns">
-														<div class="main__item-card-btns-small">
-															<div class="card-btns-small-box">
-																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
-															</div>
-															<div class="card-btns-small-box">
-																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
-																<div class="chatCircleCounter">3</div>
+																<div class="chatCircleCounter">2</div>
 															</div>
 															<div class="card-btns-small-box">
 																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
@@ -2901,20 +2121,67 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												<div class="main__item-card --big-card">
+													<div class="main__item-card-info">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/ivan-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
+															<div class="card-info-top-content">
+																<div class="item-title">Иван Прусекин</div>
+																<div class="item-cityAge">
+																	<div class="item-cityAge-left">
+																		<div class="item-cityAge-title">Город</div>
+																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																	</div>
+											
+																	<div class="item-cityAge-right">
+																		<div class="item-cityAge-title">Лет</div>
+																		<div class="item-cityAge-subtitle">36</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="main__item-card-btns">
+														<div class="main__item-card-btns-small">
+															<div class="card-btns-small-box">
+																<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+																<div class="chatCircleCounter">2</div>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+															</div>
+															<div class="card-btns-small-box --monitorPlay">
+																<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+															</div>
+															<div class="card-btns-small-box">
+																<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
+															</div>
+														</div>
+														<div class="main__item-card-btns-large">
+															<button class="card-large-btn">
+																Одобрить <span><img src="arrow-inBtn.svg" /></span>
+															</button>
+														</div>
+													</div>
+												</div>
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
 												</div>
 											</div>
 										</div>
-					
+	
 										<div class="main__item">
 											<div class="main__item-header">
 												<div class="item-title">Отклонённые</div>
@@ -2926,61 +2193,26 @@
 												</button>
 											</div>
 											<div class="main__item-inner">
-												<!-- Start: карточка актёра -->
-												<div class="main__item-card">
+												
+												<div class="main__item-card --big-card">
 													<div class="main__item-card-info">
-														<div class="card-info-top">
+														<div class="card-info-top-foto --big-foto">
+															<img src="images/paul-big.png" alt="user-foto" />
+														</div>
+														<div class="card-info-top --big-card">
 															<div class="card-info-top-content">
-																<div class="item-title">Иван Прусекин</div>
+																<div class="item-title">Paul Stormer</div>
 																<div class="item-cityAge">
 																	<div class="item-cityAge-left">
 																		<div class="item-cityAge-title">Город</div>
-																		<div class="item-cityAge-subtitle">Кишинёв</div>
+																		<div class="item-cityAge-subtitle">Владивосток</div>
 																	</div>
-					
+											
 																	<div class="item-cityAge-right">
 																		<div class="item-cityAge-title">Лет</div>
-																		<div class="item-cityAge-subtitle">36</div>
+																		<div class="item-cityAge-subtitle">38</div>
 																	</div>
 																</div>
-																<div class="item-tags-wrapper">
-																	<div class="item-tag">Horse Ride</div>
-																	<div class="item-tag">Fighting</div>
-																	<div class="item-tag">Bow</div>
-																	<div class="item-tag">Driving</div>
-																	<div class="item-tag">Medic</div>
-																	<div class="item-tag">Swiming</div>
-																	<div class="item-tag">Sex</div>
-																	<div class="number-tag-dropdown dropdown-wrapper">
-																		<div class="item-tag item-number-tag dropdown-btn">+4</div>
-																		<div class="number-tag-dropdown-wrapper dropdown-inner">
-																			<div class="item-tag item-tag-drop">Horse Ride</div>
-																			<div class="item-tag item-tag-drop">Fighting</div>
-																			<div class="item-tag item-tag-drop">Bow</div>
-																			<div class="item-tag item-tag-drop">Driving</div>
-																			<div class="item-tag item-tag-drop">Medic</div>
-																			<div class="item-tag item-tag-drop">Swiming</div>
-																			<div class="item-tag item-tag-drop">Sex</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="card-info-top-foto">
-																<img src="images/ivan.png" alt="user-foto" />
-															</div>
-														</div>
-														<div class="card-info-bottom">
-															<div class="card-info-bottom-item">
-																<img src="education-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Академия Баумана</div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
-															</div>
-															<div class="card-info-bottom-item">
-																<img src="film-icon-16.svg" />
-																<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
 															</div>
 														</div>
 													</div>
@@ -3003,13 +2235,13 @@
 															</div>
 														</div>
 														<div class="main__item-card-btns-large">
-															<button class="action-btn">
-																Действия <span><img src="arrow-down-blue4-8.svg" /></span>
+															<button class="card-large-btn --accept">
+																Отложить <span><img src="arrow-inBtn.svg" /></span>
 															</button>
 														</div>
 													</div>
 												</div>
-												<!-- End: карточка актёра -->
+												
 												<div class="drag-wrapper">
 													<img src="drag-over.svg" />
 													<span>Перетащите сюда карточку</span>
@@ -3019,48 +2251,44 @@
 									</div>
 								</div>
 							</div>
-					
 						</div>
 						<!-- End: Main-wrapper -->
-					
 						<div class="right__sidebar">
-							<div class="right__sidebar-inner">
-								<div class="right__sidebar_item">
-									<div class="right__sidebar_item_image">
-										<img src="images/sidebar-user-1.png" alt="user">
-									</div>
-									<div class="right__sidebar_item_title">Маша ФрейяФрейяФрейя</div>
-									<div class="item-cityAge">
-										<div class="item-cityAge-left">
-											<div class="item-cityAge-title">Город</div>
-											<div class="item-cityAge-subtitle">Приморско-Ахтарск</div>
-										</div>
-						
-										<div class="item-cityAge-right">
-											<div class="item-cityAge-title">Лет</div>
-											<div class="item-cityAge-subtitle">33</div>
-										</div>
-									</div>
-									<button class="addToProject-btn mt-8">Добавить в проект</button>
+							<div class="right__sidebar_item">
+								<div class="right__sidebar_item_image">
+									<img src="images/sidebar-user-1.png" alt="user">
 								</div>
-								<div class="right__sidebar_item">
-									<div class="right__sidebar_item_image">
-										<img src="images/sidebar-user-2.png" alt="user">
+								<div class="right__sidebar_item_title">Маша ФрейяФрейяФрейя</div>
+								<div class="item-cityAge">
+									<div class="item-cityAge-left">
+										<div class="item-cityAge-title">Город</div>
+										<div class="item-cityAge-subtitle">Приморско-Ахтарск</div>
 									</div>
-									<div class="right__sidebar_item_title">Алексей Сыромятников</div>
-									<div class="item-cityAge">
-										<div class="item-cityAge-left">
-											<div class="item-cityAge-title">Город</div>
-											<div class="item-cityAge-subtitle">Имеритинская низменность</div>
-										</div>
-						
-										<div class="item-cityAge-right">
-											<div class="item-cityAge-title">Лет</div>
-											<div class="item-cityAge-subtitle">37</div>
-										</div>
+	
+									<div class="item-cityAge-right">
+										<div class="item-cityAge-title">Лет</div>
+										<div class="item-cityAge-subtitle">33</div>
 									</div>
-									<button class="addToProject-btn mt-8">Добавить в проект</button>
 								</div>
+								<button class="addToProject-btn mt-8">Добавить в проект</button>
+							</div>
+							<div class="right__sidebar_item">
+								<div class="right__sidebar_item_image">
+									<img src="images/sidebar-user-2.png" alt="user">
+								</div>
+								<div class="right__sidebar_item_title">Алексей Сыромятников</div>
+								<div class="item-cityAge">
+									<div class="item-cityAge-left">
+										<div class="item-cityAge-title">Город</div>
+										<div class="item-cityAge-subtitle">Имеритинская низменность</div>
+									</div>
+	
+									<div class="item-cityAge-right">
+										<div class="item-cityAge-title">Лет</div>
+										<div class="item-cityAge-subtitle">37</div>
+									</div>
+								</div>
+								<button class="addToProject-btn mt-8">Добавить в проект</button>
 							</div>
 						</div>
 					</div>
