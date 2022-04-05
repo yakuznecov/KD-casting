@@ -1,4 +1,167 @@
 (function ($) {
+
+	const hideModalClickOutside = (parent, modalWrapper) => {
+		$(document).on('click', function (e) {
+			let field = $(parent);
+			if (!field.is(e.target) && field.has(e.target).length === 0) {
+				$(modalWrapper).removeClass('active');
+			}
+		});
+	}
+
+	const hideModalMouseoutOutside = (parent, modalWrapper) => {
+		$(document).on('mouseout', function (e) {
+			let field = $(parent);
+			if (!field.is(e.target) && field.has(e.target).length === 0) {
+				$(modalWrapper).removeClass('show');
+			}
+		});
+	}
+
+
+	// Start: show modal on hover
+	const showModal = (btn, modal) => {
+		$(btn).on('mouseover', function () {
+			$(modal).addClass('show');
+		});
+
+		hideModalMouseoutOutside('.dropdown-ensemble-wrapper-points_btn', '.dropdown-ensemble-points_modal');
+	};
+
+	showModal('.dropdown-ensemble__item-points_btn', '.dropdown-ensemble-points_modal');
+	// End: show modal on hover
+
+	// Start: smooth appearance of the block (display: none)
+	const smoothAppearanceBlock = (modal) => {
+		if (modal.hasClass('d-none')) {
+			modal.removeClass('d-none');
+			setTimeout(function () {
+				modal.removeClass('opacity-null');
+			}, 20);
+		} else {
+			modal.addClass('opacity-null');
+			modal.addClass('d-none');
+		}
+	}
+	// End: smooth appearance of the block (display: none)
+
+	// Start actions Modal on hover dynamic position
+	const actionsModal = () => {
+		const actionBtn = $('.action-btn');
+		const actionsModal = $('.dropdown-actions__modal');
+		const moveActorBtn = $('.move-actor_js');
+		const moveActorModal = $('.move-actor__modal');
+
+		actionBtn.mouseenter(function (e) {
+			e.stopPropagation();
+
+			let btnHeight = $(this).outerHeight();
+			let top = $(this).offset().top + $(this).outerHeight();
+			console.log(top);
+			let left = $(this).offset().left;
+			let win_h = $(window).height();
+
+			$(this).addClass('active');
+
+			function showModal(el) {
+				if (el.hasClass('d-none')) {
+					el.removeClass('d-none');
+					setTimeout(function () {
+						el.removeClass('opacity-null');
+					}, 20);
+				}
+
+				let moveActorModalHeight = moveActorModal.outerHeight();
+				console.log(moveActorModalHeight);
+
+				let actionsModalHeight = actionsModal.outerHeight();
+				console.log(actionsModalHeight);
+
+				if (win_h - top < actionsModalHeight) {
+					actionsModal.css({ top: top - actionsModalHeight - btnHeight - 1, left: left });
+				} else {
+					actionsModal.css({ top: top + 1, left: left });
+				}
+
+				if (win_h - top < moveActorModalHeight) {
+					moveActorModal.css({ top: top - moveActorModalHeight - btnHeight - 1, left: left });
+				} else {
+					moveActorModal.css({ top: top + 1, left: left });
+					console.log(moveActorModal.offset());
+				}
+			}
+
+			showModal(actionsModal);
+
+			moveActorBtn.click(function () {
+				showModal(moveActorModal);
+			});
+		});
+
+		$(document).mouseout(function (e) {
+			function hideModal(modal) {
+				modal.addClass('opacity-null');
+				modal.addClass('d-none');
+				$(modal).css('top', '');
+				$(modal).css('left', '');
+			}
+
+			if (
+				!actionsModal.is(e.target) &&
+				actionsModal.has(e.target).length === 0 &&
+				!actionBtn.is(e.target) &&
+				actionBtn.has(e.target).length === 0 &&
+				!moveActorModal.is(e.target) &&
+				moveActorModal.has(e.target).length === 0
+			) {
+				actionBtn.removeClass('active');
+				hideModal(actionsModal);
+				hideModal(moveActorModal);
+			}
+		});
+	};
+
+	actionsModal();
+	// End actions Modal on hover dynamic position
+
+	
+	// Start: custom select
+	$('.select-wrapper').each(function () {
+		let thisEl = $(this);
+		const selectField = thisEl.find('.selectField');
+		const selectText = thisEl.find('.selectField-text');
+		const list = thisEl.find('.selectField-list');
+		const options = thisEl.find('.selectField-options');
+		const icon = thisEl.find('.selectField-icon');
+	
+		selectField.click(function () {
+			$(this).toggleClass('open');
+			list.toggleClass('active');
+			icon.toggleClass('active');
+		});
+	
+		options.each(function () {
+			let el = $(this);
+			el.click(function () {
+				selectText.html(el.html()); // выбор текущего элемента и вставка
+				selectField.toggleClass('open');
+				list.toggleClass('active');
+				icon.toggleClass('active');
+			});
+		});
+	
+		$(document).click(function (e) {
+			let select = $('.select-wrapper');
+	
+			if (!select.is(e.target) && select.has(e.target).length === 0) {
+				selectField.removeClass('open');
+				list.removeClass('active');
+				icon.removeClass('active');
+			}
+		});
+	});
+	// End: custom select
+
 	$(function () {
 		const btnNext = $('.training-slider-btnNext');
 		const btnPrev = $('.training-slider-btnPrev');
@@ -409,6 +572,7 @@
 	addActiveHover('.sidebar-dropdown-calendar', '.sidebar-calendar-btn');
 	addActiveHover('.actor__profile-nav-btn', '.points-grey-btn-profile');
 	addActiveHover('.dropdown-request-js', '.dropdown-request-inner');
+	addActiveHover('.dropdown-request-js', '.main__item-project-modal');
 
 	// End: add/remove class active on hover -------------------------------------------------------------->
 
@@ -627,6 +791,7 @@
 		const sidebarTopBtns = $('.sidebar-top-btns');
 		const sidebarLeftBtns = $('.sidebar-left-btns');
 		const mainItemsWrapper = $('.main-items-wrapper');
+		const mainItemsProjectWrapper = $('.main-items_project-wrapper');
 		const wrapText = $('.wrap-text');
 
 		let isSidebarHidden = false;
@@ -648,11 +813,13 @@
 		});
 
 		function hideSidebar() {
-			mainItemsWrapper.addClass('active');
-			wrapText.addClass('active');
 			sidebarTabs.toggleClass('done');
 			sidebarHeaderTitle.toggleClass('done');
+			wrapText.addClass('active');
 			sidebarTopBtns.removeClass('active');
+			mainItemsWrapper.addClass('active'); // width 0.4s
+			sidebar.toggleClass('--rolled'); // transition: opacity 0.2s, flex 0.4s, width 0.4s;
+			mainItemsProjectWrapper.addClass('active'); // width 0.4s
 
 			setTimeout(function () {
 				sidebarBurger.toggleClass('done');
@@ -660,7 +827,6 @@
 				sidebarLeftBtns.addClass('active');
 			}, 100);
 
-			sidebar.toggleClass('--rolled');
 
 			sidebarBtnLeft.toggleClass('active');
 			sidebarBtnRight.toggleClass('active');
@@ -673,25 +839,24 @@
 		});
 
 		function showSidebar() {
-			mainItemsWrapper.removeClass('active');
+			mainItemsWrapper.removeClass('active'); // width 0.4s
+			sidebar.toggleClass('--rolled'); // transition: opacity 0.2s, flex 0.4s, width 0.4s;
+			
 			sidebarLeftBtns.removeClass('active');
 			sidebarBurger.toggleClass('done');
 			sidebarPlus.toggleClass('done');
+			sidebarBtnLeft.toggleClass('active');
+			sidebarBtnRight.toggleClass('active');
 
 			setTimeout(function () {
 				sidebarTopBtns.addClass('active');
 				wrapText.removeClass('active');
-			}, 280);
+			}, 400);
 
 			setTimeout(function () {
 				sidebarTabs.toggleClass('done');
 				sidebarHeaderTitle.toggleClass('done');
-			}, 280);
-
-			sidebar.toggleClass('--rolled');
-
-			sidebarBtnLeft.toggleClass('active');
-			sidebarBtnRight.toggleClass('active');
+			}, 400);
 
 			isSidebarHidden = false;
 		}
@@ -745,6 +910,10 @@
 		const mainInner = $('.main-inner');
 		const mainContainer = $('.main-container');
 		const mainItemsWrapper = $('.main-items-wrapper');
+		const mainItemsProjectWrapper = $('.main-items_project-wrapper');
+		const tabsInner = $('.tabs-inner');
+		const rightSidebarInner = $('.right__sidebar-inner');
+		const tabsProject = $('.tabs_project');
 
 		expandBtnOut.click(function () {
 			hideSidebar();
@@ -760,12 +929,13 @@
 		}
 
 		function hideSidebar() {
-			sidebar.addClass('opacity-null');
+			sidebar.addClass('opacity-null'); // transition: opacity .2s,flex .4s,width .4s,-ms-flex .4s;
 
 			sidebar.one('transitionend', function (e) {
 				sidebar.addClass('d-none');
 				main.addClass('no-transition');
-				mainInner.addClass('active');
+				mainInner.addClass('active'); // transition: width .3s;	
+				tabsInner.addClass('active');
 
 				if (sidebar.hasClass('--rolled')) {
 					main.addClass('shortSidebar');
@@ -775,14 +945,19 @@
 
 				setTimeout(function () {
 					main.removeClass('no-transition');
-					main.addClass('active');
-					mainItemsWrapper.removeClass('active');
-					mainItemsWrapper.addClass('expanded');
+					main.addClass('active'); // transition: padding-left .4s;
+					mainItemsWrapper.removeClass('active'); // transition: width .4s;
+					mainItemsWrapper.addClass('expanded'); // transition: width .4s;
+					mainItemsProjectWrapper.addClass('expanded'); // transition: width .4s;
+					
 				}, 200);
 
 				setTimeout(function () {
-					mainContainer.addClass('isWorkspace');
+					mainContainer.addClass('isWorkspace'); // transition: padding-top .3s;
 					mainItemsWrapper.addClass('expanded_height');
+					mainItemsProjectWrapper.addClass('expanded_height');
+					rightSidebarInner.addClass('active');
+					tabsProject.addClass('active'); // transition: 0.2s;
 
 					changeBtn();
 				}, 1000);
@@ -792,12 +967,16 @@
 		function showSidebar() {
 			if (sidebar.hasClass('d-none')) {
 				mainContainer.removeClass('isWorkspace');
+				tabsProject.removeClass('active');
 				mainItemsWrapper.removeClass('expanded_height');
+				mainItemsProjectWrapper.removeClass('expanded_height');
+				rightSidebarInner.removeClass('active');
 
 				setTimeout(function () {
 					if (sidebar.hasClass('--rolled')) {
 						main.removeClass('active');
 						mainItemsWrapper.addClass('active');
+						mainItemsProjectWrapper.addClass('active');
 					} else {
 						main.addClass('notSidebar');
 						main.removeClass('shortSidebar');
@@ -806,12 +985,14 @@
 
 				setTimeout(function () {
 					mainInner.removeClass('active');
+					tabsInner.removeClass('active');
 					main.removeClass('active');
 				}, 400);
 
 				setTimeout(function () {
 					mainItemsWrapper.removeClass('expanded');
-				}, 500);
+					mainItemsProjectWrapper.removeClass('expanded');
+				}, 400);
 
 				setTimeout(function () {
 					main.removeClass('notSidebar');
@@ -846,6 +1027,33 @@
 	addActiveBorderFocus('.main-header-top-search input', '.main-header-top-search');
 
 	// End: add/remove border active focus
+
+	// Start: show and Hide Modal With Close Btn
+	const showHideModalWithCloseBtn = (textEl, modal, closeBtn) => {
+		$(textEl).click(function () {
+			$(modal).addClass('active');
+		});
+
+		$(closeBtn).click(function () {
+			$(modal).removeClass('active');
+		});
+
+		$(modal).mouseover(function (e) {
+			e.stopPropagation();
+		});
+
+		hideModalClickOutside('.dropdown-grey-points', '.send_role_text__inner');
+		hideModalClickOutside('.dropdown-grey-points', '.send_project_pdf__inner');
+		hideModalClickOutside('.dropdown-request-js', '.create_copy_column__inner');
+		hideModalClickOutside('.dropdown-request-js', '.change_column_name-modal');
+	}
+
+	showHideModalWithCloseBtn('.sendText-js', '.send_role_text__inner', '.send_role_text-close-btn'); // send role text project
+	showHideModalWithCloseBtn('.sendProjectEmail-js', '.send_project_pdf__inner', '.send_project_pdf-close-btn'); // send project pdf
+	showHideModalWithCloseBtn('.dublicate-column-js', '.create_copy_column__inner', '.create_copy_column-close-btn'); // create copy column
+	showHideModalWithCloseBtn('.rename-js', '.change_column_name-modal', '.change_column_name-close-btn'); // change column name
+
+	// End: show and Hide Modal With Close Btn
 
 	$(function () {
 		$('.dropdown-text-js').click(function () {

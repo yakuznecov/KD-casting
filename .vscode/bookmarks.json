@@ -1,36 +1,91 @@
 {
 	"files": [
 		{
-			"path": "src/project-data.html",
+			"path": "src/scss/_projects.scss",
 			"bookmarks": [
 				{
-					"line": 610,
+					"line": 7,
+					"column": 13,
+					"label": ""
+				},
+				{
+					"line": 14,
+					"column": 15,
+					"label": ""
+				},
+				{
+					"line": 205,
 					"column": 29,
 					"label": ""
 				},
 				{
-					"line": 623,
-					"column": 38,
+					"line": 249,
+					"column": 17,
+					"label": ""
+				},
+				{
+					"line": 258,
+					"column": 23,
+					"label": ""
+				},
+				{
+					"line": 631,
+					"column": 31,
+					"label": ""
+				},
+				{
+					"line": 921,
+					"column": 32,
 					"label": ""
 				}
 			]
 		},
 		{
-			"path": "src/scss/_projects.scss",
+			"path": "src/project-data.html",
 			"bookmarks": [
 				{
-					"line": 141,
-					"column": 29,
+					"line": 2514,
+					"column": 50,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/nav.scss",
+			"bookmarks": [
+				{
+					"line": 452,
+					"column": 21,
 					"label": ""
 				},
 				{
-					"line": 172,
-					"column": 17,
+					"line": 562,
+					"column": 15,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_btn.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 14,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/scss/_sidebar.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 10,
 					"label": ""
 				},
 				{
-					"line": 181,
-					"column": 23,
+					"line": 23,
+					"column": 19,
 					"label": ""
 				}
 			]

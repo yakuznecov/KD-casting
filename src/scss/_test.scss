@@ -1,0 +1,50 @@
+.test__container {
+	max-width: 1800px;
+	margin: 0 auto;
+	padding: 0 24px;
+	user-select: text;
+}
+
+.test__container-text {
+	margin-left: 8px;
+}
+
+.teamwork__dropdown__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 40px;
+}
+
+.teamwork__dropdown__item-content {
+	display: flex;
+	align-items: center;
+}
+
+.teamwork__dropdown__item-user {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 12px;
+}
+
+.teamwork__dropdown__item-data-name {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	margin-bottom: 4px;
+	color: #424242;
+}
+
+.teamwork__dropdown__item-data-status {
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.4px;
+	color: #9E9E9E;
+}
+
+.teamwork__dropdown__item-role {
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	color: #9E9E9E;
+}

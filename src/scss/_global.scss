@@ -136,6 +136,15 @@
     color: #70a8dd;
 }
 
+.modal_title_12 {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 14px;
+	letter-spacing: 0.4px;
+	color: #a0afbb;
+}
+
 .title-blackBluish-small {
     font-size: 12px;
     line-height: 14px;
@@ -487,7 +496,8 @@
             color: #9e9e9e;
         }
     }
-    &:hover {
+
+	&:hover {
         border: 1px solid #bdbdbd;
     }
     &:focus-within {
@@ -535,6 +545,10 @@
         border: 2px solid rgba(223, 130, 130, 0.7);
         padding: 11px 6px 11px 11px;
     }
+
+	&.--project {
+		height: 112px;
+	}
 }
 
 .area-field {

@@ -118,3 +118,94 @@
 	display: flex;
 	transition: all 0.2s;
 }
+
+// custom select
+
+.select-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.selectField {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 9px 6px 9px 12px;
+	width: 100%;
+	height: 40px;
+	background: #fafafa;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	cursor: pointer;
+
+	&.--h-32 {
+		height: 32px;
+	}
+
+	&:hover {
+		border: 1px solid #bdbdbd;
+		& .selectField-icon path {
+			fill: #9e9e9e;
+		}
+	}
+
+	&.open {
+		padding: 8px 5px 8px 11px;
+		border: 2px solid rgba(112, 168, 221, 0.7);
+	}
+}
+
+.selectField-text {
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	color: #9e9e9e;
+}
+
+.selectField-icon.active path {
+	fill: #9e9e9e;
+}
+
+.selectField-list {
+	position: absolute;
+	top: 42px;
+	left: 0;
+	width: 100%;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0 8px 36px rgba(0, 0, 0, 0.16);
+	padding: 8px;
+	border-radius: 4px;
+	background: #fff;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 99;
+	transition: opacity 0.2s;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.--small {
+		top: 34px;
+	}
+}
+
+.selectField-options {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	padding: 12px;
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	color: #424242;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	background: #fafafa;
+	border-radius: 4px;
+	cursor: pointer;
+
+	&.--h-32 {
+		height: 32px;
+	}
+}

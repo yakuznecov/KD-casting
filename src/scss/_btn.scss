@@ -1,3 +1,99 @@
+.primary-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	height: 40px;
+	letter-spacing: 0.5px;
+	border-radius: 4px;
+	border: 2px solid transparent;
+	color: #fff;
+	background: #1991eb;
+	transition: 0.2s ease all;
+
+	&.--h-32 {
+		height: 32px;
+	}
+
+	&.--fs-15 {
+		font-size: 15px;
+	}
+
+	&.--br-8 {
+		border-radius: 8px;
+	}
+
+	&.--create-project {
+		min-width: 165px;
+	}
+
+	&.--light-blue {
+		color: #1991eb;
+		background: #dbedff;
+
+		@media (hover: hover) {
+			&:hover {
+				background: #a0cfff;
+			color: #127fd1;
+			}
+		}
+		
+		&:active {
+			background: #a0cfff;
+			color: #127fd1;
+		}
+	}
+
+	&.--pink {
+		color: #D65F5F;
+		background: #F7E0E0;
+
+		@media (hover: hover) {
+			&:hover {
+				color: #B82F2F;
+				background: #EBB1B1;
+			}
+		}
+		
+		&:active {
+			color: #B82F2F;
+			background: #EBB1B1;
+		}
+	}
+	
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			background: #127fd1;
+		}
+	}
+	
+	&:active {
+		background: #127fd1;
+	}
+}
+
+.small-text-btn {
+    font-size: 12px;
+	line-height: 14px;
+    letter-spacing: 0.4px;
+	color: #70A8DD;
+
+	@media (hover: hover) {
+		&:hover {
+			color: #106db3;
+		}
+	}
+
+    &:active {
+        color: #106db3;
+    }
+}
+
 .square-btn-32 {
 	display: inline-flex;
 	align-items: center;
@@ -7,6 +103,8 @@
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 }
+
+
 
 .blue-btn {
 	display: inline-flex;
@@ -310,17 +408,17 @@
 // Счетчик в хедере карточки на главной
 .item-counter {
 	display: inline-flex;
+	align-items: center;
 	justify-content: center;
 	font-size: 12px;
 	font-weight: 500;
-	line-height: 20px;
-	padding: 0 6px;
+	padding-top: 1px;
 	height: 20px;
-	color: #bdbdbd;
 	min-width: 20px;
 	letter-spacing: 0.4px;
 	border: 1px solid #bdbdbd;
 	border-radius: 4px;
+	color: #bdbdbd;
 	background: #fafafa;
 }
 
@@ -511,35 +609,7 @@
 	min-width: 106px;
 }
 
-.primary-btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	height: 40px;
-	font-size: 16px;
-	letter-spacing: 0.5px;
-	padding: 0 24px;
-	border-radius: 4px;
-	border: 2px solid transparent;
-	color: #fff;
-	background: #1991eb;
-	transition: 0.2s ease all;
 
-	&:focus-visible {
-		background: #1991eb;
-		border: 2px solid #7bb9f0;
-	}
-
-	@media (min-width: 1025px) {
-		&:hover {
-			background: #127fd1;
-		}
-	}
-
-	&:active {
-		background: #127fd1;
-	}
-}
 
 .white-btn-48 {
 	display: inline-flex;
@@ -553,7 +623,8 @@
 	background: #fff;
 }
 
-.transfer-actors-close-btn {
+.transfer-actors-close-btn,
+.create_copy_column-close-btn {
 	position: absolute;
 	top: 8px;
 	right: 8px;

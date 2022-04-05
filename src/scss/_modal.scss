@@ -1,0 +1,78 @@
+// Start: list__modal
+
+.list__modal {
+	padding: 8px;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 8px;
+	z-index: 200;
+	background-color: #fff;
+	transition: all 0.2s;
+}
+
+.list__modal .list__modal-item {
+	display: flex;
+	align-items: center;
+	height: 32px;
+    padding: 0px 12px;
+	cursor: pointer;
+
+	&:hover {
+		background: #f2f2f2;
+		border-radius: 4px;
+	}
+}
+
+.list__modal-item-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.list__modal-item-title {
+	font-size: 14px;
+    letter-spacing: .25px;
+    color: #424242;
+}
+
+// End: list__modal
+
+// Start: small-list__modal
+
+.small-list__modal {
+	width: 145px;
+	padding: 8px;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	z-index: 200;
+	background-color: #fff;
+	transition: all 0.2s;
+}
+
+.small-list__modal .small-list__modal-item {
+	display: flex;
+	align-items: center;
+	height: 32px;
+    padding: 0px 12px;
+	cursor: pointer;
+
+	&:hover {
+		background: #f2f2f2;
+		border-radius: 4px;
+	}
+}
+
+.small-list__modal-item-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.small-list__modal-item-title {
+	font-size: 14px;
+    letter-spacing: .25px;
+    color: #616161;
+}
+
+// End: small-list__modal

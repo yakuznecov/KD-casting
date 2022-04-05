@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>project-add-actor</title>
+		<link rel="stylesheet" href="css/nav.min.css" />
+	</head>
+	<body>
+		@@include('header.html')
+		<div class="main-container">
+			<div class="project__addActor-container">
+				<div class="create__form-head create__form-head-filter">
+					<div class="title__dropdown">
+						<button class="title__dropdown-btn">
+							<span class="title__dropdown-text">Добавить Актёра</span>
+								<img class="title__dropdown-arrow" src="arrow-down-6-12.svg" />
+						</button>
+						<div class="create__form-title-modal title__dropdown-inner list__modal">
+							<ul>
+								<li class="list__modal-item">
+									<button class="list__modal-item-btn">
+										<span class="list__modal-item-title">Добавить Актёра</span>
+									</button>
+								</li>
+								<li class="list__modal-item">
+									<button class="list__modal-item-btn">
+										<span class="list__modal-item-title">Добавить Гостевого актёра</span>
+									</button>
+								</li>
+								<li class="list__modal-item">
+									<button class="list__modal-item-btn">
+										<span class="list__modal-item-title">Добавить Избранного актёра</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<button class="close-btn-32">
+						<img src="x-close-20.svg" />
+					</button>
+				</div>
+				<div class="create__casting-wrapper">
+					<div class="create__casting-left">
+						<div class="create__casting-filter configurable-role mb-20">
+							<div class="create__casting-filter-head">
+								<div class="text-blackBrown-regular">Настраиваемая роль</div>
+							</div>
+
+							<div class="dropdown-sum-select dropdown-config-role">
+								<div class="dropdown-sum-select-inner --config-role">
+									<span class="dropdown-config-role-title">Брат</span>
+									<span class="dropdown-config-role-text">Семья Петровых</span>
+								</div>
+								<div class="dropdown-sum-select-icon"><img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" /></div>
+								<ul class="dropdown-select-items dropdown-config-role-items inactive">
+									<li class="dropdown-config-role-item" data-option="1">
+										<span class="dropdown-config-role-item-title">Брат</span>
+										<span class="dropdown-config-role-item-text">Семья Петровых</span>
+									</li>
+									<li class="dropdown-config-role-item" data-option="2">
+										<span class="dropdown-config-role-item-title">Соседка</span>
+										<span class="dropdown-config-role-item-text">Второстепенные роли</span>
+									</li>
+									<li class="dropdown-config-role-item" data-option="3">
+										<span class="dropdown-config-role-item-title">Главная роль</span>
+										<span class="dropdown-config-role-item-text">Звёздные актёры</span>
+									</li>
+								</ul>
+								<input type="hidden" value="null" />
+							</div>
+						</div>
+						<div class="create__casting-filter sidebar-filter">
+							<div class="create__casting-filter-head">
+								<div class="text-blackBrown-regular">Фильтры</div>
+								<button class="create__casting-filter-head-btn">очистить</button>
+							</div>
+							<div class="spoiler">
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="map-icon-20.svg" />
+										<span class="spoiler-item-title">Территория</span>
+										<span class="number-filter-select">(3)</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="switch__wrapper mb-16 mt-13">
+											<div class="switch">
+												<span class="switch__slider"></span>
+												<button class="switch__item spoiler-item-location-left" data-index="0">Город</button>
+												<button class="switch__item spoiler-item-location-middle" data-index="1">Страна</button>
+												<button class="switch__item spoiler-item-location-right" data-index="2">Мир</button>
+											</div>
+										</div>
+										<div class="spoiler-item-location-city">
+											<div class="input-box">
+												<input type="text" placeholder="Введите название города" />
+											</div>
+											<div class="spoiler-item-tags">
+												<div class="spoiler-item-tag">Санкт-Петербург</div>
+												<div class="spoiler-item-tag">Москва</div>
+												<div class="spoiler-item-tag">Владивосток</div>
+											</div>
+										</div>
+										<div class="spoiler-item-location-country d-none">
+											<div class="input-box">
+												<input type="text" placeholder="Введите название страны" />
+											</div>
+											<div class="spoiler-item-tags">
+												<div class="spoiler-item-tag">Россия</div>
+												<div class="spoiler-item-tag">США</div>
+												<div class="spoiler-item-tag">Италия</div>
+											</div>
+										</div>
+										<div class="spoiler-item-location-world d-none">
+											<div class="input-box">
+												<input type="text" placeholder="Введите название" />
+											</div>
+											<div class="spoiler-item-tags">
+												<div class="spoiler-item-tag">Выбраны все страны и города</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="users-20.svg" />
+										<span class="spoiler-item-title">Пол и возраст</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="spoiler-item-body-content-gender">
+											<div class="text-blackBluish-small mb-7">Пол</div>
+											<div class="checkbox-button mb-8">
+												<input type="radio" class="checkbox-main" id="spoiler-gender-male" name="radio-gender" />
+												<label for="spoiler-gender-male" class="label-main">Мужской</label>
+											</div>
+											<div class="checkbox-button mb-8">
+												<input type="radio" class="checkbox-main" id="spoiler-gender-female" name="radio-gender" />
+												<label for="spoiler-gender-female" class="label-main">Женский</label>
+											</div>
+											<div class="checkbox-button attention-dropdown">
+												<input type="radio" class="checkbox-main" id="spoiler-gender-other" name="radio-gender" />
+												<label for="spoiler-gender-other" class="label-main">Другой</label>
+												<div class="attention-dropdown-text">Обратите внимание, это не выбор мужского и женского пола вместе</div>
+											</div>
+										</div>
+										<div class="spoiler-item-body-content-age">
+											<div class="text-blackBluish-small">Возраст</div>
+											<div class="spoiler-item-body-content-fields">
+												<div class="input-box">
+													<input type="number" placeholder="От" />
+												</div>
+												<div class="input-box ml-6">
+													<input type="number" placeholder="До" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="userRectangle-20.svg" />
+										<span class="spoiler-item-title">Внешность</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="spoiler-item-body-content-height">
+											<div class="text-blackBluish-small">рост (см)</div>
+											<div class="spoiler-item-body-content-fields mb-12">
+												<div class="input-box">
+													<input type="number" placeholder="От" />
+												</div>
+												<div class="input-box ml-6">
+													<input type="number" placeholder="До" />
+												</div>
+											</div>
+											<div class="text-blackBluish-small">вес (кг)</div>
+											<div class="spoiler-item-body-content-fields">
+												<div class="input-box">
+													<input type="number" placeholder="От" />
+												</div>
+												<div class="input-box ml-6">
+													<input type="number" placeholder="До" />
+												</div>
+											</div>
+											<div class="spoiler-item-body-content-select">
+												<div class="dropdown-select mb-8">
+													<button class="dropdown-select-btn">
+														Телосложение
+														<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+													</button>
+													<div class="dropdown-select-menu dropdown-fixed-menu">
+														<div class="dropdown-fixed-menu-header">
+															<div class="text-lightGrey-small-high mb-16">Выберите вырианты из списка или добавьте через поиск</div>
+															<div class="input-box">
+																<input type="text" placeholder="Поиск" />
+															</div>
+														</div>
+
+														<ul class="dropdown-fixed-menu-inner mt-16">
+															<li class="dropdown-fixed-menu-item">Худое</li>
+															<li class="dropdown-fixed-menu-item --active">
+																Стройное
+																<img class="check-black" src="check-black-12.svg" />
+															</li>
+															<li class="dropdown-fixed-menu-item">Среднее</li>
+															<li class="dropdown-fixed-menu-item">Атлетичное</li>
+															<li class="dropdown-fixed-menu-item">Полное</li>
+															<li class="dropdown-fixed-menu-item">Лишний вес</li>
+															<li class="dropdown-fixed-menu-item">Бодибилдер</li>
+														</ul>
+														<div class="dropdown-fixed-menu-footer">
+															<button class="blue-btn --medium dropdown-fixed-menu-footer-btn">Применить</button>
+														</div>
+													</div>
+												</div>
+												<div class="dropdown-select mb-8">
+													<button class="dropdown-select-btn">
+														Цвет волос
+														<span class="number-filter-select">(4)</span>
+														<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+													</button>
+													<div class="dropdown-select-menu dropdown-fixed-menu">
+														<div class="dropdown-fixed-menu-header">
+															<div class="text-lightGrey-small-high mb-16">Выберите вырианты из списка или добавьте через поиск</div>
+															<div class="input-box">
+																<input type="text" placeholder="Поиск" />
+															</div>
+														</div>
+
+														<ul class="dropdown-fixed-menu-inner mt-16">
+															<li class="dropdown-fixed-menu-item --active">
+																Тёмные
+																<img class="check-black" src="check-black-12.svg" />
+															</li>
+															<li class="dropdown-fixed-menu-item --active">
+																Светлые
+																<img class="check-black" src="check-black-12.svg" />
+															</li>
+															<li class="dropdown-fixed-menu-item">Окрашенные</li>
+															<li class="dropdown-fixed-menu-item">Хаки</li>
+															<li class="dropdown-fixed-menu-item">Розовые</li>
+															<li class="dropdown-fixed-menu-item">Тёмные</li>
+															<li class="dropdown-fixed-menu-item">Рыжие</li>
+															<li class="dropdown-fixed-menu-item">Русые</li>
+														</ul>
+														<div class="dropdown-fixed-menu-footer">
+															<button class="blue-btn --medium dropdown-fixed-menu-footer-btn">Применить</button>
+														</div>
+													</div>
+												</div>
+												<div class="dropdown-select mb-8">
+													<button class="dropdown-select-btn">
+														Длина волос
+														<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+													</button>
+													<div class="dropdown-select-menu dropdown-fixed-menu">
+														<div class="dropdown-fixed-menu-header">
+															<div class="text-lightGrey-small-high mb-16">Выберите вырианты из списка или добавьте через поиск</div>
+															<div class="input-box">
+																<input type="text" placeholder="Поиск" />
+															</div>
+														</div>
+
+														<ul class="dropdown-fixed-menu-inner mt-16">
+															<li class="dropdown-fixed-menu-item --active">
+																Короткие
+																<img class="check-black" src="check-black-12.svg" />
+															</li>
+
+															<li class="dropdown-fixed-menu-item">Средние (до плеч)</li>
+															<li class="dropdown-fixed-menu-item">Длинные</li>
+															<li class="dropdown-fixed-menu-item">Отсутствуют</li>
+														</ul>
+														<div class="dropdown-fixed-menu-footer">
+															<button class="blue-btn --medium dropdown-fixed-menu-footer-btn">Применить</button>
+														</div>
+													</div>
+												</div>
+												<div class="dropdown-select">
+													<button class="dropdown-select-btn">
+														Тип внешности
+														<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+													</button>
+													<div class="dropdown-select-menu dropdown-fixed-menu">
+														<div class="dropdown-fixed-menu-header">
+															<div class="text-lightGrey-small-high mb-16">Выберите вырианты из списка или добавьте через поиск</div>
+															<div class="input-box">
+																<input type="text" placeholder="Поиск" />
+															</div>
+														</div>
+
+														<ul class="dropdown-fixed-menu-inner mt-16">
+															<li class="dropdown-fixed-menu-item --active">
+																Славянский
+																<img class="check-black" src="check-black-12.svg" />
+															</li>
+
+															<li class="dropdown-fixed-menu-item">Европейский</li>
+															<li class="dropdown-fixed-menu-item">Азиатский</li>
+															<li class="dropdown-fixed-menu-item">Арабский</li>
+															<li class="dropdown-fixed-menu-item">Африканский</li>
+															<li class="dropdown-fixed-menu-item">Еврейский</li>
+															<li class="dropdown-fixed-menu-item">Индийский</li>
+															<li class="dropdown-fixed-menu-item">Кавказский</li>
+															<li class="dropdown-fixed-menu-item">Латино</li>
+															<li class="dropdown-fixed-menu-item">Метис</li>
+															<li class="dropdown-fixed-menu-item">Мулат</li>
+															<li class="dropdown-fixed-menu-item">Другой</li>
+														</ul>
+														<div class="dropdown-fixed-menu-footer">
+															<button class="blue-btn --medium dropdown-fixed-menu-footer-btn">Применить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="globus-20.svg" />
+										<span class="spoiler-item-title">Языки</span>
+										<span class="number-filter-select">(5)</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="dropdown-select mb-8 mt-8">
+											<button class="dropdown-select-btn">
+												Выберите язык
+												<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+											</button>
+											<div class="dropdown-select-menu dropdown-fixed-menu">
+												<div class="dropdown-fixed-menu-header">
+													<div class="text-lightGrey-small-high mb-16">Выберите вырианты из списка или добавьте через поиск</div>
+													<div class="input-box">
+														<input type="text" placeholder="Поиск" />
+													</div>
+												</div>
+
+												<ul class="dropdown-fixed-menu-inner mt-16">
+													<li class="dropdown-fixed-menu-item --active">
+														Русский
+														<img class="check-black" src="check-black-12.svg" />
+													</li>
+													<li class="dropdown-fixed-menu-item">Английский</li>
+													<li class="dropdown-fixed-menu-item">Французский</li>
+													<li class="dropdown-fixed-menu-item">Немецкий</li>
+													<li class="dropdown-fixed-menu-item">Испанский</li>
+													<li class="dropdown-fixed-menu-item">Итальянский</li>
+													<li class="dropdown-fixed-menu-item">Украинский</li>
+													<li class="dropdown-fixed-menu-item">Белорусский</li>
+													<li class="dropdown-fixed-menu-item">Японский</li>
+													<li class="dropdown-fixed-menu-item">Китайский</li>
+												</ul>
+												<div class="dropdown-fixed-menu-footer">
+													<button class="blue-btn --medium dropdown-fixed-menu-footer-btn">Применить</button>
+												</div>
+											</div>
+										</div>
+										<div class="spoiler-item-tags">
+											<div class="spoiler-item-tag">Русский</div>
+											<div class="spoiler-item-tag">Английский</div>
+											<div class="spoiler-item-tag">Французский</div>
+										</div>
+									</div>
+								</div>
+								<div class="spoiler-item">
+									<div class="spoiler-item-header">
+										<img class="spoiler-item-header-icon" src="sliders-horizontal-20.svg" />
+										<span class="spoiler-item-title">Дополнительно</span>
+										<img class="spoiler-item-icon" src="caret-down-12.svg" />
+									</div>
+									<div class="spoiler-item-body">
+										<div class="spoiler-item-body-shot">
+											<div class="text-blackBluish-small mb-7">съёмка без одежды</div>
+											<div class="checkbox-select mb-8">
+												<input type="checkbox" class="checkbox-select-main" id="checkbox-select-breast" name="radio-gender" />
+												<label for="checkbox-select-breast" class="checkbox-select-label-main">Грудь</label>
+											</div>
+											<div class="checkbox-select mb-8">
+												<input type="checkbox" class="checkbox-select-main" id="checkbox-select-back" name="radio-gender" />
+												<label for="checkbox-select-back" class="checkbox-select-label-main">Со спины</label>
+											</div>
+											<div class="checkbox-select">
+												<input type="checkbox" class="checkbox-select-main" id="checkbox-select-total" name="radio-gender" />
+												<label for="checkbox-select-total" class="checkbox-select-label-main">Полностью</label>
+											</div>
+										</div>
+										<div class="spoiler-item-body-special">
+											<div class="text-blackBluish-small mb-8">особенные актёры</div>
+											<div class="checkbox-select">
+												<input type="checkbox" class="checkbox-select-main" id="checkbox-select-limited" name="radio-gender" />
+												<label for="checkbox-select-limited" class="checkbox-select-label-main">Ограниченные возможнос...</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

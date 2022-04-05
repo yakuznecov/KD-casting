@@ -18,6 +18,8 @@
 @import 'radio-input-checkbox';
 @import 'spoiler';
 @import 'custom-select';
+@import 'modal';
+@import 'test';
 
 html,
 body {
@@ -39,7 +41,7 @@ body {
 /* main kinolift */
 
 .main-container {
-	padding-top: 142px;
+	padding-top: 143px;
 	overflow: hidden;
 	user-select: none;
 	transition: padding-top 0.3s;
@@ -162,10 +164,6 @@ body {
 .menu-brand {
 	margin: 0 72px 0 0;
 	flex: 0 0 auto;
-}
-
-.menu-brand svg {
-	width: 137px;
 }
 
 /* End: Menu burger */
@@ -457,9 +455,10 @@ body {
 	height: calc(100vh - 263px);
 	width: calc(100vw - 407px);
 	overflow: overlay;
+	// overflow-y: hidden;
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
-	transition: width 0.3s;
+	transition: width 0.4s;
 
 	&.expanded {
 		width: calc(100vw - 31px);
@@ -505,7 +504,7 @@ body {
 }
 
 .main-items-wrapper.--rolled {
-	width: calc(100vw - 160px);
+	width: calc(100vw - 159px);
 }
 
 .main__item {
@@ -553,7 +552,7 @@ body {
 .main__item-header {
 	display: flex;
 	align-items: center;
-	padding: 19px 16px 0 24px;
+	padding: 19px 16px 0 25px;
 	margin-bottom: 23px;
 }
 
@@ -585,7 +584,7 @@ body {
 // Start: Sidebar castings
 
 .sidebar__castings {
-	margin-top: 35px;
+	margin-top: 24px;
 	height: calc(100vh - 404px);
 	padding-right: 22px;
 	overflow-y: auto;

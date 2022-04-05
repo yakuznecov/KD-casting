@@ -5,7 +5,7 @@
     flex: 0 0 376px;
     padding: 0 12px 0 40px;
     // transition: all 0.2s linear;
-    transition: opacity 0.2s, flex 0.3s, width 0.3s;
+    transition: opacity 0.2s, flex 0.4s, width 0.4s;
 }
 
 .sidebar-plus {
@@ -34,6 +34,7 @@
     }
     & .sidebar-header-buttons {
         margin-left: 0;
+		margin-right: 0;
     }
 
     & .sidebar-dropdown-question-slide {
@@ -53,22 +54,19 @@
 .sidebar-header {
     display: flex;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
 }
 
-.sidebar-header-title {
-    opacity: 1;
-    font-size: 21px;
-    line-height: 31px;
-    letter-spacing: 0.15px;
-    color: #212121;
-}
-
 .sidebar-header-buttons {
     margin-left: 41px;
+
+	&.--project {
+		margin-left: 0;
+		margin-right: 20px;
+	}
 }
 
 // Start: sidebar-dropdown-question
@@ -337,7 +335,7 @@
     left: 52px;
     width: 344px;
     padding: 24px 23px 12px 23px;
-    z-index: 100;
+    z-index: 250;
     border-radius: 4px;
     background: #ffffff;
     border: 1px solid #e7e7e7;
