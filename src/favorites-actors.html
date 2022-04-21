@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>favorites-actors</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="main-container">
+		@@include('header.html')
+
+		<!-- Start: Основная страница -->
+		<section class="main">
+			<!-- Start: Search Sidebar -->
+			<div class="search__sidebar">
+				<div class="tabs-wrapper">
+					<div class="tabs search__tabs">
+						<span class="tab sidebar__tab">актёры</span>
+						<span class="tab sidebar__tab">агенты</span>
+					</div>
+					<div class="tabs-content favorites__tabs-content">
+						<div class="tab-item">
+							<div class="search__form">
+								<div class="search__form-head">
+									<span class="text-blackBrown-regular">Поиск</span>
+									<span class="search__form-head-count">17654 профиля</span>
+								</div>
+								<div class="input-box mb-12">
+									<input placeholder="Имя актёра или ключевое слово" type="text">
+								</div>
+								<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+							</div>
+						</div>
+						<div class="tab-item">
+							<div class="search__form">
+								<div class="search__form-head">
+									<span class="text-blackBrown-regular">Поиск</span>
+									<span class="search__form-head-count">241 профиль</span>
+								</div>
+								<div class="input-box mb-12">
+									<input placeholder="Имя агента или ключевое слово" type="text">
+								</div>
+								<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="filter__form">
+					<div class="filter__form-head">
+						<span class="text-blackBrown-regular mr-4">Фильтр</span>
+						<button class="medium-text-btn ml-auto">очистить</button>
+					</div>
+					<div class="dropdown-select mb-8 mt-8">
+						<button class="dropdown-select-btn">
+							Выберите проект
+							<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+						</button>
+						<div class="dropdown-select-menu dropdown-fixed-menu">
+							<div class="dropdown-fixed-menu-header">
+								<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+								<div class="input-box">
+									<input type="text" placeholder="Поиск проектов" />
+								</div>
+							</div>
+		
+							<ul class="dropdown-fixed-menu-inner mt-16">
+								<li class="dropdown-fixed-menu-item --active">
+									Проект-1
+									<img class="check-black" src="check-black-12.svg" />
+								</li>
+								<li class="dropdown-fixed-menu-item">Проект-2</li>
+								<li class="dropdown-fixed-menu-item">Проект-3</li>
+								<li class="dropdown-fixed-menu-item">Проект-4</li>
+								<li class="dropdown-fixed-menu-item">Проект-5</li>
+								<li class="dropdown-fixed-menu-item">Проект-6</li>
+							</ul>
+							<div class="dropdown-fixed-menu-footer --choose">
+								<button class="primary-btn --h-32 --choose">Выбрать</button>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown-select mb-8 mt-8">
+						<button class="dropdown-select-btn">
+							Выберите ансамбль
+							<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+						</button>
+						<div class="dropdown-select-menu dropdown-fixed-menu">
+							<div class="dropdown-fixed-menu-header">
+								<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+								<div class="input-box">
+									<input type="text" placeholder="Поиск ансамблей" />
+								</div>
+							</div>
+		
+							<ul class="dropdown-fixed-menu-inner mt-16">
+								<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+								<li class="dropdown-fixed-menu-item --active">
+									Семья Ивановых
+									<img class="check-black" src="check-black-12.svg" />
+								</li>
+								<li class="dropdown-fixed-menu-item">Прохожие</li>
+								<li class="dropdown-fixed-menu-item">Соседи</li>
+								<li class="dropdown-fixed-menu-item">Шеф</li>
+								<li class="dropdown-fixed-menu-item">Друзья</li>
+							</ul>
+							<div class="dropdown-fixed-menu-footer --choose">
+								<button class="primary-btn --h-32 --choose">Выбрать</button>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown-select mt-8">
+						<button class="dropdown-select-btn">
+							Выберите роль
+							<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+						</button>
+						<div class="dropdown-select-menu dropdown-fixed-menu">
+							<div class="dropdown-fixed-menu-header">
+								<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+								<div class="input-box">
+									<input type="text" placeholder="Поиск ролей"/>
+								</div>
+							</div>
+		
+							<ul class="dropdown-fixed-menu-inner mt-16">
+								<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+								<li class="dropdown-fixed-menu-item --active">
+									Семья Ивановых
+									<img class="check-black" src="check-black-12.svg" />
+								</li>
+								<li class="dropdown-fixed-menu-item">Прохожий</li>
+								<li class="dropdown-fixed-menu-item">Сосед</li>
+								<li class="dropdown-fixed-menu-item">Шеф</li>
+								<li class="dropdown-fixed-menu-item">Друг</li>
+							</ul>
+							<div class="dropdown-fixed-menu-footer --choose">
+								<button class="primary-btn --h-32 --choose">Выбрать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- End: Search Sidebar -->
+
+			<div class="search__container">
+				<div class="search__main">
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Леонид Стоцкий</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">26</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/leonid.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+									<div class="chatCircleCounter">2</div>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<div class="add-to-project-dropdown">
+								<button class="primary-btn add-to-project-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+								<div class="add-to-project-modal">
+									<div class="add-to-project-modal-content">
+										<span class="text-dullGrey">Пока не состоит в проектах</span>
+									</div>
+									<button class="grey-btn --watch --inactive">Посмотреть</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Пол Штормер</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Владивосток</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">38</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/paul.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Максим Феликс</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Воронеж</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">31</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/maksim.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Фёдор Кусакин</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">33</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/fedor.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Екатерина Смольная</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Нижний Новгород</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">31</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/ekaterina.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Люси Саммер</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Казань</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">29</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/lucy_summer.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Алексей Сыроедов</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">37</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/aleksey.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+									<div class="chatCircleCounter">2</div>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Маша Фрейя</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Мурманск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">32</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/masha.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Семён Щастлиц</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Москва</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">28</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/semyon.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+									<div class="chatCircleCounter">2</div>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Настя Фаланга</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Бакситогорск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">31</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/nastya.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+									<div class="chatCircleCounter">2</div>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Виталий Сонный</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Калининград</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">35</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/vitaliy.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+									<div class="chatCircleCounter">2</div>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Борис Ношеный</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Москва</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">25</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/boris.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+									<div class="chatCircleCounter">2</div>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info --add-card">
+							<div class="main__item-card-info-title">добавить актёра в проект</div>
+							<div class="dropdown-select mb-8 mt-16">
+								<button class="dropdown-select-btn">
+									Выберите проект
+									<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+								</button>
+								<div class="dropdown-select-menu dropdown-fixed-menu">
+									<div class="dropdown-fixed-menu-header">
+										<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+										<div class="input-box">
+											<input type="text" placeholder="Поиск проектов" />
+										</div>
+									</div>
+			
+									<ul class="dropdown-fixed-menu-inner mt-16">
+										<li class="dropdown-fixed-menu-item">Проект 1</li>
+										<li class="dropdown-fixed-menu-item --active">
+											Проект 2
+											<img class="check-black" src="check-black-12.svg" />
+										</li>
+										
+										<li class="dropdown-fixed-menu-item">Проект 3</li>
+										<li class="dropdown-fixed-menu-item">Проект 4</li>
+										<li class="dropdown-fixed-menu-item">Проект 5</li>
+										<li class="dropdown-fixed-menu-item">Проект 6</li>
+									</ul>
+									<div class="dropdown-fixed-menu-footer --choose">
+										<button class="primary-btn --h-32 --choose">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown-select mb-8">
+								<button class="dropdown-select-btn">
+									Выберите ансамбль
+									<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+								</button>
+								<div class="dropdown-select-menu dropdown-fixed-menu">
+									<div class="dropdown-fixed-menu-header">
+										<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+										<div class="input-box">
+											<input type="text" placeholder="Поиск ансамблей" />
+										</div>
+									</div>
+			
+									<ul class="dropdown-fixed-menu-inner mt-16">
+										<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+										<li class="dropdown-fixed-menu-item --active">
+											Семья Ивановых
+											<img class="check-black" src="check-black-12.svg" />
+										</li>
+										
+										<li class="dropdown-fixed-menu-item">Прохожие</li>
+										<li class="dropdown-fixed-menu-item">Соседи</li>
+										<li class="dropdown-fixed-menu-item">Шеф</li>
+										<li class="dropdown-fixed-menu-item">Водитель</li>
+									</ul>
+									<div class="dropdown-fixed-menu-footer --choose">
+										<button class="primary-btn --h-32 --choose">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown-select mb-8 mt-8">
+								<button class="dropdown-select-btn">
+									Выберите роль
+									<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+								</button>
+								<div class="dropdown-select-menu dropdown-fixed-menu">
+									<div class="dropdown-fixed-menu-header">
+										<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+										<div class="input-box">
+											<input type="text" placeholder="Поиск ролей" />
+										</div>
+									</div>
+			
+									<ul class="dropdown-fixed-menu-inner mt-16">
+										<li class="dropdown-fixed-menu-item --active">
+											Отец
+											<img class="check-black" src="check-black-12.svg" />
+										</li>
+										<li class="dropdown-fixed-menu-item">Старший брат</li>
+										<li class="dropdown-fixed-menu-item">Младший брат</li>
+										<li class="dropdown-fixed-menu-item">Друг</li>
+										<li class="dropdown-fixed-menu-item">Приятель</li>
+										<li class="dropdown-fixed-menu-item">Знакомый</li>
+									</ul>
+									<div class="dropdown-fixed-menu-footer --choose">
+										<button class="primary-btn --h-32 --choose">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<button class="close-x-btn16 main__item-card-close-btn">
+								<img src="x-close-grey-16.svg" alt="close-icon"/>
+							</button>
+						</div>
+						<div class="main__item-card-btns --add-card">
+							<button class="primary-btn --h-24 --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info --add-card">
+							<div class="success-adding">
+								<img src="checkCircle.svg" alt="icon">
+								<span class="success-adding-text">Актёр успешно добавлен!</span>
+							</div>
+						</div>
+						<div class="main__item-card-btns --add-card">
+							<button class="primary-btn --h-24 --add-to-project buttonDisabled">
+								<div class="myLoader --small"></div>
+							</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Максим Феликс</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Воронеж</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">31</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/maksim.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Фёдор Кусакин</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Лет</div>
+											<div class="item-cityAge-subtitle">33</div>
+										</div>
+									</div>
+									<div class="item-tags-wrapper">
+										<div class="item-tag">Horse Ride</div>
+										<div class="item-tag">Fighting</div>
+										<div class="item-tag">Bow</div>
+										<div class="item-tag">Driving</div>
+										<div class="item-tag">Medic</div>
+										<div class="item-tag">Swiming</div>
+										<div class="item-tag">Sex</div>
+										<div class="number-tag-dropdown dropdown-wrapper">
+											<div class="item-tag item-number-tag dropdown-btn">+4</div>
+											<div class="number-tag-dropdown-wrapper dropdown-inner">
+												<div class="item-tag item-tag-drop">Horse Ride</div>
+												<div class="item-tag item-tag-drop">Fighting</div>
+												<div class="item-tag item-tag-drop">Cooking</div>
+												<div class="item-tag item-tag-drop">Bow</div>
+												<div class="item-tag item-tag-drop">Driving</div>
+												<div class="item-tag item-tag-drop">Medic</div>
+												<div class="item-tag item-tag-drop">Specs</div>
+												<div class="item-tag item-tag-drop">Swiming</div>
+												<div class="item-tag item-tag-drop">Sex</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-info-top-foto">
+									<img src="images/fedor.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="card-info-bottom">
+								<div class="card-info-bottom-item">
+									<img src="education-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Академия Баумана</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Люди в чёрном, <span>2020</span></div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="film-icon-16.svg" />
+									<div class="card-info-bottom-item-text">Despirados in da house, <span>2019</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End: Основная страница -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

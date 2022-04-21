@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>project-add-actor-2</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	@@include('header.html')
+	<div class="central__container">
+
+		<div class="project__addActor-guest mb-32">
+			<div class="create__form-head">
+				<div class="title__dropdown">
+					<button class="title__dropdown-btn">
+						<span class="title__dropdown-text">Добавить Гостевого актёра</span>
+						<img class="title__dropdown-arrow" src="arrow-down-6-12.svg" />
+					</button>
+					<div class="create__form-title-modal title__dropdown-inner list__modal">
+						<ul>
+							<li class="list__modal-item">
+								<button class="list__modal-item-btn">
+									<span class="list__modal-item-title">Добавить Актёра</span>
+								</button>
+							</li>
+							<li class="list__modal-item">
+								<button class="list__modal-item-btn">
+									<span class="list__modal-item-title">Добавить Гостевого актёра</span>
+								</button>
+							</li>
+							<li class="list__modal-item">
+								<button class="list__modal-item-btn">
+									<span class="list__modal-item-title">Добавить Избранного актёра</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<button class="close-btn-32">
+					<img src="x-close-20.svg" />
+				</button>
+			</div>
+
+			<div class="addActor-guest-form">
+				<div class="user__photo-form">
+					<div class="user__photo-form-box">
+						<img class="userCirclePlus" src="userCirclePlus.svg" alt="icon">
+						<div class="user__photo-form-box-text">Добавьте сюда фото актёра (jpeg, png)</div>
+						<div class="user__photo-form-box-subtext">Перетяните или нажмите, чтобы выбрать</div>
+					</div>
+					<div class="user__photo-form-content">
+						<div class="text-blackBrown mb-12">Воспользуйтесь данной формой, чтобы добавить в проект актёра
+							которого нет на «Кинолифт»
+						</div>
+						<div class="text-lightGrey-medium-higher">Добавьте фотографию вашего актёра, укажите, как его зовут и выберите ансамбль ролей, а также саму роль,
+							в которые его добавляем
+						</div>
+						<div class="user__photo-form-content-btns">
+							<button class="third-btn mb-8">Обрезать фото</button>
+							<button class="secondary-btn w-100 --inactive --h-32">Удалить</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">имя актёра</div>
+				<div class="input-box mb-24">
+					<input type="text">
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">ансамбль ролей</div>
+				<div class="dropdown-select mb-24 mt-8">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первая роль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Вторая роль</li>
+							<li class="dropdown-fixed-menu-item">Третья роль</li>
+							<li class="dropdown-fixed-menu-item">Четвертая роль</li>
+							<li class="dropdown-fixed-menu-item">Пятая роль</li>
+							<li class="dropdown-fixed-menu-item">Шестая роль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">роль</div>
+				<div class="dropdown-select mb-40">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первый ансамбль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Второй ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Третий ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Четвертый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Пятый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Шестой ансамбль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="addActor-guest-form-btns">
+					<button class="primary-btn --disable-blue">Добавить актёра</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="project__addActor-guest mb-32">
+			<div class="addActor-guest-form">
+				<div class="user__photo-form">
+					<div class="user__photo-form-box">
+						<img class="download-icon" src="download.svg" alt="icon">
+						<div class="user__photo-form-box-text">Загрузка файла... <span>75%</span></div>
+						<div class="user__photo-form-box-subtext --download">my_face_110918.png</div>
+					</div>
+					<div class="user__photo-form-content">
+						<div class="text-blackBrown mb-12">Воспользуйтесь данной формой, чтобы добавить в проект актёра
+							которого нет на «Кинолифт»
+						</div>
+						<div class="text-lightGrey-medium-higher">Добавьте фотографию вашего актёра, укажите, как его зовут и выберите ансамбль ролей, а также саму роль,
+							в которые его добавляем
+						</div>
+						<div class="user__photo-form-content-btns">
+							<button class="third-btn mb-8">Обрезать фото</button>
+							<button class="secondary-btn w-100 --inactive --h-32">Удалить</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">имя актёра</div>
+				<div class="input-box mb-24">
+					<input type="text">
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">ансамбль ролей</div>
+				<div class="dropdown-select mb-24 mt-8">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первая роль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Вторая роль</li>
+							<li class="dropdown-fixed-menu-item">Третья роль</li>
+							<li class="dropdown-fixed-menu-item">Четвертая роль</li>
+							<li class="dropdown-fixed-menu-item">Пятая роль</li>
+							<li class="dropdown-fixed-menu-item">Шестая роль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">роль</div>
+				<div class="dropdown-select mb-40">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первый ансамбль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Второй ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Третий ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Четвертый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Пятый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Шестой ансамбль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="addActor-guest-form-btns">
+					<button class="primary-btn --disable-blue">Добавить актёра</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="project__addActor-guest mb-32">
+			<div class="addActor-guest-form">
+				<div class="user__photo-form">
+					<div class="user__photo-form-box">
+						<img class="download-icon" src="checkCircle.svg" alt="icon">
+						<div class="user__photo-form-box-text">Загрузка завершена</div>
+
+					</div>
+					<div class="user__photo-form-content">
+						<div class="text-blackBrown mb-12">Воспользуйтесь данной формой, чтобы добавить в проект актёра
+							которого нет на «Кинолифт»
+						</div>
+						<div class="text-lightGrey-medium-higher">Добавьте фотографию вашего актёра, укажите, как его зовут и выберите ансамбль ролей, а также саму роль,
+							в которые его добавляем
+						</div>
+						<div class="user__photo-form-content-btns">
+							<button class="third-btn mb-8">Обрезать фото</button>
+							<button class="secondary-btn w-100 --inactive --h-32">Удалить</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">имя актёра</div>
+				<div class="input-box mb-24">
+					<input type="text">
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">ансамбль ролей</div>
+				<div class="dropdown-select mb-24 mt-8">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первая роль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Вторая роль</li>
+							<li class="dropdown-fixed-menu-item">Третья роль</li>
+							<li class="dropdown-fixed-menu-item">Четвертая роль</li>
+							<li class="dropdown-fixed-menu-item">Пятая роль</li>
+							<li class="dropdown-fixed-menu-item">Шестая роль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">роль</div>
+				<div class="dropdown-select mb-40">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первый ансамбль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Второй ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Третий ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Четвертый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Пятый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Шестой ансамбль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="addActor-guest-form-btns">
+					<button class="primary-btn --disable-blue">Добавить актёра</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="project__addActor-guest mb-32">
+			<div class="addActor-guest-form">
+				<div class="user__photo-form">
+					<div class="user__photo-form-box --error">
+						<img class="download-icon" src="xCircle-red.svg" alt="icon">
+						<div class="user__photo-form-box-text --error">Можно загрузить png
+							или jpeg
+						</div>
+					</div>
+					<div class="user__photo-form-content">
+						<div class="text-blackBrown mb-12">Воспользуйтесь данной формой, чтобы добавить в проект актёра
+							которого нет на «Кинолифт»
+						</div>
+						<div class="text-lightGrey-medium-higher">Добавьте фотографию вашего актёра, укажите, как его зовут и выберите ансамбль ролей, а также саму роль,
+							в которые его добавляем
+						</div>
+						<div class="user__photo-form-content-btns">
+							<button class="third-btn mb-8">Обрезать фото</button>
+							<button class="secondary-btn w-100 --inactive --h-32">Удалить</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">имя актёра</div>
+				<div class="input-box mb-24">
+					<input type="text">
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">ансамбль ролей</div>
+				<div class="dropdown-select mb-24 mt-8">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первая роль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Вторая роль</li>
+							<li class="dropdown-fixed-menu-item">Третья роль</li>
+							<li class="dropdown-fixed-menu-item">Четвертая роль</li>
+							<li class="dropdown-fixed-menu-item">Пятая роль</li>
+							<li class="dropdown-fixed-menu-item">Шестая роль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">роль</div>
+				<div class="dropdown-select mb-40">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первый ансамбль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Второй ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Третий ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Четвертый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Пятый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Шестой ансамбль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="addActor-guest-form-btns">
+					<button class="primary-btn --disable-blue">Добавить актёра</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="project__addActor-guest">
+			<div class="addActor-guest-form">
+				<div class="user__photo-form">
+					<div class="user__photo-form-box">
+						<img src="images/avatar.png" alt="user">
+					</div>
+					<div class="user__photo-form-content">
+						<div class="text-blackBrown mb-12">Воспользуйтесь данной формой, чтобы добавить в проект актёра
+							которого нет на «Кинолифт»
+						</div>
+						<div class="text-lightGrey-medium-higher">Добавьте фотографию вашего актёра, укажите, как его зовут и выберите ансамбль ролей, а также саму роль,
+							в которые его добавляем
+						</div>
+						<div class="user__photo-form-content-btns">
+							<button class="medium-secondary-btn w-100 mb-8">Обрезать фото</button>
+							<button class="secondary-btn w-100 --h-32">Удалить</button>
+						</div>
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">имя актёра</div>
+				<div class="input-box mb-24">
+					<input type="text">
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">ансамбль ролей</div>
+				<div class="dropdown-select mb-24 mt-8">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первая роль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Вторая роль</li>
+							<li class="dropdown-fixed-menu-item">Третья роль</li>
+							<li class="dropdown-fixed-menu-item">Четвертая роль</li>
+							<li class="dropdown-fixed-menu-item">Пятая роль</li>
+							<li class="dropdown-fixed-menu-item">Шестая роль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="title-blackBluish-small mb-8 mt-16">роль</div>
+				<div class="dropdown-select mb-40">
+					<button class="dropdown-select-btn">
+						Нажмите, чтобы выбрать роль
+						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+					</button>
+					<div class="dropdown-select-menu dropdown-fixed-menu">
+						<div class="dropdown-fixed-menu-header">
+							<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+							<div class="input-box">
+								<input type="text" placeholder="Поиск" />
+							</div>
+						</div>
+
+						<ul class="dropdown-fixed-menu-inner mt-16">
+							<li class="dropdown-fixed-menu-item --active">
+								Первый ансамбль
+								<img class="check-black" src="check-black-12.svg" />
+							</li>
+							<li class="dropdown-fixed-menu-item">Второй ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Третий ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Четвертый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Пятый ансамбль</li>
+							<li class="dropdown-fixed-menu-item">Шестой ансамбль</li>
+						</ul>
+						<div class="dropdown-fixed-menu-footer --choose">
+							<button class="primary-btn --h-32 --choose">Выбрать</button>
+						</div>
+					</div>
+				</div>
+				<div class="addActor-guest-form-btns">
+					<button class="primary-btn --single">Добавить актёра</button>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

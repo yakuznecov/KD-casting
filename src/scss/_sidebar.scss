@@ -54,7 +54,8 @@
 .sidebar-header {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
+	margin-top: -1px;
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
@@ -62,6 +63,8 @@
 
 .sidebar-header-buttons {
     margin-left: 41px;
+	height: 32px;
+	margin-top: 1px;
 
 	&.--project {
 		margin-left: 0;
@@ -206,12 +209,14 @@
 
 .sidebar__tabs {
     position: relative;
+	display: flex;
+	margin-bottom: 26px;
     transition: all 0.3s ease;
 
     &::after {
         content: ' ';
         position: absolute;
-        top: 30px;
+        top: 24px;
         left: 0;
         width: 296px;
         height: 2px;
@@ -227,7 +232,7 @@
     letter-spacing: 0.4px;
     text-transform: uppercase;
     margin-right: 12px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     cursor: pointer;
     border-bottom: 2px solid transparent;
     color: #9e9e9e;
@@ -246,7 +251,6 @@
 
 .sidebar__tabs-buttons {
     display: flex;
-    margin-top: 35px;
 }
 
 .sidebar__first-casting-info {
@@ -281,7 +285,7 @@
 .roll-up-box {
     display: flex;
     align-items: center;
-    margin: auto 0 6px -14px;
+    margin: auto 0 8px -14px;
     padding: 9px;
 }
 

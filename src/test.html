@@ -10,216 +10,574 @@
 </head>
 
 <body>
-	<div class="main-container">
-	
-		<!-- Start: Основная страница -->
-		<section class="main">
-			<div class="test__container">
-				<img src="arrow-down4-8-bd.svg">
-				<span class="test__container-text">arrow-down4-8-bd.svg / fill="#bdbdbd" / hover - fill: #9e9e9e;</span>
 
-				<div>
-					<button class="small-text-btn">Удалить</button>
-					<span class="test__container-text">small-text-btn</span>
+
+	<!-- Start: Основная страница -->
+	<section class="main">
+		<div class="test__container">
+			<!-- icons -->
+			<img class="spoiler-item-header-icon" src="map-icon-20.svg" />
+			<span class="test__container-text">map-icon-20.svg</span>
+			<img class="spoiler-item-header-icon" src="users-20.svg" />
+			<span class="test__container-text">users-20.svg</span>
+			<img class="spoiler-item-header-icon" src="userRectangle-20.svg" />
+			<span class="test__container-text">userRectangle-20.svg</span>
+			<img class="spoiler-item-header-icon" src="squaresFour.svg" />
+			<span class="test__container-text">squaresFour.svg</span>
+			<img class="spoiler-item-header-icon" src="globus-20.svg" />
+			<span class="test__container-text">globus-20.svg</span>
+			<img class="spoiler-item-header-icon" src="filmstrip.svg" />
+			<span class="test__container-text">filmstrip.svg</span>
+			<img class="spoiler-item-header-icon" src="musicNotesSimple.svg" />
+			<span class="test__container-text">musicNotesSimple.svg</span>
+			<img class="spoiler-item-header-icon" src="smiley.svg" />
+			<span class="test__container-text">smiley.svg</span>
+			<img class="spoiler-item-header-icon" src="smileyXEyes.svg" />
+			<span class="test__container-text">smileyXEyes.svg</span>
+			<img class="spoiler-item-header-icon" src="handFist.svg" />
+			<span class="test__container-text">handFist.svg</span>
+			<img class="spoiler-item-header-icon" src="sliders-horizontal-20.svg" />
+			<span class="test__container-text">sliders-horizontal-20.svg</span>
+			<img src="arrow-down4-8-bd.svg">
+			<span class="test__container-text">arrow-down4-8-bd.svg / fill="#bdbdbd" / hover - fill: #9e9e9e;</span>
+
+			<img src="checkCircle.svg" alt="icon">
+			<span class="test__container-text">checkCircle.svg</span>
+
+			<img src="education-icon-16.svg" />
+			<span class="test__container-text">education-icon-16.svg</span>
+			<img src="film-icon-16.svg" />
+			<span class="test__container-text">film-icon-16.svg</span>
+			<img src="phone.svg" />
+			<span class="test__container-text">phone.svg</span>
+			<img src="mail.svg" />
+			<span class="test__container-text">mail.svg</span>
+
+			<div class="myLoader"></div>
+
+			<div class="main__item-card-btns-small">
+				<div class="card-btns-small-box">
+					<button><img class="profile-btn-20" src="profile-btn-20.svg" /></button>
 				</div>
+				<div class="card-btns-small-box">
+					<button class="chatCircle-btn">
+						<img class="chatCircleDots-20" src="chatCircleDots-20.svg" />
+						<div class="chatCircleCounter">2</div>
+					</button>
+				</div>
+				<div class="card-btns-small-box">
+					<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+				</div>
+				<div class="card-btns-small-box --monitorPlay">
+					<button><img class="monitorPlay-22" src="monitorPlay-22.svg" /></button>
+				</div>
+				<div class="card-btns-small-box">
+					<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
+				</div>
+				<img src="bookmarkSimpleBlue-20.svg" />
+				<span class="test__container-text">bookmarkSimpleBlue-20.svg</span>
 
-				<div>
-					<div class="input-box mb-8">
-						<input placeholder="Введите название роли" type="text">
-					</div>
+				<img src="project_img.svg" />
+				<span class="test__container-text">project_img.svg</span>
+			</div>
+
+			<!-- Users -->
+			<div>
+				<span class="item-title">Леонид Стоцкий</span>
+				<img src="images/leonid.png" alt="user-foto" />
+				<span class="item-title">Люси Саммер</span>
+				<img src="images/lucy.png" alt="user-foto" />
+				<span class="item-title">Настя Фаланга</span>
+				<img src="images/nastya.png" alt="user-foto" />
+				<span class="item-title">Борис Ношеный</span>
+				<img src="images/boris.png" alt="user-foto" />
+				<span class="item-title">Максим Феликс</span>
+				<img src="images/maksim.png" alt="user-foto" />
+				<span class="item-title">Семён Щастлиц</span>
+				<img src="images/semyon.png" alt="user-foto" />
+
+			</div>
+
+			<!-- Buttons -->
+			<h2 style="font-weight: 700; font-size: 24px;">Buttons</h2>
+			<div class="test-buttons">
+				<div class="test-buttons-item">
+					<button class="third-btn">Обрезать фото</button>
+					<button class="secondary-btn w-100 --inactive --h-32">Удалить</button>
+					<button class="secondary-btn w-100 --h-32">Удалить</button>
+				</div>
+				<div class="test-buttons-item">
+					<button class="primary-btn --create-project">Создать проект</button>
+					<button class="primary-btn --h-32 --choose">Выбрать</button>
+					<button class="primary-btn --light-blue --fs-15 ml-8 dropdown-ensemble__item-btn">Сохранить</button>
+					<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+					<button class="primary-btn --pink ml-4 dropdown-ensemble__item-delete-btn">Удалить</button>
+				</div>
+				<div class="test-buttons-item">
+					<button class="primary-btn --br-8 dotted-empty-create-btn">Создать</button>
+					<button class="primary-btn --disable-blue">Добавить актёра</button>
+					<button class="medium-secondary-btn mb-8">Обрезать фото</button>
+					<button class="grey-btn --watch">Посмотреть</button>
+				</div>
+				<div class="test-buttons-item">
 					<button class="delete-casting-btn mb-8">
 						<img src="x-close-blue-18.svg" />
 					</button>
 					<span class="test__container-text">x-close-blue-18.svg</span>
-					<button class="primary-btn --br-8 dotted-empty-create-btn">Создать</button>
-					<button class="primary-btn --create-project">Создать проект</button>
-					<button class="primary-btn --light-blue --fs-15 ml-8 dropdown-ensemble__item-btn">Сохранить</button>
-					<button class="primary-btn --pink ml-4 dropdown-ensemble__item-delete-btn">Удалить</button>
-
+					<button class="close-x-btn16">
+						<img src="x-close-grey-16.svg" alt="close-icon"/>
+					</button>
+					<span class="test__container-text">x-close-grey-16.svg</span>	
+				</div>
+				<div class="test-buttons-item">
+					<div class="roll-up-box">
+						<button class="roll-up-btn roll-up-btn-left active">
+							<img class="arrowSquareLeft" src="arrowSquareLeft.svg" alt="arrowSquareLeft" />
+						</button>
+						<button class="roll-up-btn roll-up-btn-right">
+							<img class="arowSquareRight" src="ArrowSquareRight.svg" alt="ArrowSquareRight" />
+						</button>
+						<span class="wrap-text">Свернуть</span>
+					</div>
+				</div>
+				<div class="test-buttons-item">
 					<span class="item-counter main__item-header-counter">5</span>
+					<button class="small-text-btn">Удалить</button>
+					<button class="medium-text-btn">очистить</button>
+					<button class="btn-underline">Посмотреть кастинг</button>
+					<button class="btn-underline --large">Создать кастинг</button>
 				</div>
 				
+			</div>
 
-				<div class="teamwork__dropdown__item mb-8">
-					<div class="teamwork__dropdown__item-content">
-						<div class="teamwork__dropdown__item-user">
-							<img src="images/teamwork-user-1.png" alt="user">
+			<!-- Forms -->
+			<h2 style="font-weight: 700; font-size: 24px;">Forms</h2>
+			<div class="test-forms">
+				<div class="test-forms-item">
+					<div class="search__form">
+						<div class="search__form-head">
+							<span class="text-blackBrown-regular">Поиск</span>
+							<span class="search__form-head-count">17654 профиля</span>
 						</div>
-						<div class="teamwork__dropdown__item-data">
-							<div class="teamwork__dropdown__item-data-name">Дмитрий Пахтусов</div>
-							<div class="teamwork__dropdown__item-data-status">Просматривает</div>
+						<div class="input-box mb-12">
+							<input placeholder="Имя актёра или ключевое слово" type="text">
+						</div>
+						<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+					</div>
+				</div>
+				<div class="test-forms-item">
+					<div class="filter__form">
+						<div class="filter__form-head">
+							<span class="text-blackBrown-regular mr-4">Фильтр</span>
+							<button class="medium-text-btn ml-auto">очистить</button>
+						</div>
+						<div class="dropdown-select mb-8 mt-8">
+							<button class="dropdown-select-btn">
+								Выберите проект
+								<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+							</button>
+							<div class="dropdown-select-menu dropdown-fixed-menu">
+								<div class="dropdown-fixed-menu-header">
+									<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+									<div class="input-box">
+										<input type="text" placeholder="Поиск проектов" />
+									</div>
+								</div>
+			
+								<ul class="dropdown-fixed-menu-inner mt-16">
+									<li class="dropdown-fixed-menu-item --active">
+										Проект-1
+										<img class="check-black" src="check-black-12.svg" />
+									</li>
+									<li class="dropdown-fixed-menu-item">Проект-2</li>
+									<li class="dropdown-fixed-menu-item">Проект-3</li>
+									<li class="dropdown-fixed-menu-item">Проект-4</li>
+									<li class="dropdown-fixed-menu-item">Проект-5</li>
+									<li class="dropdown-fixed-menu-item">Проект-6</li>
+								</ul>
+								<div class="dropdown-fixed-menu-footer --choose">
+									<button class="primary-btn --h-32 --choose">Выбрать</button>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown-select mb-8 mt-8">
+							<button class="dropdown-select-btn">
+								Выберите ансамбль
+								<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+							</button>
+							<div class="dropdown-select-menu dropdown-fixed-menu">
+								<div class="dropdown-fixed-menu-header">
+									<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+									<div class="input-box">
+										<input type="text" placeholder="Поиск ансамблей" />
+									</div>
+								</div>
+			
+								<ul class="dropdown-fixed-menu-inner mt-16">
+									<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+									<li class="dropdown-fixed-menu-item --active">
+										Семья Ивановых
+										<img class="check-black" src="check-black-12.svg" />
+									</li>
+									<li class="dropdown-fixed-menu-item">Прохожие</li>
+									<li class="dropdown-fixed-menu-item">Соседи</li>
+									<li class="dropdown-fixed-menu-item">Шеф</li>
+									<li class="dropdown-fixed-menu-item">Друзья</li>
+								</ul>
+								<div class="dropdown-fixed-menu-footer --choose">
+									<button class="primary-btn --h-32 --choose">Выбрать</button>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown-select mt-8">
+							<button class="dropdown-select-btn">
+								Выберите роль
+								<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+							</button>
+							<div class="dropdown-select-menu dropdown-fixed-menu">
+								<div class="dropdown-fixed-menu-header">
+									<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+									<div class="input-box">
+										<input type="text" placeholder="Поиск ролей"/>
+									</div>
+								</div>
+			
+								<ul class="dropdown-fixed-menu-inner mt-16">
+									<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+									<li class="dropdown-fixed-menu-item --active">
+										Семья Ивановых
+										<img class="check-black" src="check-black-12.svg" />
+									</li>
+									<li class="dropdown-fixed-menu-item">Прохожий</li>
+									<li class="dropdown-fixed-menu-item">Сосед</li>
+									<li class="dropdown-fixed-menu-item">Шеф</li>
+									<li class="dropdown-fixed-menu-item">Друг</li>
+								</ul>
+								<div class="dropdown-fixed-menu-footer --choose">
+									<button class="primary-btn --h-32 --choose">Выбрать</button>
+								</div>
+							</div>
 						</div>
 					</div>
-					<span class="teamwork__dropdown__item-role">Владелец</span>
 				</div>
+			</div>
 
-				<div class="select-wrapper mb-8">
-					<div class="selectField --h-32">
-						<p class="selectField-text">Любой может редактировать проект по ссылке</p>
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="selectField-icon">
-							<path d="M8 1L11.4641 7H4.5359L8 1Z" fill="#E0E0E0" />
-							<path d="M8 15L11.4641 9H4.5359L8 15Z" fill="#E0E0E0" />
-						</svg>
+			<h2 class="mt-16 mb-8" style="font-weight: 700; font-size: 24px;">Avatars</h2>
+			<div class="avatars">
+				<div class="search__agents-avatar">
+					<img src="images/ekaterina-agent.png" class="avatar__img" alt="user-foto" />
+				</div>
+				<div class="card-info-top-foto">
+					<img src="images/dmitriy.png" class="avatar__card-img" alt="user-foto" />
+				</div>
+			</div>
+
+			<!-- Start: inputs -->
+			<div class="title-blackBluish-small mb-8 mt-16">ансамбль ролей</div>
+			<div class="input-box mb-8">
+				<input placeholder="Введите название роли" type="text">
+			</div>
+			<!-- End: inputs -->
+
+			<div class="user__photo-form mb-32 mt-16">
+				<div class="user__photo-form-box">
+					<img src="userCirclePlus.svg" alt="icon">
+					<div class="user__photo-form-box-text">Добавьте сюда фото актёра (jpeg, png)</div>
+					<div class="user__photo-form-box-subtext">Перетяните или нажмите, чтобы выбрать</div>
+				</div>
+			</div>
+
+			<div class="chess__wrapper mb-16">
+				<div class="chess-title">шахматка</div>
+				<button class="chess-btn mb-4">Скачать в PDF</button>
+				<button class="chess-btn">Распечатать</button>
+			</div>
+
+
+			<div class="teamwork__dropdown__item mb-8">
+				<div class="teamwork__dropdown__item-content">
+					<div class="teamwork__dropdown__item-user">
+						<img src="images/teamwork-user-1.png" alt="user">
 					</div>
-					<ul class="selectField-list --small">
-						<li class="selectField-options --h-32 teamwork__dropdown-footer-options">
-							<p>Любой может <span>просматривать</span>  проект по ссылке</p>
-						</li>
-						<li class="selectField-options --h-32 teamwork__dropdown-footer-options">
-							<p>Любой может <span>редактировать</span>  проект по ссылке</p>
-						</li>
-					</ul>
-				</div>
-
-				<div class="create__form-extra-information">
-					<div class="warning-box">
-						<img src="warning-icon-20.svg" class="warning-icon" />
-					</div>
-					<p class="create__form-extra-information-text text-lightGrey-small">Период, когда Актёр может принять приглашение на кастинг (продолжительность кастинга) и быть вызван, если Вы подтвердили его кандидатуру.</p>
-				</div>
-
-				<div class="checkbox-container mb-8">
-					<div class="checkbox-button">
-						<input type="radio" class="checkbox-main" id="create-casting-cinema" name="radio-item" />
-						<label for="create-casting-cinema" class="label-main">Фильм</label>
-					</div>
-					<div class="checkbox-button ml-12">
-						<input type="radio" class="checkbox-main" id="create-casting-serial" name="radio-item" />
-						<label for="create-casting-serial" class="label-main">Сериал</label>
+					<div class="teamwork__dropdown__item-data">
+						<div class="teamwork__dropdown__item-data-name">Дмитрий Пахтусов</div>
+						<div class="teamwork__dropdown__item-data-status">Просматривает</div>
 					</div>
 				</div>
+				<span class="teamwork__dropdown__item-role">Владелец</span>
+			</div>
 
-				<div class="tabs_project-modal list__modal mb-32">
-					<ul>
-						<li class="tabs_project-modal-item list__modal-item">
-							<button class="tabs_project-modal-btn list__modal-item-btn">
-								<span class="tabs_project-modal-item-title list__modal-item-title">Прохожие</span>
-							</button>
-						</li>
-						<li class="tabs_project-modal-item list__modal-item">
-							<button class="tabs_project-modal-btn list__modal-item-btn">
-								<span class="tabs_project-modal-item-title list__modal-item-title">Люди в здании</span>
-							</button>
-						</li>
-						<li class="tabs_project-modal-item list__modal-item">
-							<button class="tabs_project-modal-btn list__modal-item-btn">
-								<span class="tabs_project-modal-item-title list__modal-item-title">Братья все сестёр</span>
-							</button>
-						</li>
-					</ul>
+			<div class="select-wrapper mb-8">
+				<div class="selectField --h-32">
+					<p class="selectField-text">Любой может редактировать проект по ссылке</p>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="selectField-icon">
+						<path d="M8 1L11.4641 7H4.5359L8 1Z" fill="#E0E0E0" />
+						<path d="M8 15L11.4641 9H4.5359L8 15Z" fill="#E0E0E0" />
+					</svg>
 				</div>
+				<ul class="selectField-list --small">
+					<li class="selectField-options --h-32 teamwork__dropdown-footer-options">
+						<p>Любой может <span>просматривать</span> проект по ссылке</p>
+					</li>
+					<li class="selectField-options --h-32 teamwork__dropdown-footer-options">
+						<p>Любой может <span>редактировать</span> проект по ссылке</p>
+					</li>
+				</ul>
+			</div>
 
-				<div class="small-list__modal mb-32">
-					<ul>
-						<li class="small-list__modal-item">
-							<button class="small-list__modal-item-btn">
-								<span class="small-list__modal-item-title">Редактирование</span>
-							</button>
-						</li>
-						<li class="small-list__modal-item">
-							<button class="small-list__modal-item-btn">
-								<span class="small-list__modal-item-title">Просмотр</span>
-							</button>
-						</li>
-					</ul>
-				</div>
-
-				<div class="create__form-head create__form-head-filter">
-					<div class="title__dropdown">
-						<button class="title__dropdown-btn">
-							<span class="title__dropdown-text">Добавить Актёра</span>
-								<img class="title__dropdown-arrow" src="arrow-down-6-12.svg" />
-						</button>
-						<div class="create__form-title-modal title__dropdown-inner list__modal">
-							<ul>
-								<li class="list__modal-item">
-									<button class="list__modal-item-btn">
-										<span class="list__modal-item-title">Добавить Актёра</span>
-									</button>
-								</li>
-								<li class="list__modal-item">
-									<button class="list__modal-item-btn">
-										<span class="list__modal-item-title">Добавить Гостевого актёра</span>
-									</button>
-								</li>
-								<li class="list__modal-item">
-									<button class="list__modal-item-btn">
-										<span class="list__modal-item-title">Добавить Избранного актёра</span>
-									</button>
-								</li>
-							</ul>
+			<div class="dropdown-select mb-8 mt-8">
+				<button class="dropdown-select-btn">
+					Выберите навык
+					<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+				</button>
+				<div class="dropdown-select-menu dropdown-fixed-menu">
+					<div class="dropdown-fixed-menu-header">
+						<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+						<div class="input-box">
+							<input type="text" placeholder="Поиск" />
 						</div>
 					</div>
-					
-					<button class="close-btn-32">
-						<img src="x-close-20.svg" />
+
+					<ul class="dropdown-fixed-menu-inner mt-16">
+						<li class="dropdown-fixed-menu-item --active">
+							Карате
+							<img class="check-black" src="check-black-12.svg" />
+						</li>
+						<li class="dropdown-fixed-menu-item">Сёрфинг</li>
+						<li class="dropdown-fixed-menu-item">Бальный танец</li>
+						<li class="dropdown-fixed-menu-item">Оперный вокал</li>
+						<li class="dropdown-fixed-menu-item">Игра на фортепиано</li>
+						<li class="dropdown-fixed-menu-item">Публичные выступления</li>
+					</ul>
+					<div class="dropdown-fixed-menu-footer --choose">
+						<button class="primary-btn --h-32 --choose">Выбрать</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="create__form-extra-information">
+				<div class="warning-box">
+					<img src="warning-icon-20.svg" class="warning-icon" />
+				</div>
+				<p class="create__form-extra-information-text text-lightGrey-small">Период, когда Актёр может принять приглашение на кастинг (продолжительность кастинга) и быть вызван, если Вы
+					подтвердили его кандидатуру.</p>
+			</div>
+
+			<div class="search__sidebar-form-contacts">
+				<div class="search__sidebar-form-contacts-item">
+					<div class="search__sidebar-form-contacts-item-icon">
+						<img src="location.svg" alt="icon-location" >
+					</div>
+					<span class="text-blackBluis-regular">Санкт-Петербург</span>
+				</div>
+				<div class="search__sidebar-form-contacts-item">
+					<div class="search__sidebar-form-contacts-item-icon">
+						<img src="phone-blue.svg" alt="icon-phone">
+					</div>
+					<span class="text-blackBluis-regular">+7 (999) 888-55-33</span>
+				</div>
+				<div class="search__sidebar-form-contacts-item">
+					<div class="search__sidebar-form-contacts-item-icon">
+						<img src="mail-blue-20.svg" alt="icon-mail">
+					</div>
+					<span class="text-blackBluis-regular">support_agn@gmail.com</span>
+				</div>
+			</div>
+
+			<div class="actors__add-success-form">
+				<div class="actors__add-success-form-inner">
+					<div class="success-adding">
+						<img src="checkCircle.svg" alt="icon">
+						<span class="success-adding-text">Актёры успешно добавлены!</span>
+					</div>
+				</div>
+				<div class="actors__add-success-form-loader">
+					<button class="primary-btn w-100 --h-32 buttonDisabled">
+						<div class="myLoader --medium"></div>
 					</button>
 				</div>
-
-				<!-- Заголовки -->
-				<div class="global-title">заголовки</div>
-				<div class="primary-title">основное образование</div>
-				<code> .primary-title { font-size: 11px; line-height: 13px; text-transform: uppercase; letter-spacing: 0.4px; color: #70a8dd; }</code>
-				<div class="title-blackBrown-small">Основная информация</div>
-				<code>.title-blackBrown-small { font-size: 12px; line-height: 14px; text-transform: uppercase; letter-spacing: 0.4px; color: #212121; }</code>
-				<div class="title-blackBluish-small">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
-				<code>.title-blackBluish-small { font-size: 12px; line-height: 14px; text-transform: uppercase; letter-spacing: 0.4px; color: #424242; }</code>
-
-				<!-- Текст -->
-				<div class="global-title">текст</div>
-
-				<div class="text-blackBrown-large">Запрос артисту отправлен</div>
-				<code>.text-blackBrown-large { font-size: 21px; line-height: 31px; letter-spacing: 0.15px; color: #212121; }</code>
-
-				<div class="text-blackBrown">Академия Баумана</div>
-				<code>.text-blackBrown { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #212121; }</code>
-				<div class="text-blackBrown-regular">Академия Баумана</div>
-				<code>.text-blackBrown-regular { font-size: 16px; letter-spacing: 0.5px; color: #212121; }</code>
-				<div class="text-blackBrown-small">Основная информация</div>
-				<code>.text-blackBrown-small { font-size: 12px; line-height: 14px; letter-spacing: 0.4px; color: #212121; }</code>
-
-				<div class="text-platinumGrey-regular">Университет</div>
-				<code>.text-platinumGrey-regular { font-size: 14px; line-height: 17px; letter-spacing: 0.5px; color: #757575; }</code>
-				<div class="text-platinumGrey-medium">Университет</div>
-				<code>.text-platinumGrey-medium { font-size: 16px; line-height: 20px; letter-spacing: 0.5px; color: #757575; }</code>
-
-				<div class="text-lightGrey-extra-small">Игровой возраст</div>
-				<code>.text-lightGrey-extra-small { font-size: 10px; line-height: 12px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
-				<div class="text-lightGrey-small">Год поступления - 2017</div>
-				<code>.text-lightGrey-small { font-size: 12px; line-height: 14px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
-				<div class="text-lightGrey-small-high">Год поступления - 2017</div>
-				<code>.text-lightGrey-small-high { font-size: 12px; line-height: 17px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
-				<div class="text-lightGrey-medium">Год поступления - 2017</div>
-				<code>.text-lightGrey-medium { font-size: 13px; line-height: 14px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
-				<div class="text-lightGrey-medium-higher">Год поступления - 2021</div>
-				<code>.text-lightGrey-medium-higher { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
-				<div class="text-lightGrey-regular">Статус данного человека</div>
-				<code>.text-lightGrey-regular { font-size: 14px; line-height: 16px; letter-spacing: 0.25px; color: #9e9e9e; }</code>
-
-				<div class="text-lightGrey-bd">Дата начала</div>
-				<code>.text-lightGrey-bd { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #BDBDBD; }</code>
-				<div class="text-lightGrey-bd">Дата окончания</div>
-				<code>.text-lightGrey-medium-bd { font-size: 16px; line-height: 20px; letter-spacing: 0.5px; color: #BDBDBD; }</code>
-
-				<div class="text-dullGrey-small">Прикрепленный текст для проб:</div>
-				<code>.text-dullGrey-small { font-size: 12px; line-height: 14px; letter-spacing: 0.4px; color: #616161; }</code>
-				<div class="text-dullGrey">Дата окончания</div>
-				<code>.text-dullGrey { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #616161; }</code>
-
-				<div class="text-blackBluish-small">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
-				<code>.text-blackBluish-small { font-size: 11px; line-height: 13px; letter-spacing: 0.4px; color: #424242; }</code>
-				<div class="text-blackBluish-small-high">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
-				<code>.text-blackBluish-small-high { font-size: 12px; line-height: 17px; letter-spacing: 0.4px; color: #424242; }</code>
-				<div class="text-blackBluish">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
-				<code>.text-blackBluish { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #424242; }</code>
-				<div class="text-blackBluis-regular">Казачье войско (2 сезон)</div>
-				<code>.text-blackBluis-regular { font-size: 14px; line-height: 16px; letter-spacing: 0.25px; color: #424242; }</code>
-				<div class="text-blackBluis-large">Выберите, для кого создаём кастинг</div>
-				<code>.text-blackBluis-large { font-size: 21px; line-height: 31px; letter-spacing: 0.15px; color: #424242; }</code>
 			</div>
-		</section>
-		<!-- End: Основная страница -->
-	</div>
+
+			<!-- checkbox -->
+			<div class="spoiler-item-body-content-height">
+				<div class="checkbox-select mb-8">
+					<input type="checkbox" class="checkbox-select-main" id="checkbox-select-breast" name="radio-gender" />
+					<label for="checkbox-select-breast" class="checkbox-select-label-main">Грудь</label>
+				</div>
+				<div class="checkbox-select mb-8">
+					<input type="checkbox" class="checkbox-select-main" id="checkbox-select-back" name="radio-gender" />
+					<label for="checkbox-select-back" class="checkbox-select-label-main">Со спины</label>
+				</div>
+				<div class="checkbox-select">
+					<input type="checkbox" class="checkbox-select-main" id="checkbox-select-total" name="radio-gender" />
+					<label for="checkbox-select-total" class="checkbox-select-label-main">Полностью</label>
+				</div>
+			</div>
+
+			<!-- radio -->
+			<div class="checkbox-container mb-8">
+				<div class="checkbox-button">
+					<input type="radio" class="checkbox-main" id="create-casting-cinema" name="radio-item" />
+					<label for="create-casting-cinema" class="label-main">Фильм</label>
+				</div>
+				<div class="checkbox-button ml-12">
+					<input type="radio" class="checkbox-main" id="create-casting-serial" name="radio-item" />
+					<label for="create-casting-serial" class="label-main">Сериал</label>
+				</div>
+			</div>
+
+			<div class="tabs_project-modal list__modal mb-32">
+				<ul>
+					<li class="tabs_project-modal-item list__modal-item">
+						<button class="tabs_project-modal-btn list__modal-item-btn">
+							<span class="tabs_project-modal-item-title list__modal-item-title">Прохожие</span>
+						</button>
+					</li>
+					<li class="tabs_project-modal-item list__modal-item">
+						<button class="tabs_project-modal-btn list__modal-item-btn">
+							<span class="tabs_project-modal-item-title list__modal-item-title">Люди в здании</span>
+						</button>
+					</li>
+					<li class="tabs_project-modal-item list__modal-item">
+						<button class="tabs_project-modal-btn list__modal-item-btn">
+							<span class="tabs_project-modal-item-title list__modal-item-title">Братья все сестёр</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="small-list__modal mb-32">
+				<ul>
+					<li class="small-list__modal-item">
+						<button class="small-list__modal-item-btn">
+							<span class="small-list__modal-item-title">Редактирование</span>
+						</button>
+					</li>
+					<li class="small-list__modal-item">
+						<button class="small-list__modal-item-btn">
+							<span class="small-list__modal-item-title">Просмотр</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="create__form-head create__form-head-filter">
+				<div class="title__dropdown">
+					<button class="title__dropdown-btn">
+						<span class="title__dropdown-text">Добавить Актёра</span>
+						<img class="title__dropdown-arrow" src="arrow-down-6-12.svg" />
+					</button>
+					<div class="create__form-title-modal title__dropdown-inner list__modal">
+						<ul>
+							<li class="list__modal-item">
+								<button class="list__modal-item-btn">
+									<span class="list__modal-item-title">Добавить Актёра</span>
+								</button>
+							</li>
+							<li class="list__modal-item">
+								<button class="list__modal-item-btn">
+									<span class="list__modal-item-title">Добавить Гостевого актёра</span>
+								</button>
+							</li>
+							<li class="list__modal-item">
+								<button class="list__modal-item-btn">
+									<span class="list__modal-item-title">Добавить Избранного актёра</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<button class="close-btn-32">
+					<img src="x-close-20.svg" />
+				</button>
+			</div>
+
+			<div class="project-favorites-block">
+				<img src="project_img.svg" />
+				<div class="project-favorites-block-text">
+					<div class="text-blackBrown-short mb-12">Сейчас у вас нет избранных актёров, которых можно было бы добавить
+						в этот проект</div>
+					<div class="text-lightGrey-regular-two mb-24">Как только, кто то из актёров появится в вашем избранном, вы сможете добавить такого актёра
+						в проект, из этого меню</div>
+					<button class="medium-secondary-btn w-100">Перейти к поиску актёров</button>
+				</div>
+			</div>
+
+			<!-- Заголовки -->
+			<div class="global-title">заголовки</div>
+			<div class="primary-title">основное образование</div>
+			<code> .primary-title { font-size: 11px; line-height: 13px; text-transform: uppercase; letter-spacing: 0.4px; color: #70a8dd; }</code>
+			<div class="text-lightGrey-bd-title">вождение</div>
+			<code> .text-lightGrey-bd-title { font-size: 11px; line-height: 13px; text-transform: uppercase; letter-spacing: 0.4px; color: #BDBDBD; }</code>
+			<div class="title-blackBrown-small">Основная информация</div>
+			<code>.title-blackBrown-small { font-size: 12px; line-height: 14px; text-transform: uppercase; letter-spacing: 0.4px; color: #212121; }</code>
+			<div class="title-blackBluish-small">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
+			<code>.title-blackBluish-small { font-size: 12px; line-height: 14px; text-transform: uppercase; letter-spacing: 0.4px; color: #424242; }</code>
+
+			<!-- Текст -->
+			<div class="global-title">текст</div>
+
+			<div class="text-blackBrown-large">Запрос артисту отправлен</div>
+			<code>.text-blackBrown-large { font-size: 21px; line-height: 31px; letter-spacing: 0.15px; color: #212121; }</code>
+
+			<div class="text-blackBrown">Академия Баумана</div>
+			<code>.text-blackBrown { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #212121; }</code>
+			<div class="text-blackBrown-short">Университет туризма</div>
+			<code>.text-blackBrown-short { font-size: 14px; line-height: 17px; letter-spacing: 0.25px; color: #212121; }</code>
+			<div class="text-blackBrown-regular">Академия Баумана</div>
+			<code>.text-blackBrown-regular { font-size: 16px; letter-spacing: 0.5px; color: #212121; }</code>
+			<div class="text-blackBrown-small">Основная информация</div>
+			<code>.text-blackBrown-small { font-size: 12px; line-height: 14px; letter-spacing: 0.4px; color: #212121; }</code>
+
+			<div class="text-platinumGrey-regular">Университет</div>
+			<code>.text-platinumGrey-regular { font-size: 14px; line-height: 17px; letter-spacing: 0.5px; color: #757575; }</code>
+			<div class="text-platinumGrey-medium">Университет</div>
+			<code>.text-platinumGrey-medium { font-size: 16px; line-height: 20px; letter-spacing: 0.5px; color: #757575; }</code>
+
+			<div class="text-lightGrey-extra-small">Игровой возраст</div>
+			<code>.text-lightGrey-extra-small { font-size: 10px; line-height: 12px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-small">Год поступления - 2017</div>
+			<code>.text-lightGrey-small { font-size: 12px; line-height: 14px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-small-high">Год поступления - 2017</div>
+			<code>.text-lightGrey-small-high { font-size: 12px; line-height: 17px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-medium">Год поступления - 2017</div>
+			<code>.text-lightGrey-medium { font-size: 13px; line-height: 14px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-medium-higher">Год поступления - 2021</div>
+			<code>.text-lightGrey-medium-higher { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-regular">Статус данного человека</div>
+			<code>.text-lightGrey-regular { font-size: 14px; line-height: 16px; letter-spacing: 0.25px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-regular-two">Российский университет</div>
+			<code>.text-lightGrey-regular-two { font-size: 14px; line-height: 17px; letter-spacing: 0.25px; color: #9e9e9e; }</code>
+			<div class="text-lightGrey-large">Российский университет</div>
+			<code>.text-lightGrey-large { font-size: 16px; line-height: 16px; letter-spacing: 0.5px; color: #9e9e9e; }</code>
+
+			<div class="text-lightGrey-bd">Дата начала</div>
+			<code>.text-lightGrey-bd { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #BDBDBD; }</code>
+			<div class="text-lightGrey-bd-regular">Дата окончания</div>
+			<code>.text-lightGrey-bd-regular { font-size: 16px; line-height: 16px; letter-spacing: 0.5px; color: #BDBDBD; }</code>
+			<div class="text-lightGrey-bd">Дата окончания</div>
+			<code>.text-lightGrey-medium-bd { font-size: 16px; line-height: 20px; letter-spacing: 0.5px; color: #BDBDBD; }</code>
+
+			<div class="text-dullGrey-small">Прикрепленный текст для проб:</div>
+			<code>.text-dullGrey-small { font-size: 12px; line-height: 14px; letter-spacing: 0.4px; color: #616161; }</code>
+			<div class="text-dullGrey">Дата окончания</div>
+			<code>.text-dullGrey { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #616161; }</code>
+
+			<div class="text-blackBluish-small">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
+			<code>.text-blackBluish-small { font-size: 11px; line-height: 13px; letter-spacing: 0.4px; color: #424242; }</code>
+			<div class="text-blackBluish-small-high">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
+			<code>.text-blackBluish-small-high { font-size: 12px; line-height: 17px; letter-spacing: 0.4px; color: #424242; }</code>
+			<div class="text-blackBluish">Вы не можете посмотреть данные артиста, у него не оплачен тариф</div>
+			<code>.text-blackBluish { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #424242; }</code>
+			<div class="text-blackBluis-regular">Казачье войско (2 сезон)</div>
+			<code>.text-blackBluis-regular { font-size: 14px; line-height: 16px; letter-spacing: 0.25px; color: #424242; }</code>
+			<div class="text-blackBluis-large">Выберите, для кого создаём кастинг</div>
+			<code>.text-blackBluis-large { font-size: 21px; line-height: 31px; letter-spacing: 0.15px; color: #424242; }</code>
+		</div>
+	</section>
+	<!-- End: Основная страница -->
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="js/main.js"></script>

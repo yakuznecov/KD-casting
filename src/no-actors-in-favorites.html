@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>no-actors-in-favorites</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="main-container">
+		@@include('header.html')
+
+		<!-- Start: Основная страница -->
+		<section class="main">
+			<!-- Start: Search Sidebar -->
+
+			<div class="search__sidebar">
+				<div class="tabs-wrapper">
+					<div class="tabs search__tabs">
+						<span class="tab sidebar__tab">актёры</span>
+						<span class="tab sidebar__tab">агенты</span>
+					</div>
+					<div class="tabs-content favorites__tabs-content">
+						<div class="tab-item">
+							<div class="search__form">
+								<div class="search__form-head">
+									<span class="text-blackBrown-regular">Поиск</span>
+									<span class="search__form-head-count">нет профилей</span>
+								</div>
+								<div class="input-box mb-12">
+									<input placeholder="Имя актёра или ключевое слово" type="text">
+								</div>
+								<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+							</div>
+						</div>
+						<div class="tab-item">
+							<div class="search__form">
+								<div class="search__form-head">
+									<span class="text-blackBrown-regular">Поиск</span>
+									<span class="search__form-head-count">нет профилей</span>
+								</div>
+								<div class="input-box mb-12">
+									<input placeholder="Имя агента или ключевое слово" type="text">
+								</div>
+								<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="filter__form">
+					<div class="filter__form-head">
+						<span class="text-blackBrown-regular mr-4">Фильтр</span>
+						<button class="medium-text-btn ml-auto">очистить</button>
+					</div>
+					<div class="dropdown-select mb-8 mt-8">
+						<button class="dropdown-select-btn">
+							Выберите проект
+							<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+						</button>
+						<div class="dropdown-select-menu dropdown-fixed-menu">
+							<div class="dropdown-fixed-menu-header">
+								<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+								<div class="input-box">
+									<input type="text" placeholder="Поиск проектов" />
+								</div>
+							</div>
+		
+							<ul class="dropdown-fixed-menu-inner mt-16">
+								<li class="dropdown-fixed-menu-item --active">
+									Проект-1
+									<img class="check-black" src="check-black-12.svg" />
+								</li>
+								<li class="dropdown-fixed-menu-item">Проект-2</li>
+								<li class="dropdown-fixed-menu-item">Проект-3</li>
+								<li class="dropdown-fixed-menu-item">Проект-4</li>
+								<li class="dropdown-fixed-menu-item">Проект-5</li>
+								<li class="dropdown-fixed-menu-item">Проект-6</li>
+							</ul>
+							<div class="dropdown-fixed-menu-footer --choose">
+								<button class="primary-btn --h-32 --choose">Выбрать</button>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown-select mb-8 mt-8">
+						<button class="dropdown-select-btn">
+							Выберите ансамбль
+							<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+						</button>
+						<div class="dropdown-select-menu dropdown-fixed-menu">
+							<div class="dropdown-fixed-menu-header">
+								<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+								<div class="input-box">
+									<input type="text" placeholder="Поиск ансамблей" />
+								</div>
+							</div>
+		
+							<ul class="dropdown-fixed-menu-inner mt-16">
+								<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+								<li class="dropdown-fixed-menu-item --active">
+									Семья Ивановых
+									<img class="check-black" src="check-black-12.svg" />
+								</li>
+								<li class="dropdown-fixed-menu-item">Прохожие</li>
+								<li class="dropdown-fixed-menu-item">Соседи</li>
+								<li class="dropdown-fixed-menu-item">Шеф</li>
+								<li class="dropdown-fixed-menu-item">Друзья</li>
+							</ul>
+							<div class="dropdown-fixed-menu-footer --choose">
+								<button class="primary-btn --h-32 --choose">Выбрать</button>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown-select mt-8">
+						<button class="dropdown-select-btn">
+							Выберите роль
+							<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
+						</button>
+						<div class="dropdown-select-menu dropdown-fixed-menu">
+							<div class="dropdown-fixed-menu-header">
+								<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+								<div class="input-box">
+									<input type="text" placeholder="Поиск ролей"/>
+								</div>
+							</div>
+		
+							<ul class="dropdown-fixed-menu-inner mt-16">
+								<li class="dropdown-fixed-menu-item">Семья Петровых</li>
+								<li class="dropdown-fixed-menu-item --active">
+									Семья Ивановых
+									<img class="check-black" src="check-black-12.svg" />
+								</li>
+								<li class="dropdown-fixed-menu-item">Прохожий</li>
+								<li class="dropdown-fixed-menu-item">Сосед</li>
+								<li class="dropdown-fixed-menu-item">Шеф</li>
+								<li class="dropdown-fixed-menu-item">Друг</li>
+							</ul>
+							<div class="dropdown-fixed-menu-footer --choose">
+								<button class="primary-btn --h-32 --choose">Выбрать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- End: Search Sidebar -->
+			<div class="main-inner --empty-list">
+				<!-- Start: Пустое рабочее пространство -->
+
+				<div class="empty__wrapper">
+					<div class="empty__wrapper-bg --empty-list">
+						<img src="empty-image-agents.svg" alt="empty-img" />
+						<h3 class="empty-title">В избранном пока пусто</h3>
+						<p class="empty-text">
+							В этом месте появятся карточки актёров или агентов, которых вы <br> добавите в свой список избранного
+						</p>
+						<button class="btn-underline --large">Перейти к поиску актёров</button>
+					</div>
+				</div>
+
+				<!-- End: Пустое рабочее пространство -->
+			</div>
+			
+		</section>
+		<!-- End: Основная страница -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

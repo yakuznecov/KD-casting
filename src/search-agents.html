@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Поиск агентов</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="main-container">
+		@@include('header.html')
+
+		<!-- Start: Основная страница -->
+		<section class="main">
+			<!-- Start: Search Sidebar -->
+			<div class="search__sidebar">
+				<div class="tabs-wrapper">
+					<div class="tabs search__tabs">
+						<span class="tab sidebar__tab">по актёрам</span>
+						<span class="tab sidebar__tab">по агентам</span>
+					</div>
+					<div class="tabs-content search__tabs-content">
+						<div class="tab-item">
+							<div class="search__form">
+								<div class="search__form-head">
+									<span class="text-blackBrown-regular">Поиск</span>
+									<span class="search__form-head-count">17654 профиля</span>
+								</div>
+								<div class="input-box mb-12">
+									<input placeholder="Имя актёра или ключевое слово" type="text">
+								</div>
+								<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+							</div>
+						</div>
+						<div class="tab-item">
+							<div class="search__form">
+								<div class="search__form-head">
+									<span class="text-blackBrown-regular">Поиск</span>
+									<span class="search__form-head-count">241 профиль</span>
+								</div>
+								<div class="input-box mb-12">
+									<input placeholder="Фамилия или название агентства" type="text">
+								</div>
+								<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-filter">
+					<div class="search-filter-head">
+						<div class="text-blackBrown-regular">Фильтры</div>
+						<button class="medium-text-btn">очистить</button>
+					</div>
+					<div class="newAlphabet-wrapper">
+						<div class="switch__wrapper">
+							<div class="switch">
+								<span class="switch__slider"></span>
+								<button class="switch__item" data-index="0">Все</button>
+								<button class="switch__item" data-index="1">Агенты</button>
+								<button class="switch__item" data-index="2">Агентства</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="search-spoiler --search-agents">
+						<div class="spoiler-item">
+							<div class="spoiler-item-header">
+								<img class="spoiler-item-header-icon" src="map-icon-20.svg" />
+								<span class="spoiler-item-title">Территория</span>
+								<img class="spoiler-item-icon" src="caret-down-12.svg" />
+							</div>
+							<div class="spoiler-item-body">
+								<div class="switch__wrapper mb-16 mt-13">
+									<div class="switch">
+										<span class="switch__slider"></span>
+										<button class="switch__item spoiler-item-location-left" data-index="0">Город</button>
+										<button class="switch__item spoiler-item-location-middle" data-index="1">Страна</button>
+										<button class="switch__item spoiler-item-location-right" data-index="2">Мир</button>
+									</div>
+								</div>
+								<div class="spoiler-item-location-city">
+									<div class="input-box">
+										<input type="text" placeholder="Введите название города" />
+									</div>
+									<div class="spoiler-item-tags">
+										<div class="spoiler-item-tag">Санкт-Петербург</div>
+										<div class="spoiler-item-tag">Москва</div>
+										<div class="spoiler-item-tag">Владивосток</div>
+									</div>
+								</div>
+								<div class="spoiler-item-location-country" style="display: none;">
+									<div class="input-box">
+										<input type="text" placeholder="Введите название страны" />
+									</div>
+									<div class="spoiler-item-tags">
+										<div class="spoiler-item-tag">Россия</div>
+										<div class="spoiler-item-tag">США</div>
+										<div class="spoiler-item-tag">Италия</div>
+									</div>
+								</div>
+								<div class="spoiler-item-location-world" style="display: none;">
+									<div class="input-box">
+										<input type="text" placeholder="Введите название" />
+									</div>
+									<div class="spoiler-item-tags">
+										<div class="spoiler-item-tag">Выбраны все страны и города</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End: Search Sidebar -->
+
+			<div class="search__container">
+				<div class="search__main">
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Екатерина Снежная</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/ekaterina-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Тимофей Набоков</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Мурманск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/timofey-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Влад Мангол</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Нижний Новгород</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/vlad-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Виталий Суппорт</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Смоленск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/vitaliy-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Дмитрий Пименов</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/dmitriy-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Макс Броммель</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Москва</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/maks-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Алла Шнитке</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Москва</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/alla-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Фёдор Китчен</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/fedor-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Аяз Нурмазов </div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Архангельск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/ayaz-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Елена Полено</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/elena-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Роман Сусейло</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/roman-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Светлана Светлая</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Москва</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агент</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agents-avatar">
+									<img src="images/svetlana-agent.png" class="avatar__img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Витя Смайл</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Санкт-Петербург</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агентство</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agency-avatar">
+									<img src="images/agency-avatar.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Тимофей Набоков</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Мурманск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агентство</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agency-avatar">
+									<img src="images/agency-avatar.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Влад Мангол</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Нижний Новгород</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агентство</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agency-avatar">
+									<img src="images/agency-avatar.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+					<div class="search__card-item">
+						<div class="main__item-card-info">
+							<div class="card-info-top">
+								<div class="card-info-top-content">
+									<div class="item-title">Виталий Суппорт</div>
+									<div class="item-cityAge">
+										<div class="item-cityAge-left">
+											<div class="item-cityAge-title">Город</div>
+											<div class="item-cityAge-subtitle">Смоленск</div>
+										</div>
+
+										<div class="item-cityAge-right">
+											<div class="item-cityAge-title">Тип</div>
+											<div class="item-cityAge-subtitle">Агентство</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="search__agency-avatar">
+									<img src="images/agency-avatar.png" class="avatar__card-img" alt="user-foto" />
+								</div>
+							</div>
+							<div class="chess__wrapper">
+								<div class="chess-title">шахматка</div>
+								<button class="chess-btn mb-4">Скачать в PDF</button>
+								<button class="chess-btn">Распечатать</button>
+							</div>
+							<div class="card-info-bottom --search-agents">
+								<div class="card-info-bottom-item">
+									<img src="phone.svg" />
+									<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+								</div>
+								<div class="card-info-bottom-item">
+									<img src="mail.svg" />
+									<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__item-card-btns">
+							<div class="main__item-card-btns-small">
+								<div class="card-btns-small-box">
+									<button><img class="chatCircleDots-20" src="chatCircleDots-20.svg" /></button>
+								</div>
+								<div class="card-btns-small-box">
+									<button><img class="bookmarkSimple-20" src="bookmarkSimple-20.svg" /></button>
+								</div>
+							</div>
+							<button class="primary-btn --h-24 --light-blue --watch-all-actors">Смотреть всех актёров</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End: Основная страница -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

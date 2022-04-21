@@ -4,37 +4,37 @@
 			"path": "src/scss/_projects.scss",
 			"bookmarks": [
 				{
-					"line": 7,
+					"line": 12,
 					"column": 13,
 					"label": ""
 				},
 				{
-					"line": 14,
+					"line": 20,
 					"column": 15,
 					"label": ""
 				},
 				{
-					"line": 205,
+					"line": 214,
 					"column": 29,
 					"label": ""
 				},
 				{
-					"line": 249,
+					"line": 258,
 					"column": 17,
 					"label": ""
 				},
 				{
-					"line": 258,
+					"line": 267,
 					"column": 23,
 					"label": ""
 				},
 				{
-					"line": 631,
+					"line": 644,
 					"column": 31,
 					"label": ""
 				},
 				{
-					"line": 921,
+					"line": 934,
 					"column": 32,
 					"label": ""
 				}
@@ -54,12 +54,12 @@
 			"path": "src/scss/nav.scss",
 			"bookmarks": [
 				{
-					"line": 452,
+					"line": 464,
 					"column": 21,
 					"label": ""
 				},
 				{
-					"line": 562,
+					"line": 575,
 					"column": 15,
 					"label": ""
 				}

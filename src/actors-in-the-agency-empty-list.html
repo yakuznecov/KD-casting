@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>actors-in-the-agency-empty-list</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="main-container">
+		@@include('header.html')
+
+		<!-- Start: Основная страница -->
+		<section class="main">
+			<!-- Start: Search Sidebar -->
+
+			<div class="search__sidebar">
+				<button class="back-arrow-btn">
+					<img src="arrowLeft-20.svg" alt="icon-arrow">
+					<span class="back-arrow-btn-text">Назад</span>
+				</button>
+				<div class="search__sidebar-form">
+					<div class="search__sidebar-form-head">
+						<div class="text-blackBrown-regular">Виталий Суппорт</div>
+						<span class="text-lightGrey-bd-regular">Агентство</span>
+					</div>
+					<div class="agenсy__avatar-wrapper">
+						<img src="images/agency-avatar-large.png" class="avatar__card-img" alt="user-foto">
+					</div>
+					<div class="search__sidebar-form-contacts">
+						<div class="search__sidebar-form-contacts-item">
+							<div class="search__sidebar-form-contacts-item-icon">
+								<img src="location.svg" alt="icon-location" >
+							</div>
+							<span class="text-blackBluis-regular">Санкт-Петербург</span>
+						</div>
+						<div class="search__sidebar-form-contacts-item">
+							<div class="search__sidebar-form-contacts-item-icon">
+								<img src="phone-blue.svg" alt="icon-phone">
+							</div>
+							<span class="text-blackBluis-regular">+7 (999) 888-55-33</span>
+						</div>
+						<div class="search__sidebar-form-contacts-item">
+							<div class="search__sidebar-form-contacts-item-icon">
+								<img src="mail-blue-20.svg" alt="icon-mail">
+							</div>
+							<span class="text-blackBluis-regular">support_agn@gmail.com</span>
+						</div>
+					</div>
+					<div class="search__sidebar-form-divider"></div>
+					<div class="search__sidebar-form-chess">
+						<button class="search__sidebar-form-chess-btn mb-6">Скачать шахматку в PDF</button>
+						<button class="search__sidebar-form-chess-btn">Распечатать шахматку</button>
+					</div>
+					<button class="primary-btn --h-32 --fs-15 w-100">Сообщение</button>
+				</div>
+				<div class="search-filter">
+					<div class="search-filter-head">
+						<div class="text-blackBrown-regular">Фильтры</div>
+						<button class="medium-text-btn">очистить</button>
+					</div>
+					
+					<div class="search-spoiler --search-agents">
+						<div class="spoiler-item">
+							<div class="spoiler-item-header">
+								<img class="spoiler-item-header-icon" src="map-icon-20.svg" />
+								<span class="spoiler-item-title">Территория</span>
+								<!-- <span class="number-filter-select">(3)</span> -->
+								<img class="spoiler-item-icon" src="caret-down-12.svg" />
+							</div>
+							<div class="spoiler-item-body">
+								<div class="switch__wrapper mb-16 mt-13">
+									<div class="switch">
+										<span class="switch__slider"></span>
+										<button class="switch__item spoiler-item-location-left" data-index="0">Город</button>
+										<button class="switch__item spoiler-item-location-middle" data-index="1">Страна</button>
+										<button class="switch__item spoiler-item-location-right" data-index="2">Мир</button>
+									</div>
+								</div>
+								<div class="spoiler-item-location-city">
+									<div class="input-box">
+										<input type="text" placeholder="Введите название города" />
+									</div>
+									<div class="spoiler-item-tags">
+										<div class="spoiler-item-tag">Санкт-Петербург</div>
+										<div class="spoiler-item-tag">Москва</div>
+										<div class="spoiler-item-tag">Владивосток</div>
+									</div>
+								</div>
+								<div class="spoiler-item-location-country" style="display: none;">
+									<div class="input-box">
+										<input type="text" placeholder="Введите название страны" />
+									</div>
+									<div class="spoiler-item-tags">
+										<div class="spoiler-item-tag">Россия</div>
+										<div class="spoiler-item-tag">США</div>
+										<div class="spoiler-item-tag">Италия</div>
+									</div>
+								</div>
+								<div class="spoiler-item-location-world" style="display: none;">
+									<div class="input-box">
+										<input type="text" placeholder="Введите название" />
+									</div>
+									<div class="spoiler-item-tags">
+										<div class="spoiler-item-tag">Выбраны все страны и города</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End: Search Sidebar -->
+			<div class="main-inner --empty-list">
+				<!-- Start: Пустое рабочее пространство -->
+
+				<div class="empty__wrapper">
+					<div class="empty__wrapper-bg --empty-list">
+						<img src="empty-image-agents.svg" alt="empty-img" />
+						<h3 class="empty-title">Список актёров пуст</h3>
+						<p class="empty-text">
+							У выбранного агента или агентства, сейчас нет ни одного актёра. <br> Когда кто то появится, вы увидете их вместо этого сообщения
+						</p>
+					</div>
+				</div>
+
+				<!-- End: Пустое рабочее пространство -->
+			</div>
+			
+		</section>
+		<!-- End: Основная страница -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

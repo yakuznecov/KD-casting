@@ -1,8 +1,9 @@
 .test__container {
-	max-width: 1800px;
+	max-width: 1470px;
 	margin: 0 auto;
 	padding: 0 24px;
 	user-select: text;
+	background: #fff;
 }
 
 .test__container-text {
@@ -47,4 +48,28 @@
 	font-size: 14px;
 	letter-spacing: 0.25px;
 	color: #9E9E9E;
+}
+
+.avatars {
+	display: flex;
+}
+
+.test-forms {
+	display: flex;
+}
+
+.test-forms-item {
+	width: 296px;
+	height: 100%;
+	margin-right: 16px;
+}
+
+.test-buttons {
+	display: flex;
+}
+
+.test-buttons-item {
+	width: 296px;
+	height: 100%;
+	margin-right: 16px;
 }

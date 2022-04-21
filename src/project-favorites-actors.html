@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>project-favorites-actors</title>
+		<link rel="stylesheet" href="css/nav.min.css" />
+	</head>
+	<body>
+		@@include('header.html')
+		<div class="main-container">
+			<div class="project__addActor-container">
+				<div class="create__form-head create__form-head-filter">
+					<div class="title__dropdown">
+						<button class="title__dropdown-btn">
+							<span class="title__dropdown-text">Избранные актёры</span>
+								<img class="title__dropdown-arrow" src="arrow-down-6-12.svg" />
+						</button>
+						<div class="create__form-title-modal title__dropdown-inner list__modal">
+							<ul>
+								<li class="list__modal-item">
+									<button class="list__modal-item-btn">
+										<span class="list__modal-item-title">Добавить Актёра</span>
+									</button>
+								</li>
+								<li class="list__modal-item">
+									<button class="list__modal-item-btn">
+										<span class="list__modal-item-title">Добавить Гостевого актёра</span>
+									</button>
+								</li>
+								<li class="list__modal-item">
+									<button class="list__modal-item-btn">
+										<span class="list__modal-item-title">Добавить Избранного актёра</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<button class="close-btn-32">
+						<img src="x-close-20.svg" />
+					</button>
+				</div>
+
+				<div class="project__addActor-wrapper">
+					<div class="project__addActor-left">
+						<div class="project__addActor-left-inner mb-20">
+							<div class="project__addActor-left-inner-head">
+								<span class="text-blackBrown-regular">Поиск</span>
+								<span class="project__addActor-left-inner-head-count">нет профилей</span>
+							</div>
+							<div class="input-box mb-12">
+								<input placeholder="Имя актёра или ключевое слово" type="text">
+							</div>
+							<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
+						</div>
+					</div>
+					<div class="project__addActor-main">
+						<div class="project-favorites-block">
+							<img src="project_img.svg" />
+							<div class="project-favorites-block-text">
+								<div class="text-blackBrown-short mb-12">Сейчас у вас нет избранных актёров, которых можно было бы добавить
+									в этот проект</div>
+								<div class="text-lightGrey-regular-two mb-24">Как только, кто то из актёров появится в вашем избранном, вы сможете добавить такого актёра 
+									в проект, из этого меню</div>
+								<button class="medium-secondary-btn w-100">Перейти к поиску актёров</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

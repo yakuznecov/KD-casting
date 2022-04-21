@@ -20,6 +20,8 @@
 @import 'custom-select';
 @import 'modal';
 @import 'test';
+@import 'search';
+@import 'favorites';
 
 html,
 body {
@@ -41,9 +43,10 @@ body {
 /* main kinolift */
 
 .main-container {
-	padding-top: 143px;
-	overflow: hidden;
+	padding-top: 144px;
 	user-select: none;
+	overflow: hidden;
+	height: calc(100vh - 1px);
 	transition: padding-top 0.3s;
 
 	&.isWorkspace {
@@ -259,6 +262,10 @@ body {
 		overflow: hidden;
 		border-radius: 0;
 	}
+
+	&.--empty-list {
+		margin-left: 32px;
+	}
 }
 
 // Start: Пустое рабочее пространство
@@ -270,10 +277,15 @@ body {
 	height: calc(100vh - 143px);
 	width: 100%;
 	text-align: center;
+	overflow: hidden;
 }
 
 .empty__wrapper-bg {
 	max-width: 938px;
+
+	&.--empty-list {
+		margin-top: -125px;
+	}
 }
 
 .empty__wrapper-bg svg {
@@ -304,7 +316,7 @@ body {
 .main-header {
 	width: 100%;
 	height: 97px;
-	padding: 25px 40px 15px 32px;
+	padding: 23px 40px 9px 32px;
 	border-bottom: 1px solid #e0e0e0;
 }
 
@@ -443,7 +455,7 @@ body {
 .main-wrapper {
 	position: relative;
 	height: 100%;
-	padding: 24px 0 0 31px;
+	padding: 24px 0 0 32px;
 }
 
 .main_project-wrapper {
@@ -552,8 +564,9 @@ body {
 .main__item-header {
 	display: flex;
 	align-items: center;
-	padding: 19px 16px 0 25px;
-	margin-bottom: 23px;
+	height: 44px;
+	padding: 20px 16px 0 24px;
+	margin-bottom: 24px;
 }
 
 .main__item-header-counter {
@@ -714,24 +727,46 @@ body {
 	margin-bottom: 16px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	cursor: pointer;
-	background: #ffffff;
+	background: #fff;
 	transition: all 0.2s;
+	
 	&:hover {
 		box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	}
+
+	&.--add-card {
+		margin-right: 20px;
+	}
+
+	&.--active {
+		border: 2px solid #9BC3E8;
+		background: #F9FCFE;
+
+		& .main__item-card-info {
+			padding: 14px 14px 7px;
+		}
 	}
 }
 
 .main__item-card-info {
+	position: relative;
 	padding: 16px 16px 7px 16px;
+	
+	&.--add-card {
+		padding: 16px;
+		height: 271px;
+	}
 }
 
 .card-info-top {
 	display: flex;
+	justify-content: space-between;
 }
 
 .card-info-top-content {
 	display: flex;
-	flex: 0 0 152px;
+	// flex: 0 0 152px;
+	max-width: 197px;
 	width: 100%;
 	flex-direction: column;
 }
@@ -793,12 +828,16 @@ body {
 .card-info-top-foto {
 	width: 96px;
 	height: 144px;
-	border-radius: 4px;
-	margin-left: 20px;
+	cursor: pointer;
+	// margin-left: 20px;
 }
 
 .card-info-bottom {
 	margin-top: 17px;
+
+	&.--search-agents {
+		margin-top: 22px;
+	}
 }
 
 .card-info-bottom-item {
@@ -825,6 +864,11 @@ body {
 	justify-content: space-between;
 	padding: 10px 16px 9px 10px;
 	border-top: 1px solid #e0e0e0;
+
+	&.--add-card {
+		justify-content: flex-end;
+		padding: 13px 16px;
+	}
 }
 
 .main__item-card-btns-small {
