@@ -52,6 +52,13 @@
 			<span class="test__container-text">phone.svg</span>
 			<img src="mail.svg" />
 			<span class="test__container-text">mail.svg</span>
+			<img src="folder.svg" alt="icon">
+			<span class="test__container-text">folder.svg</span>
+			<img src="identificationCard.svg" alt="icon">
+			<span class="test__container-text">identificationCard.svg</span>
+			<img src="userCircle.svg" alt="icon">
+			<span class="test__container-text">userCircle.svg</span>
+
 
 			<div class="myLoader"></div>
 
@@ -154,7 +161,7 @@
 			<h2 style="font-weight: 700; font-size: 24px;">Forms</h2>
 			<div class="test-forms">
 				<div class="test-forms-item">
-					<div class="search__form">
+					<div class="search__form mb-12">
 						<div class="search__form-head">
 							<span class="text-blackBrown-regular">Поиск</span>
 							<span class="search__form-head-count">17654 профиля</span>
@@ -164,9 +171,29 @@
 						</div>
 						<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
 					</div>
+					<div class="search__sidebar-form-contacts">
+						<div class="search__sidebar-form-contacts-item">
+							<div class="search__sidebar-form-contacts-item-icon">
+								<img src="location.svg" alt="icon-location" >
+							</div>
+							<span class="text-blackBluis-regular">Санкт-Петербург</span>
+						</div>
+						<div class="search__sidebar-form-contacts-item">
+							<div class="search__sidebar-form-contacts-item-icon">
+								<img src="phone-blue.svg" alt="icon-phone">
+							</div>
+							<span class="text-blackBluis-regular">+7 (999) 888-55-33</span>
+						</div>
+						<div class="search__sidebar-form-contacts-item">
+							<div class="search__sidebar-form-contacts-item-icon">
+								<img src="mail-blue-20.svg" alt="icon-mail">
+							</div>
+							<span class="text-blackBluis-regular">support_agn@gmail.com</span>
+						</div>
+					</div>
 				</div>
 				<div class="test-forms-item">
-					<div class="filter__form">
+					<div class="filter__form mb-12">
 						<div class="filter__form-head">
 							<span class="text-blackBrown-regular mr-4">Фильтр</span>
 							<button class="medium-text-btn ml-auto">очистить</button>
@@ -259,9 +286,77 @@
 							</div>
 						</div>
 					</div>
+					<div class="consists-projects-modal-content">
+						<div class="consists-projects-modal-item">
+							<div class="consists-projects-modal-item-left">
+								<img src="folder.svg" alt="icon">
+								<span class="text-lightGrey-small consists-projects-modal-item-title">Название:</span>
+							</div>
+							<span class="text-blackBrown-small mt-2">Улицы разбитых фонарей</span>
+						</div>
+						<div class="consists-projects-modal-item">
+							<div class="consists-projects-modal-item-left">
+								<img src="identificationCard.svg" alt="icon">
+								<span class="text-lightGrey-small consists-projects-modal-item-title">Ансамбль:</span>
+							</div>
+							<span class="text-blackBrown-small mt-2">Семья Ивановых</span>
+						</div>
+						<div class="consists-projects-modal-item">
+							<div class="consists-projects-modal-item-left">
+								<img src="userCircle.svg" alt="icon">
+								<span class="text-lightGrey-small consists-projects-modal-item-title">Роль:</span>
+							</div>
+							<span class="text-blackBrown-small mt-2">Брат</span>
+						</div>
+					</div>
+				</div>
+				<div class="test-forms-item">
+					<div class="user__photo-form mb-32 mt-16">
+						<div class="user__photo-form-box">
+							<img src="userCirclePlus.svg" alt="icon">
+							<div class="user__photo-form-box-text">Добавьте сюда фото актёра (jpeg, png)</div>
+							<div class="user__photo-form-box-subtext">Перетяните или нажмите, чтобы выбрать</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-forms-item">
+					<div class="chess__wrapper mb-16">
+						<div class="chess-title">шахматка</div>
+						<button class="chess-btn mb-4">Скачать в PDF</button>
+						<button class="chess-btn">Распечатать</button>
+					</div>
+					<div class="actors__add-success-form">
+						<div class="actors__add-success-form-inner">
+							<div class="success-adding">
+								<img src="checkCircle.svg" alt="icon">
+								<span class="success-adding-text">Актёры успешно добавлены!</span>
+							</div>
+						</div>
+						<div class="actors__add-success-form-loader">
+							<button class="primary-btn w-100 --h-32 buttonDisabled">
+								<div class="myLoader --medium"></div>
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 
+			<!-- Modal -->
+			<h2 class="mt-16 mb-8" style="font-weight: 700; font-size: 24px;">Modal</h2>
+			<div class="test-modal">
+				<div class="test-modal-item">
+				<div class="add-to-project-modal" style="position: relative; visibility: visible; opacity: 1; right: auto; top: auto;">
+						<div class="add-to-project-modal-content">
+							<span class="text-dullGrey">Уже состоит в <span class="item-counter">5</span> проектах</span>
+						</div>
+						<button class="grey-btn --watch">Посмотреть</button>
+					</div>
+				</div>
+				<div class="test-modal-item"></div>
+				<div class="test-modal-item"></div>
+			</div>
+
+			<!-- Avatars -->
 			<h2 class="mt-16 mb-8" style="font-weight: 700; font-size: 24px;">Avatars</h2>
 			<div class="avatars">
 				<div class="search__agents-avatar">
@@ -278,21 +373,6 @@
 				<input placeholder="Введите название роли" type="text">
 			</div>
 			<!-- End: inputs -->
-
-			<div class="user__photo-form mb-32 mt-16">
-				<div class="user__photo-form-box">
-					<img src="userCirclePlus.svg" alt="icon">
-					<div class="user__photo-form-box-text">Добавьте сюда фото актёра (jpeg, png)</div>
-					<div class="user__photo-form-box-subtext">Перетяните или нажмите, чтобы выбрать</div>
-				</div>
-			</div>
-
-			<div class="chess__wrapper mb-16">
-				<div class="chess-title">шахматка</div>
-				<button class="chess-btn mb-4">Скачать в PDF</button>
-				<button class="chess-btn">Распечатать</button>
-			</div>
-
 
 			<div class="teamwork__dropdown__item mb-8">
 				<div class="teamwork__dropdown__item-content">
@@ -363,41 +443,9 @@
 					подтвердили его кандидатуру.</p>
 			</div>
 
-			<div class="search__sidebar-form-contacts">
-				<div class="search__sidebar-form-contacts-item">
-					<div class="search__sidebar-form-contacts-item-icon">
-						<img src="location.svg" alt="icon-location" >
-					</div>
-					<span class="text-blackBluis-regular">Санкт-Петербург</span>
-				</div>
-				<div class="search__sidebar-form-contacts-item">
-					<div class="search__sidebar-form-contacts-item-icon">
-						<img src="phone-blue.svg" alt="icon-phone">
-					</div>
-					<span class="text-blackBluis-regular">+7 (999) 888-55-33</span>
-				</div>
-				<div class="search__sidebar-form-contacts-item">
-					<div class="search__sidebar-form-contacts-item-icon">
-						<img src="mail-blue-20.svg" alt="icon-mail">
-					</div>
-					<span class="text-blackBluis-regular">support_agn@gmail.com</span>
-				</div>
-			</div>
+			
 
-			<div class="actors__add-success-form">
-				<div class="actors__add-success-form-inner">
-					<div class="success-adding">
-						<img src="checkCircle.svg" alt="icon">
-						<span class="success-adding-text">Актёры успешно добавлены!</span>
-					</div>
-				</div>
-				<div class="actors__add-success-form-loader">
-					<button class="primary-btn w-100 --h-32 buttonDisabled">
-						<div class="myLoader --medium"></div>
-					</button>
-				</div>
-			</div>
-
+			
 			<!-- checkbox -->
 			<div class="spoiler-item-body-content-height">
 				<div class="checkbox-select mb-8">

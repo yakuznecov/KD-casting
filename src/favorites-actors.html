@@ -302,7 +302,15 @@
 									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
 								</div>
 							</div>
-							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+							<div class="add-to-project-dropdown">
+								<button class="primary-btn add-to-project-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+								<div class="add-to-project-modal">
+									<div class="add-to-project-modal-content">
+										<span class="text-dullGrey">Уже состоит в <span class="item-counter">5</span> проектах</span>
+									</div>
+									<button class="grey-btn --watch">Посмотреть</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="search__card-item">
@@ -376,7 +384,52 @@
 									<button><img src="bookmarkSimpleBlue-20.svg" /></button>
 								</div>
 							</div>
-							<button class="primary-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+							<div class="consists-projects-dropdown">
+								<button class="primary-btn add-to-project-btn --h-24 --light-blue --add-to-project">Добавить в проект</button>
+								<div class="consists-projects-modal">
+									<div class="modal_title_12 mb-12">состоит в проектах</div>
+									<div class="consists-projects-modal-switch mb-8">
+										<div class="switch__wrapper">
+											<div class="switch consists-projects-switch">
+												<span class="switch__slider"></span>
+												<button class="switch__item" data-index="0" style="width: 50%;">Текущие</button>
+												<button class="switch__item" data-index="1" style="width: 50%;">Архивные</button>
+											</div>
+										</div>
+									</div>
+									<div class="consists-projects-modal-content">
+										<div class="consists-projects-modal-item">
+											<div class="consists-projects-modal-item-left">
+												<img src="folder.svg" alt="icon">
+												<span class="text-lightGrey-small consists-projects-modal-item-title">Название:</span>
+											</div>
+											<span class="text-blackBrown-small mt-2 consists-projects-modal-item-text">Улицы разбитых фонарей</span>
+										</div>
+										<div class="consists-projects-modal-item">
+											<div class="consists-projects-modal-item-left">
+												<img src="identificationCard.svg" alt="icon">
+												<span class="text-lightGrey-small consists-projects-modal-item-title">Ансамбль:</span>
+											</div>
+											<span class="text-blackBrown-small mt-2 consists-projects-modal-item-text">Семья Ивановых</span>
+										</div>
+										<div class="consists-projects-modal-item">
+											<div class="consists-projects-modal-item-left">
+												<img src="userCircle.svg" alt="icon">
+												<span class="text-lightGrey-small consists-projects-modal-item-title">Роль:</span>
+											</div>
+											<span class="text-blackBrown-small mt-2 consists-projects-modal-item-text">Брат</span>
+										</div>
+									</div>
+									<div class="consists-projects-modal-footer">
+										<span class="text-lightGrey-medium-higher mr-auto mt-2">1 из 5</span>
+										<button class="grey-btn --back">Назад</button>
+										<button class="grey-btn --forward ml-4">Дальше</button>
+									</div>
+									<button class="close-x-btn16 consists-projects-close-btn">
+										<img src="x-close-grey-16.svg" alt="close-icon">
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="search__card-item">

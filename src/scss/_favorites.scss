@@ -21,7 +21,8 @@
     margin-bottom: 20px;
 }
 
-.add-to-project-dropdown {
+.add-to-project-dropdown,
+.consists-projects-dropdown {
 	position: relative;
 
 	&:after {
@@ -37,6 +38,9 @@
 
 .add-to-project-modal {
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	width: 363px;
 	top: 41px;
 	right: -16px;
@@ -49,11 +53,6 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.2s;
-
-	
-
-	opacity: 1;
-	visibility: visible;
 }
 
 .add-to-project-dropdown:hover .add-to-project-modal {
@@ -64,4 +63,96 @@
 .add-to-project-dropdown:hover .add-to-project-btn {
 	background: #a0cfff;
 	color: #127fd1;
+}
+
+.consists-projects-modal {
+	position: absolute;
+	width: 363px;
+	top: 41px;
+	right: -16px;
+	padding: 16px;
+	border-radius: 8px;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
+	0px 0px 1px rgba(0, 0, 0, 0.04);
+	background-color: #fff;
+	z-index: 200;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s;
+	// opacity: 1;
+	// visibility: visible;
+}
+
+.consists-projects-dropdown:hover .consists-projects-modal {
+	opacity: 1;
+	visibility: visible;
+}
+
+.consists-projects-dropdown:hover .add-to-project-btn {
+	background: #a0cfff;
+	color: #127fd1;
+}
+
+
+.consists-projects-close-btn {
+	position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    transition: all .2s;
+}
+
+.consists-projects-modal-switch {
+	max-width: 178px;
+}
+
+.consists-projects-switch {
+	height: 21px;
+}
+
+.consists-projects-modal-content {
+	padding: 9px 15px 10px;
+    border: 1px solid #E7E7E7;
+    border-bottom-width: 2px;
+    border-radius: 4px;
+}
+
+.consists-projects-modal-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 4px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.consists-projects-modal-item-left {
+	display: flex;
+	align-items: center;
+}
+
+.consists-projects-modal-item-title {
+	margin-left: 8px;
+	margin-top: 2px;
+}
+
+.consists-projects-modal-footer {
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.consists-projects-modal-item-text {
+	transition: all 0.2s;
+	&:hover {
+		color: #157EDC;
+	}
 }

@@ -54,22 +54,21 @@
 	display: flex;
 }
 
-.test-forms {
+.test-forms,
+.test-modal,
+.test-buttons {
 	display: flex;
 }
 
-.test-forms-item {
+.test-forms-item,
+.test-buttons-item {
 	width: 296px;
 	height: 100%;
 	margin-right: 16px;
 }
 
-.test-buttons {
-	display: flex;
-}
-
-.test-buttons-item {
-	width: 296px;
+.test-modal-item {
+	width: 363px;
 	height: 100%;
 	margin-right: 16px;
 }
