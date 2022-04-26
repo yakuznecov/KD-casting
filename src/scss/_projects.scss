@@ -1,7 +1,7 @@
 // Start: Projects
 .project-container {
 	padding-top: 144px;
-    user-select: none;
+	user-select: none;
 }
 
 .project__addActor-container {
@@ -282,6 +282,9 @@
 
 
 .right__sidebar_item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
 	width: 200px;
 	height: 364px;
 	margin-bottom: 17px;
@@ -290,8 +293,12 @@
 	padding: 16px 15px 15px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
 
-	transform: translateY(0);
-	animation: spin infinite 50s linear;
+	// transform: translateY(0);
+	// animation: spin infinite 50s linear;
+
+	&.--dropdown {
+		padding: 19px 15px 15px;
+	}
 }
 
 @keyframes spin {
@@ -333,6 +340,7 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: auto;
 	height: 24px;
 	width: 100%;
 	font-size: 13px;
@@ -1394,19 +1402,19 @@
 }
 
 .project__training-slide-10 {
-    position: absolute;
-    bottom: 0;
-    width: 94.4%;
-    left: 49.4%;
-    transform: translateX(-50%);
+	position: absolute;
+	bottom: 0;
+	width: 94.4%;
+	left: 49.4%;
+	transform: translateX(-50%);
 }
 
 .project__training-slide-11 {
-    position: absolute;
-    bottom: 0px;
-    width: 95.8%;
-    left: 50.1%;
-    transform: translateX(-50%);
+	position: absolute;
+	bottom: 0px;
+	width: 95.8%;
+	left: 50.1%;
+	transform: translateX(-50%);
 }
 
 .project-slide-5-icons {
@@ -1430,6 +1438,43 @@
 	position: absolute;
 	top: 9px;
 	right: 6px;
+}
+
+.right__sidebar_item-head {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	color: #A0AFBB;
+}
+
+.right__sidebar_item-close-btn {
+	position: absolute;
+	top: 8px;
+	right: 5px;
+}
+
+.right__sidebar_item-loader-btn {
+	margin-top: auto;
+}
+
+.right__sidebar_item-success {
+	padding: 87px 0 24px;
+}
+
+.right__sidebar .right__sidebar_item-menu {
+	width: 331px;
+	right: 56px;
+	top: 260px;
+	left: auto;
+	opacity: 0;
+	visibility: hidden;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 // End: Projects

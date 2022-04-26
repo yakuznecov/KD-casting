@@ -1,5 +1,4 @@
 (function ($) {
-
 	const hideModalClickOutside = (parent, modalWrapper) => {
 		$(document).on('click', function (e) {
 			let field = $(parent);
@@ -7,7 +6,7 @@
 				$(modalWrapper).removeClass('active');
 			}
 		});
-	}
+	};
 
 	const hideModalMouseoutOutside = (parent, modalWrapper) => {
 		$(document).on('mouseout', function (e) {
@@ -16,8 +15,7 @@
 				$(modalWrapper).removeClass('show');
 			}
 		});
-	}
-
+	};
 
 	// Start: show modal on hover
 	const showModal = (btn, modal) => {
@@ -42,7 +40,7 @@
 			modal.addClass('opacity-null');
 			modal.addClass('d-none');
 		}
-	}
+	};
 	// End: smooth appearance of the block (display: none)
 
 	// Start actions Modal on hover dynamic position
@@ -124,7 +122,6 @@
 	actionsModal();
 	// End actions Modal on hover dynamic position
 
-	
 	// Start: custom select
 	$('.select-wrapper').each(function () {
 		let thisEl = $(this);
@@ -133,13 +130,13 @@
 		const list = thisEl.find('.selectField-list');
 		const options = thisEl.find('.selectField-options');
 		const icon = thisEl.find('.selectField-icon');
-	
+
 		selectField.click(function () {
 			$(this).toggleClass('open');
 			list.toggleClass('active');
 			icon.toggleClass('active');
 		});
-	
+
 		options.each(function () {
 			let el = $(this);
 			el.click(function () {
@@ -149,10 +146,10 @@
 				icon.toggleClass('active');
 			});
 		});
-	
+
 		$(document).click(function (e) {
 			let select = $('.select-wrapper');
-	
+
 			if (!select.is(e.target) && select.has(e.target).length === 0) {
 				selectField.removeClass('open');
 				list.removeClass('active');
@@ -827,7 +824,6 @@
 				sidebarLeftBtns.addClass('active');
 			}, 100);
 
-
 			sidebarBtnLeft.toggleClass('active');
 			sidebarBtnRight.toggleClass('active');
 
@@ -841,7 +837,7 @@
 		function showSidebar() {
 			mainItemsWrapper.removeClass('active'); // width 0.4s
 			sidebar.toggleClass('--rolled'); // transition: opacity 0.2s, flex 0.4s, width 0.4s;
-			
+
 			sidebarLeftBtns.removeClass('active');
 			sidebarBurger.toggleClass('done');
 			sidebarPlus.toggleClass('done');
@@ -934,7 +930,7 @@
 			sidebar.one('transitionend', function (e) {
 				sidebar.addClass('d-none');
 				main.addClass('no-transition');
-				mainInner.addClass('active'); // transition: width .3s;	
+				mainInner.addClass('active'); // transition: width .3s;
 				tabsInner.addClass('active');
 
 				if (sidebar.hasClass('--rolled')) {
@@ -949,7 +945,6 @@
 					mainItemsWrapper.removeClass('active'); // transition: width .4s;
 					mainItemsWrapper.addClass('expanded'); // transition: width .4s;
 					mainItemsProjectWrapper.addClass('expanded'); // transition: width .4s;
-					
 				}, 200);
 
 				setTimeout(function () {
@@ -1046,7 +1041,7 @@
 		hideModalClickOutside('.dropdown-grey-points', '.send_project_pdf__inner');
 		hideModalClickOutside('.dropdown-request-js', '.create_copy_column__inner');
 		hideModalClickOutside('.dropdown-request-js', '.change_column_name-modal');
-	}
+	};
 
 	showHideModalWithCloseBtn('.sendText-js', '.send_role_text__inner', '.send_role_text-close-btn'); // send role text project
 	showHideModalWithCloseBtn('.sendProjectEmail-js', '.send_project_pdf__inner', '.send_project_pdf-close-btn'); // send project pdf
@@ -1239,3 +1234,10 @@ const trainingSlider = () => {
 };
 
 trainingSlider();
+
+// Start: Show modal sidebar
+$('.js-right__sidebar_item-btn').click(function () {
+	$('.right__sidebar_item-menu').toggleClass('show');
+});
+
+// End: Show modal sidebar
