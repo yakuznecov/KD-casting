@@ -10,7 +10,7 @@
 	color: #fff;
 	background: #1991eb;
 	transition: 0.2s ease all;
-	
+
 	&.--h-24 {
 		height: 24px;
 	}
@@ -121,15 +121,39 @@
 	color: #757575;
 	transition: 0.2s ease;
 
+	&.--pt-1 {
+		padding-top: 1px;
+	}
+
+	&.--ls-04 {
+		letter-spacing: 0.4px;
+	}
+
+	&.--fs-13 {
+		font-size: 13px;
+	}
+
+	&.--fs-15 {
+		font-size: 15px;
+	}
+
+	&.--h-24 {
+		height: 24px;
+	}
+
 	&.--h-32 {
 		height: 32px;
+	}
+
+	&.--radius-8 {
+		border-radius: 8px;
 	}
 
 	&:focus-visible {
 		border: 2px solid #7bb9f0;
 	}
 
-	@media (min-width: 1025px) {
+	@media (hover: hover) {
 		&:hover {
 			background: #fafafa;
 			border: 1px solid #757575;
@@ -712,7 +736,7 @@
 	top: 0;
 	height: 100%;
 	z-index: -1;
-	transition: 0.3s ease-out all;
+	transition: 150ms ease-out all;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 	border-radius: 2px;
 }

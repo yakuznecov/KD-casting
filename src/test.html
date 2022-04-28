@@ -81,7 +81,7 @@
 				<div class="card-btns-small-box">
 					<button><img class="delete-dark-20" src="delete-dark-20.svg" /></button>
 				</div>
-				<img src="bookmarkSimpleBlue-20.svg" />
+				<img class="bookmarkSimpleBlue" src="bookmarkSimpleBlue-20.svg" />
 				<span class="test__container-text">bookmarkSimpleBlue-20.svg</span>
 
 				<img src="project_img.svg" />
@@ -149,6 +149,17 @@
 						</button>
 						<span class="wrap-text">Свернуть</span>
 					</div>
+
+					<div class="card-info-bottom --search-agents">
+						<div class="card-info-bottom-item --hover">
+							<img src="phone.svg" />
+							<div class="card-info-bottom-item-text">+7 (999) 888-55-33</div>
+						</div>
+						<div class="card-info-bottom-item --hover">
+							<img src="mail.svg" />
+							<div class="card-info-bottom-item-text">ekaterina@gmail.com</div>
+						</div>
+					</div>
 				</div>
 				<div class="test-buttons-item">
 					<span class="item-counter main__item-header-counter">5</span>
@@ -175,7 +186,7 @@
 						<button class="primary-btn --h-32 --fs-15 project__addActor-left-inner-btn">Найти</button>
 					</div>
 					<div class="search__sidebar-form-contacts">
-						<div class="search__sidebar-form-contacts-item">
+						<div class="search__sidebar-form-contacts-item --location">
 							<div class="search__sidebar-form-contacts-item-icon">
 								<img src="location.svg" alt="icon-location">
 							</div>
@@ -201,6 +212,7 @@
 							<span class="text-blackBrown-regular mr-4">Фильтр</span>
 							<button class="medium-text-btn ml-auto">очистить</button>
 						</div>
+						<!-- dropdown проекта -->
 						<div class="dropdown-select mb-8 mt-8">
 							<button class="dropdown-select-btn">
 								Выберите проект
@@ -208,7 +220,7 @@
 							</button>
 							<div class="dropdown-select-menu dropdown-fixed-menu">
 								<div class="dropdown-fixed-menu-header">
-									<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+									<div class="text-lightGrey-small-high mb-16">Выберите интересующий вас проект из списка или воспользуйтесь полем для поиска ниже</div>
 									<div class="input-box">
 										<input type="text" placeholder="Поиск проектов" />
 									</div>
@@ -230,6 +242,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- dropdown ансамбля -->
 						<div class="dropdown-select mb-8 mt-8">
 							<button class="dropdown-select-btn">
 								Выберите ансамбль
@@ -237,7 +250,7 @@
 							</button>
 							<div class="dropdown-select-menu dropdown-fixed-menu">
 								<div class="dropdown-fixed-menu-header">
-									<div class="text-lightGrey-small-high mb-16">Выберите вариант из списка или добавьте через поиск</div>
+									<div class="text-lightGrey-small-high mb-16">Выберите интересующий вас ансамбль из списка или воспользуйтесь полем для поиска ниже</div>
 									<div class="input-box">
 										<input type="text" placeholder="Поиск ансамблей" />
 									</div>
@@ -259,6 +272,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- dropdown выбора роли -->
 						<div class="dropdown-select mt-8">
 							<button class="dropdown-select-btn">
 								Выберите роль
@@ -325,8 +339,8 @@
 				<div class="test-forms-item">
 					<div class="chess__wrapper mb-16">
 						<div class="chess-title">шахматка</div>
-						<button class="chess-btn mb-4">Скачать в PDF</button>
-						<button class="chess-btn">Распечатать</button>
+						<button class="secondary-btn --ls-04 --fs-13 w-100 --pt-1 --h-24 mb-4">Скачать в PDF</button>
+						<button class="secondary-btn --ls-04 --fs-13 w-100 --pt-1 --h-24">Распечатать</button>
 					</div>
 					<div class="actors__add-success-form">
 						<div class="actors__add-success-form-inner">
@@ -571,6 +585,8 @@
 
 			<div class="text-blackBrown-large">Запрос артисту отправлен</div>
 			<code>.text-blackBrown-large { font-size: 21px; line-height: 31px; letter-spacing: 0.15px; color: #212121; }</code>
+			<div class="text-blackBrown-large-bold">Запрос артисту отправлен</div>
+			<code>.text-blackBrown-large-bold { font-size: 21px; font-weight: 700; line-height: 31px; letter-spacing: 0.15px; color: #212121; }</code>
 
 			<div class="text-blackBrown">Академия Баумана</div>
 			<code>.text-blackBrown { font-size: 13px; line-height: 16px; letter-spacing: 0.4px; color: #212121; }</code>

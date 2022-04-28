@@ -205,7 +205,19 @@
 }
 
 .teamwork__dropdown {
+	position: relative;
 	margin-left: 10px;
+	cursor: pointer;
+
+	&:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		bottom: -7px;
+		right: 0;
+		display: block;
+	}
 }
 
 .main_project-container {
@@ -608,7 +620,7 @@
 .dropdown-actions__modal {
 	position: absolute;
 	width: 227px;
-	z-index: 200;
+	z-index: 9999;
 	padding: 11px 8px;
 	border: 1px solid #e7e7e7;
 	border-radius: 4px;
@@ -640,7 +652,7 @@
 
 .move-actor__modal {
 	position: absolute;
-	z-index: 250;
+	z-index: 9999;
 	border: 1px solid #e7e7e7;
 	background-color: #fff;
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
@@ -826,12 +838,23 @@
 	background-color: #fff;
 	box-shadow: 0 24px 32px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04),
 		0 0 1px rgba(0, 0, 0, 0.04);
-	border-radius: 4px;
+	border-radius: 8px;
 	z-index: 200;
 	opacity: 0;
 	visibility: hidden;
 	// opacity: 1 !important;
 	// visibility: visible !important;
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		bottom: -55px;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: -1;
+	}
 }
 
 .teamwork__dropdown:hover .teamwork__dropdown-modal {
@@ -857,7 +880,7 @@
 }
 
 .teamwork__dropdown-header {
-	padding: 9px 16px 0 15px;
+	padding: 9px 15px 0 15px;
 }
 
 .teamwork__dropdown-header-title {
@@ -941,7 +964,7 @@
 }
 
 .teamwork__dropdown__container {
-	height: 282px;
+	height: 292px;
 	padding: 0 11px 0 15px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -1072,6 +1095,14 @@
 	}
 }
 
+.teamwork__dropdown__item:last-child .teamwork__dropdown-item-modal {
+	@media (hover: hover) {
+		& .teamwork__dropdown-item-modal-inner {
+			top: -84px;
+		}
+	}
+}
+
 .teamwork__dropdown-item-modal-arrow {
 	transition: transform 0.2s;
 	margin-bottom: 1px;
@@ -1087,7 +1118,7 @@
 }
 
 .teamwork__dropdown-footer {
-	padding: 0 16px 19px 15px;
+	padding: 0 15px 8px;
 }
 
 .teamwork__dropdown-footer-wrapper {
@@ -1095,7 +1126,7 @@
 	align-items: center;
 	justify-content: center;
 	border-top: 1px solid #e0e0e0;
-	padding-top: 15px;
+	padding-top: 16px;
 }
 
 .selectField-list .teamwork__dropdown-footer-options {
@@ -1119,13 +1150,15 @@
 	display: flex;
 	flex-direction: column;
 	flex: 0 0 348px;
-	height: 100%;
+	min-height: 800px;
 	padding: 12px;
+	border-radius: 8px;
 	margin-right: 27px;
-	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23DCDCDCFF' stroke-width='1' stroke-dasharray='8' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23DCDCDCFF' stroke-width='1' stroke-dasharray='9%2c 5' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
 
 	&.--blue {
-		background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2370a8ddFF' stroke-width='1' stroke-dasharray='8' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+		background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2370a8ddFF' stroke-width='1' stroke-dasharray='9%2c 5' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
+		border-radius: 8px;
 	}
 }
 

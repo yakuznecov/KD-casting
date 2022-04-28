@@ -272,7 +272,7 @@
 	// Start: Открытие спойлеров в сайдбаре
 	function openSpoiler() {
 		$('.spoiler-item-header').click(function () {
-			$(this).next('.spoiler-item-body').slideToggle();
+			$(this).next('.spoiler-item-body').slideToggle(300);
 			$(this).parent().toggleClass('active');
 		});
 	}

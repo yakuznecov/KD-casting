@@ -159,6 +159,7 @@ body {
 	color: #fdfeff;
 	margin-left: 20px;
 }
+
 .lang-switch-btn img {
 	margin-right: 6px;
 	width: 24px;
@@ -286,6 +287,10 @@ body {
 	&.--empty-list {
 		margin-top: -125px;
 	}
+
+	&.--no-actors {
+		margin-top: -102px;
+	}
 }
 
 .empty__wrapper-bg svg {
@@ -351,6 +356,7 @@ body {
 	border-radius: 4px;
 	border: 1px solid transparent;
 	background: #f5f5f5;
+
 	&:hover {
 		border: 1px solid #bdbdbd;
 	}
@@ -358,6 +364,7 @@ body {
 	&.active {
 		border: 2px solid rgba(112, 168, 221, 0.7);
 		padding: 0 11px;
+
 		& button svg path,
 		button svg circle {
 			stroke: #70a8dd;
@@ -375,6 +382,7 @@ body {
 		font-size: 14px;
 		letter-spacing: 0.25px;
 		color: #212121;
+
 		&::placeholder {
 			color: #616161;
 			letter-spacing: 0.25px;
@@ -413,9 +421,11 @@ body {
 
 .hide-media-status {
 	display: flex;
+
 	&.hide {
 		display: none;
 	}
+
 	// @media (max-width: 1366px) {
 	//
 	// }
@@ -442,6 +452,7 @@ body {
 
 	&:hover {
 		background: #e0e0e0;
+
 		& svg path {
 			stroke: #757575;
 		}
@@ -466,8 +477,8 @@ body {
 	display: flex;
 	height: calc(100vh - 263px);
 	width: calc(100vw - 407px);
-	overflow: overlay;
-	// overflow-y: hidden;
+	overflow-x: overlay;
+	overflow-y: hidden;
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
 	transition: width 0.4s;
@@ -506,6 +517,7 @@ body {
 		background-clip: padding-box;
 		border: 8px solid rgba(0, 0, 0, 0); // для отступа снизу
 	}
+
 	@media (max-height: 600px) {
 		height: auto;
 	}
@@ -513,6 +525,10 @@ body {
 	// @media (max-width: 1400px) {
 	// 	overflow: overlay;
 	// }
+}
+
+.main-items-box {
+	overflow-y: hidden;
 }
 
 .main-items-wrapper.--rolled {
@@ -529,6 +545,7 @@ body {
 	height: 100%;
 	margin-right: 27px;
 	transition: all 0.5s;
+
 	&:last-child {
 		margin-right: 40px;
 	}
@@ -537,24 +554,30 @@ body {
 	&.--expand {
 		max-width: 1004px;
 		transition: all 0.5s;
+
 		& .main__item-inner {
 			display: flex;
 			padding: 0 8px 0 24px;
 			min-width: 988px;
 			flex-wrap: wrap;
 		}
+
 		& .main__item-card {
 			margin-right: 24px;
+
 			&:nth-child(3n) {
 				margin-right: 0;
 			}
 		}
+
 		& .request-js svg {
 			transform: rotate(180deg);
 		}
+
 		& .request-js .collapse-column {
 			display: block;
 		}
+
 		& .request-js .expand-column {
 			display: none;
 		}
@@ -583,6 +606,7 @@ body {
 	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23DCDCDCFF' stroke-width='1' stroke-dasharray='8' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
 	border-radius: 8px;
 	margin-bottom: 12px;
+
 	& span {
 		font-size: 13px;
 		line-height: 16px;
@@ -608,6 +632,7 @@ body {
 		width: 6px;
 		background-color: #f2f2f2;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: #e0e0e0;
 		border-radius: 100px;
@@ -631,6 +656,7 @@ body {
 
 	&:hover {
 		border: 1px solid #bdbdbd;
+
 		& .arrow-right path {
 			stroke: #616161;
 		}
@@ -638,6 +664,7 @@ body {
 
 	&:hover.active {
 		border: 2px solid #70a8dd;
+
 		& .arrow-right path {
 			stroke: #70a8dd;
 		}
@@ -647,9 +674,11 @@ body {
 		background: #f3f9fe;
 		border: 2px solid rgba(112, 168, 221, 0.7);
 		padding: 0 10px;
+
 		& .arrow-right path {
 			stroke: rgba(112, 168, 221, 0.7);
 		}
+
 		& .sidebar__castings-item-img.active {
 			background: #e8f5ff;
 		}
@@ -711,6 +740,7 @@ body {
 		background-color: #f5f5f5;
 		bottom: -50px;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: #e0e0e0;
 		border-radius: 100px;
@@ -729,7 +759,7 @@ body {
 	cursor: pointer;
 	background: #fff;
 	transition: all 0.2s;
-	
+
 	&:hover {
 		box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	}
@@ -751,7 +781,7 @@ body {
 .main__item-card-info {
 	position: relative;
 	padding: 16px 16px 7px 16px;
-	
+
 	&.--add-card {
 		padding: 16px;
 		height: 271px;
@@ -826,7 +856,7 @@ body {
 }
 
 .card-info-top-foto {
-	width: 96px;
+	min-width: 96px;
 	height: 144px;
 	cursor: pointer;
 	// margin-left: 20px;
@@ -844,6 +874,33 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom: 8px;
+}
+
+.card-info-bottom-item.--hover {
+	@media (hover: hover) {
+		&:hover {
+
+			& .card-info-bottom-item-text {
+				color: #157EDC;
+				transition: all 0.2s;
+			}
+
+			& svg path {
+				fill: #70A8DD;
+				transition: all 0.2s;
+			}
+		}
+	}
+
+	&:active {
+		& .card-info-bottom-item-text {
+			color: #157EDC;
+		}
+
+		& svg path {
+			fill: #70A8DD;
+		}
+	}
 }
 
 .card-info-bottom-item-text {
@@ -879,6 +936,7 @@ body {
 	position: relative;
 	padding: 5px;
 	cursor: pointer;
+
 	& button {
 		display: flex;
 	}
@@ -893,6 +951,7 @@ body {
 }
 
 .profile-btn-20 {
+
 	&:hover circle,
 	&:hover path {
 		stroke: #212121;
@@ -934,6 +993,7 @@ body {
 		max-width: none;
 	}
 }
+
 // End: Карточка актера, крупное фото
 
 // End: Основная страница
@@ -996,6 +1056,7 @@ body {
 	background: #dbedff;
 	border-radius: 4px;
 	margin-top: 24px;
+
 	&.--right {
 		margin-top: 29px;
 	}
@@ -1015,6 +1076,7 @@ body {
 	color: #fff;
 	background: #1991eb;
 	transition: 0.2s ease;
+
 	&:hover {
 		background: #127fd1;
 	}
@@ -1029,24 +1091,31 @@ body {
 	&:nth-child(2) {
 		margin-left: 24px;
 	}
+
 	&:nth-child(3) {
 		margin-left: 24px;
 	}
+
 	&:nth-child(4) {
 		margin-left: 25px;
 	}
+
 	&:nth-child(5) {
 		margin-left: 26px;
 	}
+
 	&:nth-child(6) {
 		margin-left: 19px;
 	}
+
 	&:nth-child(7) {
 		margin-left: 19px;
 	}
+
 	&:nth-child(8) {
 		margin-left: 19px;
 	}
+
 	&:last-child {
 		margin-left: 19px;
 	}
@@ -1069,6 +1138,7 @@ body {
 .sidebar-top-btns,
 .sidebar-left-btns {
 	display: none;
+
 	&.active {
 		display: block;
 	}

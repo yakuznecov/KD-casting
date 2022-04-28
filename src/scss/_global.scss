@@ -1,5 +1,6 @@
 .central__container {
 	padding-top: 144px;
+	padding-bottom: 56px;
 }
 
 .avatar__img {
@@ -206,6 +207,14 @@
 
 .text-blackBrown-large {
 	font-size: 21px;
+	line-height: 31px;
+	letter-spacing: 0.15px;
+	color: #212121;
+}
+
+.text-blackBrown-large-bold {
+	font-size: 21px;
+	font-weight: 700;
 	line-height: 31px;
 	letter-spacing: 0.15px;
 	color: #212121;
@@ -718,5 +727,13 @@
 
 	&.--side {
 		margin-top: 25px;
+	}
+}
+
+.bookmarkSimpleBlue {
+	cursor: pointer;
+
+	&:hover path {
+		fill: #127fd1;
 	}
 }

@@ -1,91 +1,11 @@
 {
 	"files": [
 		{
-			"path": "src/scss/_projects.scss",
-			"bookmarks": [
-				{
-					"line": 12,
-					"column": 13,
-					"label": ""
-				},
-				{
-					"line": 20,
-					"column": 15,
-					"label": ""
-				},
-				{
-					"line": 214,
-					"column": 29,
-					"label": ""
-				},
-				{
-					"line": 258,
-					"column": 17,
-					"label": ""
-				},
-				{
-					"line": 267,
-					"column": 23,
-					"label": ""
-				},
-				{
-					"line": 652,
-					"column": 31,
-					"label": ""
-				},
-				{
-					"line": 942,
-					"column": 32,
-					"label": ""
-				}
-			]
-		},
-		{
 			"path": "src/project-data.html",
 			"bookmarks": [
 				{
-					"line": 2514,
-					"column": 50,
-					"label": ""
-				}
-			]
-		},
-		{
-			"path": "src/scss/nav.scss",
-			"bookmarks": [
-				{
-					"line": 464,
-					"column": 21,
-					"label": ""
-				},
-				{
-					"line": 575,
-					"column": 15,
-					"label": ""
-				}
-			]
-		},
-		{
-			"path": "src/scss/_btn.scss",
-			"bookmarks": [
-				{
-					"line": 0,
-					"column": 14,
-					"label": ""
-				}
-			]
-		},
-		{
-			"path": "src/scss/_sidebar.scss",
-			"bookmarks": [
-				{
-					"line": 0,
-					"column": 10,
-					"label": ""
-				},
-				{
-					"line": 23,
-					"column": 19,
+					"line": 1011,
+					"column": 35,
 					"label": ""
 				}
 			]

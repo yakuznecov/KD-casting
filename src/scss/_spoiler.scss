@@ -15,6 +15,7 @@
 
 	&.active {
 		border: 1px solid #9dc6ee;
+
 		&:hover {
 			border: 1px solid #9dc6ee;
 		}
@@ -25,8 +26,9 @@
 			}
 
 			& .spoiler-item-icon {
-				transition: all 0.5s;
+				transition: all 0.3s;
 				transform: rotate(180deg);
+
 				& path {
 					fill: #70a8dd;
 				}
@@ -56,7 +58,7 @@
 }
 
 .spoiler-item-icon {
-	transition: all 0.5s;
+	transition: all 0.3s;
 	margin-left: auto;
 }
 
@@ -140,8 +142,8 @@
 	letter-spacing: 0.4px;
 	border-radius: 4px;
 	overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	color: #1991eb;
 	background: #dbedff;
 }
@@ -176,7 +178,7 @@
 	overflow-x: hidden;
 	scrollbar-color: #e0e0e0 transparent;
 	scrollbar-width: thin;
-	
+
 	&::-webkit-scrollbar {
 		width: 4px;
 		height: 71px;
@@ -212,8 +214,8 @@
 	margin-right: 8px;
 	margin-bottom: 8px;
 	overflow: hidden;
-    // white-space: nowrap;
-    text-overflow: ellipsis;
+	// white-space: nowrap;
+	text-overflow: ellipsis;
 	background: #fafafa;
 	border-radius: 4px;
 	cursor: pointer;
@@ -224,6 +226,7 @@
 
 	&.--active {
 		background: #eee;
+
 		&:hover {
 			background: #e0e0e0;
 		}

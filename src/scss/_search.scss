@@ -27,7 +27,7 @@
 .search__tabs-content {
 	position: relative;
 	width: 100%;
-	margin: 36px 0 20px;
+	margin: 24px 0 20px;
 }
 
 .search__form {
@@ -79,7 +79,7 @@
 
 .search-spoiler {
 	overflow-y: auto;
-	height: calc(100vh - 525px);
+	height: calc(100vh - 528px);
 	padding: 0 7px 0 0;
 	scrollbar-color: #e0e0e0 transparent;
 	scrollbar-width: thin;
@@ -97,7 +97,7 @@
 	/* Track */
 	&::-webkit-scrollbar-track {
 		background: transparent;
-		margin-bottom: 8px;
+		margin-bottom: 17px;
 	}
 
 	/* Handle */
@@ -105,6 +105,10 @@
 		background: #e0e0e0;
 		border-radius: 100px;
 		background-clip: padding-box;
+	}
+
+	& .spoiler-item:last-child {
+		margin-bottom: 17px;
 	}
 }
 
@@ -295,8 +299,34 @@
 	cursor: pointer;
 	margin-bottom: 12px;
 
+	&:first-child {
+		@media (hover: hover) {
+			&:hover span {
+				color: inherit;
+			}
+		}
+
+		&:active span {
+			color: inherit;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover span {
+			color: #157EDC;
+		}
+	}
+
+	&:active span {
+		color: #157EDC;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	&.--location {
+		cursor: auto;
 	}
 }
 
@@ -313,20 +343,6 @@
 
 .search__sidebar-form-chess {
 	margin-bottom: 16px;
-}
-
-.search__sidebar-form-chess-btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 40px;
-	padding-top: 2px;
-	border: 1px solid #e0e0e0;
-	border-radius: 8px;
-	font-size: 15px;
-	letter-spacing: .5px;
-	color: #757575;
 }
 
 .add-to-project-form {
@@ -357,5 +373,5 @@
 }
 
 .actors__add-success-form-loader {
-	padding: 0 19px 23px;	
+	padding: 0 19px 23px;
 }
