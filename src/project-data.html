@@ -480,7 +480,29 @@
 								<img class="tab_project-dropdown-arrow mt-1" src="arrow-down-dark4-8.svg" />
 							</span>
 						</div>
+
+						<!-- modal -->
+						<div class="tabs_project-modal list__modal">
+							<ul>
+								<li class="tabs_project-modal-item list__modal-item">
+									<button class="tabs_project-modal-btn list__modal-item-btn">
+										<span class="tabs_project-modal-item-title list__modal-item-title">Прохожие</span>
+									</button>
+								</li>
+								<li class="tabs_project-modal-item list__modal-item">
+									<button class="tabs_project-modal-btn list__modal-item-btn">
+										<span class="tabs_project-modal-item-title list__modal-item-title">Люди в здании</span>
+									</button>
+								</li>
+								<li class="tabs_project-modal-item list__modal-item">
+									<button class="tabs_project-modal-btn list__modal-item-btn">
+										<span class="tabs_project-modal-item-title list__modal-item-title">Братья всех сестёр</span>
+									</button>
+								</li>
+							</ul>
+						</div>
 					</div>
+
 					<div class="dropdown-wrapper dropdown-mainRole">
 						<button class="ensemble-dropdown-btn dropdown-btn">
 							<span class="ensemble-dropdown-title">Управление ансамблями</span>
@@ -509,7 +531,7 @@
 									</div>
 								</div>
 								<div class="dropdown-ensemble__item">
-									<div class="dropdown-ensemble__item-content">
+									<div class="dropdown-ensemble__item-content js-dropdown-ensemble__item-content">
 										<span class="dropdown-ensemble__item-title">Семья Петровых</span>
 										<div class="dropdown-ensemble__item-btns">
 											<div class="dropdown-ensemble__item_btn">
@@ -525,7 +547,7 @@
 											</div>
 
 											<div class="dropdown-ensemble-wrapper-points_btn">
-												<div class="dropdown-ensemble__item_btn">
+												<div class="dropdown-ensemble__item_btn js-dropdown-ensemble__item_btn">
 													<button class="dropdown-ensemble__item-points_btn">
 														<img src="dotsThree.svg" alt="btn">
 													</button>
@@ -533,7 +555,7 @@
 
 												<div class="dropdown-ensemble-points_modal">
 													<ul>
-														<li class="sendText-js">
+														<li class="js-sendText">
 															<button>
 																<img src="sendText-20.svg" />
 																<span class="points-grey-text dropdown-text">Отправить текст всем актёрам</span>
@@ -553,21 +575,7 @@
 														</li>
 													</ul>
 												</div>
-												<div class="send_role_text__inner">
-													<div class="modal_title_12 mb-16">отправить текст роли</div>
-													<div class="drag-area mb-16">
-														<div class="text-dullGrey-small mb-4">Загрузите сюда файл с текстами для роли (doc, pdf)</div>
-														<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
-													</div>
-													<div class="title-blackBluish-small mb-8">сообщение актёрам</div>
-													<div class="area-field-wrapper --project mb-16">
-														<textarea class="area-field" name="text"></textarea>
-													</div>
-													<button class="blue-btn --medium">Отправить</button>
-													<button class="send_role_text-close-btn" aria-label="close">
-														<img src="x-close-grey-16.svg" />
-													</button>
-												</div>
+
 											</div>
 										</div>
 									</div>
@@ -632,7 +640,23 @@
 								</div>
 							</div>
 						</div>
+						<div class="js-send-role">
+							<div class="modal_title_12 mb-16">отправить текст роли</div>
+							<div class="drag-area mb-16">
+								<div class="text-dullGrey-small mb-4">Загрузите сюда файл с текстами для роли (doc, pdf)</div>
+								<div class="text-lightGrey-extra-small">Перетяните или нажмите, чтобы выбрать</div>
+							</div>
+							<div class="title-blackBluish-small mb-8">сообщение актёрам</div>
+							<div class="area-field-wrapper --project mb-16">
+								<textarea class="area-field" name="text"></textarea>
+							</div>
+							<button class="blue-btn --medium">Отправить</button>
+							<button class="send_role_text-close-btn" aria-label="close">
+								<img src="x-close-grey-16.svg" />
+							</button>
+						</div>
 					</div>
+
 					<div class="teamwork__container">
 						<div class="teamwork__users">
 							<div class="teamwork__users_img">

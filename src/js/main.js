@@ -29,6 +29,25 @@
 	showModal('.dropdown-ensemble__item-points_btn', '.dropdown-ensemble-points_modal');
 	// End: show modal on hover
 
+	$(function () {
+		const tabProjectDropdown = $('.tab_project-dropdown');
+		const tabsProjectModal = $('.tabs_project-modal');
+		const tabsContainer = $('.tabs__container');
+
+		tabProjectDropdown.on('mouseover', function () {
+			tabsProjectModal.addClass('show');
+			tabProjectDropdown.addClass('active');
+		});
+
+		$(document).on('mouseout', function (e) {
+			let field = $('.tabs__container');
+			if (!field.is(e.target) && field.has(e.target).length === 0) {
+				tabsProjectModal.removeClass('show');
+				tabProjectDropdown.removeClass('active');
+			}
+		});
+	});
+
 	// Start: smooth appearance of the block (display: none)
 	const smoothAppearanceBlock = (modal) => {
 		if (modal.hasClass('d-none')) {
@@ -1027,10 +1046,16 @@
 	const showHideModalWithCloseBtn = (textEl, modal, closeBtn) => {
 		$(textEl).click(function () {
 			$(modal).addClass('active');
+
+			if ($('.js-send-role').hasClass('active')) {
+				$('.js-dropdown-ensemble__item-content').addClass('show');
+			}
 		});
 
 		$(closeBtn).click(function () {
 			$(modal).removeClass('active');
+
+			$('.js-dropdown-ensemble__item-content').removeClass('show');
 		});
 
 		$(modal).mouseover(function (e) {
@@ -1041,12 +1066,14 @@
 		hideModalClickOutside('.dropdown-grey-points', '.send_project_pdf__inner');
 		hideModalClickOutside('.dropdown-request-js', '.create_copy_column__inner');
 		hideModalClickOutside('.dropdown-request-js', '.change_column_name-modal');
+		hideModalClickOutside('.dropdown-mainRole', '.js-send-role');
 	};
 
 	showHideModalWithCloseBtn('.sendText-js', '.send_role_text__inner', '.send_role_text-close-btn'); // send role text project
 	showHideModalWithCloseBtn('.sendProjectEmail-js', '.send_project_pdf__inner', '.send_project_pdf-close-btn'); // send project pdf
 	showHideModalWithCloseBtn('.dublicate-column-js', '.create_copy_column__inner', '.create_copy_column-close-btn'); // create copy column
 	showHideModalWithCloseBtn('.rename-js', '.change_column_name-modal', '.change_column_name-close-btn'); // change column name
+	showHideModalWithCloseBtn('.js-sendText', '.js-send-role', '.send_role_text-close-btn'); // send role text in ensemble-dropdown
 
 	// End: show and Hide Modal With Close Btn
 
@@ -1237,7 +1264,7 @@ trainingSlider();
 
 // Start: Show modal sidebar
 $('.js-right__sidebar_item-btn').click(function () {
-	$('.right__sidebar_item-menu').toggleClass('show');
+	$('.right__sidebar_item-menu').toggleClass('menu-active');
 });
 
 // End: Show modal sidebar
