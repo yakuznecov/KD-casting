@@ -68,6 +68,7 @@
 		const actionsModal = $('.dropdown-actions__modal');
 		const moveActorBtn = $('.move-actor_js');
 		const moveActorModal = $('.move-actor__modal');
+		const closeBtn = $('.move-actor__modal .create_copy_column-close-btn');
 
 		actionBtn.mouseenter(function (e) {
 			e.stopPropagation();
@@ -135,6 +136,10 @@
 				hideModal(actionsModal);
 				hideModal(moveActorModal);
 			}
+		});
+
+		closeBtn.click(function () {
+			moveActorModal.addClass('opacity-null d-none');
 		});
 	};
 

@@ -247,6 +247,10 @@ body {
 			transition: padding-left 0.4s;
 		}
 	}
+
+	&.notSidebar .tabs_project-modal {
+		top: 62px;
+	}
 }
 
 .main-inner {
@@ -482,6 +486,7 @@ body {
 	scrollbar-color: rgba(224, 224, 224, 0.5) transparent;
 	scrollbar-width: thin;
 	transition: width 0.4s;
+	cursor: pointer;
 
 	&.expanded {
 		width: calc(100vw - 31px);
@@ -508,6 +513,8 @@ body {
 	&::-webkit-scrollbar-track {
 		background: transparent;
 		margin: 0 40px 0 0;
+
+
 	}
 
 	/* Handle */
@@ -516,6 +523,8 @@ body {
 		border-radius: 100px;
 		background-clip: padding-box;
 		border: 8px solid rgba(0, 0, 0, 0); // для отступа снизу
+
+
 	}
 
 	@media (max-height: 600px) {
