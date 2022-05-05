@@ -29,25 +29,6 @@
 	showModal('.dropdown-ensemble__item-points_btn', '.dropdown-ensemble-points_modal');
 	// End: show modal on hover
 
-	$(function () {
-		const tabProjectDropdown = $('.tab_project-dropdown');
-		const tabsProjectModal = $('.tabs_project-modal');
-		const tabsContainer = $('.tabs__container');
-
-		tabProjectDropdown.on('mouseover', function () {
-			tabsProjectModal.addClass('show');
-			tabProjectDropdown.addClass('active');
-		});
-
-		$(document).on('mouseout', function (e) {
-			let field = $('.tabs__container');
-			if (!field.is(e.target) && field.has(e.target).length === 0) {
-				tabsProjectModal.removeClass('show');
-				tabProjectDropdown.removeClass('active');
-			}
-		});
-	});
-
 	// Start: smooth appearance of the block (display: none)
 	const smoothAppearanceBlock = (modal) => {
 		if (modal.hasClass('d-none')) {
@@ -62,6 +43,42 @@
 	};
 	// End: smooth appearance of the block (display: none)
 
+	// Start Modal tab_project-dropdown
+	const tabProjectModal = () => {
+		const tabProjectDropdown = $('.tab_project-dropdown');
+		const tabsProjectModal = $('.tabs_project-modal');
+
+		tabProjectDropdown.mouseover(function (e) {
+			e.stopPropagation();
+			let elm = $(this);
+			let dropHeight = elm.outerHeight();
+			let top = elm.offset().top + dropHeight;
+			let left = elm.offset().left;
+
+			elm.addClass('active');
+
+			tabsProjectModal.css({ top: top, left: left });
+			tabsProjectModal.addClass('show');
+		});
+
+		$(document).mouseover(function (e) {
+			let drop = $('.tab_project-dropdown');
+			let modal = $('.tabs_project-modal');
+			if (
+				!drop.is(e.target) &&
+				!modal.is(e.target) &&
+				drop.has(e.target).length === 0 &&
+				modal.has(e.target).length === 0
+			) {
+				modal.removeClass('show');
+				drop.removeClass('active');
+			}
+		});
+	};
+
+	tabProjectModal();
+	// End Modal tab_project-dropdown
+
 	// Start actions Modal on hover dynamic position
 	const actionsModal = () => {
 		const actionBtn = $('.action-btn');
@@ -75,7 +92,6 @@
 
 			let btnHeight = $(this).outerHeight();
 			let top = $(this).offset().top + $(this).outerHeight();
-			console.log(top);
 			let left = $(this).offset().left;
 			let win_h = $(window).height();
 
@@ -90,10 +106,8 @@
 				}
 
 				let moveActorModalHeight = moveActorModal.outerHeight();
-				console.log(moveActorModalHeight);
 
 				let actionsModalHeight = actionsModal.outerHeight();
-				console.log(actionsModalHeight);
 
 				if (win_h - top < actionsModalHeight) {
 					actionsModal.css({ top: top - actionsModalHeight - btnHeight - 1, left: left });
@@ -105,7 +119,6 @@
 					moveActorModal.css({ top: top - moveActorModalHeight - btnHeight - 1, left: left });
 				} else {
 					moveActorModal.css({ top: top + 1, left: left });
-					console.log(moveActorModal.offset());
 				}
 			}
 

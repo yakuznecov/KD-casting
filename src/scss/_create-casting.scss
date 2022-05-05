@@ -1,5 +1,6 @@
 .create__container {
-	max-width: 896px;
+	max-width: 936px;
+	padding: 0 20px;
 	// margin: 0 auto 300px;
 	margin: 0 auto;
 	user-select: none;
@@ -105,6 +106,10 @@
 
 	&.--isSidebar {
 		margin: 0 auto 0 40px;
+
+		@media (max-width: 768px) {
+			margin: 0 auto 0 20px;
+		}
 	}
 }
 

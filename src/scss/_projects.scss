@@ -5,7 +5,8 @@
 }
 
 .project__addActor-container {
-	max-width: 982px;
+	max-width: 1042px;
+	padding: 0 40px;
 	margin: 0 auto;
 	user-select: none;
 }
@@ -744,6 +745,21 @@
 	}
 }
 
+.dropdown-ensemble__item-points_btn {
+	position: relative;
+
+	&:after {
+		position: absolute;
+		display: block;
+		content: '';
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: -10px;
+	}
+
+}
+
 .dropdown-ensemble__item-title {
 	font-size: 14px;
 	letter-spacing: 0.25px;
@@ -1209,8 +1225,6 @@
 
 .tabs_project-modal {
 	position: absolute;
-	top: 48px;
-	left: 473px;
 	width: 296px;
 	opacity: 0;
 	visibility: hidden;
@@ -1220,12 +1234,17 @@
 		opacity: 1;
 		visibility: visible;
 	}
+
 }
 
 .create__form-title-modal {
 	top: 32px;
 	right: 0;
 	width: 231px;
+
+	@media (max-width: 1140px) {
+		right: -47px;
+	}
 }
 
 .project__addActor-wrapper {
@@ -1297,6 +1316,10 @@
 		background-color: #e0e0e0;
 		border-radius: 100px;
 		box-shadow: inset 0 -16px 0 0 #f5f5f5;
+	}
+
+	@media (max-width: 1082px) {
+		min-width: 429px;
 	}
 }
 
@@ -1468,6 +1491,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 50.1%;
+	width: 100%;
 	transform: translateX(-50%);
 }
 

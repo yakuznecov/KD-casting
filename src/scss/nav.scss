@@ -278,7 +278,7 @@ body {
 .empty__wrapper {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	padding-top: 95px;
 	height: calc(100vh - 143px);
 	width: 100%;
 	text-align: center;
@@ -287,19 +287,10 @@ body {
 
 .empty__wrapper-bg {
 	max-width: 938px;
-
-	&.--empty-list {
-		margin-top: -125px;
-	}
-
-	&.--no-actors {
-		margin-top: -102px;
-	}
 }
 
 .empty__wrapper-bg svg {
-	max-width: 100%;
-	height: auto;
+	width: 48.854vw;
 }
 
 .empty-title {
@@ -314,6 +305,7 @@ body {
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0.5px;
+	padding: 0 20px;
 	margin-bottom: 17px;
 	color: #757575;
 }
@@ -775,6 +767,10 @@ body {
 
 	&.--add-card {
 		margin-right: 20px;
+
+		@media (max-width: 1082px) {
+			width: 363px;
+		}
 	}
 
 	&.--active {
