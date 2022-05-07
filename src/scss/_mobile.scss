@@ -1,3 +1,17 @@
+.wrapper__mobile {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	padding-top: 72px;
+}
+
+.container-mobile {
+	padding: 0 20px;
+}
+
 .site-header-mobile {
 	position: fixed;
 	top: 0;
@@ -14,7 +28,7 @@
 	align-items: center;
 	justify-content: space-between;
 	min-height: 72px;
-
+	padding-left: 20px;
 	background-color: #0064c1;
 }
 
@@ -23,7 +37,7 @@
 	align-items: center;
 }
 
-.arrow-box + .menu-header__mobile-left-text {
+.arrow-box+.menu-header__mobile-left-text {
 	padding-left: 0px;
 }
 
@@ -35,6 +49,7 @@
 	display: flex;
 	align-items: center;
 	padding-left: 20px;
+
 	@media (max-width: 360px) {
 		font-size: 18px;
 	}
@@ -51,7 +66,18 @@
 }
 
 .burger-box {
-	padding: 20px;
+	position: relative;
+	padding: 22px;
+
+	&:after {
+		position: absolute;
+		content: '';
+		height: 20px;
+		width: 1px;
+		left: 0;
+		top: 20px;
+		background-color: #408bd1;
+	}
 }
 
 .check-box {
@@ -111,6 +137,7 @@
 .burger__menu-btn_active .burger__line-second {
 	opacity: 0;
 }
+
 .burger__menu-btn_active .burger__line-first {
 	transform: rotate(45deg);
 	top: 50%;
@@ -219,10 +246,12 @@
 	margin: 20px 0 0;
 	background-color: #2776c0;
 	padding: 0 20px;
+
 	&.--bottom {
 		margin: 14px 0 10px;
 	}
 }
+
 // End: Menu burger
 
 // Start: меню с переключением
@@ -240,12 +269,15 @@
 	background-color: #015eb5;
 	overflow-x: auto;
 	white-space: nowrap;
+
 	&::-webkit-scrollbar {
 		width: 0;
 	}
+
 	@media (min-width: 375px) {
 		overflow-x: hidden;
 	}
+
 	&.--scroll {
 		@media (max-width: 320px) {
 			padding: 17px 20px 10px;
@@ -261,22 +293,27 @@
 	height: 40px;
 	background: #015eb5;
 	z-index: 10;
+
 	&.--small {
 		top: 43px;
 		width: 13px;
 		height: 15px;
+
 		&.--r {
 			right: 0;
 			left: auto;
 		}
 	}
+
 	&.--right {
 		right: 0;
 		left: auto;
 	}
+
 	&.active {
 		display: none;
 	}
+
 	@media (min-width: 375px) {
 		display: none;
 	}
@@ -287,8 +324,10 @@
 	font-size: 15px;
 	margin-right: 18px;
 	color: #fff;
+
 	&.active {
 		color: #ffca28;
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -317,6 +356,7 @@
 
 .tabs__content {
 	display: none;
+
 	&.active {
 		display: block;
 	}
@@ -325,6 +365,7 @@
 .profile-menu__links {
 	margin-top: 17px;
 	padding: 0 10px;
+
 	&.--rate {
 		padding: 0 20px;
 	}
@@ -336,12 +377,14 @@
 	flex-flow: row nowrap;
 	padding: 7px 10px;
 	margin-bottom: 4px;
+
 	& span {
 		font-size: 17px;
 		color: #fff;
 		line-height: 1;
 		margin-left: 20px;
 	}
+
 	&:hover {
 		background: #004d94;
 		border-radius: 4px;
@@ -358,6 +401,7 @@
 	border-radius: 4px;
 	padding: 20px;
 	margin-bottom: 20px;
+
 	&-top {
 		display: flex;
 		justify-content: space-between;
@@ -365,6 +409,7 @@
 		width: 100%;
 		height: 100%;
 	}
+
 	&-bottom {
 		display: flex;
 		justify-content: space-between;
@@ -372,15 +417,18 @@
 		width: 100%;
 		height: 100%;
 	}
+
 	&-text {
 		display: inline-block;
 		color: #fff;
 		font-size: 17px;
+
 		&.--date {
 			font-size: 15px;
 			color: rgba(255, 255, 255, 0.85);
 		}
 	}
+
 	&-line {
 		width: 100%;
 		height: 1px;
@@ -435,6 +483,7 @@
 	border-radius: 100px;
 	color: #fff;
 	background: rgba(38, 153, 251, 0.55);
+
 	&:hover {
 		color: #fff;
 		background: rgba(5, 136, 248, 0.55);
@@ -452,6 +501,7 @@
 	border-radius: 100px;
 	margin-left: 20px;
 	background-color: #408bd1;
+
 	& span {
 		display: flex;
 	}
@@ -726,4 +776,54 @@
 	bottom: 2px;
 	background: #219653;
 }
+
 // End: Фиксированная кнопка с кол-вом сообщений
+
+.filter-mobile-btn {
+	display: flex;
+	padding: 22px 21px 22px 11px;
+}
+
+.search-mobile-btn {
+	display: flex;
+	padding: 21px 11px 21px 21px;
+}
+
+.menu-header__mobile-content-top {
+	margin-bottom: -4px;
+}
+
+.menu-header__mobile-content-top-title {
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 28px;
+	letter-spacing: 0.5px;
+	margin-right: 3px;
+	color: #fff;
+}
+
+.menu-header__mobile-content-bottom {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color: #bfd8ef;
+}
+
+.k-direct-bar {
+	display: flex;
+	padding-top: 12px;
+}
+
+.k-direct-bar-item {
+	width: 109px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.k-direct-bar-img {
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	object-fit: cover;
+	filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.06)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+}
