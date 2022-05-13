@@ -1225,14 +1225,17 @@
 
 .tabs_project-modal {
 	position: absolute;
+	top: 0;
 	width: 296px;
-	opacity: 0;
-	visibility: hidden;
+	// opacity: 0;
+	// visibility: hidden;
+	display: none;
 	transition: all 0.2s;
 
 	&.show {
-		opacity: 1;
-		visibility: visible;
+		// opacity: 1;
+		// visibility: visible;
+		display: block;
 	}
 
 }

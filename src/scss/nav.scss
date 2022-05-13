@@ -938,6 +938,10 @@ body {
 		justify-content: flex-end;
 		padding: 13px 16px;
 	}
+
+	&.--vertical-list {
+		padding: 8px 16px 9px 7px;
+	}
 }
 
 .main__item-card-btns-small {
@@ -955,6 +959,20 @@ body {
 
 	&.--monitorPlay {
 		margin-top: -1px;
+	}
+
+	&.--large-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 16px;
+		width: 40px;
+		height: 40px;
+		background-color: transparent;
+
+		&:active {
+			background-color: #eee;
+		}
 	}
 }
 
