@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>work-table-mobile-add-to-project</title>
+	<title>work-table-mobile-select-project</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -89,31 +89,22 @@
 		</button>
 		<div class="blur-selection-container">
 			<div class="blur-selection-inner">
-
-
 				<div class="blur-selection-menu">
-					<div class="blur-selection-menu-title">Добавить в проект</div>
+					<div class="blur-selection-menu-title">Выберите проект</div>
 					<div class="select-mobile-wrapper">
-						<button class="select-mobile-btn">
-							Выберите проект
-							<img class="select-mobile-btn-icon" src="arrow-topBottom.svg" />
-						</button>
-						<button class="select-mobile-btn">
-							Выберите ансамбль
-							<img class="select-mobile-btn-icon" src="arrow-topBottom.svg" />
-						</button>
-						<button class="select-mobile-btn">
-							Выберите роль
-							<img class="select-mobile-btn-icon" src="arrow-topBottom.svg" />
-						</button>
+						<div id="example-picker"></div>
 					</div>
-					<button class="primary-mobile-btn --blue">Добавить</button>
+					<button class="primary-mobile-btn --inactive">Выбрать</button>
+					<button class="close-mobile-btn">
+						<img src="x-close-24.svg" alt="close-icon">
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/jquery.ios.picker.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

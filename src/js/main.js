@@ -1286,3 +1286,15 @@ $('.js-right__sidebar_item-btn').click(function () {
 });
 
 // End: Show modal sidebar
+
+$('#example-picker').picker(
+	{
+		data: ['Актёры запаска', 'Части тела', 'Большие гонки', 'Древо жизни (копия)', 'Проверенный'],
+		lineHeight: 19.7,
+		selected: 0,
+	},
+	function (s) {
+		$('.output').html(s);
+		$('.example-picker').data('value', s);
+	}
+);
