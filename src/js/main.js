@@ -1290,7 +1290,7 @@ $('.js-right__sidebar_item-btn').click(function () {
 $('#example-picker').picker(
 	{
 		data: ['Актёры запаска', 'Части тела', 'Большие гонки', 'Древо жизни (копия)', 'Проверенный'],
-		lineHeight: 19.7,
+		lineHeight: 19,
 		selected: 0,
 	},
 	function (s) {

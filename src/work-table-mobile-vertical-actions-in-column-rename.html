@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>work-table-mobile-vertical-lists</title>
+	<title>work-table-mobile-vertical-actions-in-column-rename</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -49,18 +49,19 @@
 					<img class="k-direct-bar-img" src="images/k-direct-img-2.png" alt="user-avatar">
 				</div>
 			</div>
-			<div class="lists-header">
-				<div class="lists-header-left">
-					<span class="lists-title">Старший брат</span>
-					<span class="item-counter">5</span>
+
+			<div class="lists">
+				<div class="lists-header">
+					<div class="lists-header-left">
+						<span class="lists-title">Старший брат</span>
+						<span class="item-counter">5</span>
+					</div>
+					<div class="lists-header-right">
+						<button class="threePoints-btn active">
+							<img src="threePoints24.svg" alt="points-icon" />
+						</button>
+					</div>
 				</div>
-				<div class="lists-header-right">
-					<button class="threePoints-btn">
-						<img src="threePoints24.svg" alt="points-icon" />
-					</button>
-				</div>
-			</div>
-			<div class="temporary-container">
 				<div class="container-mobile">
 					<button aria-label="btn" class="main__item_plus-btn mt-4 mb-16">
 						<img src="plus-24-dark.svg" alt="plus">
@@ -115,6 +116,45 @@
 			</div>
 		</div>
 
+		<div class="threePoints-blur-container">
+			<div class="blur__menu threePoints-blur-menu">
+				<button class="blur__menu-btn">
+					<img src="copy-blue-24.svg" alt="icon">
+					<span class="blur__menu-text mt-1">Копировать в другой проект</span>
+				</button>
+				<button class="blur__menu-btn">
+					<img src="columns-blue-24.svg" alt="icon">
+					<span class="blur__menu-text">Дублировать колонку</span>
+				</button>
+				<button class="blur__menu-btn">
+					<img src="pencilSimple-blue-24.svg" alt="icon">
+					<span class="blur__menu-text mt-1">Переименовать</span>
+				</button>
+				<button class="blur__menu-btn">
+					<img src="printer-blue-24.svg" alt="icon">
+					<span class="blur__menu-text mt-1">Распечатать</span>
+				</button>
+				<button class="blur__menu-btn">
+					<img src="trashSimple-blue-24.svg" alt="icon">
+					<span class="blur__menu-text">Удалить</span>
+				</button>
+			</div>
+		</div>
+		<div class="rename-blur-container">
+			<div class="blur-selection-inner">
+				<div class="blur-selection-menu">
+					<div class="blur-selection-menu-title">Переименовать</div>
+					<div class="blur-selection-menu-rename">
+						<div class="input-box --mobile">
+							<input class="input-mobile" type="text">
+						</div>
+					</div>
+
+					<button class="primary-mobile-btn --blue">Сохранить</button>
+				</div>
+			</div>
+		</div>
+
 		<button class="version-history-btn">
 			<img src="clock.svg" alt="clock-icon">
 			<span class="version-history-btn-dot"></span>
@@ -130,6 +170,7 @@
 		<button class="side-arrow-btn">
 			<img src="arrowRight-24.svg" alt="arrow-icon">
 		</button>
+
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -65,6 +65,7 @@
 		$ele.append('<div class="picker-up"></div>');
 		$ele.append('<div class="picker-down"></div>');
 		$ele.append('<div class="picker-scroller"></div>');
+		$ele.append('<div class="picker-current"></div>');
 
 		if (typeof json.lineHeight != 'undefined') {
 			lineHeight = json.lineHeight;
@@ -132,7 +133,8 @@
 			.find('.option')
 			.each(function (index, $option) {
 				$option = $($option);
-				$option.css('-webkit-transform', 'rotateX(-' + 22.5 * index + 'deg) translateZ(90px)');
+				// $option.css('-webkit-transform', 'rotateX(-' + 22.5 * index + 'deg) translateZ(90px)'); z
+				$option.css('-webkit-transform', 'rotateX(-' + 22.5 * index + 'deg) translateZ(70px)');
 				if (index > 7) {
 					$option.hide();
 				}

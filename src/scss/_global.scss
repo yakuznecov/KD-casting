@@ -596,6 +596,19 @@
 	cursor: text;
 	background: #fafafa;
 
+	&.--mobile {
+		border-radius: 8px;
+
+		&:focus-within {
+			padding: 0 11px;
+			border: 2px solid rgba(112, 168, 221, 0.7);
+
+			& input {
+				line-height: 44px;
+			}
+		}
+	}
+
 	& input {
 		width: 100%;
 		background: transparent;
@@ -609,6 +622,12 @@
 			letter-spacing: 0.25px;
 			color: #9e9e9e;
 		}
+	}
+
+	& input.input-mobile {
+		line-height: 46px;
+		font-size: 15px;
+		letter-spacing: 0.5px;
 	}
 
 	&:hover {
