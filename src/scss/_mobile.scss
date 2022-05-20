@@ -1093,6 +1093,14 @@
 		width: 0;
 		height: 0;
 	}
+
+	@media (min-width: 393px) {
+		height: calc(100vh - 211px);
+	}
+
+	@media (min-width: 428px) {
+		height: calc(100vh - 216px);
+	}
 }
 
 .lists__cards-item {
@@ -1265,6 +1273,10 @@
 	position: absolute;
 	right: 12px;
 	top: 200px;
+
+	@media (min-width: 393px) {
+		top: 203px;
+	}
 }
 
 .blur__menu-btn {
@@ -1290,7 +1302,7 @@
 }
 
 .blur-selection-container {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -1534,8 +1546,9 @@
 }
 
 .file-sent-modal {
-	position: fixed;
-	left: 61px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: 36px;
 	display: inline-flex;
 	align-items: center;
@@ -1598,8 +1611,9 @@
 }
 
 .copy-created-modal {
-	position: fixed;
-	left: 25px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: 36px;
 	display: inline-flex;
 	align-items: center;
@@ -1668,4 +1682,8 @@
 	height: 100vh;
 	min-width: 80px;
 	border-right: 1px solid #E0E0E0;
+}
+
+.js-plus-btn24 {
+	opacity: 0;
 }

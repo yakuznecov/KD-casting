@@ -1,4 +1,21 @@
 (function ($) {
+	$('.js-temporary-container').scroll(function () {
+		const btn = $('.js-plus-btn24');
+		let top = $(this).scrollTop();
+
+		if (top > 0 && top <= 60) {
+			btn.css({
+				opacity: function () {
+					return top / 60;
+				},
+			});
+		}
+
+		if (top === 0) {
+			btn.css({ opacity: 0 });
+		}
+	});
+
 	const hideModalClickOutside = (parent, modalWrapper) => {
 		$(document).on('click', function (e) {
 			let field = $(parent);
