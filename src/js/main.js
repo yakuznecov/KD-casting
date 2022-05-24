@@ -1,4 +1,47 @@
 (function ($) {
+	// Start: Sidebar mobile
+	$(function () {
+		const content = $('.content');
+		const sidebar = $('.sidebar__mobile');
+
+		$('.side-arrow-btn').on('click', function () {
+			sidebar.addClass('active');
+			content.addClass('--sidebar-active');
+		});
+
+		$('.sidebar__mobile-arrow-btn').on('click', function () {
+			sidebar.removeClass('active');
+			content.removeClass('--sidebar-active');
+		});
+	});
+	// End: Sidebar mobile
+
+	// Start: Creation menu
+	$(function () {
+		const blurContainer = $('.blur-side-container');
+		const creationMenu = $('.creation-menu');
+		const sidebar = $('.sidebar__mobile');
+
+		let isActive = false;
+
+		$('.js-add-PlusBtn').on('click', function () {
+			if (!isActive) {
+				blurContainer.addClass('active');
+				creationMenu.addClass('active');
+				sidebar.addClass('bg-active');
+				$(this).addClass('active');
+				isActive = true;
+			} else {
+				blurContainer.removeClass('active');
+				creationMenu.removeClass('active');
+				sidebar.removeClass('bg-active');
+				$(this).removeClass('active');
+				isActive = false;
+			}
+		});
+	});
+	// End: Creation menu
+
 	$('.js-temporary-container').scroll(function () {
 		const btn = $('.js-plus-btn24');
 		let top = $(this).scrollTop();
