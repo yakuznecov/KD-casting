@@ -1294,7 +1294,7 @@
 	height: 65px;
 	margin-top: -1px;
 	border-radius: 16px;
-	padding: 0 15px;
+	padding: 0 10px 0 15px;
 	background-color: transparent;
 	user-select: none;
 
@@ -1452,15 +1452,20 @@
 }
 
 .select-file-reference {
+	display: flex;
+	justify-content: center;
 	position: absolute;
 	bottom: 0;
 	padding: 11px;
 	left: 0;
 	right: 0;
+
 }
 
 .reference {
 	display: flex;
+	max-width: 326px;
+	width: 100%;
 	padding: 10px 16px 16px 12px;
 	border-radius: 12px;
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
@@ -1472,7 +1477,7 @@
 	line-height: 18px;
 	letter-spacing: 0.5px;
 	color: #fff;
-	max-width: 240px;
+	max-width: 248px;
 	margin-left: 12px;
 	padding-top: 6px;
 }
@@ -1879,10 +1884,10 @@
 
 .creation-menu {
 	position: absolute;
-	right: 12px;
+	left: 72px;
 	top: 94px;
-	opacity: 0;
 	z-index: 2;
+	opacity: 0;
 	visibility: hidden;
 	transition: all 0.3s ease-out;
 
@@ -1890,4 +1895,74 @@
 		opacity: 1;
 		visibility: visible;
 	}
+}
+
+.settings-menu {
+	position: absolute;
+	left: 72px;
+	top: 158px;
+	z-index: 2;
+	// opacity: 1;
+	// visibility: visible;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-out;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.blur__question-menu {
+	position: absolute;
+	left: 72px;
+	top: 222px;
+	width: 287px;
+	padding: 23px 19px 22px;
+	border: 1px solid #F3F3F3;
+	border-radius: 16px;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	background: #FFF;
+	z-index: 2;
+	// opacity: 1;
+	// visibility: visible;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-out;
+
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.blur__question-menu-item {
+	border-bottom: 1px solid #ececec;
+	margin-bottom: 16px;
+	padding-bottom: 14px;
+
+	&:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.blur__question-menu-title {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.4px;
+	color: #A0AFBB;
+	text-transform: uppercase;
+	margin-bottom: 17px;
+}
+
+.blur__question-menu-text {
+	font-size: 15px;
+	line-height: 19px;
+	letter-spacing: 0.5px;
+	color: #637380;
 }

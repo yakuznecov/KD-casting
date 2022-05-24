@@ -20,23 +20,57 @@
 	$(function () {
 		const blurContainer = $('.blur-side-container');
 		const creationMenu = $('.creation-menu');
+		const settingsMenu = $('.settings-menu');
+		const questionMenu = $('.blur__question-menu');
 		const sidebar = $('.sidebar__mobile');
 
 		let isActive = false;
 
+		function showMenu() {
+			blurContainer.addClass('active');
+			sidebar.addClass('bg-active');
+			isActive = true;
+		}
+
+		function hideMenu() {
+			blurContainer.removeClass('active');
+			sidebar.removeClass('bg-active');
+			isActive = false;
+		}
+
 		$('.js-add-PlusBtn').on('click', function () {
 			if (!isActive) {
-				blurContainer.addClass('active');
+				showMenu();
 				creationMenu.addClass('active');
-				sidebar.addClass('bg-active');
 				$(this).addClass('active');
-				isActive = true;
 			} else {
-				blurContainer.removeClass('active');
+				hideMenu();
 				creationMenu.removeClass('active');
-				sidebar.removeClass('bg-active');
 				$(this).removeClass('active');
-				isActive = false;
+			}
+		});
+
+		$('.js-settingsBtn').on('click', function () {
+			if (!isActive) {
+				showMenu();
+				settingsMenu.addClass('active');
+				$(this).addClass('active');
+			} else {
+				hideMenu();
+				settingsMenu.removeClass('active');
+				$(this).removeClass('active');
+			}
+		});
+
+		$('.js-question-menu').on('click', function () {
+			if (!isActive) {
+				showMenu();
+				questionMenu.addClass('active');
+				$(this).addClass('active');
+			} else {
+				hideMenu();
+				questionMenu.removeClass('active');
+				$(this).removeClass('active');
 			}
 		});
 	});
