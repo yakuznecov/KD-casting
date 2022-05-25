@@ -1,4 +1,20 @@
 (function ($) {
+	// Start: blur__teamwork-modal-item-edit
+	$(function () {
+		let isActive = false;
+
+		$('.blur__teamwork-modal-item.js-edit').on('click', function () {
+			if (!isActive) {
+				$(this).addClass('active');
+				isActive = true;
+			} else {
+				$(this).removeClass('active');
+				isActive = false;
+			}
+		});
+	});
+	// End: blur__teamwork-modal-item-edit
+
 	// Start: Sidebar mobile
 	$(function () {
 		const content = $('.content');
