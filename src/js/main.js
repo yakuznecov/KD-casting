@@ -1,19 +1,27 @@
 (function ($) {
+	// Start toggle img blur__teamwork-access-container
+	$(function () {
+		$('.blur__teamwork-access-container').click(function () {
+			$('.blur__teamwork-access-container .access-top').toggleClass('transparent');
+		});
+	});
+	// End toggle img blur__teamwork-access-container
+
 	// Start: blur__teamwork-modal-item-edit
 	$(function () {
-		let isActive = false;
-
-		$('.blur__teamwork-modal-item.js-edit').on('click', function () {
-			if (!isActive) {
-				$(this).addClass('active');
-				isActive = true;
-			} else {
-				$(this).removeClass('active');
-				isActive = false;
-			}
+		$('.blur__teamwork-modal-item-wrapper.js-edit').on('click', function () {
+			$(this).parent().toggleClass('edit-active');
 		});
 	});
 	// End: blur__teamwork-modal-item-edit
+
+	// Start: blur__teamwork-modal-item-view
+	$(function () {
+		$('.blur__teamwork-modal-item-wrapper.js-view').on('click', function () {
+			$(this).parent().toggleClass('view-active');
+		});
+	});
+	// End: blur__teamwork-modal-item-edit-view
 
 	// Start: Sidebar mobile
 	$(function () {
@@ -38,6 +46,7 @@
 		const creationMenu = $('.creation-menu');
 		const settingsMenu = $('.settings-menu');
 		const questionMenu = $('.blur__question-menu');
+		const teamworkModal = $('.blur__teamwork-modal');
 		const sidebar = $('.sidebar__mobile');
 
 		let isActive = false;
@@ -86,6 +95,18 @@
 			} else {
 				hideMenu();
 				questionMenu.removeClass('active');
+				$(this).removeClass('active');
+			}
+		});
+
+		$('.sidebar__mobile-usersBtn').on('click', function () {
+			if (!isActive) {
+				showMenu();
+				teamworkModal.addClass('active');
+				$(this).addClass('active');
+			} else {
+				hideMenu();
+				teamworkModal.removeClass('active');
 				$(this).removeClass('active');
 			}
 		});

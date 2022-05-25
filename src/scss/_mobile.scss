@@ -1967,7 +1967,7 @@
 	color: #637380;
 }
 
-// teamwork-modal
+// start teamwork-modal
 .blur__teamwork-modal {
 	position: absolute;
 	left: 72px;
@@ -1977,6 +1977,15 @@
 	border-radius: 16px;
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	background: #FFF;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-out;
+	z-index: 2;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 .blur__teamwork-modal-header {
@@ -1984,7 +1993,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 19px 20px 15px 18px;
+	padding: 11px 11px 7px 19px;
 
 	&:after {
 		position: absolute;
@@ -2006,7 +2015,7 @@
 }
 
 .blur__teamwork-modal-lists {
-	padding: 24px 0;
+	padding: 16px 0;
 	height: 266px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -2019,28 +2028,41 @@
 
 .blur__teamwork-modal-item {
 	position: relative;
-	margin-bottom: 20px;
-	padding-left: 19px;
-	transition: transform 0.2s ease-out;
+	padding: 0 4px;
+	margin-bottom: 3px;
+	transition: transform 0.2s ease-in-out;
 
 	&:last-child {
 		margin-bottom: 0;
 	}
 
-	&.js-edit.active {
+	&.edit-active {
 		transform: translateX(109px);
+	}
+
+	&.view-active {
+		transform: translateX(152px);
 	}
 }
 
 .blur__teamwork-modal-item-wrapper {
 	display: flex;
 	align-items: center;
+	border-radius: 16px;
+	height: 65px;
+	padding: 0 16px;
+	background-color: transparent;
+
+	&:active {
+		background-color: #f3f3f3;
+	}
 }
 
 .blur__teamwork-modal-edit {
 	position: absolute;
-	left: -98px;
-	top: 4px;
+	// left: -98px;
+	right: 286px;
+	top: 12px;
 	height: 40px;
 	display: flex;
 	align-items: center;
@@ -2054,6 +2076,7 @@
 		height: 40px;
 		border-radius: 16px;
 		padding-top: 1px;
+		margin-left: 4px;
 		background-color: transparent;
 
 		&:active {
@@ -2072,10 +2095,6 @@
 	}
 }
 
-.blur__teamwork-modal-deleteBtn {
-	margin-left: 4px;
-}
-
 .blur__teamwork-modal-item-data {
 	margin-left: 20px;
 }
@@ -2085,6 +2104,7 @@
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
+	margin-bottom: 1px;
 	cursor: pointer;
 
 	.teamwork-status {
@@ -2138,3 +2158,33 @@
 		background-color: #f1f1f1;
 	}
 }
+
+.blur__teamwork-access-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 16px;
+	background-color: #fff;
+
+	&:active {
+		background-color: #eee;
+
+		& .access-top {
+			fill: #eee;
+		}
+	}
+
+	svg {
+		position: absolute;
+		transition: opacity 0.1s ease-in-out;
+	}
+
+	& .access-top.transparent {
+		opacity: 0;
+	}
+}
+
+// end teamwork-modal

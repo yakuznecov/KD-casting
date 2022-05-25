@@ -315,7 +315,10 @@
 		<div class="blur__teamwork-modal">
 			<div class="blur__teamwork-modal-header">
 				<span class="blur__teamwork-modal-header-title">Командная работа</span>
-				<img src="linkSimpleBreak.svg" alt="icon-link">
+				<div class="blur__teamwork-access-container">
+					<img src="link-blue-24.svg" alt="access-link">
+					<img class="access-top" src="linkNotOpacity.svg" alt="access-link">
+				</div>
 			</div>
 			<div class="blur__teamwork-modal-lists">
 				<div class="blur__teamwork-modal-item">
@@ -330,8 +333,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="blur__teamwork-modal-item js-edit">
-					<div class="blur__teamwork-modal-item-wrapper">
+				<div class="blur__teamwork-modal-item">
+					<div class="blur__teamwork-modal-item-wrapper js-edit">
 						<div class="blur__teamwork-modal-item-avatar">
 							<img src="images/elena-mobile.png" class="avatar__img" alt="user-foto">
 							<span class="teamwork-status active"></span>
@@ -351,7 +354,7 @@
 					</div>
 				</div>
 				<div class="blur__teamwork-modal-item">
-					<div class="blur__teamwork-modal-item-wrapper">
+					<div class="blur__teamwork-modal-item-wrapper js-view">
 						<div class="blur__teamwork-modal-item-avatar">
 							<img src="images/aleksey-mobile.png" class="avatar__img" alt="user-foto">
 							<span class="teamwork-status inactive"></span>
@@ -361,7 +364,17 @@
 							<div class="blur__teamwork-modal-item-data-status">Просмотр</div>
 						</div>
 					</div>
-
+					<div class="blur__teamwork-modal-edit">
+						<button class="blur__teamwork-modal-updateBtn">
+							<img src="arrowsClockwise-24.svg" alt="edit">
+						</button>
+						<button class="blur__teamwork-modal-editBtn">
+							<img src="pencilSimple-24.svg" alt="edit">
+						</button>
+						<button class="blur__teamwork-modal-deleteBtn">
+							<img src="trashSimpleRed-24.svg" alt="delete">
+						</button>
+					</div>
 				</div>
 				<div class="blur__teamwork-modal-item">
 					<div class="blur__teamwork-modal-item-wrapper">
