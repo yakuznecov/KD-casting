@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>work-table-mobile-send-text-role</title>
+	<title>work-table-mobile-sidebar-rights</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -179,14 +179,31 @@
 		<div class="blur-selection-container">
 			<div class="blur-selection-inner">
 				<div class="blur-selection-menu">
-					<div class="blur-selection-menu-title mb-24">Отправить текст роли</div>
-					<div class="select-file-container">
-						<button class="select-file-item">
-							Выберите файл
-							<img class="select-file-item-icon" src="plus-blue-20.svg" alt="plus-icon">
-						</button>
+					<div class="blur-selection-menu-title mb-20">Права участника</div>
+
+					<div class="user-name-actions mb-23">
+						<div class="user-name-actions-avatar">
+							<img src="images/elena-mobile.png" class="avatar__img" alt="user-foto">
+						</div>
+						<div class="user-name-actions-data">
+							<div class="user-name-actions-data-name">Елена Смирнова</div>
+							<div class="user-name-actions-rights">Редактирование</div>
+						</div>
 					</div>
-					<button class="primary-mobile-btn --inactive">Отправить</button>
+
+
+					<div class="blur-selection-checkbox-wrapper">
+						<div class="checkbox-button mb-8">
+							<input type="radio" class="checkbox-main-mobile" id="editing-mobile" name="radio-item">
+							<label for="editing-mobile" class="label-main-mobile">Редактирование</label>
+						</div>
+						<div class="checkbox-button">
+							<input type="radio" class="checkbox-main-mobile" id="viewing-mobile" name="radio-item">
+							<label for="viewing-mobile" class="label-main-mobile">Просмотр</label>
+						</div>
+					</div>
+
+					<button class="primary-mobile-btn --blue">Сохранить</button>
 					<button class="question-mobile-btn">
 						<img src="question-mobile-24.svg" alt="question-icon">
 					</button>

@@ -1375,7 +1375,6 @@
 	padding-bottom: 13px;
 	border-bottom: 1px solid #E0E0E0;
 	color: #424242;
-	margin-bottom: 24px;
 }
 
 .blur-selection-menu .close-mobile-btn {
@@ -2188,3 +2187,45 @@
 }
 
 // end teamwork-modal
+
+.blur-selection-checkbox-wrapper {
+	padding-bottom: 23px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.user-name-actions {
+	display: flex;
+	align-items: center;
+}
+
+.user-name-actions-avatar {
+	position: relative;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	margin-bottom: 1px;
+}
+
+.user-name-actions-data {
+	margin-left: 20px;
+}
+
+.user-name-actions-data-name {
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: .5px;
+	margin-bottom: 4px;
+	color: #424242;
+	max-width: 177px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.user-name-actions-rights {
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: .4px;
+	color: #9e9e9e;
+}

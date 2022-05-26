@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>work-table-mobile-send-text-role</title>
+	<title>work-table-mobile-sidebar-invitation</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -179,14 +179,22 @@
 		<div class="blur-selection-container">
 			<div class="blur-selection-inner">
 				<div class="blur-selection-menu">
-					<div class="blur-selection-menu-title mb-24">Отправить текст роли</div>
-					<div class="select-file-container">
-						<button class="select-file-item">
-							Выберите файл
-							<img class="select-file-item-icon" src="plus-blue-20.svg" alt="plus-icon">
-						</button>
+					<div class="blur-selection-menu-title mb-24">Приглашение участника</div>
+					<div class="input-box --mobile mb-24">
+						<input class="input-mobile" type="text" placeholder="Введите email">
 					</div>
-					<button class="primary-mobile-btn --inactive">Отправить</button>
+					<div class="blur-selection-checkbox-wrapper">
+						<div class="checkbox-button mb-8">
+							<input type="radio" class="checkbox-main-mobile" id="editing-mobile" name="radio-item">
+							<label for="editing-mobile" class="label-main-mobile">Редактирование</label>
+						</div>
+						<div class="checkbox-button">
+							<input type="radio" class="checkbox-main-mobile" id="viewing-mobile" name="radio-item">
+							<label for="viewing-mobile" class="label-main-mobile">Просмотр</label>
+						</div>
+					</div>
+
+					<button class="primary-mobile-btn --blue">Пригласить</button>
 					<button class="question-mobile-btn">
 						<img src="question-mobile-24.svg" alt="question-icon">
 					</button>
