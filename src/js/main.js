@@ -1,4 +1,18 @@
 (function ($) {
+	// Start fab-history modal
+	$(function () {
+		$('.version-history-btn').click(function () {
+			$('.fab-history').addClass('active');
+			$(this).addClass('active');
+		});
+
+		$('.fab-history-current-btn').click(function () {
+			$('.fab-history').removeClass('active');
+			$('.version-history-btn').removeClass('active');
+		});
+	});
+	// End fab-history modal
+
 	// Start toggle img blur__teamwork-access-container
 	$(function () {
 		$('.blur__teamwork-access-container').click(function () {
