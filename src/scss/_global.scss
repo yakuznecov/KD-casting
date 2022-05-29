@@ -183,6 +183,14 @@
 	color: #424242;
 }
 
+.title-blackBluis-regular {
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	color: #424242;
+}
+
 .text-blackBrown-short {
 	font-size: 14px;
 	line-height: 17px;
@@ -204,6 +212,13 @@
 .text-blackBrown-regular {
 	font-size: 16px;
 	letter-spacing: 0.5px;
+	color: #212121;
+}
+
+.text-blackBrown-medium {
+	font-size: 19px;
+	line-height: 28px;
+	letter-spacing: 0.15px;
 	color: #212121;
 }
 
@@ -421,6 +436,10 @@
 
 .mb-16 {
 	margin-bottom: 16px;
+}
+
+.mb-17 {
+	margin-bottom: 17px;
 }
 
 .mb-20 {
