@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>work-table-mobile-filter</title>
+	<title>work-table-mobile-nav-project</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -224,105 +224,40 @@
 
 		<div class="blur-white-container">
 			<div class="nav__container">
-				<div class="text-blackBrown-medium mb-20">Фильтр</div>
-				<div class="switch__wrapper --mobile mb-17">
+				<div class="text-blackBrown-medium mb-20">Навигация</div>
+				<div class="switch__wrapper --mobile">
 					<div class="switch">
 						<span class="switch__slider --mobile"></span>
-						<button class="switch__item --mobile" data-index="0">По стране</button>
-						<button class="switch__item --mobile" data-index="1">По городу</button>
+						<button class="switch__item --mobile" data-index="0">Проекты</button>
+						<button class="switch__item --mobile" data-index="1">Ансамбли</button>
 					</div>
 				</div>
-				<div class="title-blackBluis-regular mb-7">выберите</div>
-				<div class="dropdown-select --mobile mb-17">
-					<button class="dropdown-select-btn --mobile">
-						Все страны
-						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
-					</button>
-					<div class="dropdown-select-menu --mobile">
-						<ul class="dropdown-select-menu-inner">
-							<li class="dropdown-select-menu-item">США</li>
-							<li class="dropdown-select-menu-item --active">
-								Россия
-								<img class="check-black" src="check-black-12.svg" />
-							</li>
-							<li class="dropdown-select-menu-item">Германия</li>
-							<li class="dropdown-select-menu-item">Великобритания</li>
-							<li class="dropdown-select-menu-item">Словения</li>
-							<li class="dropdown-select-menu-item">Польша</li>
-							<li class="dropdown-select-menu-item">Турция</li>
-							<li class="dropdown-select-menu-item">Греция</li>
-							<li class="dropdown-select-menu-item">Грузия</li>
-							<li class="dropdown-select-menu-item">Армения</li>
-							<li class="dropdown-select-menu-item">Азербайджан</li>
-							<li class="dropdown-select-menu-item">Казахстан</li>
-						</ul>
-						<div class="dropdown-select-menu-footer">
-							<button class="primary-btn --single --h-32 --fs-15">Выбрать</button>
+				<div class="nav__container-projects">
+					<div class="tabs-wrapper">
+						<div class="tabs projects__tabs">
+							<span class="tab projects-tab">Активные</span>
+							<span class="tab projects-tab">Архив</span>
 						</div>
-					</div>
-				</div>
-				<div class="title-blackBluis-regular mb-7">пол</div>
-				<div class="switch__wrapper --mobile mb-33">
-					<div class="switch">
-						<span class="switch__slider --mobile"></span>
-						<button class="switch__item --mobile" data-index="0">Все</button>
-						<button class="switch__item --mobile" data-index="1">Мужчина</button>
-						<button class="switch__item --mobile" data-index="2">Женщина</button>
-					</div>
-				</div>
-				<div class="title-blackBluis-regular mb-5">возраст</div>
-				<div class="range-slider">
-					<span class="output outputOne" style="left: 18.5202%;">19</span>
-					<span class="output outputTwo" style="left: 50.6869%;">52</span>
-					<span class="full-range"></span>
-					<span class="incl-range" style="width: 33.3333%; left: 19.1919%;"></span>
-					<input class="double-range" name="rangeOne" value="19" min="0" max="99" step="1" type="range">
-					<input class="double-range" name="rangeTwo" value="52" min="0" max="99" step="1" type="range">
-				</div>
-				<div class="range-slider-inner" style="margin-bottom: 39px">
-					<span class="range-slider-number">0</span>
-					<span class="range-slider-dot" style="margin: 0 43px 0 26px;"></span>
-					<span class="range-slider-number">25</span>
-					<span class="range-slider-dot" style="margin: 0 26px;"></span>
-					<span class="range-slider-number">50</span>
-					<span class="range-slider-dot" style="margin: 0 35px 0 26px;"></span>
-					<span class="range-slider-number">75</span>
-					<span class="range-slider-dot" style="margin: 0 18px 0 33px;"></span>
-					<span class="range-slider-number">99</span>
-				</div>
-				<div class="title-blackBluis-regular mb-7">навыки</div>
-				<div class="dropdown-select --mobile">
-					<button class="dropdown-select-btn --mobile">
-						Добавить навык для поиска
-						<img class="dropdown-select-btn-icon" src="arrow-topBottom.svg" />
-					</button>
-					<div class="dropdown-select-menu --mobile" style="top: -423px;">
-						<ul class="dropdown-select-menu-inner" style="max-height: 333px;">
-							<li class="dropdown-select-menu-item">Постановка целей</li>
-							<li class="dropdown-select-menu-item --active">
-								Настойчивость
-								<img class="check-black" src="check-black-12.svg" />
-							</li>
-							<li class="dropdown-select-menu-item">Творческое мышление</li>
-							<li class="dropdown-select-menu-item">Предприимчивость</li>
-							<li class="dropdown-select-menu-item">Критическое мышление</li>
-							<li class="dropdown-select-menu-item">Умение шутить</li>
-							<li class="dropdown-select-menu-item">Самодисциплина</li>
-							<li class="dropdown-select-menu-item">Способность решать проблемы</li>
-							<li class="dropdown-select-menu-item">Профессиональные навыки</li>
-							<li class="dropdown-select-menu-item">Ораторское искусство</li>
-							<li class="dropdown-select-menu-item">Умение распознавать ложь</li>
-							<li class="dropdown-select-menu-item">Адаптивность к изменениям</li>
-						</ul>
-						<div class="dropdown-select-menu-footer">
-							<button class="primary-btn --single --h-32 --fs-15">Выбрать</button>
+						<div class="tabs-content sidebar__tabs-content">
+							<div class="tab-item"></div>
+							<div class="tab-item"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="nav__footer-btns">
-				<button class="primary-mobile-btn --grey mb-8">Сбросить</button>
-				<button class="primary-mobile-btn --blue">Применить</button>
+				<div class="nav__footer-btns-inner mb-8">
+					<button class="square-btn-mobile --grey">
+						<img src="arrowsDownUp.svg" alt="btn">
+					</button>
+					<button class="square-btn-mobile --grey ml-8">
+						<img src="pencilSimple-white-24.svg" alt="btn">
+					</button>
+					<button class="square-btn-mobile --red ml-8">
+						<img src="trashSimple-white-24.svg" alt="btn">
+					</button>
+				</div>
+				<button class="primary-mobile-btn --blue">Перейти</button>
 			</div>
 		</div>
 	</div>
