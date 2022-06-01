@@ -2729,3 +2729,34 @@
 		background: #F3F9FE;
 	}
 }
+
+.nav-loader-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.nav-loader-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	background: #FFFFFF;
+	opacity: 0.5;
+}
+
+.loader-blue-circles {
+	z-index: 1000;
+}
+
+
+.fake-bg {
+	background-image: url(../images/projects-bg.png);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
