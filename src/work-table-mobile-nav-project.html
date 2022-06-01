@@ -228,8 +228,8 @@
 				<div class="switch__wrapper --mobile">
 					<div class="switch">
 						<span class="switch__slider --mobile"></span>
-						<button class="switch__item --mobile" data-index="0">Проекты</button>
-						<button class="switch__item --mobile" data-index="1">Ансамбли</button>
+						<button class="switch__item --mobile switch__item-projects" data-index="0">Проекты</button>
+						<button class="switch__item --mobile switch__item-ensembles" data-index="1">Ансамбли</button>
 					</div>
 				</div>
 				<div class="nav__container-projects">
@@ -239,10 +239,75 @@
 							<span class="tab projects-tab">Архив</span>
 						</div>
 						<div class="tabs-content sidebar__tabs-content">
-							<div class="tab-item"></div>
-							<div class="tab-item"></div>
+							<div class="tab-item tab-item-container">
+								<div class="casting-card mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">На тропе войны</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+								<div class="casting-card selected mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Большие гонки</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+								<div class="casting-card mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Препод на час</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+								<div class="casting-card mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Копи царя Соломона</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+								<div class="casting-card mb-12">
+									<div class="casting-card-img">
+										<img src="ad-icon-24.svg" alt="ad-icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Сироп от кашля Miralex</div>
+										<div class="casting-card-content-bottom">Реклама</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-item tab-item-container">
+								<div class="casting-card mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Звёздные войны</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+
+							</div>
 						</div>
 					</div>
+				</div>
+				<div class="nav__container-ensembles" style="display: none;">
+					<div class="ensembles-item mb-12">
+						<span>Семья Петровых</span>
+					</div>
+					<div class="ensembles-item selected mb-12">Семья Ивановых</div>
+					<div class="ensembles-item mb-12">Прохожие</div>
+					<div class="ensembles-item mb-12">Остальные роли</div>
 				</div>
 			</div>
 			<div class="nav__footer-btns">
@@ -256,6 +321,24 @@
 					<button class="square-btn-mobile --red ml-8">
 						<img src="trashSimple-white-24.svg" alt="btn">
 					</button>
+					<button class="square-btn-mobile --dark ml-8">
+						<img src="dotsThree-white-32.svg" alt="btn">
+					</button>
+
+					<div class="blur__menu extra-dark-menu">
+						<button class="blur__menu-btn">
+							<img src="fileText-white24.svg" alt="icon">
+							<span class="blur__menu-text mt-1">Отправить текст всем актёрам</span>
+						</button>
+						<button class="blur__menu-btn">
+							<img src="downloadSimple-white24.svg" alt="icon">
+							<span class="blur__menu-text">Скачать ансамбль в PDF</span>
+						</button>
+						<button class="blur__menu-btn">
+							<img src="printer-white24.svg" alt="icon">
+							<span class="blur__menu-text mt-1">Распечатать</span>
+						</button>
+					</div>
 				</div>
 				<button class="primary-mobile-btn --blue">Перейти</button>
 			</div>

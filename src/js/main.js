@@ -1,4 +1,48 @@
 (function ($) {
+	// Start: Dark menu in ensembles
+	$(function () {
+		let darkMenu = $('.extra-dark-menu');
+		let moveBtn = $('.nav__footer-btns .primary-mobile-btn');
+		let squareBtnGrey = $('.nav__footer-btns-inner .square-btn-mobile.--grey');
+		let squareBtnRed = $('.nav__footer-btns-inner .square-btn-mobile.--red');
+
+		$('.square-btn-mobile.--dark').click(function () {
+			darkMenu.toggleClass('active');
+			moveBtn.toggleClass('--inactive');
+			squareBtnGrey.toggleClass('--inactive');
+			squareBtnRed.toggleClass('--inactive');
+		});
+
+		$('.switch__item-projects').click(function () {
+			darkMenu.removeClass('active');
+			moveBtn.removeClass('--inactive');
+			squareBtnGrey.removeClass('--inactive');
+			squareBtnRed.removeClass('--inactive');
+		});
+	});
+	// End: Dark menu in ensembles
+	// Start: Переключение проектов в work-table-mobile-nav-project
+	$(function () {
+		let projects = $('.nav__container-projects');
+		let ensembles = $('.nav__container-ensembles');
+		let switchBtnProjects = $('.switch__item-projects');
+		let switchBtnEnsembles = $('.switch__item-ensembles');
+		let btnsInner = $('.nav__footer-btns-inner');
+
+		switchBtnProjects.click(function () {
+			ensembles.hide();
+			projects.show();
+			btnsInner.removeClass('active');
+		});
+
+		switchBtnEnsembles.click(function () {
+			ensembles.show();
+			projects.hide();
+			btnsInner.addClass('active');
+		});
+	});
+	// End: Переключение проектов в work-table-mobile-nav-project
+
 	// Start fab-history modal
 	$(function () {
 		$('.version-history-btn').click(function () {
@@ -524,7 +568,7 @@
 			.find('.tab')
 			.click(function () {
 				thisEl.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-				thisEl.find('.tab-item').hide().eq($(this).index()).fadeIn();
+				thisEl.find('.tab-item').hide().eq($(this).index()).fadeIn(200);
 			})
 			.eq(0)
 			.addClass('active');
@@ -902,7 +946,6 @@
 	};
 
 	switchProjects();
-
 	// End: Переключение проектов в create-step-3
 
 	// Start: 2 кнопки переключения рассылка приглашений
