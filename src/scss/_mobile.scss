@@ -2764,3 +2764,54 @@
 .dotsSix-24 {
 	margin: 0 8px 0 -4px;
 }
+
+.search__mobile {
+	height: 100vh;
+}
+
+.search__mobile-header {
+	display: flex;
+	align-items: center;
+	padding: 16px 12px;
+}
+
+.search__mobile-header-arrowBack {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search__mobile-input {
+	height: 30px;
+	font-size: 19px;
+	line-height: 19px;
+	letter-spacing: 0.5px;
+	color: #424242;
+	background: transparent;
+}
+
+.search__mobile-title {
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: #212121;
+}
+
+.search__mobile-projects {
+	display: flex;
+	align-items: center;
+}
+
+.search__mobile-projects-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 8px 12px;
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	color: #212121;
+	background: #FFFFFF;
+}
