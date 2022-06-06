@@ -1,4 +1,16 @@
 (function ($) {
+	// Start toggle img blur__teamwork-access-container
+	$(function () {
+		const xBtn = $('.square-btn-mobile-toggle.--x-close');
+		const dotsBtn = $('.square-btn-mobile-toggle.--dots');
+
+		$('.square-btn-mobile.--dark').click(function () {
+			xBtn.toggleClass('x-active');
+			dotsBtn.toggleClass('dots-active');
+		});
+	});
+	// End toggle img blur__teamwork-access-container
+
 	// Start: Dark menu in ensembles
 	$(function () {
 		let darkMenu = $('.extra-dark-menu');

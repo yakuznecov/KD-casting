@@ -1167,6 +1167,14 @@
 .no-projects-inner {
 	text-align: center;
 	max-width: 255px;
+
+	&.--search {
+		margin: 170px auto;
+	}
+
+	&.--no-actors {
+		margin: 133px auto;
+	}
 }
 
 .no-projects-text {
@@ -1176,6 +1184,10 @@
 	color: #7A818F;
 	margin-top: 7px;
 	margin-bottom: 32px;
+
+	&.--search {
+		margin-top: 16px;
+	}
 }
 
 .no-projects-btn {
@@ -1291,6 +1303,7 @@
 		background: #7c7c7c;
 		opacity: 0;
 		visibility: hidden;
+		transition: all 0.5s;
 
 		&.active {
 			opacity: 1;
@@ -2632,10 +2645,37 @@
 	}
 
 	&.--dark {
+		position: relative;
 		background: #616161;
 
 		&:active {
 			background: #212121;
+		}
+
+		svg {
+			position: absolute;
+		}
+
+		.square-btn-mobile-toggle.--dots {
+			transform: rotate(0deg);
+			transition: transform .4s ease-out, opacity 0.5s ease-in-out;
+			opacity: 1;
+
+			&.dots-active {
+				transform: rotate(45deg);
+				opacity: 0;
+			}
+		}
+
+		.square-btn-mobile-toggle.--x-close {
+			transform: rotate(-45deg);
+			transition: transform .4s ease-out, opacity 0.5s ease-in-out;
+			opacity: 0;
+
+			&.x-active {
+				transform: rotate(0deg);
+				opacity: 1;
+			}
 		}
 	}
 
