@@ -1,5 +1,13 @@
 (function ($) {
-	// Start toggle img blur__teamwork-access-container
+	$(function () {
+		const menu = $('.profile-m__actor-menu-extra');
+
+		$('.profile-m__actor-menu-item.--extra-menu').on('click', function () {
+			menu.toggleClass('active');
+			$(this).toggleClass('active');
+		});
+	});
+
 	$(function () {
 		const xBtn = $('.square-btn-mobile-toggle.--x-close');
 		const dotsBtn = $('.square-btn-mobile-toggle.--dots');
@@ -9,7 +17,6 @@
 			dotsBtn.toggleClass('dots-active');
 		});
 	});
-	// End toggle img blur__teamwork-access-container
 
 	// Start: Dark menu in ensembles
 	$(function () {
