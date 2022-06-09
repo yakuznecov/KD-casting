@@ -79,3 +79,14 @@
 	height: 100%;
 	margin-right: 12px;
 }
+
+.test-mobile-wrapper {
+	display: flex;
+}
+
+.test-mobile-container {
+	position: relative;
+	width: 375px;
+	height: 667px;
+	background: #d5d5d5;
+}
