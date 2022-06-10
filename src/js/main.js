@@ -1,4 +1,11 @@
 (function ($) {
+	// Start toggle img profile-m__actor-wrapper-header-icon
+	$(function () {
+		$('.profile-m__actor-wrapper-header-icon').click(function () {
+			$('.profile-m__actor-wrapper-header-icon .bookmarkSimple').toggleClass('transparent');
+		});
+	});
+	// End toggle img profile-m__actor-wrapper-header-icon
 	$(function () {
 		const menu = $('.profile-m__actor-menu-extra');
 
