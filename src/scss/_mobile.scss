@@ -2986,7 +2986,7 @@
 	right: 0;
 	bottom: 0;
 	min-height: 272px;
-	padding: 24px 20px 144px 19px;
+	padding: 24px 0 144px;
 	box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.04), 0px -2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	border-radius: 16px 16px 0px 0px;
 	background: #FFFFFF;
@@ -3062,6 +3062,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 0 20px 0 19px;
 }
 
 .profile-m__actor-wrapper-header-title {
@@ -3093,6 +3094,7 @@
 	margin-top: 31px;
 	display: flex;
 	align-items: center;
+	padding: 0 20px 0 19px;
 }
 
 .profile-m__actor-main-title {
@@ -3314,6 +3316,7 @@
 
 .profile-m__actor-basic-info {
 	margin-top: 40px;
+	padding: 0 20px 0 19px;
 }
 
 .profile-m__actor-basic-info-inner {
@@ -3372,6 +3375,7 @@
 
 .profile-m__actor-extra-info {
 	margin-top: 40px;
+	padding: 0 20px 0 19px;
 }
 
 .profile-m__actor-extra-info-item {
@@ -3379,6 +3383,11 @@
 	border: 1px solid #e7e7e7;
 	border-bottom-width: 2px;
 	border-radius: 8px;
+	margin-bottom: 8px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .profile-m__actor-extra-info-item-title {
@@ -3387,12 +3396,17 @@
 	text-transform: uppercase;
 	letter-spacing: .4px;
 	color: #2E9BED;
+	border-bottom: 1px solid #ECEFF1;
+	padding-bottom: 6px;
 }
 
 .profile-m__actor-extra-info-item-content {
-	margin-top: 5px;
-	padding-top: 14px;
-	border-top: 1px solid #ECEFF1;
+	margin-top: 13px;
+}
+
+.profile-m__actor-extra-info-item-tags {
+	font-size: 0;
+	margin-top: 8px;
 }
 
 .profile-m__actor-extra-info-item-content-name {
@@ -3413,4 +3427,148 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	.--dark {
+		color: #37474F;
+	}
+}
+
+.item-tag-m {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 8px;
+	height: 23px;
+	font-size: 12px;
+	letter-spacing: .4px;
+	border-radius: 4px;
+	color: #757575;
+	background: #eee;
+	margin: 4px 4px 0 0;
+}
+
+.profile-m__actor-roles {
+	margin-top: 40px;
+	padding: 0 20px 0 19px;
+}
+
+.profile-m__actor-roles-item {
+	display: flex;
+	padding: 11px 12px 12px;
+	height: 78px;
+	border: 1px solid #E7E7E7;
+	border-radius: 8px;
+	border-bottom-width: 2px;
+	margin-bottom: 8px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.profile-m__actor-roles-item-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 12px;
+	width: 36px;
+	height: 36px;
+	border-radius: 4px;
+	background: #f3f9fe;
+}
+
+.profile-m__actor-roles-item-text {
+	padding-top: 2px;
+}
+
+.profile-m__actor-roles-item-title {
+	font-size: 15px;
+	line-height: 15px;
+	margin-bottom: 2px;
+	letter-spacing: 0.5px;
+	color: #37474F;
+	max-width: 220px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.profile-m__actor-roles-item-subtitle {
+	font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 3px;
+	letter-spacing: 0.25px;
+	color: #90A4AE;
+}
+
+.profile-m__actor-contacts {
+	margin-top: 40px;
+	padding: 0 8px;
+}
+
+.profile-m__actor-contacts-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 65px;
+	padding: 0 12px;
+	background: transparent;
+
+	&:active {
+		border-radius: 16px;
+		background: #F3F3F3;
+	}
+}
+
+.profile-m__actor-contacts-item-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	border: 1px solid #E7E7E7;
+	background: #FAFAFA;
+}
+
+.profile-m__actor-contacts-item-text {
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: 0.5px;
+	color: #37474F;
+}
+
+.profile-m__actor-contacts-blocked {
+	margin-top: 30px;
+	padding: 0 20px;
+}
+
+.profile-m__actor-contacts-blocked-title {
+	position: relative;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.5px;
+	margin-bottom: 12px;
+	padding-left: 20px;
+	color: #37474F;
+
+	&:before {
+		position: absolute;
+		content: " ";
+		left: 0;
+		top: 4px;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #F6B501;
+	}
+}
+
+.profile-m__actor-contacts-blocked-text {
+	font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 37px;
+	letter-spacing: 0.25px;
+	color: #90A4AE;
 }
