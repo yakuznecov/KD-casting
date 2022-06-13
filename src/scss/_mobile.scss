@@ -2966,7 +2966,12 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 9999;
+	z-index: 1000;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 .profile-m__actor-photo {
@@ -3000,6 +3005,10 @@
 		height: 4px;
 		background-color: #f3f3f3;
 		border-radius: 100px;
+	}
+
+	&.--hide::before {
+		opacity: 0;
 	}
 }
 
@@ -3095,6 +3104,10 @@
 	display: flex;
 	align-items: center;
 	padding: 0 20px 0 19px;
+
+	&.hide {
+		display: none;
+	}
 }
 
 .profile-m__actor-main-title {
@@ -3317,6 +3330,11 @@
 .profile-m__actor-basic-info {
 	margin-top: 40px;
 	padding: 0 20px 0 19px;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 .profile-m__actor-basic-info-inner {
@@ -3376,6 +3394,11 @@
 .profile-m__actor-extra-info {
 	margin-top: 40px;
 	padding: 0 20px 0 19px;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 .profile-m__actor-extra-info-item {
@@ -3450,6 +3473,11 @@
 .profile-m__actor-roles {
 	margin-top: 40px;
 	padding: 0 20px 0 19px;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 .profile-m__actor-roles-item {
@@ -3504,6 +3532,11 @@
 .profile-m__actor-contacts {
 	margin-top: 40px;
 	padding: 0 8px;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 .profile-m__actor-contacts-item {
@@ -3542,6 +3575,11 @@
 .profile-m__actor-contacts-blocked {
 	margin-top: 30px;
 	padding: 0 20px;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 .profile-m__actor-contacts-blocked-title {
