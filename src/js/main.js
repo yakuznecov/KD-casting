@@ -7,11 +7,117 @@
 	});
 	// End toggle img profile-m__actor-wrapper-header-icon
 	$(function () {
-		const menu = $('.profile-m__actor-menu-extra');
+		const wrapper = $('.profile-m__actor-wrapper');
+		const main = $('.profile-m__actor-main');
+		const extraMenu = $('.profile-m__actor-menu-extra');
+		const basicInfo = $('.profile-m__actor-basic-info');
+		const extraInfo = $('.profile-m__actor-extra-info');
+		const roles = $('.profile-m__actor-roles');
+		const contacts = $('.profile-m__actor-contacts');
+		const profile = $('.profile-m__actor');
+		const contactsBlocked = $('.profile-m__actor-contacts-blocked');
+
+		$('.lists-card-img.--profile-js').on('click', function () {
+			profile.addClass('active');
+		});
 
 		$('.profile-m__actor-menu-item.--extra-menu').on('click', function () {
-			menu.toggleClass('active');
+			extraMenu.toggleClass('active');
 			$(this).toggleClass('active');
+		});
+
+		$(document).click(function (e) {
+			const extraMenu = $('.profile-m__actor-menu-extra');
+			let btn = $('.profile-m__actor-menu-item.--extra-menu');
+			if (
+				!extraMenu.is(e.target) &&
+				extraMenu.has(e.target).length === 0 &&
+				!btn.is(e.delegateTarget.activeElement)
+			) {
+				extraMenu.removeClass('active');
+				btn.removeClass('active');
+			}
+		});
+
+		function switchWrapper() {
+			if (!wrapper.hasClass('--hide')) {
+				wrapper.addClass('--hide');
+			} else {
+				wrapper.removeClass('--hide');
+			}
+		}
+
+		$('.profile-m__actor-menu-item.--basic-js').on('click', function () {
+			extraMenu.removeClass('active');
+			switchWrapper();
+			basicInfo.toggleClass('active');
+
+			if (basicInfo.hasClass('active')) {
+				main.addClass('hide');
+			} else {
+				main.removeClass('hide');
+			}
+
+			extraInfo.removeClass('active');
+			roles.removeClass('active');
+			contacts.removeClass('active');
+			contactsBlocked.removeClass('active');
+		});
+
+		$('.profile-m__actor-menu-item.--extra-js').on('click', function () {
+			extraMenu.removeClass('active');
+			switchWrapper();
+			extraInfo.toggleClass('active');
+
+			if (extraInfo.hasClass('active')) {
+				main.addClass('hide');
+			} else {
+				main.removeClass('hide');
+			}
+
+			basicInfo.removeClass('active');
+			roles.removeClass('active');
+			contacts.removeClass('active');
+			contactsBlocked.removeClass('active');
+		});
+
+		$('.profile-m__actor-menu-item.--roles-js').on('click', function () {
+			extraMenu.removeClass('active');
+			switchWrapper();
+			roles.toggleClass('active');
+
+			if (roles.hasClass('active')) {
+				main.addClass('hide');
+			} else {
+				main.removeClass('hide');
+			}
+
+			extraInfo.removeClass('active');
+			basicInfo.removeClass('active');
+			contacts.removeClass('active');
+			contactsBlocked.removeClass('active');
+		});
+
+		$('.profile-m__actor-menu-item.--contacts-js').on('click', function () {
+			extraMenu.removeClass('active');
+			switchWrapper();
+			contacts.toggleClass('active');
+
+			if (contacts.hasClass('active')) {
+				main.addClass('hide');
+			} else {
+				main.removeClass('hide');
+			}
+
+			extraInfo.removeClass('active');
+			basicInfo.removeClass('active');
+			roles.removeClass('active');
+			contactsBlocked.removeClass('active');
+		});
+
+		$('.profile-m__actor-contacts-item').on('click', function () {
+			contacts.removeClass('active');
+			contactsBlocked.toggleClass('active');
 		});
 	});
 
