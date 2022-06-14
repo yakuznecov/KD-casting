@@ -1,4 +1,82 @@
 (function ($) {
+	$(function () {
+		const actions = $('.profile-m__actor-media-photo-item-actions');
+		const actionsVideo = $('.profile-m__actor-media-video-item-actions');
+		const btn = $('.profile-m__actor-media-photo-item .extra-menu');
+		const btnVideo = $('.profile-m__actor-media-video-item .extra-menu');
+		const closeBtn = $('.profile-m__actor-media-photo-item-actions-close');
+
+		btn.click(function (e) {
+			e.stopPropagation();
+			actions.addClass('active');
+		});
+
+		btnVideo.click(function (e) {
+			e.stopPropagation();
+			actionsVideo.addClass('active');
+		});
+
+		closeBtn.click(function () {
+			actions.removeClass('active');
+			actionsVideo.removeClass('active');
+		});
+	});
+
+	$(function () {
+		const media = $('.profile-m__actor-media');
+		const profPhoto = $('.profile-m__actor-photo');
+		const closeBtn = $('.profile-m__actor-media-closeBtn');
+
+		profPhoto.click(function () {
+			media.addClass('active');
+		});
+
+		closeBtn.click(function () {
+			media.removeClass('active');
+		});
+	});
+
+	$(function () {
+		const largeVideo = $('.profile-m__actor-media-video-item.--large-video');
+		const viewVideo = $('.profile-m__actor-media-view-media.--video');
+		const backBtn = $('.profile-m__actor-media-view-media-backBtn');
+
+		largeVideo.click(function () {
+			viewVideo.addClass('active');
+		});
+
+		backBtn.click(function () {
+			viewVideo.removeClass('active');
+		});
+	});
+
+	$(function () {
+		const largeImg = $('.profile-m__actor-media-photo-item.--large-image');
+		console.log(largeImg);
+		const viewPhoto = $('.profile-m__actor-media-view-media.--photo');
+		const backBtn = $('.profile-m__actor-media-view-media-backBtn');
+
+		largeImg.click(function () {
+			viewPhoto.addClass('active');
+		});
+
+		backBtn.click(function () {
+			viewPhoto.removeClass('active');
+		});
+	});
+
+	$(function () {
+		const leftBtn = $('.profile-m__actor-media-tab.--photo');
+		const rightBtn = $('.profile-m__actor-media-tab.--video');
+		const lineMove = $('.line-move');
+
+		leftBtn.click(function () {
+			lineMove.removeClass('active');
+		});
+		rightBtn.click(function () {
+			lineMove.addClass('active');
+		});
+	});
 	// Start toggle img profile-m__actor-wrapper-header-icon
 	$(function () {
 		$('.profile-m__actor-wrapper-header-icon').click(function () {
@@ -15,10 +93,15 @@
 		const roles = $('.profile-m__actor-roles');
 		const contacts = $('.profile-m__actor-contacts');
 		const profile = $('.profile-m__actor');
+		const arrowBack = $('.profile-m__actor-menu-arrow');
 		const contactsBlocked = $('.profile-m__actor-contacts-blocked');
 
 		$('.lists-card-img.--profile-js').on('click', function () {
 			profile.addClass('active');
+		});
+
+		arrowBack.click(function () {
+			profile.removeClass('active');
 		});
 
 		$('.profile-m__actor-menu-item.--extra-menu').on('click', function () {
