@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>wtm-train-side-menu-4</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="wrapper__mobile">
+		<header class="site-header-mobile">
+			<div class="menu-header__mobile">
+				<div class="menu-header__mobile-content">
+					<div class="menu-header__mobile-content-top --no-projects">
+						<span class="menu-header__mobile-content-top-title">Список проектов</span>
+						<img src="arrow-down-header-mobile.svg" alt="arrow-icon">
+					</div>
+				</div>
+				<div class="menu-header__mobile-right">
+					<button class="search-mobile-btn">
+						<img src="search-mobile-btn.svg" alt="search-btn">
+					</button>
+					<button class="filter-mobile-btn">
+						<img src="filter-mobile-btn.svg" alt="filter-btn">
+					</button>
+					<div class="burger-box">
+						<div class="burger__menu-btn">
+							<span class="burger__line burger__line-first"></span>
+							<span class="burger__line burger__line-second"></span>
+							<span class="burger__line burger__line-third"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="no-projects-container" style="transform: translateX(80px)">
+			<div class="no-projects-inner">
+				<img src="archive-mobile.svg" alt="icon">
+				<div class="no-projects-text">Пока что здесь пусто, создайте свой первый проект</div>
+				<button class="primary-btn --light-blue --br-8 --fs-15 no-projects-btn">Создать проект</button>
+			</div>
+		</div>
+
+		<button class="side-arrow-btn">
+			<img src="arrowRight-24.svg" alt="arrow-icon">
+		</button>
+
+		<div class="sidebar__mobile active">
+			<button class="sidebar__mobile-btn mb-16 js-add-PlusBtn">
+				<img src="plus-mobile-24.svg" alt="btn">
+			</button>
+			<button class="sidebar__mobile-btn mb-16 js-settingsBtn">
+				<img src="gearSix.svg" alt="btn">
+			</button>
+			<button class="sidebar__mobile-btn js-question-menu">
+				<img src="question-dark-24.svg" alt="btn">
+			</button>
+			<div class="sidebar__mobile-divider"></div>
+			<button class="sidebar__mobile-btn mb-16 sidebar__mobile-usersBtn">
+				<img src="users-dark-24.svg" alt="btn">
+				<span class="status-mobile active"></span>
+			</button>
+			<div class="toggle-mobile">
+				<input type="checkbox">
+				<div class="btn">
+					<img src="checkCircle-mobile.svg" alt="check-btn">
+				</div>
+			</div>
+			<button class="sidebar__mobile-arrow-btn">
+				<img src="arrowLeft-mobile-24.svg" alt="arrow-btn">
+			</button>
+		</div>
+
+		<div class="training__container">
+			<div class="training-wrapper">
+				<div class="training-title">Командная работа</div>
+				<p class="training-text">В этом меню находится управление командной работой над проектом. Отсюда можно добавить/исключить участников</p>
+				<div class="training__btns">
+					<button class="training-btn --close">Закрыть</button>
+					<button class="training-btn --primary">Еще совет</button>
+				</div>
+			</div>
+			<div class="training-hidden --side-menu-4"></div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
