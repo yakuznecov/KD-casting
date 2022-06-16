@@ -3914,6 +3914,10 @@
 	bottom: 100px;
 	padding-right: 24px;
 	z-index: 1;
+
+	&.--menu-projects {
+		bottom: 184px;
+	}
 }
 
 .training-title {
@@ -4013,10 +4017,54 @@
 		top: 310px;
 	}
 
+	&.--side-menu-5 {
+		width: 64px;
+		height: 104px;
+		top: 374px;
+	}
+
 	&.--column-1 {
 		width: auto;
 		left: 8px;
 		right: 8px;
-		top: 124px;
+		top: 196px;
+	}
+
+	&.--column-2 {
+		width: 52px;
+		left: auto;
+		right: 6px;
+		top: 144px;
+	}
+
+	&.--column-3 {
+		width: 52px;
+		left: auto;
+		right: 50px;
+		top: 144px;
+	}
+
+	&.--menu-projects {
+		width: 64px;
+		left: auto;
+		right: 112px;
+		top: auto;
+		bottom: 72px;
+	}
+
+	&.--menu-projects-2 {
+		width: 64px;
+		left: auto;
+		right: 56px;
+		top: auto;
+		bottom: 72px;
+	}
+
+	&.--menu-projects-3 {
+		width: 64px;
+		left: auto;
+		right: 0;
+		top: auto;
+		bottom: 72px;
 	}
 }

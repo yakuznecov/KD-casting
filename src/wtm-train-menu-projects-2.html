@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>wtm-train-menu-projects-2</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="wrapper__mobile">
+		<header class="site-header-mobile">
+			<div class="menu-header__mobile">
+				<div class="menu-header__mobile-content">
+					<div class="menu-header__mobile-content-top --no-projects">
+						<span class="menu-header__mobile-content-top-title">Большие гонки</span>
+						<img src="arrow-down-header-mobile.svg" alt="arrow-icon">
+					</div>
+				</div>
+				<div class="menu-header__mobile-right">
+					<button class="search-mobile-btn">
+						<img src="search-mobile-btn.svg" alt="search-btn">
+					</button>
+					<button class="filter-mobile-btn">
+						<img src="filter-mobile-btn.svg" alt="filter-btn">
+					</button>
+					<div class="burger-box">
+						<div class="burger__menu-btn">
+							<span class="burger__line burger__line-first"></span>
+							<span class="burger__line burger__line-second"></span>
+							<span class="burger__line burger__line-third"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<button class="side-arrow-btn">
+			<img src="arrowRight-24.svg" alt="arrow-icon">
+		</button>
+		<div class="blur-white-container">
+			<div class="nav__container">
+				<div class="text-blackBrown-medium mb-20">Навигация</div>
+				<div class="switch__wrapper --mobile">
+					<div class="switch">
+						<span class="switch__slider --mobile"></span>
+						<button class="switch__item --mobile switch__item-projects" data-index="0">Проекты</button>
+						<button class="switch__item --mobile switch__item-ensembles" data-index="1">Ансамбли</button>
+					</div>
+				</div>
+				<div class="nav__container-projects">
+					<div class="tabs-wrapper">
+						<div class="tabs projects__tabs">
+							<span class="tab projects-tab">Активные</span>
+							<span class="tab projects-tab">Архив</span>
+						</div>
+						<div class="tabs-content sidebar__tabs-content">
+							<div class="tab-item tab-item-container">
+
+								<div class="casting-card selected mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Большие гонки</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="tab-item tab-item-container">
+								<div class="casting-card mb-12">
+									<div class="casting-card-img">
+										<img src="movie-icon-24.svg" alt="icon">
+									</div>
+									<div class="casting-card-content">
+										<div class="casting-card-content-top">Звёздные войны</div>
+										<div class="casting-card-content-bottom">Фильм</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav__container-ensembles" style="display: none;">
+					<div class="ensembles-item mb-12">
+						<span>Семья Петровых</span>
+					</div>
+					<div class="ensembles-item selected mb-12">Семья Ивановых</div>
+					<div class="ensembles-item mb-12">Прохожие</div>
+					<div class="ensembles-item mb-12">Остальные роли</div>
+				</div>
+			</div>
+			<div class="nav__footer-btns">
+				<div class="nav__footer-btns-inner mb-8">
+					<button class="square-btn-mobile --grey">
+						<img src="arrowsDownUp.svg" alt="btn">
+					</button>
+					<button class="square-btn-mobile --grey ml-8">
+						<img src="pencilSimple-white-24.svg" alt="btn">
+					</button>
+					<button class="square-btn-mobile --red ml-8">
+						<img src="trashSimple-white-24.svg" alt="btn">
+					</button>
+					<button class="square-btn-mobile --dark ml-8">
+						<img class="square-btn-mobile-toggle --x-close" src="x-close-white-24.svg" alt="btn">
+						<img class="square-btn-mobile-toggle --dots" src="dotsThree-white-32.svg" alt="btn">
+					</button>
+
+					<div class="blur__menu extra-dark-menu">
+						<button class="blur__menu-btn">
+							<img src="fileText-white24.svg" alt="icon">
+							<span class="blur__menu-text mt-1">Отправить текст всем актёрам</span>
+						</button>
+						<button class="blur__menu-btn">
+							<img src="downloadSimple-white24.svg" alt="icon">
+							<span class="blur__menu-text">Скачать ансамбль в PDF</span>
+						</button>
+						<button class="blur__menu-btn">
+							<img src="printer-white24.svg" alt="icon">
+							<span class="blur__menu-text mt-1">Распечатать</span>
+						</button>
+					</div>
+				</div>
+				<button class="primary-mobile-btn --blue">Перейти</button>
+			</div>
+		</div>
+
+		<div class="training__container">
+			<div class="training-wrapper --menu-projects">
+				<div class="training-title">Изменение названий</div>
+				<p class="training-text">Эта функция позволит внести изменения в названия ваших проектов или ансамблей, пользуйтесь</p>
+				<div class="training__btns">
+					<button class="training-btn --close">Закрыть</button>
+					<button class="training-btn --primary">Еще совет</button>
+				</div>
+			</div>
+			<div class="training-hidden --menu-projects-2"></div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
