@@ -3918,6 +3918,10 @@
 	&.--menu-projects {
 		bottom: 184px;
 	}
+
+	&.--fab {
+		bottom: 244px;
+	}
 }
 
 .training-title {
@@ -3935,6 +3939,40 @@
 	letter-spacing: 0.5px;
 	margin-bottom: 24px;
 	color: #d7ebfb;
+
+	&.--indicator-green {
+		position: relative;
+		padding-left: 18px;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 3px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #00BA75;
+			border: 2px solid #2b7dbe;
+		}
+	}
+
+	&.--indicator-white {
+		position: relative;
+		padding-left: 18px;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 3px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #BDBDBD;
+			border: 2px solid #2b7dbe;
+		}
+	}
 }
 
 .training__btns {
@@ -4066,5 +4104,22 @@
 		right: 0;
 		top: auto;
 		bottom: 72px;
+	}
+
+	&.--fab-list {
+		width: 64px;
+		height: 112px;
+		left: auto;
+		right: 4px;
+		top: auto;
+		bottom: 72px;
+	}
+
+	&.--fab-version {
+		width: 64px;
+		left: auto;
+		right: 4px;
+		top: auto;
+		bottom: 180px;
 	}
 }
