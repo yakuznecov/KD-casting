@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>wtm-train-FAB-version-control</title>
+	<title>wtm-train-gorizontal-lists-card-4</title>
 	<link rel="stylesheet" href="css/nav.min.css" />
 </head>
 
@@ -51,25 +51,41 @@
 			</div>
 
 			<div class="lists__container">
-				<div class="lists-header">
-					<div class="lists-header-left">
-						<span class="lists-title">Старший брат</span>
-						<span class="item-counter">5</span>
+				<div class="lists">
+					<div class="lists-header">
+						<div class="lists-header-left">
+							<span class="lists-title">Старший брат</span>
+							<span class="item-counter">5</span>
+						</div>
+						<div class="lists-header-right">
+							<button class="plus-btn24">
+								<img src="plus-24.svg" alt="plus-icon" />
+							</button>
+							<button class="threePoints-btn">
+								<img src="threePoints24.svg" alt="points-icon" />
+							</button>
+						</div>
 					</div>
-					<div class="lists-header-right">
-						<button class="threePoints-btn">
-							<img src="threePoints24.svg" alt="points-icon" />
-						</button>
-					</div>
-				</div>
-				<div class="container-mobile">
-					<button aria-label="btn" class="main__item_plus-btn mt-4 mb-16">
-						<img src="plus-24-dark.svg" alt="plus">
-					</button>
+					<div class="lists-wrapper">
+						<div class="lists-card">
+							<div class="lists-card-img">
+								<img class="avatar-img-mobile" src="images/leonid-mobile.png" alt="user-foto">
+							</div>
+							<div class="lists-card-text">
+								<div class="lists-card-name">Леонид Стоцкий</div>
+								<div class="item-cityAge-mobile">
+									<div class="item-cityAge-left">
+										<div class="item-cityAge-mobile-title">Город</div>
+										<div class="item-cityAge-mobile-subtitle">Санкт-Петербург</div>
+									</div>
 
-					<div class="drag-wrapper-mobile">
-						<img src="user3.svg" />
-						<span>Актёры пока не добавлены</span>
+									<div class="item-cityAge-right">
+										<div class="item-cityAge-mobile-title">Лет</div>
+										<div class="item-cityAge-mobile-subtitle">26</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -81,29 +97,28 @@
 		</button>
 		<div class="list-wiew">
 			<button class="list-wiew-top-btn">
-				<img src="rows.svg" alt="icon">
+				<img src="rows-active.svg" alt="icon">
 			</button>
 			<button class="list-wiew-bottom-btn">
-				<img src="columns-active.svg" alt="icon">
+				<img src="columns.svg" alt="icon">
 			</button>
 		</div>
-
 		<button class="side-arrow-btn">
 			<img src="arrowRight-24.svg" alt="arrow-icon">
 		</button>
 
-
 		<div class="training__container">
-			<div class="training-wrapper --fab">
-				<div class="training-title">История версий</div>
-				<p class="training-text --fab">Нажатием на эту кнопку можно вызвать меню контроля версий в рамках командной работы над проектом.</p>
-				<p class="training-text --indicator-green --fab">Зелёный индиктор подскажет, если с момента принятия последних изменений были совершены какие-то действия.</p>
-				<p class="training-text --indicator-white">Если индикатор серый, то новых действий в проекте не было.</p>
-				<div class="training__btns">
-					<button class="training-btn --primary">Понятно</button>
+			<div class="training-wrapper --lists-card">
+				<div class="training-title">Удаление актёра из проекта</div>
+				<p class="training-text">Долгое нажатие на показанную область карточки, вызовет меню с подтверждением удаления актёра из проекта</p>
+				<div class="training__btns --lists-card">
+					<button class="training-btn --close">Закрыть</button>
+					<button class="training-btn --primary --inactive">Еще совет</button>
 				</div>
 			</div>
-			<div class="training-hidden --fab-version"></div>
+			<div class="training-hidden --lists-card">
+				<img class="pointer-delete" src="pointer-train-4.svg" alt="card">
+			</div>
 		</div>
 	</div>
 

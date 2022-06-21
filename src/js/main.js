@@ -1,5 +1,47 @@
 (function ($) {
 	$(function () {
+		const plusBtn = $('.main__item_plus-btn');
+		const threePointsBtn = $('.threePoints-btn');
+		const plusBtn24 = $('.plus-btn24');
+		const listsCard = $('.lists-card');
+		const trainingWrapper = $('.training-wrapper.--lists-card');
+
+		const hiddenBlock = $('.training-hidden.--column-1');
+		const hiddenBlock2 = $('.training-hidden.--column-2');
+		const hiddenBlock3 = $('.training-hidden.--column-3');
+		const hiddenBlock4 = $('.training-hidden.--lists-card');
+
+		$(window).on('load resize', function () {
+			if (plusBtn.length > 0) {
+				const plusBtnTop = plusBtn.offset().top;
+				hiddenBlock.css({ top: plusBtnTop - 12 });
+			}
+
+			if (threePointsBtn.length > 0) {
+				const threePointsBtnTop = threePointsBtn.offset().top;
+				hiddenBlock2.css({ top: threePointsBtnTop - 12 });
+			}
+
+			if (plusBtn24.length > 0) {
+				const plusBtn24Top = plusBtn24.offset().top;
+				hiddenBlock3.css({ top: plusBtn24Top - 12 });
+			}
+
+			if (listsCard.length > 0) {
+				const listsCardTop = listsCard.offset().top;
+				const listsCardWidth = listsCard.width();
+				const listsCardHeight = listsCard.height();
+				hiddenBlock4.css({ top: listsCardTop - 12, width: listsCardWidth + 24, height: listsCardHeight + 24 });
+				if ($(window).width() > 380) {
+					trainingWrapper.css({ left: listsCardWidth + 48 });
+				} else {
+					trainingWrapper.css({ left: 24 });
+				}
+			}
+		});
+	});
+
+	$(function () {
 		const actions = $('.profile-m__actor-media-photo-item-actions');
 		const actionsVideo = $('.profile-m__actor-media-video-item-actions');
 		const btn = $('.profile-m__actor-media-photo-item .extra-menu');
