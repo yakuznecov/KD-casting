@@ -61,6 +61,12 @@
 	&:hover {
 		border: 1px solid #bdbdbd;
 	}
+
+	&.--mobile {
+		font-size: 15px;
+		letter-spacing: 0.5px;
+		border-radius: 8px;
+	}
 }
 
 // End: checkbox-button

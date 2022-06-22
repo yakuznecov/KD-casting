@@ -1,5 +1,44 @@
 (function ($) {
 	$(function () {
+		const rolesBtn = $('.profile-m__actor-menu-item.--roles-js');
+		const extraBtn = $('.profile-m__actor-menu-item.--extra-js');
+		const basicBtn = $('.profile-m__actor-menu-item.--basic-js');
+
+		rolesBtn.click(function () {
+			const actorRoles = $('.profile-m__actor-roles.active');
+			const actorRolesHeight = actorRoles.outerHeight();
+
+			if ($(window).height() - actorRolesHeight > 282) {
+				actorRoles.css({ height: 'auto' });
+			} else {
+				actorRoles.css({ height: $(window).height() - 282 });
+			}
+		});
+
+		extraBtn.click(function () {
+			const actorExtra = $('.profile-m__actor-extra-info');
+			const actorExtraHeight = actorExtra.outerHeight();
+
+			if ($(window).height() - actorExtraHeight > 282) {
+				actorExtra.css({ height: 'auto' });
+			} else {
+				actorExtra.css({ height: $(window).height() - 282 });
+			}
+		});
+
+		basicBtn.click(function () {
+			const actorBasic = $('.profile-m__actor-basic-info');
+			const actorBasicHeight = actorBasic.outerHeight();
+
+			if ($(window).height() - actorBasicHeight > 282) {
+				actorBasic.css({ height: 'auto' });
+			} else {
+				actorBasic.css({ height: $(window).height() - 282 });
+			}
+		});
+	});
+
+	$(function () {
 		const plusBtn = $('.main__item_plus-btn');
 		const threePointsBtn = $('.threePoints-btn');
 		const plusBtn24 = $('.plus-btn24');
@@ -32,10 +71,15 @@
 				const listsCardWidth = listsCard.width();
 				const listsCardHeight = listsCard.height();
 				hiddenBlock4.css({ top: listsCardTop - 12, width: listsCardWidth + 24, height: listsCardHeight + 24 });
-				if ($(window).width() > 380) {
-					trainingWrapper.css({ left: listsCardWidth + 48 });
+
+				if ($(window).width() <= 375 && $(window).height() < 812) {
+					trainingWrapper.css({ left: listsCardWidth + 48, top: 197 });
 				} else {
 					trainingWrapper.css({ left: 24 });
+				}
+
+				if ($(window).width() > 380) {
+					trainingWrapper.css({ left: listsCardWidth + 48 });
 				}
 			}
 		});
@@ -164,17 +208,16 @@
 			}
 		});
 
-		function switchWrapper() {
-			if (!wrapper.hasClass('--hide')) {
-				wrapper.addClass('--hide');
-			} else {
-				wrapper.removeClass('--hide');
-			}
-		}
+		// function switchWrapper() {
+		// 	if (!wrapper.hasClass('--hide')) {
+		// 		wrapper.addClass('--hide');
+		// 	} else {
+		// 		wrapper.removeClass('--hide');
+		// 	}
+		// }
 
 		$('.profile-m__actor-menu-item.--basic-js').on('click', function () {
 			extraMenu.removeClass('active');
-			switchWrapper();
 			basicInfo.toggleClass('active');
 
 			if (basicInfo.hasClass('active')) {
@@ -191,7 +234,6 @@
 
 		$('.profile-m__actor-menu-item.--extra-js').on('click', function () {
 			extraMenu.removeClass('active');
-			switchWrapper();
 			extraInfo.toggleClass('active');
 
 			if (extraInfo.hasClass('active')) {
@@ -208,7 +250,6 @@
 
 		$('.profile-m__actor-menu-item.--roles-js').on('click', function () {
 			extraMenu.removeClass('active');
-			switchWrapper();
 			roles.toggleClass('active');
 
 			if (roles.hasClass('active')) {
@@ -225,7 +266,6 @@
 
 		$('.profile-m__actor-menu-item.--contacts-js').on('click', function () {
 			extraMenu.removeClass('active');
-			switchWrapper();
 			contacts.toggleClass('active');
 
 			if (contacts.hasClass('active')) {

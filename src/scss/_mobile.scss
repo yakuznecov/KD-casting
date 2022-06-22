@@ -2996,7 +2996,7 @@
 
 .profile-m__actor-photo {
 	width: 100%;
-	height: 574px;
+	height: 71%;
 
 	img {
 		width: 100%;
@@ -3025,10 +3025,6 @@
 		height: 4px;
 		background-color: #f3f3f3;
 		border-radius: 100px;
-	}
-
-	&.--hide::before {
-		opacity: 0;
 	}
 }
 
@@ -3350,6 +3346,7 @@
 .profile-m__actor-basic-info {
 	margin-top: 40px;
 	padding: 0 20px 0 19px;
+	overflow-y: auto;
 	display: none;
 
 	&.active {
@@ -3414,6 +3411,7 @@
 .profile-m__actor-extra-info {
 	margin-top: 40px;
 	padding: 0 20px 0 19px;
+	overflow-y: auto;
 	display: none;
 
 	&.active {
@@ -3493,6 +3491,7 @@
 .profile-m__actor-roles {
 	margin-top: 40px;
 	padding: 0 20px 0 19px;
+	overflow-y: auto;
 	display: none;
 
 	&.active {
@@ -3937,6 +3936,16 @@
 		@media (max-height: 811px) {
 			left: 225px;
 		}
+
+		@media (min-width: 393px) and (max-height: 851px) {
+			top: 198px;
+		}
+
+		@media (min-width: 414px) and (max-height: 736px) {
+			top: 201px;
+		}
+
+
 	}
 
 	&.--side-menu-5 {
@@ -4195,4 +4204,41 @@
 		height: 358px;
 		top: 196px;
 	}
+}
+
+.create-project-form {
+	position: relative;
+	height: 100vh;
+	margin-bottom: 38px;
+}
+
+.create-project-form-header {
+	display: flex;
+	align-items: center;
+	padding: 21px 16px 0;
+	margin-bottom: 29px;
+}
+
+.create-project-form-arrowBack {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 21px;
+}
+
+.create-project-form-title {
+	font-size: 19px;
+	line-height: 19px;
+	letter-spacing: 0.5px;
+	color: #424242;
+}
+
+.create-project-form-content {
+	padding: 0 20px 40px;
+}
+
+.create-project-form-content .create-project-form-area {
+	height: 176px;
 }
