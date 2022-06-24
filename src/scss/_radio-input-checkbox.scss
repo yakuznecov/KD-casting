@@ -26,6 +26,19 @@
 		}
 	}
 
+	&:checked+.label-main.--mobile {
+		background-color: #ebf5ff;
+		padding: 11px 11px 11px 35px;
+		color: #1991eb;
+		border: 2px solid #70a8dd;
+
+		&:active {
+			border: 2px solid #1991eb;
+			color: #106db3;
+			background-color: #ebf5ff;
+		}
+	}
+
 	&:checked+.label-main::before {
 		border: 5px solid #70a8dd;
 		left: 11px;
@@ -66,6 +79,7 @@
 		font-size: 15px;
 		letter-spacing: 0.5px;
 		border-radius: 8px;
+		padding: 12px 12px 12px 36px;
 	}
 }
 

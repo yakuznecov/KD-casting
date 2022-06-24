@@ -71,16 +71,6 @@
 				const listsCardWidth = listsCard.width();
 				const listsCardHeight = listsCard.height();
 				hiddenBlock4.css({ top: listsCardTop - 12, width: listsCardWidth + 24, height: listsCardHeight + 24 });
-
-				if ($(window).width() <= 375 && $(window).height() < 812) {
-					trainingWrapper.css({ left: listsCardWidth + 48, top: 197 });
-				} else {
-					trainingWrapper.css({ left: 24 });
-				}
-
-				if ($(window).width() > 380) {
-					trainingWrapper.css({ left: listsCardWidth + 48 });
-				}
 			}
 		});
 	});
@@ -1027,20 +1017,36 @@
 		const outputTwo = $('.outputTwo');
 		const inclRange = $('.incl-range');
 		const updateView = function () {
-			const oneLeft = (this.val() / this.attr('max')) * (100 - 3.5) + '%';
-			const twoLeft = (this.val() / this.attr('max')) * (100 - 3.5) + '%';
+			if ($(window).width() >= 360) {
+				const oneLeft = (this.val() / this.attr('max')) * 97 + '%';
+				const twoLeft = (this.val() / this.attr('max')) * 97 + '%';
+
+				if (this.attr('name') === 'rangeOne') {
+					outputOne.html(this.val());
+					outputOne.css('left', `${oneLeft}`);
+				} else {
+					outputTwo.html(this.val());
+					outputTwo.css('left', `${twoLeft}`);
+				}
+			}
+			if ($(window).width() >= 768) {
+				const oneLeft = (this.val() / this.attr('max')) * 98.6 + '%';
+				const twoLeft = (this.val() / this.attr('max')) * 98.6 + '%';
+
+				if (this.attr('name') === 'rangeOne') {
+					outputOne.html(this.val());
+					outputOne.css('left', `${oneLeft}`);
+				} else {
+					outputTwo.html(this.val());
+					outputTwo.css('left', `${twoLeft}`);
+				}
+			}
+
 			const inclRangeWidthFirst = ((rangeOne.val() - rangeTwo.val()) / this.attr('max')) * 100 + '%';
 			const inclRangeWidthSecond = ((rangeTwo.val() - rangeOne.val()) / this.attr('max')) * 100 + '%';
 			const inclRangeLeftFirst = (rangeTwo.val() / this.attr('max')) * 100 + '%';
 			const inclRangeLeftSecond = (rangeOne.val() / this.attr('max')) * 100 + '%';
 
-			if (this.attr('name') === 'rangeOne') {
-				outputOne.html(this.val());
-				outputOne.css('left', `${oneLeft}`);
-			} else {
-				outputTwo.html(this.val());
-				outputTwo.css('left', `${twoLeft}`);
-			}
 			if (parseInt(rangeOne.val()) > parseInt(rangeTwo.val())) {
 				inclRange.css('width', `${inclRangeWidthFirst}`);
 				inclRange.css('left', `${inclRangeLeftFirst}`);

@@ -62,6 +62,20 @@
 		letter-spacing: 0.4px;
 	}
 
+	&.--dark-blue {
+		background: #4E94D5;
+
+		@media (hover: hover) {
+			&:hover {
+				background: #3182CE;
+			}
+		}
+
+		&:active {
+			background: #3182CE;
+		}
+	}
+
 	&.--light-blue {
 		color: #1991eb;
 		background: #dbedff;
