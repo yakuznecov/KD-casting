@@ -372,15 +372,26 @@
 	$(function () {
 		const content = $('.content');
 		const sidebar = $('.sidebar__mobile');
+		const menuHeaderMobile = $('.menu-header__mobile');
+		const versionHistoryBtn = $('.version-history-btn');
+		const listWiew = $('.list-wiew');
 
 		$('.side-arrow-btn').on('click', function () {
 			sidebar.addClass('active');
 			content.addClass('--sidebar-active');
+			menuHeaderMobile.addClass('active');
+			versionHistoryBtn.addClass('--hidden');
+			listWiew.addClass('--hidden');
+			$(this).addClass('--hidden');
 		});
 
 		$('.sidebar__mobile-arrow-btn').on('click', function () {
 			sidebar.removeClass('active');
 			content.removeClass('--sidebar-active');
+			menuHeaderMobile.removeClass('active');
+			versionHistoryBtn.removeClass('--hidden');
+			listWiew.removeClass('--hidden');
+			$('.side-arrow-btn').removeClass('--hidden');
 		});
 	});
 	// End: Sidebar mobile
