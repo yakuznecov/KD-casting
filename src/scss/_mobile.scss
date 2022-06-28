@@ -1842,7 +1842,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 100;
+	z-index: 1000;
 	padding: 24px 12px;
 	backdrop-filter: blur(10px);
 	background: hsla(0, 0%, 71%, .5);
@@ -3775,6 +3775,10 @@
 	height: calc(100vh - 148px);
 	max-height: 513px;
 	overflow-y: auto;
+
+	@media (min-width: 768px) {
+		align-content: start;
+	}
 }
 
 .profile-m__actor-media-photo-item {
@@ -3787,6 +3791,7 @@
 
 	@media (min-width: 768px) {
 		width: 22.6%;
+		margin-bottom: 24px;
 	}
 
 	img {
