@@ -1164,6 +1164,14 @@
 	@media (min-width: 428px) {
 		height: calc(100vh - 216px);
 	}
+
+	&.--test-ipad {
+		height: calc(100vh - 272px);
+
+		@media (min-width: 820px) {
+			height: calc(100vh - 279px);
+		}
+	}
 }
 
 .lists__cards-item {
@@ -4027,12 +4035,6 @@
 		@media (min-width: 414px) and (max-height: 736px) {
 			left: 57%;
 			top: 27.5%;
-			bottom: auto;
-		}
-
-		@media (min-width: 768px) and (max-height: 1024px) {
-			left: 35%;
-			top: 25.3%;
 			bottom: auto;
 		}
 	}
