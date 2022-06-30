@@ -874,6 +874,9 @@
 	@media (min-width: 768px) {
 		height: calc(100vh - 219px);
 	}
+	@media (min-width: 820px) {
+		height: calc(100vh - 227px);
+	}
 
 	&::-webkit-scrollbar {
 		width: 0;
